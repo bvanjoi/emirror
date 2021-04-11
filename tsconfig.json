@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "jsx": "react",
+    "esModuleInterop": true
+  }
+}
