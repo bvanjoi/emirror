@@ -1,0 +1,4 @@
+{
+  "main": "dist/emirror-pm-inputrules.cjs.js",
+  "module": "dist/emirror-pm-inputrules.esm.js"
+}

@@ -1,0 +1,4 @@
+{
+  "main": "dist/emirror-pm-history.cjs.js",
+  "module": "dist/emirror-pm-history.esm.js"
+}

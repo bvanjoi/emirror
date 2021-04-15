@@ -6,19 +6,13 @@
     "prosemirror"
   ],
   "author": "bvanjoi <610376039@qq.com>",
-  "homepage": "",
+  "homepage": "https://github.com/bvanjoi/emirror/tree/main/packages/emirror__pm",
+  "repository": "https://github.com/bvanjoi/emirror/tree/main/packages/emirror__pm",
   "license": "MIT",
-  "main": "lib/emirror__pm.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {},
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+  "main": "dist/emirror-pm.cjs.js",
+  "module": "dist/emirror-pm.esm.js",
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "prosemirror-commands": "^1.1.7",
@@ -39,5 +33,18 @@
     "@types/prosemirror-state": "^1.2.6",
     "@types/prosemirror-transform": "^1.1.2",
     "@types/prosemirror-view": "^1.17.1"
+  },
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "commands.ts",
+      "history.ts",
+      "inputrules.ts",
+      "keymap.ts",
+      "model.ts",
+      "state.ts",
+      "transform.ts",
+      "view.ts"
+    ]
   }
 }

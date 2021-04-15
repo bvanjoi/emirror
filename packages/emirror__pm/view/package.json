@@ -1,0 +1,4 @@
+{
+  "main": "dist/emirror-pm-view.cjs.js",
+  "module": "dist/emirror-pm-view.esm.js"
+}

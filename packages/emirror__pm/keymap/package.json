@@ -1,0 +1,4 @@
+{
+  "main": "dist/emirror-pm-keymap.cjs.js",
+  "module": "dist/emirror-pm-keymap.esm.js"
+}
