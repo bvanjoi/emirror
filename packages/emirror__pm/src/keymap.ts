@@ -1,1 +1,1 @@
-export * from "prosemirror-keymap";
+export * from 'prosemirror-keymap';

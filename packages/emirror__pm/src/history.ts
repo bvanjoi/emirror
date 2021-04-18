@@ -1,1 +1,1 @@
-export * from "prosemirror-history";
+export * from 'prosemirror-history';

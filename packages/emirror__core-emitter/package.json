@@ -1,0 +1,26 @@
+{
+  "name": "@emirror/core-emitter",
+  "version": "0.0.1",
+  "description": "The implement of event emitter of the Subscribe/Publisher Pattern.",
+  "author": "bvanjoi <610376039@qq.com>",
+  "homepage": "https://github.com/bvanjoi/emirror#readme",
+  "license": "MIT",
+  "main": "dist/emirror-core-emitter.cjs.js",
+  "module": "dist/emirror-core-emitter.esm.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvanjoi/emirror.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/bvanjoi/emirror/issues"
+  },
+  "dependencies": {
+    "@emirror/pm": "^0.0.1"
+  }
+}

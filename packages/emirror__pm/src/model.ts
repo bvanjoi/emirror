@@ -1,1 +1,1 @@
-export * from "prosemirror-model";
+export * from 'prosemirror-model';

@@ -1,0 +1,20 @@
+{
+  "name": "@emirror/core-utils",
+  "version": "0.0.1",
+  "description": "Basic data structure of emirror.",
+  "author": "bvanjoi <610376039@qq.com>",
+  "homepage": "https://github.com/bvanjoi/emirror#readme",
+  "license": "MIT",
+  "main": "dist/emirror-core-utils.cjs.js",
+  "module": "dist/emirror-core-utils.esm.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/bvanjoi/emirror/issues"
+  },
+  "dependencies": {
+    "@emirror/core-provider": "^0.0.1",
+    "@emirror/pm": "^0.0.1"
+  }
+}

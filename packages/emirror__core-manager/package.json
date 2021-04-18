@@ -1,0 +1,28 @@
+{
+  "name": "@emirror/core-manager",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "bvanjoi <610376039@qq.com>",
+  "homepage": "https://github.com/bvanjoi/emirror#readme",
+  "license": "MIT",
+  "main": "dist/emirror-core-manager.cjs.js",
+  "module": "dist/emirror-core-manager.esm.js",
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvanjoi/emirror.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/bvanjoi/emirror/issues"
+  },
+  "dependencies": {
+    "@emirror/core-provider": "^0.0.1",
+    "@emirror/core-structure": "^0.0.1",
+    "@emirror/pm": "^0.0.1"
+  }
+}

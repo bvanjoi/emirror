@@ -1,0 +1,26 @@
+{
+  "name": "@emirror/core",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "bvanjoi <610376039@qq.com>",
+  "homepage": "https://github.com/bvanjoi/emirror#readme",
+  "license": "MIT",
+  "main": "dist/emirror-core.cjs.js",
+  "module": "dist/emirror-core.esm.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvanjoi/emirror.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/bvanjoi/emirror/issues"
+  },
+  "dependencies": {
+    "@emirror/core-react": "^0.0.1"
+  }
+}
