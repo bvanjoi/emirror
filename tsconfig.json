@@ -3,6 +3,7 @@
     "sourceMap": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "module": "ESNext",
     "target": "ESNext",

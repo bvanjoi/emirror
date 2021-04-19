@@ -33,7 +33,7 @@ export class Manager {
    */
   get nodes() {
     return (this.emPlugins.filter(
-      plugin => plugin.type !== 'node'
+      plugin => plugin.type === 'node'
     ) as Node[]).reduce(
       (nodes, { name, schema }) => ({ ...nodes, [name]: schema }),
       {} as { [name: string]: NodeSpec }
@@ -45,7 +45,7 @@ export class Manager {
    */
   get marks() {
     return (this.emPlugins.filter(
-      plugin => plugin.type !== 'mark'
+      plugin => plugin.type === 'mark'
     ) as Mark[]).reduce(
       (marks, { name, schema }) => ({ ...marks, [name]: schema }),
       {} as { [name: string]: MarkSpec }

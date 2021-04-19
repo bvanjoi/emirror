@@ -43,7 +43,8 @@
   },
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "lint-staged": {
     "packages/*.{js,jsx,ts,tsx}": "eslint"

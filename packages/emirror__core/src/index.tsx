@@ -8,7 +8,7 @@ import {
 
 const EMirror = (props: EMirrorProps) => (
   <EMirrorContext.Provider value={useEmirrorContext()}>
-    <EMirrorView plugins={[]} />
+    <EMirrorView {...props} />
   </EMirrorContext.Provider>
 );
 
