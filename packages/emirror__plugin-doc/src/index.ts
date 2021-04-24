@@ -10,9 +10,4 @@ export class Doc extends Node {
       content: 'block+',
     };
   }
-
-  constructor() {
-    super();
-    return this;
-  }
 }

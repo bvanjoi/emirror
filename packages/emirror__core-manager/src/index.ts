@@ -11,9 +11,10 @@ import {
   PortalProvider,
   PluginsProvider
 } from '@emirror/core-provider';
+import { InputRule } from '@emirror/pm/inputrules';
+import { Keymap } from '@emirror/pm/commands';
 import { genReactNodeViews } from './ReactNodeView';
 import { ErrorMsg } from './constant';
-import { InputRule } from '@emirror/pm/inputrules';
 
 /**
  * Manager for emirror plugins.
@@ -103,7 +104,6 @@ export class Manager {
       .forEach(([name, nodeView]) => {
         if (nodeViews[name]) {
           console.error(ErrorMsg.REPEATED_NODEVIEW);
-          return;
         }
         nodeViews[name] = nodeView;
       });
@@ -130,6 +130,7 @@ export class Manager {
     (this.emPlugins.filter(plugin =>
       ['node', 'mark'].includes(plugin.type)
     ) as (Node | Mark)[])
+      .filter(plugin => plugin.inputRules)
       .map(plugin =>
         plugin.inputRules({
           type: schema[`${plugin.type}s`][plugin.name],
@@ -140,4 +141,46 @@ export class Manager {
         (allRules, rules) => [...allRules, ...rules],
         [] as InputRule[]
       );
+
+  /**
+   * Generate Keymap from EMPlugins
+   * @param schema The scheme generate from nodes and marks of Prosemirror
+   * @returns When keydown some keyboard, some command will exec.
+   */
+  keymaps = (schema: Schema): Keymap => {
+    const allKeymap = {};
+    // keymap of Mark and Node
+    (this.emPlugins.filter(plugin =>
+      ['node', 'mark'].includes(plugin.type)
+    ) as (Node | Mark)[])
+      .map(plugin =>
+        plugin.keymap({
+          type: schema[`${plugin.type}s`][plugin.name],
+        })
+      )
+      .forEach(obj =>
+        Object.entries(obj).forEach(([key, value]) => {
+          if (allKeymap[key]) {
+            console.error(ErrorMsg.REPEATED_KEYMAP);
+          }
+          allKeymap[key] = value;
+        })
+      );
+
+    // keymap of Extension
+    (this.emPlugins.filter(
+      plugin => plugin.type === 'extension'
+    ) as Extension[])
+      .map(plugin => plugin.keymap({}))
+      .forEach(obj =>
+        Object.entries(obj).forEach(([key, value]) => {
+          if (allKeymap[key]) {
+            console.error(ErrorMsg.REPEATED_KEYMAP);
+          }
+          allKeymap[key] = value;
+        })
+      );
+
+    return allKeymap;
+  };
 }

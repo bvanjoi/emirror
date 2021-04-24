@@ -20,7 +20,7 @@ export const findChangedNodesFromTr = (tr: Transaction) => {
     for (let i = from; i <= to + size; i++) {
       if (i <= tr.doc.content.size) {
         const topLevelNode = tr.doc.resolve(i).node(1);
-        if (topLevelNode && nodes.find(n => n === topLevelNode)) {
+        if (topLevelNode && !nodes.find(n => n === topLevelNode)) {
           nodes.push(topLevelNode);
         }
       }

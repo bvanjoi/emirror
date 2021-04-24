@@ -29,7 +29,7 @@ export type AnalyticsProps = {
 export class AnalyticsProvider {
   shouldTrack = false;
   logToConsole = false;
-  logLevel: LogLevel = 'error';
+  logLevel: LogLevel = 'warn';
   logs: {
     [namespace: string]: {
       [key: string]: {
@@ -159,6 +159,7 @@ export class AnalyticsProvider {
       throw Error(`Stopping measurement for namespace ${namespace}`);
     }
   }
+
   getName(namespace: string, method: string) {
     return `${namespace}::${method}`;
   }

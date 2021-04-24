@@ -4,9 +4,12 @@ import { Base } from './base';
 import { PluginType } from './types';
 import { ErrorMsg } from './constant';
 
+/**
+ * The integration for ProsemirrorMark.
+ */
 export class Mark extends Base {
   get type(): PluginType {
-    return 'node';
+    return 'mark';
   }
 
   /**

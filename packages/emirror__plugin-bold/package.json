@@ -1,12 +1,11 @@
 {
-  "name": "@emirror/core-provider",
+  "name": "@emirror/plugin-bold",
   "version": "0.0.1",
-  "description": "The provider for emirror",
+  "description": "The bold mark",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-core-provider.cjs.js",
-  "module": "dist/emirror-core-provider.esm.js",
+  "main": "dist/emirror-plugin-bold.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -21,8 +20,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/core-emitter": "^0.0.1",
-    "@emirror/core-performance": "^0.0.1",
-    "@emirror/pm": "^0.0.1"
+    "@emirror/core-structure": "^0.0.1",
+    "@emirror/utils": "^0.0.1"
   }
 }

@@ -1,5 +1,6 @@
 import { Node } from '@emirror/core-structure';
 import { DOMOutputSpecArray } from '@emirror/pm/model';
+import { baseKeymap } from '@emirror/pm/commands';
 
 export class Paragraph extends Node {
   get name() {
@@ -20,8 +21,5 @@ export class Paragraph extends Node {
     };
   }
 
-  constructor() {
-    super();
-    return this;
-  }
+  keymap = () => baseKeymap;
 }

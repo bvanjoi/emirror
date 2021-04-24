@@ -6,7 +6,7 @@ import {
   EMirrorView,
 } from '@emirror/core-react';
 
-const EMirror = (props: EMirrorProps) => (
+export const EMirror = (props) => (
   <EMirrorContext.Provider value={useEmirrorContext()}>
     <EMirrorView {...props} />
   </EMirrorContext.Provider>

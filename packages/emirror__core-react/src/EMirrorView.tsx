@@ -1,13 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useEmirrorContext } from './EMirrorContext';
+import styled from 'styled-components';
 import { Node, Mark, Extension } from '@emirror/core-structure';
 import { Manager } from '@emirror/core-manager';
 import { EditorView } from '@emirror/pm/view';
 import { EditorState, Transaction } from '@emirror/pm/state';
 import { Schema } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
+import { keymap } from '@emirror/pm/keymap';
 import { ErrorMsg } from './constants';
+import { useEmirrorContext } from './EMirrorContext';
 import PortalRenderer from './PortalRenderer';
+
 /**
  * The EMirror Editor props;
  */
@@ -67,8 +70,9 @@ export const EMirrorView = (props: EMirrorViewProps) => {
       return;
     }
     const view = init(viewRef.current);
-    viewProvider.init(view);
+    view.focus();
     afterInit && afterInit(view);
+    viewProvider.init(view);
 
     return () => {
       beforeDestory(viewProvider.view);
@@ -85,23 +89,36 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     const manager = new Manager(emPlugins);
     // nodes and marks of Prosemirror
     const { nodes, marks } = manager;
+
+    /** Scheme of Prosemirror */
+    const schema = new Schema({ nodes, marks });
+
     /** All plugins of Prosemirror */
     const plugins = manager.plugins(pluginsProvider);
+
     /** All nodeVies of Prosemirror */
     const nodeViews = manager.nodeAndMarkReactComponent(
       portalProvider,
       pluginsProvider
     );
+
     /** All outer reactComponent  */
     const extensionReactComponent = manager.extensionsReactComponent();
     setExtensionsReactComponent(extensionReactComponent);
-    /** Scheme of Prosemirror */
-    const schema = new Schema({ nodes, marks });
-    /** All inputRules for Prosemirror*/
+
+    /** All inputRules for Prosemirror */
     const rules = manager.inputRules(schema);
-    inputRules.length && plugins.push(inputRules({ rules }));
+    // if input rules are not empty, then push it to plugins.
+    rules.length && plugins.push(inputRules({ rules }));
+
+    /** All key map for Prosemirror */
+    const keymaps = manager.keymaps(schema);
+    // if key map are not empty, then push it to plugins.
+    Object.keys(keymaps).length && plugins.push(keymap(keymaps));
+
     /** The init state of Prosemirror */
     const state = EditorState.create({ schema, plugins });
+
     return new EditorView(ele, {
       state,
       nodeViews,
@@ -162,14 +179,25 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     analyticsProvider.perf.stop('view', 'dispatchTransaction', 1000);
   }
 
-  // TODO style-component
   return (
-    <React.Fragment>
-      <div ref={viewRef} className="emirror" spellCheck="false" />
+    <div className="emirror">
+      <EMirrorInnerView>
+        <div ref={viewRef} spellCheck="false" />
+      </EMirrorInnerView>
       {extensionsReactComponent?.map((rc, index) => (
         <div key={index}>{rc}</div>
       ))}
       <PortalRenderer />
-    </React.Fragment>
+    </div>
   );
 };
+
+const EMirrorInnerView = styled.div`
+  & .ProseMirror {
+    min-height: 140px;
+    overflow-wrap: break-word;
+    outline: none;
+    padding: 10px;
+    white-space: pre-wrap;
+  }
+`;

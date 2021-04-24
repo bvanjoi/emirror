@@ -10,7 +10,9 @@
     "@emirror/core": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-paragraph": "^0.0.1",
-    "@emirror/plugin-text": "^0.0.1"
+    "@emirror/plugin-text": "^0.0.1",
+    "@emirror/plugin-history": "^0.0.1",
+    "@emirror/plugin-bold": "^0.0.1"
   },
   "devDependencies": {
     "webpack": "^5.34.0",

@@ -11,9 +11,4 @@ export class Text extends Node {
       inline: true,
     };
   }
-
-  constructor() {
-    super();
-    return this;
-  }
 }
