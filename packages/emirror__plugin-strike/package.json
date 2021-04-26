@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/plugin-bold",
+  "name": "@emirror/plugin-strike",
   "version": "0.0.1",
-  "description": "The bold mark",
+  "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-plugin-bold.cjs.js",
+  "main": "dist/emirror-plugin-strike.cjs.js",
   "publishConfig": {
     "access": "public"
   },

@@ -4,7 +4,7 @@ import { baseKeymap } from '@emirror/pm/commands';
 
 export class Paragraph extends Node {
   get name() {
-    return 'paragraph';
+    return 'paragraph' as const;
   }
 
   get schema() {

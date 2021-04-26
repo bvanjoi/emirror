@@ -4,7 +4,7 @@ import { history, undo, redo } from '@emirror/pm/history';
 
 export class History extends Extension {
   get name() {
-    return 'history';
+    return 'history' as const;
   }
 
   plugins = () => [history()];

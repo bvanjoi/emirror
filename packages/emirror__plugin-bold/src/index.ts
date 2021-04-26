@@ -1,11 +1,11 @@
 import { Mark } from '@emirror/core-structure';
-import { MarkSpec, Schema } from '@emirror/pm/model';
+import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
 
 export class Bold extends Mark {
   get name() {
-    return 'bold';
+    return 'bold' as const;
   }
 
   get schema(): MarkSpec {
@@ -33,6 +33,6 @@ export class Bold extends Mark {
   });
 
   inputRules = ({ type }) => [
-    markInputRules(/(?:\*\*)([^*_]+)(?:\*\*)$/, type),
+    markInputRules(/(?:\*\*)([^*_]+)(?:\*\*)\x20$/, type),
   ];
 }

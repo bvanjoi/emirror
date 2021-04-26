@@ -88,7 +88,7 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   const init = (ele: HTMLDivElement) => {
     const manager = new Manager(emPlugins);
     // nodes and marks of Prosemirror
-    const { nodes, marks } = manager;
+    const { nodes, marks, names } = manager;
 
     /** Scheme of Prosemirror */
     const schema = new Schema({ nodes, marks });

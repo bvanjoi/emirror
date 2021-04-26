@@ -30,6 +30,20 @@ export class Manager {
   }
 
   /**
+   * get all names of EMirror plugins.
+   */
+  get names() {
+    return {
+      N: this.emPlugins
+        .filter(plugin => plugin.type === 'node')
+        .map(({ name }) => name),
+      M: this.emPlugins
+        .filter(plugin => plugin.type === 'mark')
+        .map(({ name }) => name),
+    };
+  }
+
+  /**
    * EMirror Node to Prosemirror Node
    */
   get nodes() {
