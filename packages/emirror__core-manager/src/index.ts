@@ -7,14 +7,12 @@ import {
 } from '@emirror/pm/model';
 import { EditorView, Decoration, NodeView } from '@emirror/pm/view';
 import { Plugin } from '@emirror/pm/state';
-import {
-  PortalProvider,
-  PluginsProvider
-} from '@emirror/core-provider';
+import { PluginsProvider } from '@emirror/core-provider';
 import { InputRule } from '@emirror/pm/inputrules';
 import { Keymap } from '@emirror/pm/commands';
-import { genReactNodeViews } from './ReactNodeView';
+import { createReactNodeViews } from './ReactNodeView';
 import { ErrorMsg } from './constant';
+import { ContextProps } from '@emirror/core-react';
 
 /**
  * Manager for emirror plugins.
@@ -85,10 +83,7 @@ export class Manager {
    * Generate React Component from node and mark
    * if the react component is not empty.
    */
-  nodeAndMarkReactComponent = (
-    portalProvider: PortalProvider,
-    pluginsProvider: PluginsProvider
-  ) => {
+  nodeAndMarkReactComponent = (ctx: ContextProps) => {
     const nodeViews = {};
     this.emPlugins
       .filter(
@@ -100,11 +95,7 @@ export class Manager {
         plugin =>
           [
             plugin.name,
-            genReactNodeViews(
-              plugin.reactComponent,
-              portalProvider,
-              pluginsProvider
-            ),
+            createReactNodeViews(plugin.reactComponent, ctx),
           ] as [
             string,
             (

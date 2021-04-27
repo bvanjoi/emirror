@@ -1,32 +1,33 @@
 import React from 'react';
 import {
   PluginsProvider,
-  PortalProvider,
   ViewProvider,
   AnalyticsProvider
 } from '@emirror/core-provider';
 
-/**
- * The React.Context for EMirror.
- */
-export const EMirrorContext = React.createContext({
+export { PluginsProvider, ViewProvider, AnalyticsProvider };
+
+export type ContextProps = {
   /**
    * The view of Prosemirror.
    */
-  viewProvider: new ViewProvider(),
+  viewProvider: ViewProvider;
   /**
    * All plugins of EMirror.
    */
-  pluginsProvider: new PluginsProvider(),
-  /**
-   * All reactPortal of EMirror.
-   */
-  portalProvider: new PortalProvider(),
+  pluginsProvider: PluginsProvider;
   /**
    * Analytics action.
    */
-  analyticsProvider: new AnalyticsProvider(),
-});
+  analyticsProvider: AnalyticsProvider;
+};
+
+/**
+ * The React.Context for EMirror.
+ */
+export const EMirrorContext = React.createContext<ContextProps | null>(
+  null
+);
 
 /**
  *

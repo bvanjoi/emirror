@@ -9,7 +9,7 @@ import { Bold } from '@emirror/plugin-bold';
 import { Italic } from '@emirror/plugin-italic';
 import { Strike } from '@emirror/plugin-strike';
 import { Underline } from '@emirror/plugin-underline';
-import { Code } from '@emirror/plugin-code';
+import { CodeReact as Code } from '@emirror/plugin-code';
 const App = () => (
   <div>
     test

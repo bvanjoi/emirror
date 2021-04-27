@@ -9,7 +9,6 @@ import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';
 import { ErrorMsg } from './constants';
 import { useEmirrorContext } from './EMirrorContext';
-import PortalRenderer from './PortalRenderer';
 
 /**
  * The EMirror Editor props;
@@ -58,12 +57,12 @@ export const EMirrorView = (props: EMirrorViewProps) => {
    */
   const viewRef = useRef<HTMLDivElement>(null);
 
+  const emirrorContext = useEmirrorContext();
   const {
     viewProvider,
     pluginsProvider,
-    portalProvider,
     analyticsProvider,
-  } = useEmirrorContext();
+  } = emirrorContext;
 
   useEffect(() => {
     if (!viewRef.current) {
@@ -98,8 +97,7 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 
     /** All nodeVies of Prosemirror */
     const nodeViews = manager.nodeAndMarkReactComponent(
-      portalProvider,
-      pluginsProvider
+      emirrorContext
     );
 
     /** All outer reactComponent  */
@@ -150,11 +148,6 @@ export const EMirrorView = (props: EMirrorViewProps) => {
       200
     );
 
-    if (oldState === newState) {
-      portalProvider.flush();
-      return;
-    }
-
     analyticsProvider.perf.warn(
       'view',
       'dispatchTransaction updateState'
@@ -163,14 +156,6 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     analyticsProvider.perf.stop(
       'view',
       'dispatchTransaction updateState',
-      100
-    );
-
-    analyticsProvider.perf.debug('view', 'dispatchTransaction flush');
-    portalProvider.flush();
-    analyticsProvider.perf.stop(
-      'view',
-      'dispatchTransaction flush',
       100
     );
 
@@ -187,7 +172,6 @@ export const EMirrorView = (props: EMirrorViewProps) => {
       {extensionsReactComponent?.map((rc, index) => (
         <div key={index}>{rc}</div>
       ))}
-      <PortalRenderer />
     </div>
   );
 };
