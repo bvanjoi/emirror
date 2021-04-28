@@ -2,10 +2,16 @@ import React from 'react';
 import {
   PluginsProvider,
   ViewProvider,
-  AnalyticsProvider
+  AnalyticsProvider,
+  RenderProvider
 } from '@emirror/core-provider';
 
-export { PluginsProvider, ViewProvider, AnalyticsProvider };
+export {
+  PluginsProvider,
+  ViewProvider,
+  AnalyticsProvider,
+  RenderProvider
+};
 
 export type ContextProps = {
   /**
@@ -20,6 +26,10 @@ export type ContextProps = {
    * Analytics action.
    */
   analyticsProvider: AnalyticsProvider;
+  /**
+   * Render NodeView.
+   */
+  renderProvider: RenderProvider;
 };
 
 /**

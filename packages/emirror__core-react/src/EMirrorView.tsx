@@ -184,4 +184,8 @@ const EMirrorInnerView = styled.div`
     padding: 10px;
     white-space: pre-wrap;
   }
+
+  & .emirror-paragraph {
+    letter-spacing: 1px;
+  }
 `;

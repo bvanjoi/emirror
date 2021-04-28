@@ -97,7 +97,6 @@ class ReactNodeViews implements NodeView {
     if (this.contentDOM) {
       this.dom.appendChild(this.contentDOM);
     }
-
     this.render(this.dom);
 
     return this;
@@ -110,7 +109,7 @@ class ReactNodeViews implements NodeView {
 
       useEffect(() => {
         const componentDOM = componentRef.current as HTMLElement;
-        if (componentDOM != null && this.contentDOM != null) {
+        if (componentDOM && this.contentDOM) {
           if (!this.node.isLeaf) {
             componentDOM.firstChild?.appendChild(this.contentDOM);
           }
@@ -149,7 +148,6 @@ class ReactNodeViews implements NodeView {
         </MarkView>
       );
     };
-
     ReactDOM.render(<Component />, container);
   }
 
@@ -239,8 +237,8 @@ class ReactNodeViews implements NodeView {
     view: EditorView,
     getPos: (() => number) | boolean,
     decorations: Decoration[]
-  ) =>
-    new ReactNodeViews(
+  ) => {
+    const nodeView = new ReactNodeViews(
       node,
       view,
       getPos,
@@ -248,6 +246,9 @@ class ReactNodeViews implements NodeView {
       ctx,
       reactComponent
     ).init();
+    ctx.renderProvider.flush();
+    return nodeView;
+  };
 }
 
 export const createReactNodeViews = ReactNodeViews.fromReactComponent;
