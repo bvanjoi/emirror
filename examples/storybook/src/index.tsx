@@ -9,7 +9,9 @@ import { Bold } from '@emirror/plugin-bold';
 import { Italic } from '@emirror/plugin-italic';
 import { Strike } from '@emirror/plugin-strike';
 import { Underline } from '@emirror/plugin-underline';
-import { CodeReact as Code } from '@emirror/plugin-code';
+import { Code } from '@emirror/plugin-code';
+// import { Code as CodeReact } from '@emirror/plugin-react-code';
+
 const App = () => (
   <div>
     test
@@ -24,6 +26,7 @@ const App = () => (
         new Strike(),
         new Underline(),
         new Code(),
+        // new CodeReact(),
       ]}
     />
   </div>

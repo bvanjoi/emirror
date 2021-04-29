@@ -183,9 +183,6 @@ const EMirrorInnerView = styled.div`
     outline: none;
     padding: 10px;
     white-space: pre-wrap;
-  }
-
-  & .emirror-paragraph {
-    letter-spacing: 1px;
+    font-variant-ligatures: none;
   }
 `;
