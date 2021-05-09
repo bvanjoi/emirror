@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import cls from 'classnames';
 import { Node, Mark, Extension } from '@emirror/core-structure';
 import { Manager } from '@emirror/core-manager';
 import { EditorView } from '@emirror/pm/view';
-import { EditorState, Transaction } from '@emirror/pm/state';
-import { Schema } from '@emirror/pm/model';
+import { EditorState, TextSelection, Transaction } from '@emirror/pm/state';
+import { Schema, DOMParser } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';
 import { ErrorMsg } from './constants';
@@ -14,6 +15,10 @@ import { useEmirrorContext } from './EMirrorContext';
  * The EMirror Editor props;
  */
 export type EMirrorProps = {
+  /**
+   * The class of Emirror.
+   */
+  className?: string;
   /**
    *  The plugins for emirror.
    */
@@ -34,43 +39,56 @@ export type EMirrorProps = {
    * The action when editor destory.
    */
   beforeDestory?: (view: EditorView) => void;
+  /**
+   * the init content of this editor.
+   */
+  children?: React.ReactNode;
 };
 
 type EMirrorViewProps = EMirrorProps;
 
 export const EMirrorView = (props: EMirrorViewProps) => {
   const {
+    className,
     plugins: emPlugins = [],
     afterInit,
     afterUpdate,
     beforeDestory,
     showAnalytics = false,
+    children,
   } = props;
 
-  const [
-    extensionsReactComponent,
-    setExtensionsReactComponent,
-  ] = useState([]);
+  const [extensionsReactComponent, setExtensionsReactComponent] = useState([]);
 
   /**
    * The ref of ProsemirrorView.
    */
   const viewRef = useRef<HTMLDivElement>(null);
 
+  /**
+   * The init content ref of ReactNode
+   */
+  const contentRef = useRef<HTMLDivElement>(null);
+
   const emirrorContext = useEmirrorContext();
-  const {
-    viewProvider,
-    pluginsProvider,
-    analyticsProvider,
-  } = emirrorContext;
+  const { viewProvider, pluginsProvider, analyticsProvider } = emirrorContext;
 
   useEffect(() => {
     if (!viewRef.current) {
       return;
     }
     const view = init(viewRef.current);
+
+    // set Selection to the doc end.
+    view.dispatch(
+      view.state.tr.setSelection(
+        TextSelection.create(view.state.doc, view.state.doc.nodeSize - 2),
+      ),
+    );
     view.focus();
+
     afterInit && afterInit(view);
+
     viewProvider.init(view);
 
     return () => {
@@ -96,9 +114,7 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     const plugins = manager.plugins(pluginsProvider);
 
     /** All nodeVies of Prosemirror */
-    const nodeViews = manager.nodeAndMarkReactComponent(
-      emirrorContext
-    );
+    const nodeViews = manager.nodeAndMarkReactComponent(emirrorContext);
 
     /** All outer reactComponent  */
     const extensionReactComponent = manager.extensionsReactComponent();
@@ -114,8 +130,11 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     // if key map are not empty, then push it to plugins.
     Object.keys(keymaps).length && plugins.push(keymap(keymaps));
 
+    /** init doc of editor */
+    const doc = DOMParser.fromSchema(schema).parse(contentRef.current);
+
     /** The init state of Prosemirror */
-    const state = EditorState.create({ schema, plugins });
+    const state = EditorState.create({ schema, plugins, doc });
 
     return new EditorView(ele, {
       state,
@@ -134,30 +153,20 @@ export const EMirrorView = (props: EMirrorViewProps) => {
       console.error(ErrorMsg.INVALID_VIEW);
       return;
     }
-    analyticsProvider.perf.warn('view', 'dispatchTransaction');
-    const oldState = view.state;
-    analyticsProvider.perf.info(
-      'view',
-      'dispatchTransaction state::apply'
-    );
 
+    analyticsProvider.perf.warn('view', 'dispatchTransaction');
+
+    analyticsProvider.perf.info('view', 'dispatchTransaction state::apply');
     const newState = view.state.apply(tr);
     analyticsProvider.perf.stop(
       'view',
       'dispatchTransaction state::apply',
-      200
+      200,
     );
 
-    analyticsProvider.perf.warn(
-      'view',
-      'dispatchTransaction updateState'
-    );
+    analyticsProvider.perf.warn('view', 'dispatchTransaction updateState');
     view.updateState(newState);
-    analyticsProvider.perf.stop(
-      'view',
-      'dispatchTransaction updateState',
-      100
-    );
+    analyticsProvider.perf.stop('view', 'dispatchTransaction updateState', 100);
 
     afterUpdate && afterUpdate(view);
 
@@ -165,9 +174,13 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   }
 
   return (
-    <div className="emirror">
+    <div className={cls('emirror', className)}>
       <EMirrorInnerView>
-        <div ref={viewRef} spellCheck="false" />
+        <div ref={viewRef} spellCheck="false">
+          <div ref={contentRef} style={{ display: 'none' }}>
+            {children}
+          </div>
+        </div>
       </EMirrorInnerView>
       {extensionsReactComponent?.map((rc, index) => (
         <div key={index}>{rc}</div>

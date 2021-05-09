@@ -11,9 +11,5 @@ module.exports = {
     '@babel/preset-react',
     '@babel/preset-typescript',
   ],
-  plugins: [
-    '@babel/plugin-transform-modules-commonjs',
-    '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-transform-runtime',
-  ],
+  plugins: ['@babel/plugin-proposal-class-properties'],
 };

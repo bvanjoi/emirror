@@ -1,6 +1,5 @@
 import { Node } from '@emirror/core-structure';
-
-export class Doc extends Node {
+class Doc extends Node {
   get name() {
     return 'doc' as const;
   }
@@ -11,3 +10,5 @@ export class Doc extends Node {
     };
   }
 }
+
+export default Doc;

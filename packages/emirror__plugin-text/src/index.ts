@@ -1,6 +1,6 @@
 import { Node } from '@emirror/core-structure';
 
-export class Text extends Node {
+class Text extends Node {
   get name() {
     return 'text' as const;
   }
@@ -12,3 +12,5 @@ export class Text extends Node {
     };
   }
 }
+
+export default Text;

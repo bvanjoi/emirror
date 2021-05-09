@@ -2,7 +2,7 @@ import { Extension } from '@emirror/core-structure';
 import { isMac } from '@emirror/utils';
 import { history, undo, redo } from '@emirror/pm/history';
 
-export class History extends Extension {
+class History extends Extension {
   get name() {
     return 'history' as const;
   }
@@ -19,3 +19,5 @@ export class History extends Extension {
     return binding;
   };
 }
+
+export default History;

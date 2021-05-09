@@ -8,7 +8,7 @@
   "main": "dist/emirror-core-manager.cjs.js",
   "module": "dist/emirror-core-manager.esm.js",
   "publishConfig": {
-    "registry": "https://registry.npm.taobao.org/"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,10 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
+    "@babel/runtime": "^7.14.0",
     "@emirror/core-provider": "^0.0.1",
-    "@emirror/core-structure": "^0.0.1",
     "@emirror/core-react": "^0.0.1",
+    "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1"
   }
 }

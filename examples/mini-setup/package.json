@@ -1,0 +1,20 @@
+{
+  "name": "@emirror/mini-setup",
+  "version": "0.0.1",
+  "main": "dist/emirror-mini-setup.cjs.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.14.0",
+    "@emirror/core": "^0.0.1",
+    "@emirror/plugin-bold": "^0.0.1",
+    "@emirror/plugin-code": "^0.0.1",
+    "@emirror/plugin-doc": "^0.0.1",
+    "@emirror/plugin-history": "^0.0.1",
+    "@emirror/plugin-italic": "^0.0.1",
+    "@emirror/plugin-paragraph": "^0.0.1",
+    "@emirror/plugin-react-code": "^0.0.1",
+    "@emirror/plugin-strike": "^0.0.1",
+    "@emirror/plugin-text": "^0.0.1",
+    "@emirror/plugin-underline": "^0.0.1"
+  }
+}

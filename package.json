@@ -4,7 +4,10 @@
   "scripts": {
     "fix": "preconstruct fix",
     "postinstall": "preconstruct dev",
-    "storybook": "lerna run --scope @emirror/storybook start"
+    "dev": "lerna run --scope=website dev",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "deploy": "lerna run --scope=website deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
@@ -35,7 +38,7 @@
     "lerna": "^4.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "typescript": "4.2.4"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -44,14 +47,27 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "examples/*"
+    "examples/*",
+    "website"
   ],
   "lint-staged": {
-    "packages/*.{js,jsx,ts,tsx}": "eslint"
+    "./packages/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ],
+    "./examples/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ],
+    "./website/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
   },
   "preconstruct": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "examples/*"
     ]
   }
 }

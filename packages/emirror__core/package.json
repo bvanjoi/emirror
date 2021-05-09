@@ -21,6 +21,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
+    "@babel/runtime": "^7.14.0",
     "@emirror/core-react": "^0.0.1"
   }
 }

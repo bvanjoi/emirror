@@ -15,5 +15,5 @@ module.exports = {
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-transform-runtime',
   ],
-  babelrcRoots: ['.', 'packages/@*/*', 'packages/*', 'example/*'],
+  babelrcRoots: ['.', 'packages/@*/*', 'packages/*'],
 };
