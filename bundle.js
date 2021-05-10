@@ -35924,10 +35924,10 @@ var App = function App() {
     setPathname(location === null || location === void 0 ? void 0 : location.pathname);
   }, [location]);
   var routeComponents = [{
-    path: 'mini-setup',
+    path: 'emirror/mini-setup',
     component: _pages__WEBPACK_IMPORTED_MODULE_3__.MiniEMirror
   }, {
-    path: 'default',
+    path: 'emirror/default',
     component: _pages__WEBPACK_IMPORTED_MODULE_3__.DefaultEMirror
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AppView, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.Nav, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.Introduction, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.SubNavigation, {
@@ -36246,7 +36246,7 @@ var Routes = function Routes(props) {
       component: c.component
     });
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Redirect, {
-    to: "/mini-setup"
+    to: "/emirror/mini-setup"
   }));
 };
 
@@ -36355,9 +36355,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, {
-  basename: 'emirror'
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('root'));
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('root'));
 })();
 
 /******/ })()
