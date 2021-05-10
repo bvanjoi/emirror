@@ -1,6 +1,75 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "../examples/default/dist/emirror-default.cjs.js":
+/*!*******************************************************!*\
+  !*** ../examples/default/dist/emirror-default.cjs.js ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.tsx */ "../examples/default/src/index.tsx");
+unregister();
+
+/***/ }),
+
+/***/ "../examples/default/src/index.tsx":
+/*!*****************************************!*\
+  !*** ../examples/default/src/index.tsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _emirror_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/core */ "../packages/emirror__core/src/index.tsx");
+/* harmony import */ var _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-doc */ "../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js");
+/* harmony import */ var _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/plugin-paragraph */ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js");
+/* harmony import */ var _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emirror/plugin-text */ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js");
+/* harmony import */ var _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emirror/plugin-history */ "../packages/emirror__plugin-history/dist/emirror-plugin-history.cjs.js");
+/* harmony import */ var _emirror_plugin_bold__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emirror/plugin-bold */ "../packages/emirror__plugin-bold/dist/emirror-plugin-bold.cjs.js");
+/* harmony import */ var _emirror_plugin_code__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emirror/plugin-code */ "../packages/emirror__plugin-code/dist/emirror-plugin-code.cjs.js");
+/* harmony import */ var _emirror_plugin_italic__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emirror/plugin-italic */ "../packages/emirror__plugin-italic/dist/emirror-plugin-italic.cjs.js");
+/* harmony import */ var _emirror_plugin_strike__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emirror/plugin-strike */ "../packages/emirror__plugin-strike/dist/emirror-plugin-strike.cjs.js");
+/* harmony import */ var _emirror_plugin_underline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @emirror/plugin-underline */ "../packages/emirror__plugin-underline/dist/emirror-plugin-underline.cjs.js");
+
+
+
+
+
+
+
+
+
+
+
+
+var DefaultEMirror = function DefaultEMirror() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
+    plugins: [new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(), new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_bold__WEBPACK_IMPORTED_MODULE_6__.default(), new _emirror_plugin_code__WEBPACK_IMPORTED_MODULE_7__.default(), new _emirror_plugin_italic__WEBPACK_IMPORTED_MODULE_8__.default(), new _emirror_plugin_strike__WEBPACK_IMPORTED_MODULE_9__.default(), new _emirror_plugin_underline__WEBPACK_IMPORTED_MODULE_10__.default()]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This is the default setup of EMirror."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "It not only contains the baisc features of MiniEMirror, It also contians that:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "1. You can input ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "bold font"), " by ctrl + b;"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "2. You can input ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("u", null, "underline font"), " font by ctrl + u."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "3. And It also contians ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "italic"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("code", null, "code"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("s", null, "strike"), "..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Also, It support relative Markdown shortcuts."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "More features is under development."));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DefaultEMirror);
+
+/***/ }),
+
 /***/ "../examples/mini-setup/dist/emirror-mini-setup.cjs.js":
 /*!*************************************************************!*\
   !*** ../examples/mini-setup/dist/emirror-mini-setup.cjs.js ***!
@@ -34320,6 +34389,270 @@ var EMirror = function EMirror(props) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-bold/dist/emirror-plugin-bold.cjs.js":
+/*!************************************************************************!*\
+  !*** ../packages/emirror__plugin-bold/dist/emirror-plugin-bold.cjs.js ***!
+  \************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-bold/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-bold/src/index.ts":
+/*!*****************************************************!*\
+  !*** ../packages/emirror__plugin-bold/src/index.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var Bold = /*#__PURE__*/function (_Mark) {
+  _inherits(Bold, _Mark);
+
+  var _super = _createSuper(Bold);
+
+  function Bold() {
+    var _this;
+
+    _classCallCheck(this, Bold);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Mod-b': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type),
+        'Mod-B': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type)
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_utils__WEBPACK_IMPORTED_MODULE_2__.markInputRules)(/(?:\*\*)([^*_]+)(?:\*\*)\x20$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(Bold, [{
+    key: "name",
+    get: function get() {
+      return 'bold';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        parseDOM: [{
+          tag: 'strong'
+        }, {
+          tag: 'b',
+          getAttrs: function getAttrs(node) {
+            return node.style.fontWeight !== 'normal' && null;
+          }
+        }, {
+          tag: 'font-weight',
+          getAttrs: function getAttrs(value) {
+            return /^(bolder)?|[5-9]\d{2,}$/.test(value) && null;
+          }
+        }],
+        toDOM: function toDOM() {
+          return ['strong', {
+            "class": 'emirror-bold'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Bold;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Bold);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-code/dist/emirror-plugin-code.cjs.js":
+/*!************************************************************************!*\
+  !*** ../packages/emirror__plugin-code/dist/emirror-plugin-code.cjs.js ***!
+  \************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-code/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-code/src/index.ts":
+/*!*****************************************************!*\
+  !*** ../packages/emirror__plugin-code/src/index.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var Code = /*#__PURE__*/function (_Mark) {
+  _inherits(Code, _Mark);
+
+  var _super = _createSuper(Code);
+
+  function Code() {
+    var _this;
+
+    _classCallCheck(this, Code);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Mod-Ctrl-c': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type),
+        'Mod-Ctrl-C': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type)
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_utils__WEBPACK_IMPORTED_MODULE_2__.markInputRules)(/(?:`)([^*_]+)(?:`)\x20$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(Code, [{
+    key: "name",
+    get: function get() {
+      return 'code';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        parseDOM: [{
+          tag: 'code'
+        }],
+        toDOM: function toDOM() {
+          return ['code', {
+            "class": 'emirror-code'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Code;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Code);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js":
 /*!**********************************************************************!*\
   !*** ../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js ***!
@@ -34529,6 +34862,137 @@ var History = /*#__PURE__*/function (_Extension) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-italic/dist/emirror-plugin-italic.cjs.js":
+/*!****************************************************************************!*\
+  !*** ../packages/emirror__plugin-italic/dist/emirror-plugin-italic.cjs.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-italic/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-italic/src/index.ts":
+/*!*******************************************************!*\
+  !*** ../packages/emirror__plugin-italic/src/index.ts ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var Italic = /*#__PURE__*/function (_Mark) {
+  _inherits(Italic, _Mark);
+
+  var _super = _createSuper(Italic);
+
+  function Italic() {
+    var _this;
+
+    _classCallCheck(this, Italic);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Mod-i': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type),
+        'Mod-I': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type)
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_utils__WEBPACK_IMPORTED_MODULE_2__.markInputRules)(/(?:\*)([^*_]+)(?:\*)\x20$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(Italic, [{
+    key: "name",
+    get: function get() {
+      return 'italic';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        parseDOM: [{
+          tag: 'em'
+        }, {
+          tag: 'i'
+        }, {
+          style: 'font-style=italic'
+        }],
+        toDOM: function toDOM() {
+          return ['em', {
+            "class": 'emirror-italic'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Italic;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Italic);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js":
 /*!**********************************************************************************!*\
   !*** ../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js ***!
@@ -34647,6 +35111,140 @@ var Paragraph = /*#__PURE__*/function (_Node) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-strike/dist/emirror-plugin-strike.cjs.js":
+/*!****************************************************************************!*\
+  !*** ../packages/emirror__plugin-strike/dist/emirror-plugin-strike.cjs.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-strike/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-strike/src/index.ts":
+/*!*******************************************************!*\
+  !*** ../packages/emirror__plugin-strike/src/index.ts ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var Strike = /*#__PURE__*/function (_Mark) {
+  _inherits(Strike, _Mark);
+
+  var _super = _createSuper(Strike);
+
+  function Strike() {
+    var _this;
+
+    _classCallCheck(this, Strike);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Mod-Shift-x': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type),
+        'Mod-Shift-X': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type)
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_utils__WEBPACK_IMPORTED_MODULE_2__.markInputRules)(/(?:~~)([^*_]+)(?:~~)\x20$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(Strike, [{
+    key: "name",
+    get: function get() {
+      return 'strike';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        parseDOM: [{
+          tag: 's'
+        }, {
+          tag: 'del'
+        }, {
+          tag: 'text-decoration',
+          getAttrs: function getAttrs(n) {
+            return n === 'line-through' ? {} : false;
+          }
+        }],
+        toDOM: function toDOM() {
+          return ['s', {
+            "class": 'emirror-strike'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Strike;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Strike);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js":
 /*!************************************************************************!*\
   !*** ../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js ***!
@@ -34738,6 +35336,138 @@ var Text = /*#__PURE__*/function (_Node) {
 }(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Text);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-underline/dist/emirror-plugin-underline.cjs.js":
+/*!**********************************************************************************!*\
+  !*** ../packages/emirror__plugin-underline/dist/emirror-plugin-underline.cjs.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-underline/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-underline/src/index.ts":
+/*!**********************************************************!*\
+  !*** ../packages/emirror__plugin-underline/src/index.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var Underline = /*#__PURE__*/function (_Mark) {
+  _inherits(Underline, _Mark);
+
+  var _super = _createSuper(Underline);
+
+  function Underline() {
+    var _this;
+
+    _classCallCheck(this, Underline);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Mod-u': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type),
+        'Mod-U': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.toggleMark)(type)
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_utils__WEBPACK_IMPORTED_MODULE_2__.markInputRules)(/(?:~)([^*_]+)(?:~)\x20$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(Underline, [{
+    key: "name",
+    get: function get() {
+      return 'underline';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        parseDOM: [{
+          tag: 'u'
+        }, {
+          tag: 'text-decoration',
+          getAttrs: function getAttrs(n) {
+            return n === 'underline' ? {} : false;
+          }
+        }],
+        toDOM: function toDOM() {
+          return ['u', {
+            "class": 'emirror-underline'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Underline;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Underline);
 
 /***/ }),
 
@@ -35175,12 +35905,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var AppView = styled_components__WEBPACK_IMPORTED_MODULE_4__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  * {\n    box-sizing: border-box;\n  }\n\n  padding: 0 32px;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n\n  .emirror {\n    border: 1px solid #efefef;\n    border-radius: 20px;\n    margin-bottom: 1em;\n  }\n\n  @media screen and (max-width: 800px) {\n    .emirror {\n      width: calc(100% - 8px);\n    }\n  }\n  @media screen and (min-width: 800px) {\n    .emirror {\n      width: 760px;\n    }\n  }\n"])));
+var AppView = styled_components__WEBPACK_IMPORTED_MODULE_4__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  * {\n    box-sizing: border-box;\n  }\n\n  width: 100%;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n\n  .emirror {\n    border: 1px solid black;\n    border-radius: 20px;\n    margin-bottom: 1em;\n  }\n\n  @media screen and (max-width: 800px) {\n    .emirror {\n      max-width: calc(100% - 8px);\n    }\n  }\n  @media screen and (min-width: 800px) {\n    .emirror {\n      width: 760px;\n    }\n  }\n"])));
 /**
  * the prefix point examples.
  */
 
-var prefix = 'https://github.com/bvanjoi/emirror/examples';
+var prefix = 'https://github.com/bvanjoi/emirror/tree/main/examples';
 
 var App = function App() {
   var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useLocation)();
@@ -35195,7 +35925,10 @@ var App = function App() {
   }, [location]);
   var routeComponents = [{
     path: 'mini-setup',
-    component: _pages__WEBPACK_IMPORTED_MODULE_3__.MiniEmirror
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.MiniEMirror
+  }, {
+    path: 'default',
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.DefaultEMirror
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AppView, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.Nav, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.Introduction, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.SubNavigation, {
     pathname: pathname,
@@ -35304,7 +36037,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var NavStyled = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  width: 100%;\n  height: 72px;\n"])));
+var NavStyled = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  padding: 0 32px;\n  width: 100%;\n  height: 72px;\n"])));
 
 var Navigation = function Navigation() {
   /**
@@ -35388,15 +36121,16 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var WrappedLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__.default)(_basic_components_link__WEBPACK_IMPORTED_MODULE_2__.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  &.selected {\n    text-decoration: underline;\n  }\n"])));
-var SubNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  margin-bottom: 10px;\n\n  display: flex;\n  justify-content: flex-start;\n"])));
+var WrappedLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__.default)(_basic_components_link__WEBPACK_IMPORTED_MODULE_2__.default)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  &.selected {\n    border-bottom: 1px solid black;\n  }\n"])));
+var SubNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  * {\n    margin: 0 8px;\n  }\n\n  margin-bottom: 10px;\n\n  display: flex;\n  justify-content: flex-start;\n"])));
 
 var SubNavigation = function SubNavigation(props) {
   var menus = props.menus,
       pathname = props.pathname;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SubNavWrapper, null, menus.map(function (menu) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(WrappedLink, {
-      key: pathname,
+      key: menu,
+      href: "/".concat(menu),
       className: classnames__WEBPACK_IMPORTED_MODULE_1___default()({
         selected: pathname === "/".concat(menu)
       })
@@ -35434,6 +36168,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/pages/defaultEditor/index.tsx":
+/*!*******************************************!*\
+  !*** ./src/pages/defaultEditor/index.tsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_default__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _emirror_default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/default */ "../examples/default/dist/emirror-default.cjs.js");
+
+
+/***/ }),
+
 /***/ "./src/pages/index.ts":
 /*!****************************!*\
   !*** ./src/pages/index.ts ***!
@@ -35443,9 +36193,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MiniEmirror": () => (/* reexport safe */ _miniEditor__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */   "MiniEMirror": () => (/* reexport safe */ _miniEditor__WEBPACK_IMPORTED_MODULE_0__.default),
+/* harmony export */   "DefaultEMirror": () => (/* reexport safe */ _defaultEditor__WEBPACK_IMPORTED_MODULE_1__.default)
 /* harmony export */ });
 /* harmony import */ var _miniEditor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./miniEditor */ "./src/pages/miniEditor/index.tsx");
+/* harmony import */ var _defaultEditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defaultEditor */ "./src/pages/defaultEditor/index.tsx");
+
 
 
 
@@ -35460,18 +36213,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_mini_setup__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var _emirror_mini_setup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/mini-setup */ "../examples/mini-setup/dist/emirror-mini-setup.cjs.js");
+/* harmony import */ var _emirror_mini_setup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/mini-setup */ "../examples/mini-setup/dist/emirror-mini-setup.cjs.js");
 
-
-
-var MiniEditor = function MiniEditor() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_mini_setup__WEBPACK_IMPORTED_MODULE_1__.default, null));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MiniEditor);
 
 /***/ }),
 
@@ -35610,7 +36355,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('root'));
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, {
+  basename: 'emirror'
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('root'));
 })();
 
 /******/ })()
