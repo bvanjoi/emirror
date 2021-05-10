@@ -3,7 +3,7 @@ import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
 
-export class Underline extends Mark {
+class Underline extends Mark {
   get name() {
     return 'underline' as const;
   }
@@ -26,7 +26,7 @@ export class Underline extends Mark {
     'Mod-U': toggleMark(type),
   });
 
-  inputRules = ({ type }) => [
-    markInputRules(/(?:~)([^*_]+)(?:~)\x20$/, type),
-  ];
+  inputRules = ({ type }) => [markInputRules(/(?:~)([^*_]+)(?:~)\x20$/, type)];
 }
+
+export default Underline;

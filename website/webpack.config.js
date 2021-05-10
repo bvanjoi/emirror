@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devWebpackConfig = {
   devtool: 'source-map',
@@ -30,6 +31,11 @@ const devWebpackConfig = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+  ],
 };
 
 module.exports = devWebpackConfig;

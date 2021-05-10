@@ -3,7 +3,7 @@ import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
 
-export class Code extends Mark {
+class Code extends Mark {
   get name() {
     return 'code' as const;
   }
@@ -20,7 +20,7 @@ export class Code extends Mark {
     'Mod-Ctrl-C': toggleMark(type),
   });
 
-  inputRules = ({ type }) => [
-    markInputRules(/(?:`)([^*_]+)(?:`)\x20$/, type),
-  ];
+  inputRules = ({ type }) => [markInputRules(/(?:`)([^*_]+)(?:`)\x20$/, type)];
 }
+
+export default Code;

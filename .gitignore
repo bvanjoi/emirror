@@ -1,6 +1,6 @@
 .history
 .DS_Store
-node_modules
+node_modules/
 dist/
 coverage/
 
@@ -9,7 +9,7 @@ coverage/
 
 # Editor directories and files
 .idea
-# .vscode
+.vscode
 *.suo
 *.ntvs*
 *.njsproj

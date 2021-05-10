@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import Routes from './routes';
 import { Nav, Introduction, ShowCodeLink, SubNavigation } from './components';
-import { MiniEmirror } from './pages';
+import { MiniEMirror, DefaultEMirror } from './pages';
 
 const AppView = styled.div`
   * {
     box-sizing: border-box;
   }
 
-  padding: 0 32px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -18,14 +18,14 @@ const AppView = styled.div`
   justify-content: center;
 
   .emirror {
-    border: 1px solid #efefef;
+    border: 1px solid black;
     border-radius: 20px;
     margin-bottom: 1em;
   }
 
   @media screen and (max-width: 800px) {
     .emirror {
-      width: calc(100% - 8px);
+      max-width: calc(100% - 8px);
     }
   }
   @media screen and (min-width: 800px) {
@@ -38,7 +38,7 @@ const AppView = styled.div`
 /**
  * the prefix point examples.
  */
-const prefix = 'https://github.com/bvanjoi/emirror/examples';
+const prefix = 'https://github.com/bvanjoi/emirror/tree/main/examples';
 
 const App = () => {
   const location = useLocation();
@@ -50,8 +50,12 @@ const App = () => {
 
   const routeComponents = [
     {
-      path: 'mini-setup',
-      component: MiniEmirror,
+      path: 'emirror/mini-setup',
+      component: MiniEMirror,
+    },
+    {
+      path: 'emirror/default',
+      component: DefaultEMirror,
     },
   ];
 

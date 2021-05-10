@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const WrappedLink = styled(Link)`
   &.selected {
-    text-decoration: underline;
+    border-bottom: 1px solid black;
   }
 `;
 
@@ -22,6 +22,10 @@ type Props = {
 };
 
 const SubNavWrapper = styled.div`
+  * {
+    margin: 0 8px;
+  }
+
   margin-bottom: 10px;
 
   display: flex;
@@ -34,7 +38,8 @@ const SubNavigation = (props: Props) => {
     <SubNavWrapper>
       {menus.map((menu) => (
         <WrappedLink
-          key={pathname}
+          key={menu}
+          href={`/${menu}`}
           className={cls({ selected: pathname === `/${menu}` })}
         >
           {menu}

@@ -3,7 +3,7 @@ import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
 
-export class Strike extends Mark {
+class Strike extends Mark {
   get name() {
     return 'strike' as const;
   }
@@ -31,3 +31,5 @@ export class Strike extends Mark {
     markInputRules(/(?:~~)([^*_]+)(?:~~)\x20$/, type),
   ];
 }
+
+export default Strike;

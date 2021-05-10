@@ -3,18 +3,14 @@ import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
 
-export class Italic extends Mark {
+class Italic extends Mark {
   get name() {
     return 'italic' as const;
   }
 
   get schema(): MarkSpec {
     return {
-      parseDOM: [
-        { tag: 'em' },
-        { tag: 'i' },
-        { style: 'font-style=italic' },
-      ],
+      parseDOM: [{ tag: 'em' }, { tag: 'i' }, { style: 'font-style=italic' }],
       toDOM: () => ['em', { class: 'emirror-italic' }, 0],
     };
   }
@@ -28,3 +24,5 @@ export class Italic extends Mark {
     markInputRules(/(?:\*)([^*_]+)(?:\*)\x20$/, type),
   ];
 }
+
+export default Italic;

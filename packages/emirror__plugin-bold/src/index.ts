@@ -3,7 +3,7 @@ import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
 
-export class Bold extends Mark {
+class Bold extends Mark {
   get name() {
     return 'bold' as const;
   }
@@ -36,3 +36,5 @@ export class Bold extends Mark {
     markInputRules(/(?:\*\*)([^*_]+)(?:\*\*)\x20$/, type),
   ];
 }
+
+export default Bold;

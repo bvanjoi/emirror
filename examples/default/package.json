@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/mini-setup",
+  "name": "@emirror/default",
   "version": "0.0.1",
-  "license": "MIT",
   "description": "> TODO: description",
-  "homepage": "https://github.com/bvanjoi/emirror#readme",
   "author": "bvanjoi <610376039@qq.com>",
-  "main": "dist/emirror-mini-setup.cjs.js",
+  "homepage": "https://github.com/bvanjoi/emirror#readme",
+  "license": "MIT",
+  "main": "dist/emirror-default.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -22,9 +22,14 @@
   "dependencies": {
     "@babel/runtime": "^7.14.0",
     "@emirror/core": "^0.0.1",
+    "@emirror/plugin-bold": "^0.0.1",
+    "@emirror/plugin-code": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
+    "@emirror/plugin-italic": "^0.0.1",
     "@emirror/plugin-paragraph": "^0.0.1",
-    "@emirror/plugin-text": "^0.0.1"
+    "@emirror/plugin-strike": "^0.0.1",
+    "@emirror/plugin-text": "^0.0.1",
+    "@emirror/plugin-underline": "^0.0.1"
   }
 }

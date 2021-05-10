@@ -1,3 +1,4 @@
-import MiniEmirror from './miniEditor';
+import MiniEMirror from './miniEditor';
+import DefaultEMirror from './defaultEditor';
 
-export { MiniEmirror };
+export { MiniEMirror, DefaultEMirror };

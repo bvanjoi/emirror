@@ -7,6 +7,7 @@ const NavStyled = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  padding: 0 32px;
   width: 100%;
   height: 72px;
 `;
