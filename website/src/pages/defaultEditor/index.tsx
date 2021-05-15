@@ -1,1 +1,1 @@
-export { default } from '@emirror/default';
+export { default } from '@emirror/example-default';

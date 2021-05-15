@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Node as PMNode } from '@emirror/pm/model';
+import { DOMSerializer, Node as PMNode } from '@emirror/pm/model';
 import { Decoration, EditorView, NodeView } from '@emirror/pm/view';
 import { ContextProps } from '@emirror/core-react';
+import { kebabCase } from 'case-anything';
 
 /**
  * NodeView/MarkView for nodeView
@@ -17,9 +18,7 @@ type IReactNodeViewContext = {
 /**
  * The Context for ReactComponentView,
  */
-const ReactNodeViewContext = React.createContext<IReactNodeViewContext>(
-  null
-);
+const ReactNodeViewContext = React.createContext<IReactNodeViewContext>(null);
 
 /**
  * Prosemirror nodeView to React Component
@@ -42,10 +41,17 @@ class ReactNodeViews implements NodeView {
    * Outer DOM container PMNode
    */
   dom: HTMLElement;
+
   /**
    * Hold the PMNode's content
    */
-  contentDOM: HTMLElement | null;
+  contentDOM: Node;
+
+  /**
+   * Wrapper the content node.
+   */
+  contentDOMWrapper: HTMLElement;
+
   /**
    * The Prosemirror Node
    */
@@ -76,7 +82,7 @@ class ReactNodeViews implements NodeView {
     getPos: (() => number) | boolean,
     decorations: Decoration[],
     ctx: ContextProps,
-    reactComponent: React.ComponentType
+    reactComponent: React.ComponentType,
   ) {
     this.node = node;
     this.view = view;
@@ -93,10 +99,14 @@ class ReactNodeViews implements NodeView {
 
   init() {
     this.dom = this.createContainerDOM();
-    this.contentDOM = this.createContentDOM();
-    if (this.contentDOM) {
-      this.dom.appendChild(this.contentDOM);
+    const { contentDOM, wrapper } = this.createContentDOM();
+    this.contentDOM = contentDOM;
+    this.contentDOMWrapper = wrapper;
+
+    if (this.contentDOMWrapper) {
+      this.dom.appendChild(this.contentDOMWrapper);
     }
+
     this.render(this.dom);
 
     return this;
@@ -160,9 +170,7 @@ class ReactNodeViews implements NodeView {
       this.node.isInline === false
         ? document.createElement('div')
         : document.createElement('span');
-    containerDOM.classList.add(
-      `emirror-${this.node.type.name}__nodeview-dom`
-    );
+    containerDOM.classList.add(`emirror-${this.node.type.name}__nodeview-dom`);
     return containerDOM;
   }
 
@@ -170,21 +178,34 @@ class ReactNodeViews implements NodeView {
    * Create Content DOM for this.contentDOM
    * @returns if PMNode is leaf node, it returns null.
    */
-  createContentDOM(): HTMLElement | null {
+  createContentDOM(): { contentDOM: Node; wrapper: HTMLElement } | null {
     if (this.pluginType !== 'node' && this.pluginType !== 'mark') {
       return null;
     }
     if (this.node.isLeaf) {
       return null;
     }
-    const contentDOM: HTMLElement =
-      this.pluginType === 'mark'
-        ? document.createElement('span')
-        : document.createElement('div');
-    contentDOM.classList.add(
-      `emirror-${this.node.type.name}__content-dom`
-    );
-    return contentDOM;
+    const domSpec = this.node.type.spec.toDOM?.(this.node);
+    if (!domSpec) {
+      return null;
+    }
+
+    const { dom, contentDOM } = DOMSerializer.renderSpec(document, domSpec);
+
+    if (!(dom.nodeType === Node.ELEMENT_NODE && dom instanceof Node)) {
+      return null;
+    }
+
+    let wrapper = dom as HTMLElement;
+    if (dom === contentDOM) {
+      wrapper = document.createElement('span');
+      wrapper.classList.add(
+        `${kebabCase(this.node.type.name)}-node-view-content-wrapper`,
+      );
+      wrapper.append(contentDOM);
+    }
+
+    return { contentDOM, wrapper };
   }
 
   /**
@@ -216,7 +237,7 @@ class ReactNodeViews implements NodeView {
    * change happens within the nodeView
    */
   ignoreMutation(
-    mutation: MutationRecord | { type: 'selection'; target: Element }
+    mutation: MutationRecord | { type: 'selection'; target: Element },
   ): boolean {
     if (mutation.type === 'selection') {
       return false;
@@ -231,12 +252,12 @@ class ReactNodeViews implements NodeView {
    */
   static fromReactComponent = (
     reactComponent: React.ComponentType,
-    ctx: ContextProps
+    ctx: ContextProps,
   ) => (
     node: PMNode,
     view: EditorView,
     getPos: (() => number) | boolean,
-    decorations: Decoration[]
+    decorations: Decoration[],
   ) => {
     const nodeView = new ReactNodeViews(
       node,
@@ -244,7 +265,7 @@ class ReactNodeViews implements NodeView {
       getPos,
       decorations,
       ctx,
-      reactComponent
+      reactComponent,
     ).init();
     ctx.renderProvider.flush();
     return nodeView;

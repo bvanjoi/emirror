@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devWebpackConfig = {
   devtool: 'source-map',
   mode: 'development',
-  entry: './src/index.tsx',
+  entry: ['regenerator-runtime/runtime.js', './src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -28,6 +28,10 @@ const devWebpackConfig = {
         options: {
           presets: ['@babel/react', '@babel/env'],
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

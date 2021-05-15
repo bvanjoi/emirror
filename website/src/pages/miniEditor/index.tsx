@@ -1,1 +1,1 @@
-export { default } from '@emirror/mini-setup';
+export { default } from '@emirror/example-mini-setup';

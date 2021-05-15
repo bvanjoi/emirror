@@ -15,7 +15,7 @@ const Routes = (props: Props) => {
       {routeComponents.map((c) => (
         <Route exact key={c.path} path={`/${c.path}`} component={c.component} />
       ))}
-      <Redirect to="/emirror/mini-setup" />
+      <Redirect to="/default" />
     </Switch>
   );
 };

@@ -7,7 +7,10 @@ import History from '@emirror/plugin-history';
 
 const MiniEMirror = () => {
   return (
-    <EMirror plugins={[new Doc(), new Paragraph(), new Text(), new History()]}>
+    <EMirror
+      topNode={new Doc()}
+      plugins={[new Paragraph(), new Text(), new History()]}
+    >
       <p>
         This is the minimun setup of EMirror, which only contains the basic
         structure and basic operations.

@@ -18,7 +18,8 @@ const Introduction = () => {
   return (
     <IntroStyled>
       <p>
-        <strong>EMirror</strong> - a WYSIWYG eidtor based on{' '}
+        <strong>EMirror</strong> - a WYSIWYG eidtor based on
+        <span> </span>
         <Link>
           <UnderLineSpan>Prosemirror</UnderLineSpan>
         </Link>

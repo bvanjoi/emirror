@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/default",
+  "name": "@emirror/example-default",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-default.cjs.js",
+  "main": "dist/emirror-example-default.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -30,6 +30,13 @@
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-strike": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",
-    "@emirror/plugin-underline": "^0.0.1"
+    "@emirror/plugin-underline": "^0.0.1",
+    "@emirror/plugin-blockquote": "^0.0.1",
+    "@emirror/plugin-heading": "^0.0.1",
+    "@emirror/plugin-order-list": "^0.0.1",
+    "@emirror/plugin-bullet-list": "^0.0.1",
+    "@emirror/plugin-list-item": "^0.0.1",
+    "@emirror/plugin-text-background-color": "^0.0.1",
+    "@emirror/plugin-text-color": "^0.0.1"
   }
 }

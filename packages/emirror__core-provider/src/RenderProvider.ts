@@ -6,6 +6,7 @@ export class RenderProvider {
     this.forceUpdate = props.forceUpdate;
     this.state = props.state;
   }
+
   flush() {
     this.forceUpdate();
   }

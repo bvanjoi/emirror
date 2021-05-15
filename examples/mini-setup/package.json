@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/mini-setup",
+  "name": "@emirror/example-mini-setup",
   "version": "0.0.1",
   "license": "MIT",
   "description": "> TODO: description",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "author": "bvanjoi <610376039@qq.com>",
-  "main": "dist/emirror-mini-setup.cjs.js",
+  "main": "dist/emirror-example-mini-setup.cjs.js",
   "publishConfig": {
     "access": "public"
   },

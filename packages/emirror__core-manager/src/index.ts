@@ -1,15 +1,10 @@
 import { Node, Mark, Extension } from '@emirror/core-structure';
-import {
-  MarkSpec,
-  NodeSpec,
-  Node as PMNode,
-  Schema
-} from '@emirror/pm/model';
+import { MarkSpec, NodeSpec, Node as PMNode, Schema } from '@emirror/pm/model';
 import { EditorView, Decoration, NodeView } from '@emirror/pm/view';
 import { Plugin } from '@emirror/pm/state';
 import { PluginsProvider } from '@emirror/core-provider';
 import { InputRule } from '@emirror/pm/inputrules';
-import { Keymap } from '@emirror/pm/commands';
+import { Keymap, chainCommands } from '@emirror/pm/commands';
 import { createReactNodeViews } from './ReactNodeView';
 import { ErrorMsg } from './constant';
 import { ContextProps } from '@emirror/core-react';
@@ -72,10 +67,7 @@ export class Manager {
    */
   plugins = (pluginsProvider: PluginsProvider) =>
     this.emPlugins.reduce(
-      (allPlugins, { plugins }) => [
-        ...allPlugins,
-        ...plugins(pluginsProvider),
-      ],
+      (allPlugins, { plugins }) => [...allPlugins, ...plugins()],
       [] as Plugin[]
     );
 
@@ -88,22 +80,18 @@ export class Manager {
     this.emPlugins
       .filter(
         plugin =>
-          ['node', 'mark'].includes(plugin.type) &&
-          plugin.reactComponent
+          ['node', 'mark'].includes(plugin.type) && plugin.reactComponent
       )
       .map(
         plugin =>
-          [
-            plugin.name,
-            createReactNodeViews(plugin.reactComponent, ctx),
-          ] as [
+          [plugin.name, createReactNodeViews(plugin.reactComponent, ctx)] as [
             string,
             (
               node: PMNode,
               view: EditorView,
               getPos: (() => number) | boolean,
-              decoration: Decoration[]
-            ) => NodeView
+              decoration: Decoration[],
+            ) => NodeView,
           ]
       )
       .forEach(([name, nodeView]) => {
@@ -121,9 +109,7 @@ export class Manager {
    */
   extensionsReactComponent = () =>
     this.emPlugins
-      .filter(
-        plugin => plugin.type === 'extension' && plugin.reactComponent
-      )
+      .filter(plugin => plugin.type === 'extension' && plugin.reactComponent)
       .map(p => p.reactComponent);
 
   /**
@@ -142,10 +128,7 @@ export class Manager {
         })
       )
       .filter(rules => rules && Array.isArray(rules))
-      .reduce(
-        (allRules, rules) => [...allRules, ...rules],
-        [] as InputRule[]
-      );
+      .reduce((allRules, rules) => [...allRules, ...rules], [] as InputRule[]);
 
   /**
    * Generate Keymap from EMPlugins
@@ -166,9 +149,10 @@ export class Manager {
       .forEach(obj =>
         Object.entries(obj).forEach(([key, value]) => {
           if (allKeymap[key]) {
-            console.error(ErrorMsg.REPEATED_KEYMAP);
+            allKeymap[key] = chainCommands(value, allKeymap[key]);
+          } else {
+            allKeymap[key] = value;
           }
-          allKeymap[key] = value;
         })
       );
 
@@ -180,9 +164,10 @@ export class Manager {
       .forEach(obj =>
         Object.entries(obj).forEach(([key, value]) => {
           if (allKeymap[key]) {
-            console.error(ErrorMsg.REPEATED_KEYMAP);
+            allKeymap[key] = chainCommands(value, allKeymap[key]);
+          } else {
+            allKeymap[key] = value;
           }
-          allKeymap[key] = value;
         })
       );
 

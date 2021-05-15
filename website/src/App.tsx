@@ -3,7 +3,13 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import Routes from './routes';
 import { Nav, Introduction, ShowCodeLink, SubNavigation } from './components';
-import { MiniEMirror, DefaultEMirror } from './pages';
+import {
+  MiniEMirror,
+  DefaultEMirror,
+  ReadOnlyEMirror,
+  HighlightEMirror,
+  TitleDocEMirror,
+} from './pages';
 
 const AppView = styled.div`
   * {
@@ -19,7 +25,7 @@ const AppView = styled.div`
 
   .emirror {
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 5px;
     margin-bottom: 1em;
   }
 
@@ -50,12 +56,24 @@ const App = () => {
 
   const routeComponents = [
     {
-      path: 'emirror/mini-setup',
+      path: 'mini-setup',
       component: MiniEMirror,
     },
     {
-      path: 'emirror/default',
+      path: 'default',
       component: DefaultEMirror,
+    },
+    {
+      path: 'read-only',
+      component: ReadOnlyEMirror,
+    },
+    {
+      path: 'title-doc',
+      component: TitleDocEMirror,
+    },
+    {
+      path: 'highlight-block',
+      component: HighlightEMirror,
     },
   ];
 

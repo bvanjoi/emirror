@@ -4,7 +4,7 @@ import cls from 'classnames';
 import { Node, Mark, Extension } from '@emirror/core-structure';
 import { Manager } from '@emirror/core-manager';
 import { EditorView } from '@emirror/pm/view';
-import { EditorState, TextSelection, Transaction } from '@emirror/pm/state';
+import { EditorState, Transaction, Selection } from '@emirror/pm/state';
 import { Schema, DOMParser } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';
@@ -20,13 +20,17 @@ export type EMirrorProps = {
    */
   className?: string;
   /**
-   *  The plugins for emirror.
+   * The plugins for emirror.
    */
   plugins: (Node | Mark | Extension)[];
   /**
-   * Is show performance analytics?
+   * The document top node. it point the basic struct of EMirror.
    */
-  showAnalytics?: boolean;
+  topNode: Node;
+  /**
+   * Can EMirror be editable? Default it's true.
+   */
+  editable?: boolean;
   /**
    * The action when editor init.
    */
@@ -49,21 +53,27 @@ type EMirrorViewProps = EMirrorProps;
 
 export const EMirrorView = (props: EMirrorViewProps) => {
   const {
+    topNode,
     className,
     plugins: emPlugins = [],
     afterInit,
     afterUpdate,
     beforeDestory,
-    showAnalytics = false,
+    editable = true,
     children,
   } = props;
 
   const [extensionsReactComponent, setExtensionsReactComponent] = useState([]);
 
   /**
+   * The ref of ProsemirrorView DOM.
+   */
+  const viewDOMRef = useRef<HTMLDivElement>(null);
+
+  /**
    * The ref of ProsemirrorView.
    */
-  const viewRef = useRef<HTMLDivElement>(null);
+  const viewRef = useRef<EditorView>(null);
 
   /**
    * The init content ref of ReactNode
@@ -74,28 +84,34 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   const { viewProvider, pluginsProvider, analyticsProvider } = emirrorContext;
 
   useEffect(() => {
-    if (!viewRef.current) {
+    if (!viewDOMRef.current) {
       return;
     }
-    const view = init(viewRef.current);
-
+    const view = init(viewDOMRef.current);
     // set Selection to the doc end.
-    view.dispatch(
-      view.state.tr.setSelection(
-        TextSelection.create(view.state.doc, view.state.doc.nodeSize - 2),
-      ),
-    );
+    view.dispatch(view.state.tr.setSelection(Selection.atEnd(view.state.doc)));
+
     view.focus();
 
     afterInit && afterInit(view);
-
+    window.view = view;
+    viewRef.current = view;
     viewProvider.init(view);
 
     return () => {
-      beforeDestory(viewProvider.view);
-      viewProvider.view.destroy();
+      beforeDestory(view);
+      view.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    //! Why viewProvider.view return undefine?
+    const view = viewRef.current;
+    view.update({
+      ...view.props,
+      editable: () => editable,
+    });
+  }, [editable]);
 
   /**
    * init the Prosemirror view.
@@ -103,12 +119,14 @@ export const EMirrorView = (props: EMirrorViewProps) => {
    * @returns The view of Prosemirror.
    */
   const init = (ele: HTMLDivElement) => {
+    emPlugins.unshift(topNode);
     const manager = new Manager(emPlugins);
+
     // nodes and marks of Prosemirror
     const { nodes, marks, names } = manager;
 
     /** Scheme of Prosemirror */
-    const schema = new Schema({ nodes, marks });
+    const schema = new Schema({ nodes, marks, topNode: topNode.name });
 
     /** All plugins of Prosemirror */
     const plugins = manager.plugins(pluginsProvider);
@@ -176,7 +194,7 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   return (
     <div className={cls('emirror', className)}>
       <EMirrorInnerView>
-        <div ref={viewRef} spellCheck="false">
+        <div ref={viewDOMRef} spellCheck="false">
           <div ref={contentRef} style={{ display: 'none' }}>
             {children}
           </div>
@@ -197,5 +215,6 @@ const EMirrorInnerView = styled.div`
     padding: 10px;
     white-space: pre-wrap;
     font-variant-ligatures: none;
+    word-break: break-word;
   }
 `;
