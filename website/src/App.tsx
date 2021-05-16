@@ -9,6 +9,8 @@ import {
   ReadOnlyEMirror,
   HighlightEMirror,
   TitleDocEMirror,
+  PlaceholderEMirror,
+  ExceedTipEditor,
 } from './pages';
 
 const AppView = styled.div`
@@ -74,6 +76,14 @@ const App = () => {
     {
       path: 'highlight-block',
       component: HighlightEMirror,
+    },
+    {
+      path: 'placeholder',
+      component: PlaceholderEMirror,
+    },
+    {
+      path: 'exceed-tip',
+      component: ExceedTipEditor,
     },
   ];
 

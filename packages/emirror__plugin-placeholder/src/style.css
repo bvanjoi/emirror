@@ -1,0 +1,5 @@
+.emirror .emirror-placeholder::before {
+  color: grey;
+  position: absolute;
+  content: attr(data-placeholder-content);
+}

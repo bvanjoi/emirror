@@ -1,0 +1,17 @@
+:root {
+  --exceed-tip-color: rgb(190, 20, 30);
+  --exceed-tip-margin-left: 4px;
+}
+
+.emirror .emirror-exceed-tip.after::after {
+  color: var(--exceed-tip-color);
+  margin-left: var(--exceed-tip-margin-left);
+  content: attr(data-exceed-tip-content);
+}
+
+.emirror .emirror-exceed-tip.before::before {
+  color: var(--exceed-tip-color);
+  margin-left: var(--exceed-tip-margin-left);
+  position: absolute;
+  content: attr(data-exceed-tip-content);
+}

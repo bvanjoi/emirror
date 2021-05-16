@@ -2,6 +2,7 @@ import { Node } from '@emirror/core-structure';
 import { NodeSpec, Node as PMNode } from '@emirror/pm/model';
 import { setBlockType } from '@emirror/pm/commands';
 import { textblockTypeInputRule } from '@emirror/pm/inputrules';
+import { genID } from '@emirror/utils';
 
 class Heading extends Node {
   levels = [1, 2, 3, 4, 5, 6];
@@ -24,7 +25,7 @@ class Heading extends Node {
       parseDOM: levels.map(level => ({ tag: `h${level}`, attrs: { level } })),
       toDOM: (node: PMNode) => [
         `h${node.attrs.level}`,
-        { class: `emirror-heading emirror-h${node.attrs.level}` },
+        { id: genID(), class: `emirror-heading emirror-h${node.attrs.level}` },
         0,
       ],
     };

@@ -10,7 +10,7 @@ class HighlightBlock extends Node {
   get schema(): NodeSpec {
     return {
       group: 'block',
-      content: 'paragraph+',
+      content: '(paragraph|bulletList|orderList)+',
       defining: true,
       parseDOM: [{ tag: 'div.emirror-highlight-block' }],
       toDOM: () => ['div', { class: 'emirror-highlight-block' }, 0],

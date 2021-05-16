@@ -5,3 +5,4 @@ export * from './findChangedNodesFromTr';
 export * from './getNodeType';
 export * from './findParentNodeClosestToPos';
 export * from './findParentNode';
+export * from './genID';

@@ -1,11 +1,11 @@
 {
-  "name": "@emirro/example-highlight-block",
+  "name": "@emirror/example-placeholder",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirro-example-highlight-block.cjs.js",
+  "main": "dist/emirror-example-placeholder.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -26,9 +26,6 @@
     "@emirror/plugin-history": "^0.0.1",
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",
-    "@emirror/plugin-order-list": "^0.0.1",
-    "@emirror/plugin-bullet-list": "^0.0.1",
-    "@emirror/plugin-list-item": "^0.0.1",
-    "@emirror/plugin-react-highlight-block": "^0.0.1"
+    "@emirror/plugin-placeholder": "^0.0.1"
   }
 }

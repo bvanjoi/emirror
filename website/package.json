@@ -37,6 +37,8 @@
     "@emirror/example-read-only": "^0.0.1",
     "@emirror/example-title-doc": "^0.0.1",
     "@emirro/example-highlight-block": "^0.0.1",
+    "@emirror/example-placeholder": "^0.0.1",
+    "@emirror/example-exceed-tip": "^0.0.1",
     "classnames": "^2.3.1",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.7",
