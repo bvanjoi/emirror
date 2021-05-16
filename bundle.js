@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../examples/default/dist/emirror-default.cjs.js":
-/*!*******************************************************!*\
-  !*** ../examples/default/dist/emirror-default.cjs.js ***!
-  \*******************************************************/
+/***/ "../examples/default/dist/emirror-example-default.cjs.js":
+/*!***************************************************************!*\
+  !*** ../examples/default/dist/emirror-example-default.cjs.js ***!
+  \***************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -48,6 +48,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _emirror_plugin_italic__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emirror/plugin-italic */ "../packages/emirror__plugin-italic/dist/emirror-plugin-italic.cjs.js");
 /* harmony import */ var _emirror_plugin_strike__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emirror/plugin-strike */ "../packages/emirror__plugin-strike/dist/emirror-plugin-strike.cjs.js");
 /* harmony import */ var _emirror_plugin_underline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @emirror/plugin-underline */ "../packages/emirror__plugin-underline/dist/emirror-plugin-underline.cjs.js");
+/* harmony import */ var _emirror_plugin_blockquote__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emirror/plugin-blockquote */ "../packages/emirror__plugin-blockquote/dist/emirror-plugin-blockquote.cjs.js");
+/* harmony import */ var _emirror_plugin_heading__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @emirror/plugin-heading */ "../packages/emirror__plugin-heading/dist/emirror-plugin-heading.cjs.js");
+/* harmony import */ var _emirror_plugin_bullet_list__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @emirror/plugin-bullet-list */ "../packages/emirror__plugin-bullet-list/dist/emirror-plugin-bullet-list.cjs.js");
+/* harmony import */ var _emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @emirror/plugin-list-item */ "../packages/emirror__plugin-list-item/dist/emirror-plugin-list-item.cjs.js");
+/* harmony import */ var _emirror_plugin_order_list__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @emirror/plugin-order-list */ "../packages/emirror__plugin-order-list/dist/emirror-plugin-order-list.cjs.js");
+/* harmony import */ var _emirror_plugin_text_background_color__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @emirror/plugin-text-background-color */ "../packages/emirror__plugin-text-background-color/dist/emirror-plugin-text-background-color.cjs.js");
+/* harmony import */ var _emirror_plugin_text_color__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @emirror/plugin-text-color */ "../packages/emirror__plugin-text-color/dist/emirror-plugin-text-color.cjs.js");
+
+
+
+
+
+
+
 
 
 
@@ -62,18 +76,157 @@ __webpack_require__.r(__webpack_exports__);
 
 var DefaultEMirror = function DefaultEMirror() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
-    plugins: [new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(), new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_bold__WEBPACK_IMPORTED_MODULE_6__.default(), new _emirror_plugin_code__WEBPACK_IMPORTED_MODULE_7__.default(), new _emirror_plugin_italic__WEBPACK_IMPORTED_MODULE_8__.default(), new _emirror_plugin_strike__WEBPACK_IMPORTED_MODULE_9__.default(), new _emirror_plugin_underline__WEBPACK_IMPORTED_MODULE_10__.default()]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This is the default setup of EMirror."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "It not only contains the baisc features of MiniEMirror, It also contians that:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "1. You can input ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "bold font"), " by ctrl + b;"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "2. You can input ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("u", null, "underline font"), " font by ctrl + u."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "3. And It also contians ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "italic"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("code", null, "code"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("s", null, "strike"), "..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Also, It support relative Markdown shortcuts."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "More features is under development."));
+    topNode: new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(),
+    plugins: [new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_bold__WEBPACK_IMPORTED_MODULE_6__.default(), new _emirror_plugin_code__WEBPACK_IMPORTED_MODULE_7__.default(), new _emirror_plugin_italic__WEBPACK_IMPORTED_MODULE_8__.default(), new _emirror_plugin_strike__WEBPACK_IMPORTED_MODULE_9__.default(), new _emirror_plugin_underline__WEBPACK_IMPORTED_MODULE_10__.default(), new _emirror_plugin_blockquote__WEBPACK_IMPORTED_MODULE_11__.default(), new _emirror_plugin_heading__WEBPACK_IMPORTED_MODULE_12__.default(), new _emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_14__.default(), new _emirror_plugin_order_list__WEBPACK_IMPORTED_MODULE_15__.default(), new _emirror_plugin_bullet_list__WEBPACK_IMPORTED_MODULE_13__.default(), new _emirror_plugin_text_background_color__WEBPACK_IMPORTED_MODULE_16__.default(), new _emirror_plugin_text_color__WEBPACK_IMPORTED_MODULE_17__.default()]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Hello, This is the default setup of EMirror."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("blockquote", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The MiniEMirror only provide basic features, such as enter to get a new line, ctrl-A to selection all."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The default setup will provide more practical function.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "And in default EMirror, it provider following function:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Some text mark: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "bold"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("u", null, "underline"), ",", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "italic"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("code", null, "code"), ", ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("s", null, "strike"), ",", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "data-text-bg-color": "#faf594"
+  }, "text background color"), ",", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "data-text-color": "#ba4b4b"
+  }, "text color"), "..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "And also, EMirror provider some relative markdown shortcut: for example, if your input **something**, it will be transfer it to", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "something"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Meanwhile, it also support key map, if you keydown Ctrl-b, and then input, you will find the text is bold font.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "And some node, such as the order-list, bullet-list, and quote, headings."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "For example, you can move your cursor to the head of this line, and input # and space, you will find this line become h1 tag."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "More features is under development, such as:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ol", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "image")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "menus")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "todo list")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "fantastic input")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "...."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "And in the last, I want to say it again: the aim of EMirror is to provider a struct to build modern editor easily, and it will provider some examples to exhibit implementation approach."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "But it has a lots of things to do..."));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DefaultEMirror);
 
 /***/ }),
 
-/***/ "../examples/mini-setup/dist/emirror-mini-setup.cjs.js":
-/*!*************************************************************!*\
-  !*** ../examples/mini-setup/dist/emirror-mini-setup.cjs.js ***!
-  \*************************************************************/
+/***/ "../examples/exceed-tip/dist/emirror-example-exceed-tip.cjs.js":
+/*!*********************************************************************!*\
+  !*** ../examples/exceed-tip/dist/emirror-example-exceed-tip.cjs.js ***!
+  \*********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.tsx */ "../examples/exceed-tip/src/index.tsx");
+unregister();
+
+/***/ }),
+
+/***/ "../examples/exceed-tip/src/index.tsx":
+/*!********************************************!*\
+  !*** ../examples/exceed-tip/src/index.tsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _emirror_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/core */ "../packages/emirror__core/src/index.tsx");
+/* harmony import */ var _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-doc */ "../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js");
+/* harmony import */ var _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/plugin-paragraph */ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js");
+/* harmony import */ var _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emirror/plugin-text */ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js");
+/* harmony import */ var _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emirror/plugin-history */ "../packages/emirror__plugin-history/dist/emirror-plugin-history.cjs.js");
+/* harmony import */ var _emirror_plugin_exceed_tip__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emirror/plugin-exceed-tip */ "../packages/emirror__plugin-exceed-tip/dist/emirror-plugin-exceed-tip.cjs.js");
+
+
+
+
+
+
+
+
+var MiniEMirror = function MiniEMirror() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
+    topNode: new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(),
+    plugins: [new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_exceed_tip__WEBPACK_IMPORTED_MODULE_6__.default({
+      maxSize: 140
+    })]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "At some social Apps, such as weibo, Twitter, The editor has restrict the content length of document."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "And now, ExceedTip plugin had implement similar feature, If you input content exceed 140 chars, it will show error tip. Of course, you can define it custom."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Meanwhile, as a tip, because of the complexity of unicode, the count of content may be not as you see."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "such as \uD83E\uDD1A, although it seems take up 1 char in visual, it occur 2 chars indeed."));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MiniEMirror);
+
+/***/ }),
+
+/***/ "../examples/highlight-block/dist/emirro-example-highlight-block.cjs.js":
+/*!******************************************************************************!*\
+  !*** ../examples/highlight-block/dist/emirro-example-highlight-block.cjs.js ***!
+  \******************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.tsx */ "../examples/highlight-block/src/index.tsx");
+unregister();
+
+/***/ }),
+
+/***/ "../examples/highlight-block/src/index.tsx":
+/*!*************************************************!*\
+  !*** ../examples/highlight-block/src/index.tsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _emirror_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/core */ "../packages/emirror__core/src/index.tsx");
+/* harmony import */ var _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-doc */ "../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js");
+/* harmony import */ var _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/plugin-paragraph */ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js");
+/* harmony import */ var _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emirror/plugin-text */ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js");
+/* harmony import */ var _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emirror/plugin-history */ "../packages/emirror__plugin-history/dist/emirror-plugin-history.cjs.js");
+/* harmony import */ var _emirror_plugin_react_highlight_block__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emirror/plugin-react-highlight-block */ "../packages/emirror__plugin-react-highlight-block/dist/emirror-plugin-react-highlight-block.cjs.js");
+/* harmony import */ var _emirror_plugin_bullet_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emirror/plugin-bullet-list */ "../packages/emirror__plugin-bullet-list/dist/emirror-plugin-bullet-list.cjs.js");
+/* harmony import */ var _emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emirror/plugin-list-item */ "../packages/emirror__plugin-list-item/dist/emirror-plugin-list-item.cjs.js");
+/* harmony import */ var _emirror_plugin_order_list__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emirror/plugin-order-list */ "../packages/emirror__plugin-order-list/dist/emirror-plugin-order-list.cjs.js");
+
+
+
+
+
+
+
+
+
+
+
+var MiniEMirror = function MiniEMirror() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
+    topNode: new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(),
+    plugins: [new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_react_highlight_block__WEBPACK_IMPORTED_MODULE_6__.default(), new _emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_8__.default(), new _emirror_plugin_order_list__WEBPACK_IMPORTED_MODULE_9__.default(), new _emirror_plugin_bullet_list__WEBPACK_IMPORTED_MODULE_7__.default()]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "HighLight block it make you written some important thing."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "emirror-highlight-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Yaou can record here, such as:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Do not forget to brush your teeth."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This example shows how build a little complex block node by using React Component."));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MiniEMirror);
+
+/***/ }),
+
+/***/ "../examples/mini-setup/dist/emirror-example-mini-setup.cjs.js":
+/*!*********************************************************************!*\
+  !*** ../examples/mini-setup/dist/emirror-example-mini-setup.cjs.js ***!
+  \*********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -121,11 +274,225 @@ __webpack_require__.r(__webpack_exports__);
 
 var MiniEMirror = function MiniEMirror() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
-    plugins: [new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(), new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default()]
+    topNode: new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(),
+    plugins: [new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default()]
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This is the minimun setup of EMirror, which only contains the basic structure and basic operations."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "You can insert some chars, and delete it by BackSpace."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "And then, it suppoter basic shortcuts such as ctrl-z for undo; ctrl-a to select all text; ctrl-c to copy text."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "But don't worry, EMirror is under devlopment, more fantastic will be coming soon."));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MiniEMirror);
+
+/***/ }),
+
+/***/ "../examples/placeholder/dist/emirror-example-placeholder.cjs.js":
+/*!***********************************************************************!*\
+  !*** ../examples/placeholder/dist/emirror-example-placeholder.cjs.js ***!
+  \***********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.tsx */ "../examples/placeholder/src/index.tsx");
+unregister();
+
+/***/ }),
+
+/***/ "../examples/placeholder/src/index.tsx":
+/*!*********************************************!*\
+  !*** ../examples/placeholder/src/index.tsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _emirror_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/core */ "../packages/emirror__core/src/index.tsx");
+/* harmony import */ var _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-doc */ "../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js");
+/* harmony import */ var _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/plugin-paragraph */ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js");
+/* harmony import */ var _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emirror/plugin-text */ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js");
+/* harmony import */ var _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emirror/plugin-history */ "../packages/emirror__plugin-history/dist/emirror-plugin-history.cjs.js");
+/* harmony import */ var _emirror_plugin_placeholder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emirror/plugin-placeholder */ "../packages/emirror__plugin-placeholder/dist/emirror-plugin-placeholder.cjs.js");
+
+
+
+
+
+
+
+
+var MiniEMirror = function MiniEMirror() {
+  var content = 'This is a empty document, and this is a placeholder, write anything here to eliminate that.';
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
+    topNode: new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(),
+    plugins: [new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_placeholder__WEBPACK_IMPORTED_MODULE_6__.default({
+      content: content
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MiniEMirror);
+
+/***/ }),
+
+/***/ "../examples/read-only/dist/emirror-example-read-only.cjs.js":
+/*!*******************************************************************!*\
+  !*** ../examples/read-only/dist/emirror-example-read-only.cjs.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.tsx */ "../examples/read-only/src/index.tsx");
+unregister();
+
+/***/ }),
+
+/***/ "../examples/read-only/src/index.tsx":
+/*!*******************************************!*\
+  !*** ../examples/read-only/src/index.tsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _emirror_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/core */ "../packages/emirror__core/src/index.tsx");
+/* harmony import */ var _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-doc */ "../packages/emirror__plugin-doc/dist/emirror-plugin-doc.cjs.js");
+/* harmony import */ var _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/plugin-paragraph */ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js");
+/* harmony import */ var _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emirror/plugin-text */ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js");
+/* harmony import */ var _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emirror/plugin-history */ "../packages/emirror__plugin-history/dist/emirror-plugin-history.cjs.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+var ReadOnlyEMirror = function ReadOnlyEMirror() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      editable = _useState2[0],
+      setEditable = _useState2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "checkbox",
+    name: "editable",
+    id: "editable",
+    checked: editable,
+    onChange: function onChange() {
+      return setEditable(!editable);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "editable")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
+    topNode: new _emirror_plugin_doc__WEBPACK_IMPORTED_MODULE_2__.default(),
+    editable: editable,
+    plugins: [new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_3__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_5__.default()]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This is a example show how to config editable of EMirror."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "You can use checkbox the changed this state.")));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReadOnlyEMirror);
+
+/***/ }),
+
+/***/ "../examples/title-doc/dist/emirror-example-title-doc.cjs.js":
+/*!*******************************************************************!*\
+  !*** ../examples/title-doc/dist/emirror-example-title-doc.cjs.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.tsx */ "../examples/title-doc/src/index.tsx");
+unregister();
+
+/***/ }),
+
+/***/ "../examples/title-doc/src/index.tsx":
+/*!*******************************************!*\
+  !*** ../examples/title-doc/src/index.tsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _emirror_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/core */ "../packages/emirror__core/src/index.tsx");
+/* harmony import */ var _emirror_plugin_title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-title */ "../packages/emirror__plugin-title/dist/emirror-plugin-title.cjs.js");
+/* harmony import */ var _emirror_plugin_title_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/plugin-title-doc */ "../packages/emirror__plugin-title-doc/dist/emirror-plugin-title-doc.cjs.js");
+/* harmony import */ var _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emirror/plugin-paragraph */ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js");
+/* harmony import */ var _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emirror/plugin-text */ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js");
+/* harmony import */ var _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emirror/plugin-history */ "../packages/emirror__plugin-history/dist/emirror-plugin-history.cjs.js");
+
+
+
+
+
+
+
+
+var TitleDocEMirror = function TitleDocEMirror() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_emirror_core__WEBPACK_IMPORTED_MODULE_1__.default, {
+    topNode: new _emirror_plugin_title_doc__WEBPACK_IMPORTED_MODULE_3__.default(),
+    plugins: [new _emirror_plugin_title__WEBPACK_IMPORTED_MODULE_2__.default(), new _emirror_plugin_paragraph__WEBPACK_IMPORTED_MODULE_4__.default(), new _emirror_plugin_text__WEBPACK_IMPORTED_MODULE_5__.default(), new _emirror_plugin_history__WEBPACK_IMPORTED_MODULE_6__.default()]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Enforce First Line to Title."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "This example shows how force layout."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "You can edit in anyway, and you will find the first line is alaway title."));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TitleDocEMirror);
 
 /***/ }),
 
@@ -987,6 +1354,204 @@ exports.___internalHook = function () {
 
 /***/ }),
 
+/***/ "../node_modules/case-anything/dist/index.esm.js":
+/*!*******************************************************!*\
+  !*** ../node_modules/case-anything/dist/index.esm.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "camelCase": () => (/* binding */ camelCase),
+/* harmony export */   "capitalCase": () => (/* binding */ capitalCase),
+/* harmony export */   "constantCase": () => (/* binding */ constantCase),
+/* harmony export */   "kebabCase": () => (/* binding */ kebabCase),
+/* harmony export */   "lowerCase": () => (/* binding */ lowerCase),
+/* harmony export */   "pascalCase": () => (/* binding */ pascalCase),
+/* harmony export */   "pathCase": () => (/* binding */ pathCase),
+/* harmony export */   "snakeCase": () => (/* binding */ snakeCase),
+/* harmony export */   "spaceCase": () => (/* binding */ spaceCase),
+/* harmony export */   "upperCase": () => (/* binding */ upperCase)
+/* harmony export */ });
+// Latin-1 Supplement
+// upper case ranges
+// [À-ÖØ-ß]
+// lower case ranges
+// [à-öø-ÿ]
+
+/**
+ * A string.match function that will return an array of "string parts"
+ *
+ * @param {string} string
+ * @returns {string[]}
+ */
+function splitOnSpecialChars(string) {
+  return string.match(/^[a-zà-öø-ÿ]+|[A-ZÀ-ÖØ-ß][a-zà-öø-ÿ]+|[a-zà-öø-ÿ]+|[0-9]+|[A-ZÀ-ÖØ-ß]+(?![a-zà-öø-ÿ])/g);
+}
+/**
+ * A string.match function that will return an array of "string parts"
+ *
+ * @param {string} string
+ * @returns {string[]}
+ */
+
+
+function getParts(string, noSpecialChars) {
+  if (noSpecialChars === void 0) {
+    noSpecialChars = false;
+  }
+
+  var target = string.trim().normalize('NFC');
+  var parts = target.includes(' ') ? target.split(' ').filter(Boolean) : splitOnSpecialChars(target);
+  return noSpecialChars ? parts.map(function (part) {
+    return part.normalize('NFD').replace(/[^a-zA-ZØßø0-9]/g, '');
+  }) : parts;
+}
+/**
+ * Capitalises a single word
+ *
+ * @export
+ * @param {string} string the word
+ * @returns {string} the word with the first character in uppercase and the rest in lowercase
+ */
+
+
+function capitaliseWord(string) {
+  return string[0].toUpperCase() + string.slice(1).toLowerCase();
+}
+
+var noSpecialChars = true;
+/**
+ * converts strings to camelCase
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in camelCase
+ */
+
+function camelCase(string) {
+  return getParts(string, noSpecialChars).reduce(function (result, match, index) {
+    return index === 0 ? match.toLowerCase() : result + capitaliseWord(match);
+  }, '');
+}
+/**
+ * converts strings to PascalCase
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in PascalCase
+ */
+
+
+function pascalCase(string) {
+  return getParts(string, noSpecialChars).reduce(function (result, match) {
+    return result + capitaliseWord(match);
+  }, '');
+}
+/**
+ * converts strings to kebab-case
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in kebab-case
+ */
+
+
+function kebabCase(string) {
+  return getParts(string, noSpecialChars).join('-').toLowerCase();
+}
+/**
+ * converts strings to snake_case
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in snake_case
+ */
+
+
+function snakeCase(string) {
+  return getParts(string, noSpecialChars).join('_').toLowerCase();
+}
+/**
+ * converts strings to CONSTANT_CASE
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in CONSTANT_CASE
+ */
+
+
+function constantCase(string) {
+  return getParts(string, noSpecialChars).join('_').toUpperCase();
+}
+/**
+ * converts strings to path/case
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in path/case
+ */
+
+
+function pathCase(string) {
+  return getParts(string).join('/');
+}
+/**
+ * converts strings to space case (will add spaces but not change casing)
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in path case
+ */
+
+
+function spaceCase(string) {
+  return getParts(string).join(' ');
+}
+/**
+ * converts strings to Capital Case (with spaces)
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in Capital Case (with spaces)
+ */
+
+
+function capitalCase(string) {
+  return getParts(string).reduce(function (result, match) {
+    return result + " " + capitaliseWord(match);
+  }, '').trim();
+}
+/**
+ * converts strings to lower case (with spaces)
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in lower case (with spaces)
+ */
+
+
+function lowerCase(string) {
+  return getParts(string).join(' ').toLowerCase();
+}
+/**
+ * converts strings to UPPER CASE (with spaces)
+ *
+ * @export
+ * @param {string} string
+ * @returns {string} in UPPER CASE (with spaces)
+ */
+
+
+function upperCase(string) {
+  return getParts(string).join(' ').toUpperCase();
+}
+
+
+
+/***/ }),
+
 /***/ "../node_modules/classnames/index.js":
 /*!*******************************************!*\
   !*** ../node_modules/classnames/index.js ***!
@@ -1055,6 +1620,170 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
     window.classNames = classNames;
   }
 })();
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/runtime/api.js":
+/*!******************************************************!*\
+  !*** ../node_modules/css-loader/dist/runtime/api.js ***!
+  \******************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
+/*!*************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
+  \*************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = function cssWithMappingToString(item) {
+  var _item = _slicedToArray(item, 4),
+      content = _item[1],
+      cssMapping = _item[3];
+
+  if (typeof btoa === "function") {
+    // eslint-disable-next-line no-undef
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || "").concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join("\n");
+  }
+
+  return [content].join("\n");
+};
 
 /***/ }),
 
@@ -2321,6 +3050,137 @@ function createReactContext(defaultValue, calculateChangedBits) {
 
 var index = react__WEBPACK_IMPORTED_MODULE_0__.createContext || createReactContext;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+
+/***/ }),
+
+/***/ "../node_modules/nanoid/index.dev.js":
+/*!*******************************************!*\
+  !*** ../node_modules/nanoid/index.dev.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "nanoid": () => (/* binding */ nanoid),
+/* harmony export */   "customAlphabet": () => (/* binding */ customAlphabet),
+/* harmony export */   "customRandom": () => (/* binding */ customRandom),
+/* harmony export */   "urlAlphabet": () => (/* reexport safe */ _url_alphabet_index_js__WEBPACK_IMPORTED_MODULE_0__.urlAlphabet),
+/* harmony export */   "random": () => (/* binding */ random)
+/* harmony export */ });
+/* harmony import */ var _url_alphabet_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./url-alphabet/index.js */ "../node_modules/nanoid/url-alphabet/index.js");
+// This file replaces `index.js` in bundlers like webpack or Rollup,
+// according to `browser` config in `package.json`.
+
+
+if (true) {
+  // All bundlers will remove this block in the production bundle.
+  if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative' && typeof crypto === 'undefined') {
+    throw new Error('React Native does not have a built-in secure random generator. ' + 'If you don’t need unpredictable IDs use `nanoid/non-secure`. ' + 'For secure IDs, import `react-native-get-random-values` ' + 'before Nano ID.');
+  }
+
+  if (typeof msCrypto !== 'undefined' && typeof crypto === 'undefined') {
+    throw new Error('Import file with `if (!window.crypto) window.crypto = window.msCrypto`' + ' before importing Nano ID to fix IE 11 support');
+  }
+
+  if (typeof crypto === 'undefined') {
+    throw new Error('Your browser does not have secure random generator. ' + 'If you don’t need unpredictable IDs, you can use nanoid/non-secure.');
+  }
+}
+
+var random = function random(bytes) {
+  return crypto.getRandomValues(new Uint8Array(bytes));
+};
+
+var customRandom = function customRandom(alphabet, size, getRandom) {
+  // First, a bitmask is necessary to generate the ID. The bitmask makes bytes
+  // values closer to the alphabet size. The bitmask calculates the closest
+  // `2^31 - 1` number, which exceeds the alphabet size.
+  // For example, the bitmask for the alphabet size 30 is 31 (00011111).
+  // `Math.clz32` is not used, because it is not available in browsers.
+  var mask = (2 << Math.log(alphabet.length - 1) / Math.LN2) - 1; // Though, the bitmask solution is not perfect since the bytes exceeding
+  // the alphabet size are refused. Therefore, to reliably generate the ID,
+  // the random bytes redundancy has to be satisfied.
+  // Note: every hardware random generator call is performance expensive,
+  // because the system call for entropy collection takes a lot of time.
+  // So, to avoid additional system calls, extra bytes are requested in advance.
+  // Next, a step determines how many random bytes to generate.
+  // The number of random bytes gets decided upon the ID size, mask,
+  // alphabet size, and magic number 1.6 (using 1.6 peaks at performance
+  // according to benchmarks).
+  // `-~f => Math.ceil(f)` if f is a float
+  // `-~i => i + 1` if i is an integer
+
+  var step = -~(1.6 * mask * size / alphabet.length);
+  return function () {
+    var id = '';
+
+    while (true) {
+      var bytes = getRandom(step); // A compact alternative for `for (var i = 0; i < step; i++)`.
+
+      var j = step;
+
+      while (j--) {
+        // Adding `|| ''` refuses a random byte that exceeds the alphabet size.
+        id += alphabet[bytes[j] & mask] || '';
+        if (id.length === size) return id;
+      }
+    }
+  };
+};
+
+var customAlphabet = function customAlphabet(alphabet, size) {
+  return customRandom(alphabet, size, random);
+};
+
+var nanoid = function nanoid() {
+  var size = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 21;
+  var id = '';
+  var bytes = crypto.getRandomValues(new Uint8Array(size)); // A compact alternative for `for (var i = 0; i < step; i++)`.
+
+  while (size--) {
+    // It is incorrect to use bytes exceeding the alphabet size.
+    // The following mask reduces the random byte in the 0-255 value
+    // range to the 0-63 value range. Therefore, adding hacks, such
+    // as empty string fallback or magic numbers, is unneccessary because
+    // the bitmask trims bytes down to the alphabet size.
+    var _byte = bytes[size] & 63;
+
+    if (_byte < 36) {
+      // `0-9a-z`
+      id += _byte.toString(36);
+    } else if (_byte < 62) {
+      // `A-Z`
+      id += (_byte - 26).toString(36).toUpperCase();
+    } else if (_byte < 63) {
+      id += '_';
+    } else {
+      id += '-';
+    }
+  }
+
+  return id;
+};
+
+
+
+/***/ }),
+
+/***/ "../node_modules/nanoid/url-alphabet/index.js":
+/*!****************************************************!*\
+  !*** ../node_modules/nanoid/url-alphabet/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "urlAlphabet": () => (/* binding */ urlAlphabet)
+/* harmony export */ });
+// This alphabet uses `A-Za-z0-9_-` symbols. The genetic algorithm helped
+// optimize the gzip compression for this alphabet.
+var urlAlphabet = 'ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW';
+
 
 /***/ }),
 
@@ -10238,6 +11098,389 @@ function gatherToDOM(obj) {
 function doc(options) {
   // declare global: window
   return options.document || window.document;
+}
+
+
+
+/***/ }),
+
+/***/ "../node_modules/prosemirror-schema-list/dist/index.es.js":
+/*!****************************************************************!*\
+  !*** ../node_modules/prosemirror-schema-list/dist/index.es.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addListNodes": () => (/* binding */ addListNodes),
+/* harmony export */   "bulletList": () => (/* binding */ bulletList),
+/* harmony export */   "liftListItem": () => (/* binding */ liftListItem),
+/* harmony export */   "listItem": () => (/* binding */ listItem),
+/* harmony export */   "orderedList": () => (/* binding */ orderedList),
+/* harmony export */   "sinkListItem": () => (/* binding */ sinkListItem),
+/* harmony export */   "splitListItem": () => (/* binding */ splitListItem),
+/* harmony export */   "wrapInList": () => (/* binding */ wrapInList)
+/* harmony export */ });
+/* harmony import */ var prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prosemirror-transform */ "../node_modules/prosemirror-transform/dist/index.es.js");
+/* harmony import */ var prosemirror_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prosemirror-model */ "../node_modules/prosemirror-model/dist/index.es.js");
+
+
+var olDOM = ["ol", 0],
+    ulDOM = ["ul", 0],
+    liDOM = ["li", 0]; // :: NodeSpec
+// An ordered list [node spec](#model.NodeSpec). Has a single
+// attribute, `order`, which determines the number at which the list
+// starts counting, and defaults to 1. Represented as an `<ol>`
+// element.
+
+var orderedList = {
+  attrs: {
+    order: {
+      "default": 1
+    }
+  },
+  parseDOM: [{
+    tag: "ol",
+    getAttrs: function getAttrs(dom) {
+      return {
+        order: dom.hasAttribute("start") ? +dom.getAttribute("start") : 1
+      };
+    }
+  }],
+  toDOM: function toDOM(node) {
+    return node.attrs.order == 1 ? olDOM : ["ol", {
+      start: node.attrs.order
+    }, 0];
+  }
+}; // :: NodeSpec
+// A bullet list node spec, represented in the DOM as `<ul>`.
+
+var bulletList = {
+  parseDOM: [{
+    tag: "ul"
+  }],
+  toDOM: function toDOM() {
+    return ulDOM;
+  }
+}; // :: NodeSpec
+// A list item (`<li>`) spec.
+
+var listItem = {
+  parseDOM: [{
+    tag: "li"
+  }],
+  toDOM: function toDOM() {
+    return liDOM;
+  },
+  defining: true
+};
+
+function add(obj, props) {
+  var copy = {};
+
+  for (var prop in obj) {
+    copy[prop] = obj[prop];
+  }
+
+  for (var prop$1 in props) {
+    copy[prop$1] = props[prop$1];
+  }
+
+  return copy;
+} // :: (OrderedMap<NodeSpec>, string, ?string) → OrderedMap<NodeSpec>
+// Convenience function for adding list-related node types to a map
+// specifying the nodes for a schema. Adds
+// [`orderedList`](#schema-list.orderedList) as `"ordered_list"`,
+// [`bulletList`](#schema-list.bulletList) as `"bullet_list"`, and
+// [`listItem`](#schema-list.listItem) as `"list_item"`.
+//
+// `itemContent` determines the content expression for the list items.
+// If you want the commands defined in this module to apply to your
+// list structure, it should have a shape like `"paragraph block*"` or
+// `"paragraph (ordered_list | bullet_list)*"`. `listGroup` can be
+// given to assign a group name to the list node types, for example
+// `"block"`.
+
+
+function addListNodes(nodes, itemContent, listGroup) {
+  return nodes.append({
+    ordered_list: add(orderedList, {
+      content: "list_item+",
+      group: listGroup
+    }),
+    bullet_list: add(bulletList, {
+      content: "list_item+",
+      group: listGroup
+    }),
+    list_item: add(listItem, {
+      content: itemContent
+    })
+  });
+} // :: (NodeType, ?Object) → (state: EditorState, dispatch: ?(tr: Transaction)) → bool
+// Returns a command function that wraps the selection in a list with
+// the given type an attributes. If `dispatch` is null, only return a
+// value to indicate whether this is possible, but don't actually
+// perform the change.
+
+
+function wrapInList(listType, attrs) {
+  return function (state, dispatch) {
+    var ref = state.selection;
+    var $from = ref.$from;
+    var $to = ref.$to;
+    var range = $from.blockRange($to),
+        doJoin = false,
+        outerRange = range;
+
+    if (!range) {
+      return false;
+    } // This is at the top of an existing list item
+
+
+    if (range.depth >= 2 && $from.node(range.depth - 1).type.compatibleContent(listType) && range.startIndex == 0) {
+      // Don't do anything if this is the top of the list
+      if ($from.index(range.depth - 1) == 0) {
+        return false;
+      }
+
+      var $insert = state.doc.resolve(range.start - 2);
+      outerRange = new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.NodeRange($insert, $insert, range.depth);
+
+      if (range.endIndex < range.parent.childCount) {
+        range = new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.NodeRange($from, state.doc.resolve($to.end(range.depth)), range.depth);
+      }
+
+      doJoin = true;
+    }
+
+    var wrap = (0,prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.findWrapping)(outerRange, listType, attrs, range);
+
+    if (!wrap) {
+      return false;
+    }
+
+    if (dispatch) {
+      dispatch(doWrapInList(state.tr, range, wrap, doJoin, listType).scrollIntoView());
+    }
+
+    return true;
+  };
+}
+
+function doWrapInList(tr, range, wrappers, joinBefore, listType) {
+  var content = prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty;
+
+  for (var i = wrappers.length - 1; i >= 0; i--) {
+    content = prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(wrappers[i].type.create(wrappers[i].attrs, content));
+  }
+
+  tr.step(new prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.ReplaceAroundStep(range.start - (joinBefore ? 2 : 0), range.end, range.start, range.end, new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Slice(content, 0, 0), wrappers.length, true));
+  var found = 0;
+
+  for (var i$1 = 0; i$1 < wrappers.length; i$1++) {
+    if (wrappers[i$1].type == listType) {
+      found = i$1 + 1;
+    }
+  }
+
+  var splitDepth = wrappers.length - found;
+  var splitPos = range.start + wrappers.length - (joinBefore ? 2 : 0),
+      parent = range.parent;
+
+  for (var i$2 = range.startIndex, e = range.endIndex, first = true; i$2 < e; i$2++, first = false) {
+    if (!first && (0,prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.canSplit)(tr.doc, splitPos, splitDepth)) {
+      tr.split(splitPos, splitDepth);
+      splitPos += 2 * splitDepth;
+    }
+
+    splitPos += parent.child(i$2).nodeSize;
+  }
+
+  return tr;
+} // :: (NodeType) → (state: EditorState, dispatch: ?(tr: Transaction)) → bool
+// Build a command that splits a non-empty textblock at the top level
+// of a list item by also splitting that list item.
+
+
+function splitListItem(itemType) {
+  return function (state, dispatch) {
+    var ref = state.selection;
+    var $from = ref.$from;
+    var $to = ref.$to;
+    var node = ref.node;
+
+    if (node && node.isBlock || $from.depth < 2 || !$from.sameParent($to)) {
+      return false;
+    }
+
+    var grandParent = $from.node(-1);
+
+    if (grandParent.type != itemType) {
+      return false;
+    }
+
+    if ($from.parent.content.size == 0 && $from.node(-1).childCount == $from.indexAfter(-1)) {
+      // In an empty block. If this is a nested list, the wrapping
+      // list item should be split. Otherwise, bail out and let next
+      // command handle lifting.
+      if ($from.depth == 2 || $from.node(-3).type != itemType || $from.index(-2) != $from.node(-2).childCount - 1) {
+        return false;
+      }
+
+      if (dispatch) {
+        var wrap = prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty,
+            keepItem = $from.index(-1) > 0; // Build a fragment containing empty versions of the structure
+        // from the outer list item to the parent node of the cursor
+
+        for (var d = $from.depth - (keepItem ? 1 : 2); d >= $from.depth - 3; d--) {
+          wrap = prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from($from.node(d).copy(wrap));
+        } // Add a second list item with an empty default start node
+
+
+        wrap = wrap.append(prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(itemType.createAndFill()));
+        var tr$1 = state.tr.replace($from.before(keepItem ? null : -1), $from.after(-3), new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Slice(wrap, keepItem ? 3 : 2, 2));
+        tr$1.setSelection(state.selection.constructor.near(tr$1.doc.resolve($from.pos + (keepItem ? 3 : 2))));
+        dispatch(tr$1.scrollIntoView());
+      }
+
+      return true;
+    }
+
+    var nextType = $to.pos == $from.end() ? grandParent.contentMatchAt(0).defaultType : null;
+    var tr = state.tr["delete"]($from.pos, $to.pos);
+    var types = nextType && [null, {
+      type: nextType
+    }];
+
+    if (!(0,prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.canSplit)(tr.doc, $from.pos, 2, types)) {
+      return false;
+    }
+
+    if (dispatch) {
+      dispatch(tr.split($from.pos, 2, types).scrollIntoView());
+    }
+
+    return true;
+  };
+} // :: (NodeType) → (state: EditorState, dispatch: ?(tr: Transaction)) → bool
+// Create a command to lift the list item around the selection up into
+// a wrapping list.
+
+
+function liftListItem(itemType) {
+  return function (state, dispatch) {
+    var ref = state.selection;
+    var $from = ref.$from;
+    var $to = ref.$to;
+    var range = $from.blockRange($to, function (node) {
+      return node.childCount && node.firstChild.type == itemType;
+    });
+
+    if (!range) {
+      return false;
+    }
+
+    if (!dispatch) {
+      return true;
+    }
+
+    if ($from.node(range.depth - 1).type == itemType) // Inside a parent list
+      {
+        return liftToOuterList(state, dispatch, itemType, range);
+      } else // Outer list node
+      {
+        return liftOutOfList(state, dispatch, range);
+      }
+  };
+}
+
+function liftToOuterList(state, dispatch, itemType, range) {
+  var tr = state.tr,
+      end = range.end,
+      endOfList = range.$to.end(range.depth);
+
+  if (end < endOfList) {
+    // There are siblings after the lifted items, which must become
+    // children of the last item
+    tr.step(new prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.ReplaceAroundStep(end - 1, endOfList, end, endOfList, new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Slice(prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(itemType.create(null, range.parent.copy())), 1, 0), 1, true));
+    range = new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.NodeRange(tr.doc.resolve(range.$from.pos), tr.doc.resolve(endOfList), range.depth);
+  }
+
+  dispatch(tr.lift(range, (0,prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.liftTarget)(range)).scrollIntoView());
+  return true;
+}
+
+function liftOutOfList(state, dispatch, range) {
+  var tr = state.tr,
+      list = range.parent; // Merge the list items into a single big item
+
+  for (var pos = range.end, i = range.endIndex - 1, e = range.startIndex; i > e; i--) {
+    pos -= list.child(i).nodeSize;
+    tr["delete"](pos - 1, pos + 1);
+  }
+
+  var $start = tr.doc.resolve(range.start),
+      item = $start.nodeAfter;
+  var atStart = range.startIndex == 0,
+      atEnd = range.endIndex == list.childCount;
+  var parent = $start.node(-1),
+      indexBefore = $start.index(-1);
+
+  if (!parent.canReplace(indexBefore + (atStart ? 0 : 1), indexBefore + 1, item.content.append(atEnd ? prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty : prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(list)))) {
+    return false;
+  }
+
+  var start = $start.pos,
+      end = start + item.nodeSize; // Strip off the surrounding list. At the sides where we're not at
+  // the end of the list, the existing list is closed. At sides where
+  // this is the end, it is overwritten to its end.
+
+  tr.step(new prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.ReplaceAroundStep(start - (atStart ? 1 : 0), end + (atEnd ? 1 : 0), start + 1, end - 1, new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Slice((atStart ? prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty : prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(list.copy(prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty))).append(atEnd ? prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty : prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(list.copy(prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.empty))), atStart ? 0 : 1, atEnd ? 0 : 1), atStart ? 0 : 1));
+  dispatch(tr.scrollIntoView());
+  return true;
+} // :: (NodeType) → (state: EditorState, dispatch: ?(tr: Transaction)) → bool
+// Create a command to sink the list item around the selection down
+// into an inner list.
+
+
+function sinkListItem(itemType) {
+  return function (state, dispatch) {
+    var ref = state.selection;
+    var $from = ref.$from;
+    var $to = ref.$to;
+    var range = $from.blockRange($to, function (node) {
+      return node.childCount && node.firstChild.type == itemType;
+    });
+
+    if (!range) {
+      return false;
+    }
+
+    var startIndex = range.startIndex;
+
+    if (startIndex == 0) {
+      return false;
+    }
+
+    var parent = range.parent,
+        nodeBefore = parent.child(startIndex - 1);
+
+    if (nodeBefore.type != itemType) {
+      return false;
+    }
+
+    if (dispatch) {
+      var nestedBefore = nodeBefore.lastChild && nodeBefore.lastChild.type == parent.type;
+      var inner = prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(nestedBefore ? itemType.create() : null);
+      var slice = new prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Slice(prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(itemType.create(null, prosemirror_model__WEBPACK_IMPORTED_MODULE_1__.Fragment.from(parent.type.create(null, inner)))), nestedBefore ? 3 : 1, 0);
+      var before = range.start,
+          after = range.end;
+      dispatch(state.tr.step(new prosemirror_transform__WEBPACK_IMPORTED_MODULE_0__.ReplaceAroundStep(before - (nestedBefore ? 3 : 1), after, before, after, slice, 1, true)).scrollIntoView());
+    }
+
+    return true;
+  };
 }
 
 
@@ -29750,6 +30993,740 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "../node_modules/regenerator-runtime/runtime.js":
+/*!******************************************************!*\
+  !*** ../node_modules/regenerator-runtime/runtime.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var runtime = function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function define(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []); // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+    return generator;
+  }
+
+  exports.wrap = wrap; // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed"; // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+
+  var ContinueSentinel = {}; // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+
+  function Generator() {}
+
+  function GeneratorFunction() {}
+
+  function GeneratorFunctionPrototype() {} // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+
+
+  var IteratorPrototype = {};
+
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+
+  if (NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"); // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function (genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor ? ctor === GeneratorFunction || // For the native GeneratorFunction constructor, the best we can
+    // do is to check its .name property.
+    (ctor.displayName || ctor.name) === "GeneratorFunction" : false;
+  };
+
+  exports.mark = function (genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  }; // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+
+
+  exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+
+        if (value && _typeof(value) === "object" && hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function (value) {
+            invoke("next", value, resolve, reject);
+          }, function (err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function (unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function (error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function (resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise = // If enqueue has been called before, then we want to wait until
+      // all previous Promises have been resolved before calling invoke,
+      // so that results are always delivered in the correct order. If
+      // enqueue has not been called before, then it is important to
+      // call invoke immediately, without waiting on a callback to fire,
+      // so that the async generator function has the opportunity to do
+      // any necessary setup in a predictable way. This predictability
+      // is why the Promise constructor synchronously invokes its
+      // executor callback, and why async functions synchronously
+      // execute code before the first await. Since we implement simple
+      // async functions in terms of async generators, it is especially
+      // important to get this right, even though it requires care.
+      previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, // Avoid propagating failures to Promises returned by later
+      // invocations of the iterator.
+      callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+    } // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+
+
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+
+  exports.AsyncIterator = AsyncIterator; // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+
+  exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter // If outerFn is a generator, return the full iterator.
+    : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        } // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+
+
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+        var record = tryCatch(innerFn, self, context);
+
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done ? GenStateCompleted : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        } else if (record.type === "throw") {
+          state = GenStateCompleted; // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  } // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+
+
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError("The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (!info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value; // Resume execution at the desired location (see delegateYield).
+
+      context.next = delegate.nextLoc; // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    } // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+
+
+    context.delegate = null;
+    return ContinueSentinel;
+  } // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+
+
+  defineIteratorMethods(Gp);
+  define(Gp, toStringTagSymbol, "Generator"); // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+
+  Gp[iteratorSymbol] = function () {
+    return this;
+  };
+
+  Gp.toString = function () {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{
+      tryLoc: "root"
+    }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function (object) {
+    var keys = [];
+
+    for (var key in object) {
+      keys.push(key);
+    }
+
+    keys.reverse(); // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      } // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+
+
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+            next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+          return next;
+        };
+
+        return next.next = next;
+      }
+    } // Return an iterator with no values.
+
+
+    return {
+      next: doneResult
+    };
+  }
+
+  exports.values = values;
+
+  function doneResult() {
+    return {
+      value: undefined,
+      done: true
+    };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+    reset: function reset(skipTempReset) {
+      this.prev = 0;
+      this.next = 0; // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+      this.method = "next";
+      this.arg = undefined;
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" && hasOwn.call(this, name) && !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+    stop: function stop() {
+      this.done = true;
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+    dispatchException: function dispatchException(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !!caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry && (type === "break" || type === "continue") && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+    complete: function complete(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" || record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+    finish: function finish(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+    "catch": function _catch(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+
+          return thrown;
+        }
+      } // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+
+
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  }; // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+
+  return exports;
+}( // If this script is executing as a CommonJS module, use module.exports
+// as the regeneratorRuntime namespace. Otherwise create a new empty
+// object. Either way, the resulting object will be used to initialize
+// the regeneratorRuntime variable at the top of this file.
+( false ? 0 : _typeof(module)) === "object" ? module.exports : {});
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+/***/ }),
+
 /***/ "../node_modules/resolve-pathname/esm/resolve-pathname.js":
 /*!****************************************************************!*\
   !*** ../node_modules/resolve-pathname/esm/resolve-pathname.js ***!
@@ -32628,6 +34605,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "../node_modules/react-dom/index.js");
+/* harmony import */ var _emirror_pm_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/pm/model */ "../packages/emirror__pm/src/model.ts");
+/* harmony import */ var case_anything__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! case-anything */ "../node_modules/case-anything/dist/index.esm.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -32638,6 +34617,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
+/**
+ * NodeView/MarkView for nodeView
+ */
 
 /**
  * The Context for ReactComponentView,
@@ -32666,6 +34650,10 @@ var ReactNodeViews = /*#__PURE__*/function () {
 
   /**
    * Hold the PMNode's content
+   */
+
+  /**
+   * Wrapper the content node.
    */
 
   /**
@@ -32700,6 +34688,8 @@ var ReactNodeViews = /*#__PURE__*/function () {
 
     _defineProperty(this, "contentDOM", void 0);
 
+    _defineProperty(this, "contentDOMWrapper", void 0);
+
     _defineProperty(this, "node", void 0);
 
     _defineProperty(this, "view", void 0);
@@ -32727,10 +34717,16 @@ var ReactNodeViews = /*#__PURE__*/function () {
     key: "init",
     value: function init() {
       this.dom = this.createContainerDOM();
-      this.contentDOM = this.createContentDOM();
 
-      if (this.contentDOM) {
-        this.dom.appendChild(this.contentDOM);
+      var _this$createContentDO = this.createContentDOM(),
+          contentDOM = _this$createContentDO.contentDOM,
+          wrapper = _this$createContentDO.wrapper;
+
+      this.contentDOM = contentDOM;
+      this.contentDOMWrapper = wrapper;
+
+      if (this.contentDOMWrapper) {
+        this.dom.appendChild(this.contentDOMWrapper);
       }
 
       this.render(this.dom);
@@ -32808,6 +34804,8 @@ var ReactNodeViews = /*#__PURE__*/function () {
   }, {
     key: "createContentDOM",
     value: function createContentDOM() {
+      var _this$node$type$spec$, _this$node$type$spec;
+
       if (this.pluginType !== 'node' && this.pluginType !== 'mark') {
         return null;
       }
@@ -32816,9 +34814,32 @@ var ReactNodeViews = /*#__PURE__*/function () {
         return null;
       }
 
-      var contentDOM = this.pluginType === 'mark' ? document.createElement('span') : document.createElement('div');
-      contentDOM.classList.add("emirror-".concat(this.node.type.name, "__content-dom"));
-      return contentDOM;
+      var domSpec = (_this$node$type$spec$ = (_this$node$type$spec = this.node.type.spec).toDOM) === null || _this$node$type$spec$ === void 0 ? void 0 : _this$node$type$spec$.call(_this$node$type$spec, this.node);
+
+      if (!domSpec) {
+        return null;
+      }
+
+      var _DOMSerializer$render = _emirror_pm_model__WEBPACK_IMPORTED_MODULE_2__.DOMSerializer.renderSpec(document, domSpec),
+          dom = _DOMSerializer$render.dom,
+          contentDOM = _DOMSerializer$render.contentDOM;
+
+      if (!(dom.nodeType === Node.ELEMENT_NODE && dom instanceof Node)) {
+        return null;
+      }
+
+      var wrapper = dom;
+
+      if (dom === contentDOM) {
+        wrapper = document.createElement('span');
+        wrapper.classList.add("".concat((0,case_anything__WEBPACK_IMPORTED_MODULE_3__.kebabCase)(this.node.type.name), "-node-view-content-wrapper"));
+        wrapper.append(contentDOM);
+      }
+
+      return {
+        contentDOM: contentDOM,
+        wrapper: wrapper
+      };
     }
     /**
      * The function is called when the nodeView updating itself.
@@ -32905,7 +34926,6 @@ var ErrorMsg;
   ErrorMsg["INVALID_CONTAINER_DOM"] = "Hit a invalid container dom.";
   ErrorMsg["INVALID_REACT_COMPONENT"] = "Hit a invalid react component";
   ErrorMsg["REPEATED_NODEVIEW"] = "The name of NodeView had repeated";
-  ErrorMsg["REPEATED_KEYMAP"] = "The key of keymap had repeated";
 })(ErrorMsg || (ErrorMsg = {}));
 
 /***/ }),
@@ -32921,8 +34941,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Manager": () => (/* binding */ Manager)
 /* harmony export */ });
-/* harmony import */ var _ReactNodeView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ReactNodeView */ "../packages/emirror__core-manager/src/ReactNodeView.tsx");
-/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constant */ "../packages/emirror__core-manager/src/constant.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _ReactNodeView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReactNodeView */ "../packages/emirror__core-manager/src/ReactNodeView.tsx");
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constant */ "../packages/emirror__core-manager/src/constant.ts");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -32958,6 +34979,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 /**
  * Manager for emirror plugins.
  */
@@ -32975,7 +34997,7 @@ var Manager = /*#__PURE__*/function () {
     _defineProperty(this, "plugins", function (pluginsProvider) {
       return _this.emPlugins.reduce(function (allPlugins, _ref) {
         var plugins = _ref.plugins;
-        return [].concat(_toConsumableArray(allPlugins), _toConsumableArray(plugins(pluginsProvider)));
+        return [].concat(_toConsumableArray(allPlugins), _toConsumableArray(plugins()));
       }, []);
     });
 
@@ -32985,14 +35007,14 @@ var Manager = /*#__PURE__*/function () {
       _this.emPlugins.filter(function (plugin) {
         return ['node', 'mark'].includes(plugin.type) && plugin.reactComponent;
       }).map(function (plugin) {
-        return [plugin.name, (0,_ReactNodeView__WEBPACK_IMPORTED_MODULE_0__.createReactNodeViews)(plugin.reactComponent, ctx)];
+        return [plugin.name, (0,_ReactNodeView__WEBPACK_IMPORTED_MODULE_1__.createReactNodeViews)(plugin.reactComponent, ctx)];
       }).forEach(function (_ref2) {
         var _ref3 = _slicedToArray(_ref2, 2),
             name = _ref3[0],
             nodeView = _ref3[1];
 
         if (nodeViews[name]) {
-          console.error(_constant__WEBPACK_IMPORTED_MODULE_1__.ErrorMsg.REPEATED_NODEVIEW);
+          console.error(_constant__WEBPACK_IMPORTED_MODULE_2__.ErrorMsg.REPEATED_NODEVIEW);
         }
 
         nodeViews[name] = nodeView;
@@ -33041,10 +35063,10 @@ var Manager = /*#__PURE__*/function () {
               value = _ref5[1];
 
           if (allKeymap[key]) {
-            console.error(_constant__WEBPACK_IMPORTED_MODULE_1__.ErrorMsg.REPEATED_KEYMAP);
+            allKeymap[key] = (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_0__.chainCommands)(value, allKeymap[key]);
+          } else {
+            allKeymap[key] = value;
           }
-
-          allKeymap[key] = value;
         });
       }); // keymap of Extension
 
@@ -33060,10 +35082,10 @@ var Manager = /*#__PURE__*/function () {
               value = _ref7[1];
 
           if (allKeymap[key]) {
-            console.error(_constant__WEBPACK_IMPORTED_MODULE_1__.ErrorMsg.REPEATED_KEYMAP);
+            allKeymap[key] = (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_0__.chainCommands)(value, allKeymap[key]);
+          } else {
+            allKeymap[key] = value;
           }
-
-          allKeymap[key] = value;
         });
       });
 
@@ -33595,33 +35617,46 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
 
 
 /**
  * Provide the view of Prosemirror to EMirror.
  */
 
+var _view = new WeakMap();
+
 var ViewProvider = /*#__PURE__*/function () {
   function ViewProvider() {
     _classCallCheck(this, ViewProvider);
 
-    _defineProperty(this, "_view", void 0);
+    _view.set(this, {
+      writable: true,
+      value: void 0
+    });
   }
 
   _createClass(ViewProvider, [{
     key: "view",
     get: function get() {
-      if (!this._view) {
+      if (!_classPrivateFieldGet(this, _view)) {
         throw Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ErrorMsg.INVALID_VIEW);
       }
 
-      return this._view;
+      return _classPrivateFieldGet(this, _view);
     }
   }, {
     key: "init",
     value: function init(view) {
-      this._view = view;
+      _classPrivateFieldSet(this, _view, view);
     }
   }]);
 
@@ -33738,6 +35773,12 @@ var _templateObject;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -33766,14 +35807,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  */
 
 var EMirrorView = function EMirrorView(props) {
-  var className = props.className,
+  var topNode = props.topNode,
+      className = props.className,
       _props$plugins = props.plugins,
       emPlugins = _props$plugins === void 0 ? [] : _props$plugins,
       afterInit = props.afterInit,
       afterUpdate = props.afterUpdate,
       beforeDestory = props.beforeDestory,
-      _props$showAnalytics = props.showAnalytics,
-      showAnalytics = _props$showAnalytics === void 0 ? false : _props$showAnalytics,
+      _props$editable = props.editable,
+      _editable = _props$editable === void 0 ? true : _props$editable,
       children = props.children;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
@@ -33781,9 +35823,14 @@ var EMirrorView = function EMirrorView(props) {
       extensionsReactComponent = _useState2[0],
       setExtensionsReactComponent = _useState2[1];
   /**
-   * The ref of ProsemirrorView.
+   * The ref of ProsemirrorView DOM.
    */
 
+
+  var viewDOMRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  /**
+   * The ref of ProsemirrorView.
+   */
 
   var viewRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   /**
@@ -33796,21 +35843,32 @@ var EMirrorView = function EMirrorView(props) {
       pluginsProvider = emirrorContext.pluginsProvider,
       analyticsProvider = emirrorContext.analyticsProvider;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (!viewRef.current) {
+    if (!viewDOMRef.current) {
       return;
     }
 
-    var view = init(viewRef.current); // set Selection to the doc end.
+    var view = init(viewDOMRef.current); // set Selection to the doc end.
 
-    view.dispatch(view.state.tr.setSelection(_emirror_pm_state__WEBPACK_IMPORTED_MODULE_4__.TextSelection.create(view.state.doc, view.state.doc.nodeSize - 2)));
+    view.dispatch(view.state.tr.setSelection(_emirror_pm_state__WEBPACK_IMPORTED_MODULE_4__.Selection.atEnd(view.state.doc)));
     view.focus();
     afterInit && afterInit(view);
+    window.view = view;
+    viewRef.current = view;
     viewProvider.init(view);
     return function () {
-      beforeDestory(viewProvider.view);
-      viewProvider.view.destroy();
+      beforeDestory(view);
+      view.destroy();
     };
   }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    //! Why viewProvider.view return undefine?
+    var view = viewRef.current;
+    view.update(_objectSpread(_objectSpread({}, view.props), {}, {
+      editable: function editable() {
+        return _editable;
+      }
+    }));
+  }, [_editable]);
   /**
    * init the Prosemirror view.
    * @param ele - DOM element for prosemirror view construct.
@@ -33818,6 +35876,7 @@ var EMirrorView = function EMirrorView(props) {
    */
 
   var init = function init(ele) {
+    emPlugins.unshift(topNode);
     var manager = new _emirror_core_manager__WEBPACK_IMPORTED_MODULE_2__.Manager(emPlugins); // nodes and marks of Prosemirror
 
     var nodes = manager.nodes,
@@ -33827,7 +35886,8 @@ var EMirrorView = function EMirrorView(props) {
 
     var schema = new _emirror_pm_model__WEBPACK_IMPORTED_MODULE_5__.Schema({
       nodes: nodes,
-      marks: marks
+      marks: marks,
+      topNode: topNode.name
     });
     /** All plugins of Prosemirror */
 
@@ -33895,7 +35955,7 @@ var EMirrorView = function EMirrorView(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('emirror', className)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(EMirrorInnerView, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    ref: viewRef,
+    ref: viewDOMRef,
     spellCheck: "false"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     ref: contentRef,
@@ -33908,7 +35968,7 @@ var EMirrorView = function EMirrorView(props) {
     }, rc);
   }));
 };
-var EMirrorInnerView = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  & .ProseMirror {\n    min-height: 140px;\n    overflow-wrap: break-word;\n    outline: none;\n    padding: 10px;\n    white-space: pre-wrap;\n    font-variant-ligatures: none;\n  }\n"])));
+var EMirrorInnerView = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  & .ProseMirror {\n    min-height: 140px;\n    overflow-wrap: break-word;\n    outline: none;\n    padding: 10px;\n    white-space: pre-wrap;\n    font-variant-ligatures: none;\n    word-break: break-word;\n  }\n"])));
 
 /***/ }),
 
@@ -33988,6 +36048,10 @@ var Base = /*#__PURE__*/function () {
       return [];
     });
 
+    _defineProperty(this, "commands", function () {
+      return {};
+    });
+
     _defineProperty(this, "keymap", function () {
       return {};
     });
@@ -34021,15 +36085,6 @@ var Base = /*#__PURE__*/function () {
     key: "pluginsKey",
     get: function get() {
       return {};
-    }
-    /**
-     * Commands for this plugin
-     */
-
-  }, {
-    key: "commands",
-    get: function get() {
-      return null;
     }
     /**
      * Provider plugins
@@ -34389,6 +36444,138 @@ var EMirror = function EMirror(props) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-blockquote/dist/emirror-plugin-blockquote.cjs.js":
+/*!************************************************************************************!*\
+  !*** ../packages/emirror__plugin-blockquote/dist/emirror-plugin-blockquote.cjs.js ***!
+  \************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-blockquote/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-blockquote/src/index.ts":
+/*!***********************************************************!*\
+  !*** ../packages/emirror__plugin-blockquote/src/index.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/pm/inputrules */ "../packages/emirror__pm/src/inputrules.ts");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "../packages/emirror__plugin-blockquote/src/style.css");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var Blockquote = /*#__PURE__*/function (_Node) {
+  _inherits(Blockquote, _Node);
+
+  var _super = _createSuper(Blockquote);
+
+  function Blockquote() {
+    var _this;
+
+    _classCallCheck(this, Blockquote);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Mod->': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.wrapIn)(type),
+        'Mod-》': (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.wrapIn)(type)
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_2__.wrappingInputRule)(/^\s*(>|》)\x20$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(Blockquote, [{
+    key: "name",
+    get: function get() {
+      return 'blockquote';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        content: 'block+',
+        group: 'block',
+        defining: true,
+        parseDOM: [{
+          tag: 'blockquote'
+        }],
+        toDOM: function toDOM() {
+          return ['blockquote', {
+            "class": 'emirror-blockquote'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Blockquote;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blockquote);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-bold/dist/emirror-plugin-bold.cjs.js":
 /*!************************************************************************!*\
   !*** ../packages/emirror__plugin-bold/dist/emirror-plugin-bold.cjs.js ***!
@@ -34526,6 +36713,134 @@ var Bold = /*#__PURE__*/function (_Mark) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-bullet-list/dist/emirror-plugin-bullet-list.cjs.js":
+/*!**************************************************************************************!*\
+  !*** ../packages/emirror__plugin-bullet-list/dist/emirror-plugin-bullet-list.cjs.js ***!
+  \**************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-bullet-list/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-bullet-list/src/index.ts":
+/*!************************************************************!*\
+  !*** ../packages/emirror__plugin-bullet-list/src/index.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/inputrules */ "../packages/emirror__pm/src/inputrules.ts");
+/* harmony import */ var _emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-list-item */ "../packages/emirror__plugin-list-item/dist/emirror-plugin-list-item.cjs.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var BulletList = /*#__PURE__*/function (_Node) {
+  _inherits(BulletList, _Node);
+
+  var _super = _createSuper(BulletList);
+
+  function BulletList() {
+    var _this;
+
+    _classCallCheck(this, BulletList);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Shift-Ctrl-8': (0,_emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_2__.toggleList)(type, 'listItem')
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_1__.wrappingInputRule)(/^\s*[-+*]\s$/, type)];
+    });
+
+    return _this;
+  }
+
+  _createClass(BulletList, [{
+    key: "name",
+    get: function get() {
+      return 'bulletList';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        content: 'listItem+',
+        group: 'block',
+        parseDOM: [{
+          tag: 'ul'
+        }],
+        toDOM: function toDOM() {
+          return ['ul', {
+            "class": 'emirror-bullet-list'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return BulletList;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BulletList);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-code/dist/emirror-plugin-code.cjs.js":
 /*!************************************************************************!*\
   !*** ../packages/emirror__plugin-code/dist/emirror-plugin-code.cjs.js ***!
@@ -34565,6 +36880,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
 /* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
 /* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "../packages/emirror__plugin-code/src/style.css");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34588,6 +36904,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -34743,6 +37060,303 @@ var Doc = /*#__PURE__*/function (_Node) {
 }(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Doc);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-exceed-tip/dist/emirror-plugin-exceed-tip.cjs.js":
+/*!************************************************************************************!*\
+  !*** ../packages/emirror__plugin-exceed-tip/dist/emirror-plugin-exceed-tip.cjs.js ***!
+  \************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-exceed-tip/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-exceed-tip/src/index.ts":
+/*!***********************************************************!*\
+  !*** ../packages/emirror__plugin-exceed-tip/src/index.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_state__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/state */ "../packages/emirror__pm/src/state.ts");
+/* harmony import */ var _emirror_pm_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/pm/view */ "../packages/emirror__pm/src/view.ts");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "../packages/emirror__plugin-exceed-tip/src/style.css");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+/**
+ * The option type of exceed-tip.
+ */
+
+var ExceedTip = /*#__PURE__*/function (_Extension) {
+  _inherits(ExceedTip, _Extension);
+
+  var _super = _createSuper(ExceedTip);
+
+  function ExceedTip(options) {
+    var _this;
+
+    _classCallCheck(this, ExceedTip);
+
+    _this = _super.call(this);
+
+    _defineProperty(_assertThisInitialized(_this), "exceedTipKey", new _emirror_pm_state__WEBPACK_IMPORTED_MODULE_1__.PluginKey(_this.name));
+
+    _defineProperty(_assertThisInitialized(_this), "options", {
+      maxSize: 140
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "plugins", function () {
+      return [new _emirror_pm_state__WEBPACK_IMPORTED_MODULE_1__.Plugin({
+        key: _this.exceedTipKey,
+        props: {
+          decorations: function decorations(state) {
+            var doc = state.doc;
+            var lastChild = doc.lastChild;
+
+            if (!lastChild) {
+              return;
+            }
+
+            if (doc.textContent.length <= _this.options.maxSize) {
+              return;
+            }
+
+            var pos = doc.content.size - lastChild.nodeSize;
+            var className = 'emirror-exceed-tip ';
+
+            if (lastChild.isTextblock && !lastChild.textContent.length) {
+              // this if-else stat aims to format content
+              className += 'before';
+            } else {
+              className += 'after';
+            }
+
+            var decoration = _emirror_pm_view__WEBPACK_IMPORTED_MODULE_2__.Decoration.node(pos, pos + lastChild.nodeSize, {
+              "class": className,
+              'data-exceed-tip-content': "".concat(doc.textContent.length, "/").concat(_this.options.maxSize)
+            });
+            return _emirror_pm_view__WEBPACK_IMPORTED_MODULE_2__.DecorationSet.create(doc, [decoration]);
+          }
+        }
+      })];
+    });
+
+    _this.options = options;
+    return _this;
+  }
+
+  _createClass(ExceedTip, [{
+    key: "name",
+    get: function get() {
+      return 'placeholder';
+    }
+  }]);
+
+  return ExceedTip;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Extension);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExceedTip);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-heading/dist/emirror-plugin-heading.cjs.js":
+/*!******************************************************************************!*\
+  !*** ../packages/emirror__plugin-heading/dist/emirror-plugin-heading.cjs.js ***!
+  \******************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-heading/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-heading/src/index.ts":
+/*!********************************************************!*\
+  !*** ../packages/emirror__plugin-heading/src/index.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/commands */ "../packages/emirror__pm/src/commands.ts");
+/* harmony import */ var _emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/pm/inputrules */ "../packages/emirror__pm/src/inputrules.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var Heading = /*#__PURE__*/function (_Node) {
+  _inherits(Heading, _Node);
+
+  var _super = _createSuper(Heading);
+
+  function Heading() {
+    var _this;
+
+    _classCallCheck(this, Heading);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "levels", [1, 2, 3, 4, 5, 6]);
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return Object.fromEntries(_this.levels.map(function (level) {
+        return ["Ctrl-Shift-".concat(level), (0,_emirror_pm_commands__WEBPACK_IMPORTED_MODULE_1__.setBlockType)(type, {
+          level: level
+        })];
+      }));
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return _this.levels.map(function (level) {
+        return (0,_emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_2__.textblockTypeInputRule)(new RegExp("^(#{1,".concat(level, "})\\s$")), type, function () {
+          return {
+            level: level
+          };
+        });
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(Heading, [{
+    key: "name",
+    get: function get() {
+      return 'heading';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      var levels = this.levels;
+      return {
+        group: 'block',
+        content: 'inline*',
+        defining: true,
+        attrs: {
+          level: {
+            "default": 1
+          }
+        },
+        parseDOM: levels.map(function (level) {
+          return {
+            tag: "h".concat(level),
+            attrs: {
+              level: level
+            }
+          };
+        }),
+        toDOM: function toDOM(node) {
+          return ["h".concat(node.attrs.level), {
+            id: (0,_emirror_utils__WEBPACK_IMPORTED_MODULE_3__.genID)(),
+            "class": "emirror-heading emirror-h".concat(node.attrs.level)
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Heading;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Heading);
 
 /***/ }),
 
@@ -34993,6 +37607,344 @@ var Italic = /*#__PURE__*/function (_Mark) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-list-item/dist/emirror-plugin-list-item.cjs.js":
+/*!**********************************************************************************!*\
+  !*** ../packages/emirror__plugin-list-item/dist/emirror-plugin-list-item.cjs.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-list-item/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-list-item/src/command.ts":
+/*!************************************************************!*\
+  !*** ../packages/emirror__plugin-list-item/src/command.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "toggleList": () => (/* binding */ toggleList)
+/* harmony export */ });
+/* harmony import */ var _emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/pm/schema-list */ "../packages/emirror__pm/src/schema-list.ts");
+/* harmony import */ var _emirror_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/utils */ "../packages/emirror__utils/src/index.ts");
+
+
+
+var isList = function isList(node, schema) {
+  var type = node.type;
+  return type === schema.nodes.bulletList || type === schema.nodes.orderedList || type === schema.nodes.todoList;
+};
+
+var toggleList = function toggleList(listTypeOrName, itemTypeOrName) {
+  return function (state, dispatch) {
+    var schema = state.schema,
+        selection = state.selection;
+    var listType = (0,_emirror_utils__WEBPACK_IMPORTED_MODULE_1__.getNodeType)(listTypeOrName, schema);
+    var itemType = (0,_emirror_utils__WEBPACK_IMPORTED_MODULE_1__.getNodeType)(itemTypeOrName, schema);
+    var $from = selection.$from,
+        $to = selection.$to;
+    var range = $from.blockRange($to);
+
+    if (!range) {
+      return;
+    }
+
+    var parentList = (0,_emirror_utils__WEBPACK_IMPORTED_MODULE_1__.findParentNode)(function (node) {
+      return isList(node, schema);
+    })(selection);
+
+    if (range.depth >= 1 && parentList && range.depth - parentList.depth <= 1) {
+      // remove list
+      if (parentList.node.type === listType) {
+        return (0,_emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_0__.liftListItem)(itemType)(state, dispatch);
+      } // change list type
+
+
+      if (isList(parentList.node, schema) && listType.validContent(parentList.node.content)) {
+        var tr = state.tr;
+        tr.setNodeMarkup(parentList.pos, listType);
+
+        if (dispatch) {
+          dispatch(tr);
+        }
+
+        return false;
+      }
+    }
+
+    return (0,_emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_0__.wrapInList)(listType)(state, dispatch);
+  };
+};
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-list-item/src/index.ts":
+/*!**********************************************************!*\
+  !*** ../packages/emirror__plugin-list-item/src/index.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "toggleList": () => (/* reexport safe */ _command__WEBPACK_IMPORTED_MODULE_2__.toggleList)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/schema-list */ "../packages/emirror__pm/src/schema-list.ts");
+/* harmony import */ var _command__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./command */ "../packages/emirror__plugin-list-item/src/command.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var ListItem = /*#__PURE__*/function (_Node) {
+  _inherits(ListItem, _Node);
+
+  var _super = _createSuper(ListItem);
+
+  function ListItem() {
+    var _this;
+
+    _classCallCheck(this, ListItem);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        Enter: (0,_emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_1__.splitListItem)(type),
+        Tab: (0,_emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_1__.sinkListItem)(type),
+        'Shift-Tab': (0,_emirror_pm_schema_list__WEBPACK_IMPORTED_MODULE_1__.liftListItem)(type)
+      };
+    });
+
+    return _this;
+  }
+
+  _createClass(ListItem, [{
+    key: "name",
+    get: function get() {
+      return 'listItem';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        content: 'block*',
+        defining: true,
+        draggable: false,
+        parseDOM: [{
+          tag: 'li'
+        }],
+        toDOM: function toDOM() {
+          return ['li', {
+            "class": 'emirror-li'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return ListItem;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ListItem);
+
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-order-list/dist/emirror-plugin-order-list.cjs.js":
+/*!************************************************************************************!*\
+  !*** ../packages/emirror__plugin-order-list/dist/emirror-plugin-order-list.cjs.js ***!
+  \************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-order-list/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-order-list/src/index.ts":
+/*!***********************************************************!*\
+  !*** ../packages/emirror__plugin-order-list/src/index.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/inputrules */ "../packages/emirror__pm/src/inputrules.ts");
+/* harmony import */ var _emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/plugin-list-item */ "../packages/emirror__plugin-list-item/dist/emirror-plugin-list-item.cjs.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var OrderList = /*#__PURE__*/function (_Node) {
+  _inherits(OrderList, _Node);
+
+  var _super = _createSuper(OrderList);
+
+  function OrderList() {
+    var _this;
+
+    _classCallCheck(this, OrderList);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "keymap", function (_ref) {
+      var type = _ref.type;
+      return {
+        'Shift-Ctrl-9': (0,_emirror_plugin_list_item__WEBPACK_IMPORTED_MODULE_2__.toggleList)(type, 'listItem')
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "inputRules", function (_ref2) {
+      var type = _ref2.type;
+      return [(0,_emirror_pm_inputrules__WEBPACK_IMPORTED_MODULE_1__.wrappingInputRule)(/^^(\d+)\.\s$/, type, function (match) {
+        return {
+          order: parseInt(match[1], 10)
+        };
+      }, function (match, node) {
+        return node.childCount + node.attrs.order === parseInt(match[1], 10);
+      })];
+    });
+
+    return _this;
+  }
+
+  _createClass(OrderList, [{
+    key: "name",
+    get: function get() {
+      return 'orderList';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        attrs: {
+          order: {
+            "default": 1
+          }
+        },
+        content: 'listItem+',
+        group: 'block',
+        parseDOM: [{
+          tag: 'ol',
+          getAttrs: function getAttrs(dom) {
+            return {
+              order: dom.getAttribute('data-order-start') ? parseInt(dom.getAttribute('data-order-start'), 10) : 1
+            };
+          }
+        }],
+        toDOM: function toDOM(node) {
+          return node.attrs.order === 1 ? ['ol', {
+            "class": 'emirror-order-li'
+          }, 0] : ['ol', {
+            "class": 'emirror-order-li',
+            'data-order-start': node.attrs.order
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return OrderList;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OrderList);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js":
 /*!**********************************************************************************!*\
   !*** ../packages/emirror__plugin-paragraph/dist/emirror-plugin-paragraph.cjs.js ***!
@@ -35108,6 +38060,361 @@ var Paragraph = /*#__PURE__*/function (_Node) {
 }(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Paragraph);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-placeholder/dist/emirror-plugin-placeholder.cjs.js":
+/*!**************************************************************************************!*\
+  !*** ../packages/emirror__plugin-placeholder/dist/emirror-plugin-placeholder.cjs.js ***!
+  \**************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-placeholder/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-placeholder/src/index.ts":
+/*!************************************************************!*\
+  !*** ../packages/emirror__plugin-placeholder/src/index.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _emirror_pm_state__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emirror/pm/state */ "../packages/emirror__pm/src/state.ts");
+/* harmony import */ var _emirror_pm_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emirror/pm/view */ "../packages/emirror__pm/src/view.ts");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "../packages/emirror__plugin-placeholder/src/style.css");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+/**
+ * The option type of placeholder
+ */
+
+var Placeholder = /*#__PURE__*/function (_Extension) {
+  _inherits(Placeholder, _Extension);
+
+  var _super = _createSuper(Placeholder);
+
+  function Placeholder(options) {
+    var _this;
+
+    _classCallCheck(this, Placeholder);
+
+    _this = _super.call(this);
+
+    _defineProperty(_assertThisInitialized(_this), "placeholderKey", new _emirror_pm_state__WEBPACK_IMPORTED_MODULE_1__.PluginKey(_this.name));
+
+    _defineProperty(_assertThisInitialized(_this), "options", {
+      content: 'default placeholder content'
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "plugins", function () {
+      return [new _emirror_pm_state__WEBPACK_IMPORTED_MODULE_1__.Plugin({
+        key: _this.placeholderKey,
+        props: {
+          decorations: function decorations(state) {
+            var doc = state.doc,
+                selection = state.selection;
+            var anchor = selection.anchor;
+
+            if (doc.childCount > 1) {
+              return;
+            }
+
+            var pos = 0;
+            var emptyNodeSize = 2;
+            var hasAnchor = anchor >= pos && anchor <= pos + emptyNodeSize;
+
+            if (!hasAnchor) {
+              return;
+            }
+
+            var decoration = _emirror_pm_view__WEBPACK_IMPORTED_MODULE_2__.Decoration.node(pos, pos + emptyNodeSize, {
+              "class": 'emirror-placeholder',
+              'data-placeholder-content': _this.options.content
+            });
+            return _emirror_pm_view__WEBPACK_IMPORTED_MODULE_2__.DecorationSet.create(doc, [decoration]);
+          }
+        }
+      })];
+    });
+
+    _this.options = options;
+    return _this;
+  }
+
+  _createClass(Placeholder, [{
+    key: "name",
+    get: function get() {
+      return 'placeholder';
+    }
+  }]);
+
+  return Placeholder;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Extension);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Placeholder);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-react-highlight-block/dist/emirror-plugin-react-highlight-block.cjs.js":
+/*!**********************************************************************************************************!*\
+  !*** ../packages/emirror__plugin-react-highlight-block/dist/emirror-plugin-react-highlight-block.cjs.js ***!
+  \**********************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-react-highlight-block/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-react-highlight-block/src/HighlightView.tsx":
+/*!*******************************************************************************!*\
+  !*** ../packages/emirror__plugin-react-highlight-block/src/HighlightView.tsx ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _templateObject, _templateObject2;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+var EMOJI_URL = 'https://unpkg.com/emojilib@3.0.2/dist/emoji-en-US.json';
+var HighlighWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  border-radius: 5px;\n  padding: 6px 12px;\n  position: relative;\n  display: flex;\n  background-color: rgb(240, 244, 255);\n  border: 1px solid rgb(186, 206, 253);\n  color: unset;\n"])));
+var IconWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: inline-block;\n  font-size: 22px;\n  margin: 12px 16px;\n  cursor: pointer;\n\n  ::selection {\n    background-color: transparent;\n  }\n"])));
+
+var HighlightView = function HighlightView() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(['✨']),
+      _useState2 = _slicedToArray(_useState, 2),
+      allEmoji = _useState2[0],
+      setAllEmoji = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('✨'),
+      _useState4 = _slicedToArray(_useState3, 2),
+      emoji = _useState4[0],
+      setEmoji = _useState4[1];
+
+  var getRandomEmoji = function getRandomEmoji() {
+    return setEmoji(allEmoji[Math.floor(Math.random() * allEmoji.length)]);
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var getEmoji = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var res;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return fetch(EMOJI_URL);
+
+              case 2:
+                _context.next = 4;
+                return _context.sent.json();
+
+              case 4:
+                res = _context.sent;
+                setAllEmoji(Object.keys(res));
+
+              case 6:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function getEmoji() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    getEmoji();
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(HighlighWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(IconWrapper, {
+    onClick: function onClick() {
+      getRandomEmoji();
+    }
+  }, emoji));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HighlightView);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-react-highlight-block/src/index.ts":
+/*!**********************************************************************!*\
+  !*** ../packages/emirror__plugin-react-highlight-block/src/index.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+/* harmony import */ var _HighlightView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HighlightView */ "../packages/emirror__plugin-react-highlight-block/src/HighlightView.tsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var HighlightBlock = /*#__PURE__*/function (_Node) {
+  _inherits(HighlightBlock, _Node);
+
+  var _super = _createSuper(HighlightBlock);
+
+  function HighlightBlock() {
+    var _this;
+
+    _classCallCheck(this, HighlightBlock);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "reactComponent", _HighlightView__WEBPACK_IMPORTED_MODULE_1__.default);
+
+    return _this;
+  }
+
+  _createClass(HighlightBlock, [{
+    key: "name",
+    get: function get() {
+      return 'highlightBlock';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        group: 'block',
+        content: '(paragraph|bulletList|orderList)+',
+        defining: true,
+        parseDOM: [{
+          tag: 'div.emirror-highlight-block'
+        }],
+        toDOM: function toDOM() {
+          return ['div', {
+            "class": 'emirror-highlight-block'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return HighlightBlock;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HighlightBlock);
 
 /***/ }),
 
@@ -35245,6 +38552,278 @@ var Strike = /*#__PURE__*/function (_Mark) {
 
 /***/ }),
 
+/***/ "../packages/emirror__plugin-text-background-color/dist/emirror-plugin-text-background-color.cjs.js":
+/*!**********************************************************************************************************!*\
+  !*** ../packages/emirror__plugin-text-background-color/dist/emirror-plugin-text-background-color.cjs.js ***!
+  \**********************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-text-background-color/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-text-background-color/src/index.ts":
+/*!**********************************************************************!*\
+  !*** ../packages/emirror__plugin-text-background-color/src/index.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var TextBgColor = /*#__PURE__*/function (_Mark) {
+  _inherits(TextBgColor, _Mark);
+
+  var _super = _createSuper(TextBgColor);
+
+  function TextBgColor() {
+    _classCallCheck(this, TextBgColor);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TextBgColor, [{
+    key: "name",
+    get: function get() {
+      return 'textBgColor';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        attrs: {
+          bgColor: {}
+        },
+        parseDOM: [{
+          tag: 'span[data-text-bg-color]',
+          getAttrs: function getAttrs(dom) {
+            var bgColor = dom.getAttribute('data-text-bg-color');
+
+            if (!bgColor) {
+              return;
+            }
+
+            return {
+              bgColor: bgColor
+            };
+          }
+        }, {
+          style: 'background-color',
+          getAttrs: function getAttrs(bgColor) {
+            if (typeof bgColor !== 'string') {
+              return;
+            }
+
+            return {
+              bgColor: bgColor
+            };
+          }
+        }],
+        toDOM: function toDOM(mark) {
+          var attrs = mark.attrs;
+          var bgColor = attrs.bgColor;
+
+          if (!bgColor) {
+            return ['span', {
+              "class": 'emirror-text-bg-color'
+            }, 0];
+          }
+
+          return ['span', {
+            "class": 'emirror-text-bg-color',
+            'data-text-bg-color': bgColor,
+            style: "background-color: ".concat(bgColor, ";")
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return TextBgColor;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TextBgColor);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-text-color/dist/emirror-plugin-text-color.cjs.js":
+/*!************************************************************************************!*\
+  !*** ../packages/emirror__plugin-text-color/dist/emirror-plugin-text-color.cjs.js ***!
+  \************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-text-color/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-text-color/src/index.ts":
+/*!***********************************************************!*\
+  !*** ../packages/emirror__plugin-text-color/src/index.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var TextColor = /*#__PURE__*/function (_Mark) {
+  _inherits(TextColor, _Mark);
+
+  var _super = _createSuper(TextColor);
+
+  function TextColor() {
+    _classCallCheck(this, TextColor);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TextColor, [{
+    key: "name",
+    get: function get() {
+      return 'textColor';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        attrs: {
+          color: {}
+        },
+        parseDOM: [{
+          tag: 'span[data-text-color]',
+          getAttrs: function getAttrs(dom) {
+            var color = dom.getAttribute('data-text-color');
+
+            if (!color) {
+              return;
+            }
+
+            return {
+              color: color
+            };
+          }
+        }, {
+          style: 'color',
+          getAttrs: function getAttrs(color) {
+            if (typeof color !== 'string') {
+              return;
+            }
+
+            return {
+              color: color
+            };
+          }
+        }],
+        toDOM: function toDOM(mark) {
+          var attrs = mark.attrs;
+          var color = attrs.color;
+
+          if (!color) {
+            return ['span', {
+              "class": 'emirror-text-color'
+            }, 0];
+          }
+
+          return ['span', {
+            "class": 'emirror-text-color',
+            'data-text-color': color,
+            style: "color: ".concat(color, ";")
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return TextColor;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Mark);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TextColor);
+
+/***/ }),
+
 /***/ "../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js":
 /*!************************************************************************!*\
   !*** ../packages/emirror__plugin-text/dist/emirror-plugin-text.cjs.js ***!
@@ -35336,6 +38915,200 @@ var Text = /*#__PURE__*/function (_Node) {
 }(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Text);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-title-doc/dist/emirror-plugin-title-doc.cjs.js":
+/*!**********************************************************************************!*\
+  !*** ../packages/emirror__plugin-title-doc/dist/emirror-plugin-title-doc.cjs.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-title-doc/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-title-doc/src/index.ts":
+/*!**********************************************************!*\
+  !*** ../packages/emirror__plugin-title-doc/src/index.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var TitleDoc = /*#__PURE__*/function (_Node) {
+  _inherits(TitleDoc, _Node);
+
+  var _super = _createSuper(TitleDoc);
+
+  function TitleDoc() {
+    _classCallCheck(this, TitleDoc);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TitleDoc, [{
+    key: "name",
+    get: function get() {
+      return 'titleDoc';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        content: 'title block+'
+      };
+    }
+  }]);
+
+  return TitleDoc;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TitleDoc);
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-title/dist/emirror-plugin-title.cjs.js":
+/*!**************************************************************************!*\
+  !*** ../packages/emirror__plugin-title/dist/emirror-plugin-title.cjs.js ***!
+  \**************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __dirname = "/";
+ // this file might look strange and you might be wondering what it's for
+// it's lets you import your source files by importing this entrypoint
+// as you would import it if it was built with preconstruct build
+// this file is slightly different to some others though
+// it has a require hook which compiles your code with Babel
+// this means that you don't have to set up @babel/register or anything like that
+// but you can still require this module and it'll be compiled
+// this bit of code imports the require hook and registers it
+
+var unregister = __webpack_require__(/*! ../../../node_modules/@preconstruct/hook */ "../node_modules/@preconstruct/hook/noop.js").___internalHook( false ? 0 : __dirname, "../../..", ".."); // this re-exports the source file
+
+
+module.exports = __webpack_require__(/*! ../src/index.ts */ "../packages/emirror__plugin-title/src/index.ts");
+unregister();
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-title/src/index.ts":
+/*!******************************************************!*\
+  !*** ../packages/emirror__plugin-title/src/index.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/core-structure */ "../packages/emirror__core-structure/src/index.ts");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var Title = /*#__PURE__*/function (_Node) {
+  _inherits(Title, _Node);
+
+  var _super = _createSuper(Title);
+
+  function Title() {
+    _classCallCheck(this, Title);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Title, [{
+    key: "name",
+    get: function get() {
+      return 'title';
+    }
+  }, {
+    key: "schema",
+    get: function get() {
+      return {
+        content: 'inline*',
+        parseDOM: [{
+          tag: 'h1'
+        }],
+        toDOM: function toDOM() {
+          return ['h1', {
+            "class": 'emirror-title'
+          }, 0];
+        }
+      };
+    }
+  }]);
+
+  return Title;
+}(_emirror_core_structure__WEBPACK_IMPORTED_MODULE_0__.Node);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Title);
 
 /***/ }),
 
@@ -35604,6 +39377,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../packages/emirror__pm/src/schema-list.ts":
+/*!**************************************************!*\
+  !*** ../packages/emirror__pm/src/schema-list.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addListNodes": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.addListNodes),
+/* harmony export */   "bulletList": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.bulletList),
+/* harmony export */   "liftListItem": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.liftListItem),
+/* harmony export */   "listItem": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.listItem),
+/* harmony export */   "orderedList": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.orderedList),
+/* harmony export */   "sinkListItem": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.sinkListItem),
+/* harmony export */   "splitListItem": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.splitListItem),
+/* harmony export */   "wrapInList": () => (/* reexport safe */ prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__.wrapInList)
+/* harmony export */ });
+/* harmony import */ var prosemirror_schema_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prosemirror-schema-list */ "../node_modules/prosemirror-schema-list/dist/index.es.js");
+
+
+/***/ }),
+
 /***/ "../packages/emirror__pm/src/state.ts":
 /*!********************************************!*\
   !*** ../packages/emirror__pm/src/state.ts ***!
@@ -35740,6 +39536,72 @@ var findChangedNodesFromTr = function findChangedNodesFromTr(tr) {
 
 /***/ }),
 
+/***/ "../packages/emirror__utils/src/findParentNode.ts":
+/*!********************************************************!*\
+  !*** ../packages/emirror__utils/src/findParentNode.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "findParentNode": () => (/* binding */ findParentNode)
+/* harmony export */ });
+/* harmony import */ var _findParentNodeClosestToPos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./findParentNodeClosestToPos */ "../packages/emirror__utils/src/findParentNodeClosestToPos.ts");
+
+var findParentNode = function findParentNode(predicate) {
+  return function (selection) {
+    return (0,_findParentNodeClosestToPos__WEBPACK_IMPORTED_MODULE_0__.findParentNodeClosestToPos)(selection.$from, predicate);
+  };
+};
+
+/***/ }),
+
+/***/ "../packages/emirror__utils/src/findParentNodeClosestToPos.ts":
+/*!********************************************************************!*\
+  !*** ../packages/emirror__utils/src/findParentNodeClosestToPos.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "findParentNodeClosestToPos": () => (/* binding */ findParentNodeClosestToPos)
+/* harmony export */ });
+function findParentNodeClosestToPos($pos, predicate) {
+  for (var i = $pos.depth; i > 0; i -= 1) {
+    var _node = $pos.node(i);
+
+    if (predicate(_node)) {
+      return {
+        pos: i > 0 ? $pos.before(i) : 0,
+        start: $pos.start(i),
+        depth: i,
+        node: _node
+      };
+    }
+  }
+}
+
+/***/ }),
+
+/***/ "../packages/emirror__utils/src/genID.ts":
+/*!***********************************************!*\
+  !*** ../packages/emirror__utils/src/genID.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "genID": () => (/* binding */ genID)
+/* harmony export */ });
+/* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nanoid */ "../node_modules/nanoid/index.dev.js");
+
+var genID = nanoid__WEBPACK_IMPORTED_MODULE_0__.nanoid;
+
+/***/ }),
+
 /***/ "../packages/emirror__utils/src/getMarksBetween.ts":
 /*!*********************************************************!*\
   !*** ../packages/emirror__utils/src/getMarksBetween.ts ***!
@@ -35779,6 +39641,35 @@ var getMarksBetween = function getMarksBetween(from, to, state) {
 
 /***/ }),
 
+/***/ "../packages/emirror__utils/src/getNodeType.ts":
+/*!*****************************************************!*\
+  !*** ../packages/emirror__utils/src/getNodeType.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getNodeType": () => (/* binding */ getNodeType)
+/* harmony export */ });
+/**
+ * get the type of node if it exist in schema.
+ * If it's do not exist, it will throw error.
+ */
+function getNodeType(nameOrType, schema) {
+  if (typeof nameOrType === 'string') {
+    if (!schema.nodes[nameOrType]) {
+      throw Error("There is no node type named ".concat(nameOrType, "."));
+    }
+
+    return schema.nodes[nameOrType];
+  }
+
+  return nameOrType;
+}
+
+/***/ }),
+
 /***/ "../packages/emirror__utils/src/index.ts":
 /*!***********************************************!*\
   !*** ../packages/emirror__utils/src/index.ts ***!
@@ -35791,12 +39682,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "isMac": () => (/* reexport safe */ _isMac__WEBPACK_IMPORTED_MODULE_0__.isMac),
 /* harmony export */   "markInputRules": () => (/* reexport safe */ _markInputRules__WEBPACK_IMPORTED_MODULE_1__.markInputRules),
 /* harmony export */   "getMarksBetween": () => (/* reexport safe */ _getMarksBetween__WEBPACK_IMPORTED_MODULE_2__.getMarksBetween),
-/* harmony export */   "findChangedNodesFromTr": () => (/* reexport safe */ _findChangedNodesFromTr__WEBPACK_IMPORTED_MODULE_3__.findChangedNodesFromTr)
+/* harmony export */   "findChangedNodesFromTr": () => (/* reexport safe */ _findChangedNodesFromTr__WEBPACK_IMPORTED_MODULE_3__.findChangedNodesFromTr),
+/* harmony export */   "getNodeType": () => (/* reexport safe */ _getNodeType__WEBPACK_IMPORTED_MODULE_4__.getNodeType),
+/* harmony export */   "findParentNodeClosestToPos": () => (/* reexport safe */ _findParentNodeClosestToPos__WEBPACK_IMPORTED_MODULE_5__.findParentNodeClosestToPos),
+/* harmony export */   "findParentNode": () => (/* reexport safe */ _findParentNode__WEBPACK_IMPORTED_MODULE_6__.findParentNode),
+/* harmony export */   "genID": () => (/* reexport safe */ _genID__WEBPACK_IMPORTED_MODULE_7__.genID)
 /* harmony export */ });
 /* harmony import */ var _isMac__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isMac */ "../packages/emirror__utils/src/isMac.ts");
 /* harmony import */ var _markInputRules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markInputRules */ "../packages/emirror__utils/src/markInputRules.ts");
 /* harmony import */ var _getMarksBetween__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getMarksBetween */ "../packages/emirror__utils/src/getMarksBetween.ts");
 /* harmony import */ var _findChangedNodesFromTr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./findChangedNodesFromTr */ "../packages/emirror__utils/src/findChangedNodesFromTr.ts");
+/* harmony import */ var _getNodeType__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./getNodeType */ "../packages/emirror__utils/src/getNodeType.ts");
+/* harmony import */ var _findParentNodeClosestToPos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./findParentNodeClosestToPos */ "../packages/emirror__utils/src/findParentNodeClosestToPos.ts");
+/* harmony import */ var _findParentNode__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./findParentNode */ "../packages/emirror__utils/src/findParentNode.ts");
+/* harmony import */ var _genID__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./genID */ "../packages/emirror__utils/src/genID.ts");
+
+
+
+
 
 
 
@@ -35816,7 +39719,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "isMac": () => (/* binding */ isMac)
 /* harmony export */ });
 /**
- * is Mac platform ?
+ * is Mac platform?
  */
 var isMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
 
@@ -35905,7 +39808,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var AppView = styled_components__WEBPACK_IMPORTED_MODULE_4__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  * {\n    box-sizing: border-box;\n  }\n\n  width: 100%;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n\n  .emirror {\n    border: 1px solid black;\n    border-radius: 20px;\n    margin-bottom: 1em;\n  }\n\n  @media screen and (max-width: 800px) {\n    .emirror {\n      max-width: calc(100% - 8px);\n    }\n  }\n  @media screen and (min-width: 800px) {\n    .emirror {\n      width: 760px;\n    }\n  }\n"])));
+var AppView = styled_components__WEBPACK_IMPORTED_MODULE_4__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  * {\n    box-sizing: border-box;\n  }\n\n  width: 100%;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n\n  .emirror {\n    border: 1px solid black;\n    border-radius: 5px;\n    margin-bottom: 1em;\n  }\n\n  @media screen and (max-width: 800px) {\n    .emirror {\n      max-width: calc(100% - 8px);\n    }\n  }\n  @media screen and (min-width: 800px) {\n    .emirror {\n      width: 760px;\n    }\n  }\n"])));
 /**
  * the prefix point examples.
  */
@@ -35924,11 +39827,26 @@ var App = function App() {
     setPathname(location === null || location === void 0 ? void 0 : location.pathname);
   }, [location]);
   var routeComponents = [{
-    path: 'emirror/mini-setup',
+    path: 'mini-setup',
     component: _pages__WEBPACK_IMPORTED_MODULE_3__.MiniEMirror
   }, {
-    path: 'emirror/default',
+    path: 'default',
     component: _pages__WEBPACK_IMPORTED_MODULE_3__.DefaultEMirror
+  }, {
+    path: 'read-only',
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.ReadOnlyEMirror
+  }, {
+    path: 'title-doc',
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.TitleDocEMirror
+  }, {
+    path: 'highlight-block',
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.HighlightEMirror
+  }, {
+    path: 'placeholder',
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.PlaceholderEMirror
+  }, {
+    path: 'exceed-tip',
+    component: _pages__WEBPACK_IMPORTED_MODULE_3__.ExceedTipEditor
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AppView, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.Nav, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.Introduction, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components__WEBPACK_IMPORTED_MODULE_2__.SubNavigation, {
     pathname: pathname,
@@ -36009,7 +39927,7 @@ var IntroStyled = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_te
 var UnderLineSpan = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.span(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  text-decoration: underline;\n"])));
 
 var Introduction = function Introduction() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(IntroStyled, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "EMirror"), " - a WYSIWYG eidtor based on", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_basic_components_link__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(UnderLineSpan, null, "Prosemirror")), ' and ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_basic_components_link__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(UnderLineSpan, null, "React")), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "It means ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Extension Prosemirror"), ", and it aims is provide a toolkit for build modern web editor fluently."));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(IntroStyled, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "EMirror"), " - a WYSIWYG eidtor based on", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_basic_components_link__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(UnderLineSpan, null, "Prosemirror")), ' and ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_basic_components_link__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(UnderLineSpan, null, "React")), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "It means ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Extension Prosemirror"), ", and it aims is provide a toolkit for build modern web editor fluently."));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Introduction);
@@ -36168,6 +40086,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/index.tsx":
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "../node_modules/react-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "../node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.tsx");
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('root'));
+
+/***/ }),
+
 /***/ "./src/pages/defaultEditor/index.tsx":
 /*!*******************************************!*\
   !*** ./src/pages/defaultEditor/index.tsx ***!
@@ -36177,9 +40115,41 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _emirror_default__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_example_default__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
-/* harmony import */ var _emirror_default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/default */ "../examples/default/dist/emirror-default.cjs.js");
+/* harmony import */ var _emirror_example_default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/example-default */ "../examples/default/dist/emirror-example-default.cjs.js");
+
+
+/***/ }),
+
+/***/ "./src/pages/exceedTipEditor/index.ts":
+/*!********************************************!*\
+  !*** ./src/pages/exceedTipEditor/index.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_example_exceed_tip__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _emirror_example_exceed_tip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/example-exceed-tip */ "../examples/exceed-tip/dist/emirror-example-exceed-tip.cjs.js");
+
+
+/***/ }),
+
+/***/ "./src/pages/highlightEditor/index.tsx":
+/*!*********************************************!*\
+  !*** ./src/pages/highlightEditor/index.tsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _emirro_example_highlight_block__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _emirro_example_highlight_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirro/example-highlight-block */ "../examples/highlight-block/dist/emirro-example-highlight-block.cjs.js");
 
 
 /***/ }),
@@ -36194,10 +40164,25 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MiniEMirror": () => (/* reexport safe */ _miniEditor__WEBPACK_IMPORTED_MODULE_0__.default),
-/* harmony export */   "DefaultEMirror": () => (/* reexport safe */ _defaultEditor__WEBPACK_IMPORTED_MODULE_1__.default)
+/* harmony export */   "DefaultEMirror": () => (/* reexport safe */ _defaultEditor__WEBPACK_IMPORTED_MODULE_1__.default),
+/* harmony export */   "ReadOnlyEMirror": () => (/* reexport safe */ _readonlyEditor__WEBPACK_IMPORTED_MODULE_2__.default),
+/* harmony export */   "TitleDocEMirror": () => (/* reexport safe */ _titleDocEditor__WEBPACK_IMPORTED_MODULE_3__.default),
+/* harmony export */   "HighlightEMirror": () => (/* reexport safe */ _highlightEditor__WEBPACK_IMPORTED_MODULE_4__.default),
+/* harmony export */   "PlaceholderEMirror": () => (/* reexport safe */ _placeholderEditor__WEBPACK_IMPORTED_MODULE_5__.default),
+/* harmony export */   "ExceedTipEditor": () => (/* reexport safe */ _exceedTipEditor__WEBPACK_IMPORTED_MODULE_6__.default)
 /* harmony export */ });
 /* harmony import */ var _miniEditor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./miniEditor */ "./src/pages/miniEditor/index.tsx");
 /* harmony import */ var _defaultEditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defaultEditor */ "./src/pages/defaultEditor/index.tsx");
+/* harmony import */ var _readonlyEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./readonlyEditor */ "./src/pages/readonlyEditor/index.ts");
+/* harmony import */ var _titleDocEditor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./titleDocEditor */ "./src/pages/titleDocEditor/index.ts");
+/* harmony import */ var _highlightEditor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./highlightEditor */ "./src/pages/highlightEditor/index.tsx");
+/* harmony import */ var _placeholderEditor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./placeholderEditor */ "./src/pages/placeholderEditor/index.ts");
+/* harmony import */ var _exceedTipEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./exceedTipEditor */ "./src/pages/exceedTipEditor/index.ts");
+
+
+
+
+
 
 
 
@@ -36213,9 +40198,57 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _emirror_mini_setup__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_example_mini_setup__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
-/* harmony import */ var _emirror_mini_setup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/mini-setup */ "../examples/mini-setup/dist/emirror-mini-setup.cjs.js");
+/* harmony import */ var _emirror_example_mini_setup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/example-mini-setup */ "../examples/mini-setup/dist/emirror-example-mini-setup.cjs.js");
+
+
+/***/ }),
+
+/***/ "./src/pages/placeholderEditor/index.ts":
+/*!**********************************************!*\
+  !*** ./src/pages/placeholderEditor/index.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_example_placeholder__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _emirror_example_placeholder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/example-placeholder */ "../examples/placeholder/dist/emirror-example-placeholder.cjs.js");
+
+
+/***/ }),
+
+/***/ "./src/pages/readonlyEditor/index.ts":
+/*!*******************************************!*\
+  !*** ./src/pages/readonlyEditor/index.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_example_read_only__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _emirror_example_read_only__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/example-read-only */ "../examples/read-only/dist/emirror-example-read-only.cjs.js");
+
+
+/***/ }),
+
+/***/ "./src/pages/titleDocEditor/index.ts":
+/*!*******************************************!*\
+  !*** ./src/pages/titleDocEditor/index.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _emirror_example_title_doc__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _emirror_example_title_doc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emirror/example-title-doc */ "../examples/title-doc/dist/emirror-example-title-doc.cjs.js");
 
 
 /***/ }),
@@ -36246,11 +40279,518 @@ var Routes = function Routes(props) {
       component: c.component
     });
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Redirect, {
-    to: "/emirror/mini-setup"
+    to: "/default"
   }));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Routes);
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-blockquote/src/style.css":
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-blockquote/src/style.css ***!
+  \***************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".emirror .emirror-blockquote {\n  color: rgb(106, 115, 125);\n  margin: 0 4px;\n  padding: 0 12px;\n  border-left: 4px solid rgb(223, 226, 229);\n}\n", "",{"version":3,"sources":["webpack://./../packages/emirror__plugin-blockquote/src/style.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;EACzB,aAAa;EACb,eAAe;EACf,yCAAyC;AAC3C","sourcesContent":[".emirror .emirror-blockquote {\n  color: rgb(106, 115, 125);\n  margin: 0 4px;\n  padding: 0 12px;\n  border-left: 4px solid rgb(223, 226, 229);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-code/src/style.css":
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-code/src/style.css ***!
+  \*********************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".emirror .emirror-code {\n  background-color: #efefef;\n}\n", "",{"version":3,"sources":["webpack://./../packages/emirror__plugin-code/src/style.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;AAC3B","sourcesContent":[".emirror .emirror-code {\n  background-color: #efefef;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-exceed-tip/src/style.css":
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-exceed-tip/src/style.css ***!
+  \***************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --exceed-tip-color: rgb(190, 20, 30);\n  --exceed-tip-margin-left: 4px;\n}\n\n.emirror .emirror-exceed-tip.after::after {\n  color: var(--exceed-tip-color);\n  margin-left: var(--exceed-tip-margin-left);\n  content: attr(data-exceed-tip-content);\n}\n\n.emirror .emirror-exceed-tip.before::before {\n  color: var(--exceed-tip-color);\n  margin-left: var(--exceed-tip-margin-left);\n  position: absolute;\n  content: attr(data-exceed-tip-content);\n}\n", "",{"version":3,"sources":["webpack://./../packages/emirror__plugin-exceed-tip/src/style.css"],"names":[],"mappings":"AAAA;EACE,oCAAoC;EACpC,6BAA6B;AAC/B;;AAEA;EACE,8BAA8B;EAC9B,0CAA0C;EAC1C,sCAAsC;AACxC;;AAEA;EACE,8BAA8B;EAC9B,0CAA0C;EAC1C,kBAAkB;EAClB,sCAAsC;AACxC","sourcesContent":[":root {\n  --exceed-tip-color: rgb(190, 20, 30);\n  --exceed-tip-margin-left: 4px;\n}\n\n.emirror .emirror-exceed-tip.after::after {\n  color: var(--exceed-tip-color);\n  margin-left: var(--exceed-tip-margin-left);\n  content: attr(data-exceed-tip-content);\n}\n\n.emirror .emirror-exceed-tip.before::before {\n  color: var(--exceed-tip-color);\n  margin-left: var(--exceed-tip-margin-left);\n  position: absolute;\n  content: attr(data-exceed-tip-content);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-placeholder/src/style.css":
+/*!****************************************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-placeholder/src/style.css ***!
+  \****************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".emirror .emirror-placeholder::before {\n  color: grey;\n  position: absolute;\n  content: attr(data-placeholder-content);\n}\n", "",{"version":3,"sources":["webpack://./../packages/emirror__plugin-placeholder/src/style.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,kBAAkB;EAClB,uCAAuC;AACzC","sourcesContent":[".emirror .emirror-placeholder::before {\n  color: grey;\n  position: absolute;\n  content: attr(data-placeholder-content);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-blockquote/src/style.css":
+/*!************************************************************!*\
+  !*** ../packages/emirror__plugin-blockquote/src/style.css ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./style.css */ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-blockquote/src/style.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-code/src/style.css":
+/*!******************************************************!*\
+  !*** ../packages/emirror__plugin-code/src/style.css ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./style.css */ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-code/src/style.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-exceed-tip/src/style.css":
+/*!************************************************************!*\
+  !*** ../packages/emirror__plugin-exceed-tip/src/style.css ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./style.css */ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-exceed-tip/src/style.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "../packages/emirror__plugin-placeholder/src/style.css":
+/*!*************************************************************!*\
+  !*** ../packages/emirror__plugin-placeholder/src/style.css ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./style.css */ "../node_modules/css-loader/dist/cjs.js!../packages/emirror__plugin-placeholder/src/style.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!*****************************************************************************!*\
+  !*** ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \*****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
 
 /***/ })
 
@@ -36268,13 +40808,16 @@ var Routes = function Routes(props) {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -36338,26 +40881,23 @@ var Routes = function Routes(props) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/*!***********************!*\
-  !*** ./src/index.tsx ***!
-  \***********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "../node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.tsx");
-
-
-
-
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('root'));
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("../node_modules/regenerator-runtime/runtime.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.tsx");
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
