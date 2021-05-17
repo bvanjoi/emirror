@@ -7,7 +7,7 @@ const isList = (node: PMNode, schema: Schema) => {
   const { type } = node;
   return (
     type === schema.nodes.bulletList ||
-    type === schema.nodes.orderedList ||
+    type === schema.nodes.orderList ||
     type === schema.nodes.todoList
   );
 };
