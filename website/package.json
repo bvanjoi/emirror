@@ -22,7 +22,7 @@
     "url": "git+https://github.com/bvanjoi/emirror.git"
   },
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "webpack serve --env dev",
     "build": "webpack build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"

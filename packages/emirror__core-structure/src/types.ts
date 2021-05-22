@@ -1,3 +1,6 @@
+import { Decoration, EditorView } from '@emirror/pm/view';
+import { Node as PMNode, Schema } from '@emirror/pm/model';
+
 /**
  * The Plugin type of emirror/core-structure
  *
@@ -10,3 +13,23 @@
  *      For example, the article menu is a extend plugin.
  */
 export type PluginType = 'base' | 'node' | 'mark' | 'extension';
+
+export interface NodeViewComponentProps<S extends Schema = any> {
+  /**
+   * The instance of ProseMirror view.
+   */
+  view: EditorView<S>;
+  /**
+   * A ProseMirror node.
+   */
+  node: PMNode<S>;
+  /**
+   * - For nodes, `getPos` is the pos of the node view in the ProseMirror document.
+   * - For Marks, `getPos` is a boolean that indicates whether the mark's content is inline.
+   */
+  getPos: (() => number) | boolean;
+  /**
+   * An array of node or inline decorations that are active around the node.
+   */
+  decorations: Decoration[];
+}

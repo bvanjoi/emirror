@@ -3,22 +3,8 @@ import ReactDOM from 'react-dom';
 import { DOMSerializer, Node as PMNode } from '@emirror/pm/model';
 import { Decoration, EditorView, NodeView } from '@emirror/pm/view';
 import { ContextProps } from '@emirror/core-react';
+import { NodeViewComponentProps } from '@emirror/core-structure';
 import { kebabCase } from 'case-anything';
-
-/**
- * NodeView/MarkView for nodeView
- */
-type IReactNodeViewContext = {
-  node: PMNode;
-  view: EditorView;
-  getPos: (() => number) | boolean;
-  decorations: Decoration[];
-};
-
-/**
- * The Context for ReactComponentView,
- */
-const ReactNodeViewContext = React.createContext<IReactNodeViewContext>(null);
 
 /**
  * Prosemirror nodeView to React Component
@@ -27,7 +13,7 @@ class ReactNodeViews implements NodeView {
   /**
    * The React Component need to rendered.
    */
-  private reactComponent: React.ComponentType;
+  private reactComponent: React.ComponentType<NodeViewComponentProps>;
   /**
    * The Context That my be used.
    */
@@ -82,7 +68,7 @@ class ReactNodeViews implements NodeView {
     getPos: (() => number) | boolean,
     decorations: Decoration[],
     ctx: ContextProps,
-    reactComponent: React.ComponentType,
+    reactComponent: React.ComponentType<NodeViewComponentProps>,
   ) {
     this.node = node;
     this.view = view;
@@ -137,16 +123,12 @@ class ReactNodeViews implements NodeView {
         </span>
       );
       const ReactComponentView = () => (
-        <ReactNodeViewContext.Provider
-          value={{
-            node: this.node,
-            view: this.view,
-            getPos: this.getPos,
-            decorations: this.decorations,
-          }}
-        >
-          <this.reactComponent />
-        </ReactNodeViewContext.Provider>
+        <this.reactComponent
+          node={this.node}
+          view={this.view}
+          getPos={this.getPos}
+          decorations={this.decorations}
+        />
       );
       return this.pluginType === 'node' ? (
         <NodeView>
@@ -251,7 +233,7 @@ class ReactNodeViews implements NodeView {
    * Received a react component and generate ReactNodeViews.
    */
   static fromReactComponent = (
-    reactComponent: React.ComponentType,
+    reactComponent: React.ComponentType<NodeViewComponentProps>,
     ctx: ContextProps,
   ) => (
     node: PMNode,

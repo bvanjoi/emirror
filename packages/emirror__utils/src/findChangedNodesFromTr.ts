@@ -3,7 +3,7 @@ import { Node as PMNode, Slice } from '@emirror/pm/model';
 import { Step } from '@emirror/pm/transform';
 
 /**
- * find all changed Prosemirror node within given tr
+ * find all changed ProseMirror node within given transaction
  * @param tr - specified transaction
  */
 export const findChangedNodesFromTr = (tr: Transaction) => {

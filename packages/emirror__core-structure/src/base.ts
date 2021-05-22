@@ -2,7 +2,7 @@ import { EditorView } from '@emirror/pm/view';
 import { MarkType, NodeType } from '@emirror/pm/model';
 import { Keymap, Command } from '@emirror/pm/commands';
 import { Plugin, PluginKey } from '@emirror/pm/state';
-import { PluginType } from './types';
+import { PluginType, NodeViewComponentProps } from './types';
 import { ErrorMsg } from './constant';
 
 /**
@@ -52,5 +52,5 @@ export class Base {
   /**
    * React component to provider a more complicated nodeview.
    */
-  reactComponent: React.ComponentType = null;
+  reactComponent: React.ComponentType<NodeViewComponentProps> = null;
 }
