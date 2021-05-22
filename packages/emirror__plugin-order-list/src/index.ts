@@ -40,7 +40,7 @@ class OrderList extends Node {
   }
 
   keymap = ({ type }) => ({
-    'Shift-Ctrl-9': toggleList(type, 'listItem'),
+    'Shift-Ctrl-8': toggleList(type, 'listItem'),
   });
 
   inputRules = ({ type }) => [

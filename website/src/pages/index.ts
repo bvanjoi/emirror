@@ -5,6 +5,7 @@ import TitleDocEMirror from './titleDocEditor';
 import HighlightEMirror from './highlightEditor';
 import PlaceholderEMirror from './placeholderEditor';
 import ExceedTipEditor from './exceedTipEditor';
+import TodoEditor from './todoEditor';
 
 export {
   MiniEMirror,
@@ -13,5 +14,6 @@ export {
   TitleDocEMirror,
   HighlightEMirror,
   PlaceholderEMirror,
-  ExceedTipEditor
+  ExceedTipEditor,
+  TodoEditor
 };

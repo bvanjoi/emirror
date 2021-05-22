@@ -123,13 +123,10 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     const manager = new Manager(emPlugins);
 
     // nodes and marks of Prosemirror
-    const { nodes, marks, names } = manager;
+    const { nodes, marks, names, plugins } = manager;
 
     /** Scheme of Prosemirror */
     const schema = new Schema({ nodes, marks, topNode: topNode.name });
-
-    /** All plugins of Prosemirror */
-    const plugins = manager.plugins(pluginsProvider);
 
     /** All nodeVies of Prosemirror */
     const nodeViews = manager.nodeAndMarkReactComponent(emirrorContext);

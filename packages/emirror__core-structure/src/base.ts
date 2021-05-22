@@ -34,7 +34,9 @@ export class Base {
    * Provider plugins
    * @returns All plugins in Base class.
    */
-  plugins: () => Plugin[] = () => [];
+  get plugins(): Plugin[] {
+    return [];
+  }
 
   /**
    * Commands for this plugin

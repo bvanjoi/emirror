@@ -11,6 +11,7 @@ import {
   TitleDocEMirror,
   PlaceholderEMirror,
   ExceedTipEditor,
+  TodoEditor,
 } from './pages';
 
 const AppView = styled.div`
@@ -84,6 +85,10 @@ const App = () => {
     {
       path: 'exceed-tip',
       component: ExceedTipEditor,
+    },
+    {
+      path: 'todo-list',
+      component: TodoEditor,
     },
   ];
 

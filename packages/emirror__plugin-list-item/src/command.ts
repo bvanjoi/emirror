@@ -12,6 +12,9 @@ const isList = (node: PMNode, schema: Schema) => {
   );
 };
 
+/**
+ * toggle this paragraph to list and reverse.
+ */
 export const toggleList = (
   listTypeOrName: string | NodeType,
   itemTypeOrName: string | NodeType

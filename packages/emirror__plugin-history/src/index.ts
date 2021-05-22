@@ -7,7 +7,9 @@ class History extends Extension {
     return 'history' as const;
   }
 
-  plugins = () => [history()];
+  get plugins() {
+    return [history()];
+  }
 
   keymap = () => {
     const binding = {};

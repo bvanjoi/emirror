@@ -1,0 +1,2 @@
+yarn add prosemirror-commands@latest prosemirror-history@latest prosemirror-inputrules@latest prosemirror-keymap@latest prosemirror-model@latest prosemirror-schema-list@latest prosemirror-state@latest prosemirror-transform@latest prosemirror-view@latest
+yarn add -D @types/prosemirror-commands@latest @types/prosemirror-history@latest @types/prosemirror-inputrules@latest @types/prosemirror-keymap@latest @types/prosemirror-model@latest @types/prosemirror-schema-list@latest @types/prosemirror-state@latest @types/prosemirror-transform@latest @types/prosemirror-view@latest

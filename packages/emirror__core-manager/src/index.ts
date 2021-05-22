@@ -61,15 +61,14 @@ export class Manager {
   }
 
   /**
-   *
-   * @param pluginsProvider Convert EMirror plugins to Prosemirror Plugins
-   * @returns All plugins of Prosemirror
+   * get plugins of Prosemirror from EMirror
    */
-  plugins = (pluginsProvider: PluginsProvider) =>
-    this.emPlugins.reduce(
-      (allPlugins, { plugins }) => [...allPlugins, ...plugins()],
+  get plugins() {
+    return this.emPlugins.reduce(
+      (allPlugins, { plugins }) => [...allPlugins, ...plugins],
       [] as Plugin[]
     );
+  }
 
   /**
    * Generate React Component from node and mark

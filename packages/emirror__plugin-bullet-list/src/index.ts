@@ -18,7 +18,7 @@ class BulletList extends Node {
   }
 
   keymap = ({ type }) => ({
-    'Shift-Ctrl-8': toggleList(type, 'listItem'),
+    'Shift-Ctrl-7': toggleList(type, 'listItem'),
   });
 
   inputRules = ({ type }) => [wrappingInputRule(/^\s*[-+*]\s$/, type)];
