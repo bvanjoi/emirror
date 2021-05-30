@@ -232,26 +232,28 @@ class ReactNodeViews implements NodeView {
   /**
    * Received a react component and generate ReactNodeViews.
    */
-  static fromReactComponent = (
-    reactComponent: React.ComponentType<NodeViewComponentProps>,
-    ctx: ContextProps,
-  ) => (
-    node: PMNode,
-    view: EditorView,
-    getPos: (() => number) | boolean,
-    decorations: Decoration[],
-  ) => {
-    const nodeView = new ReactNodeViews(
-      node,
-      view,
-      getPos,
-      decorations,
-      ctx,
-      reactComponent,
-    ).init();
-    ctx.renderProvider.flush();
-    return nodeView;
-  };
+  static fromReactComponent =
+    (
+      reactComponent: React.ComponentType<NodeViewComponentProps>,
+      ctx: ContextProps,
+    ) =>
+    (
+      node: PMNode,
+      view: EditorView,
+      getPos: (() => number) | boolean,
+      decorations: Decoration[],
+    ) => {
+      const nodeView = new ReactNodeViews(
+        node,
+        view,
+        getPos,
+        decorations,
+        ctx,
+        reactComponent,
+      ).init();
+      ctx.renderProvider.flush();
+      return nodeView;
+    };
 }
 
 export const createReactNodeViews = ReactNodeViews.fromReactComponent;

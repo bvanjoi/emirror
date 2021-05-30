@@ -16,7 +16,7 @@ class History extends Extension {
     binding['Mod-z'] = undo;
     binding['Shift-Mod-z'] = redo;
     if (!isMac) {
-      binding['Mod-z'] = redo;
+      binding['Mod-y'] = redo;
     }
     return binding;
   };

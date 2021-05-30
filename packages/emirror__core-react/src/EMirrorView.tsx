@@ -20,7 +20,8 @@ export type EMirrorProps = {
    */
   className?: string;
   /**
-   * The plugins for emirror.
+   * The plugins for emirror. And the order of plugins is very
+   * important, it may cover some keymap.
    */
   plugins: (Node | Mark | Extension)[];
   /**
@@ -93,13 +94,13 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 
     view.focus();
 
-    afterInit && afterInit(view);
+    typeof afterInit === 'function' && afterInit(view);
     window.view = view;
     viewRef.current = view;
     viewProvider.init(view);
 
     return () => {
-      beforeDestory(view);
+      typeof beforeDestory === 'function' && beforeDestory(view);
       view.destroy();
     };
   }, []);

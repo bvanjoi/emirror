@@ -86,16 +86,13 @@ const DefaultEMirror = () => {
           <p>image</p>
         </li>
         <li>
-          <p>menus</p>
-        </li>
-        <li>
-          <p>todo list</p>
+          <p>menu</p>
         </li>
         <li>
           <p>fantastic input</p>
         </li>
         <li>
-          <p>....</p>
+          <p>More useful featuers...</p>
         </li>
       </ol>
       <p>

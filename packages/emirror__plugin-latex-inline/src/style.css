@@ -1,0 +1,22 @@
+.emirror-latex-node-inline {
+  display: inline;
+  white-space: nowrap;
+}
+
+.emirror-latex-node-inline .emirror-latex-render {
+  display: inline-block;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.emirror-latex-node-inline .emirror-latex-source .ProseMirror {
+  display: inline;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.emirror-latex-node-inline .emirror-latex-source::after,
+.emirror-latex-node-inline .emirror-latex-source::before {
+  content: '$';
+  color: #b0b0b0;
+}

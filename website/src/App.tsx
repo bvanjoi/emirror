@@ -12,6 +12,7 @@ import {
   PlaceholderEMirror,
   ExceedTipEditor,
   TodoEditor,
+  LatexEditor,
 } from './pages';
 
 const AppView = styled.div`
@@ -89,6 +90,10 @@ const App = () => {
     {
       path: 'todo-list',
       component: TodoEditor,
+    },
+    {
+      path: 'latex',
+      component: LatexEditor,
     },
   ];
 

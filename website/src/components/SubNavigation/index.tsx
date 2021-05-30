@@ -39,7 +39,7 @@ const SubNavigation = (props: Props) => {
       {menus.map((menu) => (
         <WrappedLink
           key={menu}
-          href={`/${menu}`}
+          href={`#/${menu}`}
           className={cls({ selected: pathname === `/${menu}` })}
         >
           {menu}

@@ -6,6 +6,7 @@ import HighlightEMirror from './highlightEditor';
 import PlaceholderEMirror from './placeholderEditor';
 import ExceedTipEditor from './exceedTipEditor';
 import TodoEditor from './todoEditor';
+import LatexEditor from './latexEditor';
 
 export {
   MiniEMirror,
@@ -15,5 +16,6 @@ export {
   HighlightEMirror,
   PlaceholderEMirror,
   ExceedTipEditor,
-  TodoEditor
+  TodoEditor,
+  LatexEditor
 };

@@ -1,0 +1,22 @@
+.emirror-latex-node-block .emirror-latex-render {
+  cursor: pointer;
+}
+
+.emirror-latex-node-block .emirror-select-node {
+  background-color: #eee;
+}
+
+.emirror-latex-node-block .emirror-latex-source .ProseMirror {
+  width: 100%;
+}
+
+.emirror-latex-node-block .emirror-latex-source::after,
+.emirror-latex-node-block .emirror-latex-source::before {
+  content: '$$';
+  text-align: left;
+  color: #b0b0b0;
+}
+
+.emirror-latex-node-block .katex-display {
+  margin: 0;
+}

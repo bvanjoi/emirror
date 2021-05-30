@@ -1,0 +1,35 @@
+.emirror-latex-node {
+  min-width: 1em;
+  min-height: 1em;
+  font-size: 0.95em;
+  cursor: auto;
+}
+
+.emirror-latex-node.empty-latex .emirror-latex-render::before {
+  color: red;
+  content: '(empty)';
+}
+
+.emirror-latex-node .latex-render.emirror-latex-parse-error::before {
+  content: '(error)';
+  color: red;
+  cursor: help;
+}
+
+.emirror-latex-node.emirror-select-node {
+  outline: none;
+}
+
+.emirror-latex-node.emirror-select-node .emirror-latex-source {
+  display: inline;
+}
+
+.emirror-latex-node.emirror-select-node .emirror-latex-render {
+  display: none;
+}
+
+.emirror-latex-node .emirror-latex-source {
+  display: none;
+  color: rgb(132, 33, 162);
+  tab-size: 4;
+}

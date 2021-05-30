@@ -19,9 +19,7 @@ const TitleDocEMirror = () => {
         new TodoList(),
       ]}
     >
-      <p>
-        Ok, now may be you had somethings todo, then you can use todo plugin
-      </p>
+      <p>May be you had somethings todo, then you can use todo plugin.</p>
       <p>
         For example, there are something that need to be done, and something
         that have already been done:

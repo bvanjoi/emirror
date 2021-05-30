@@ -1,0 +1,15 @@
+.katex-html *::selection {
+  background-color: none !important;
+}
+
+p::selection p > *::selection {
+  background-color: #c0c0c0;
+}
+
+.emirror-latex-select.emirror-latex-node .emirror-latex-render {
+  background-color: #c0c0c0;
+}
+
+.emirror-latex-inline.emirror-latex-select .emirror-latex-render {
+  padding-top: 2px;
+}

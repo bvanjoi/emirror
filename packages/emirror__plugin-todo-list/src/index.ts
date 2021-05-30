@@ -1,6 +1,5 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { wrappingInputRule } from '@emirror/pm/inputrules';
 import { toggleList } from '@emirror/plugin-list-item';
 import './style.css';
 
@@ -26,12 +25,6 @@ class TodoList extends Node {
   keymap = ({ type }) => ({
     'Shift-Ctrl-9': toggleList(type, 'todoItem'),
   });
-
-  inputRules = ({ type }) => [
-    wrappingInputRule(/\s*(\[([ |x])\])\x20$/, type, match => ({
-      checked: match[match.length - 1] === 'x',
-    })),
-  ];
 }
 
 export default TodoList;

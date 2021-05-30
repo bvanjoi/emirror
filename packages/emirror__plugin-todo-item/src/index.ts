@@ -1,6 +1,7 @@
 import { Node } from '@emirror/core-structure';
 import { Plugin, PluginKey } from '@emirror/pm/state';
 import { NodeSpec } from '@emirror/pm/model';
+import { wrappingInputRule } from '@emirror/pm/inputrules';
 import {
   liftListItem,
   sinkListItem,
@@ -83,7 +84,6 @@ class TodoItem extends Node {
                   if (node.type.name === 'todoItem') {
                     return false;
                   }
-
                   return true;
                 },
               };
@@ -100,6 +100,12 @@ class TodoItem extends Node {
       todoItemNodeViewKey,
     };
   }
+
+  inputRules = ({ type }) => [
+    wrappingInputRule(/(\[([ |x])\]|\[\])\x20$/, type, match => ({
+      checked: match[match.length - 1] === 'x',
+    })),
+  ];
 }
 
 export default TodoItem;
