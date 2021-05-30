@@ -37,6 +37,7 @@
     "@emirror/plugin-bullet-list": "^0.0.1",
     "@emirror/plugin-list-item": "^0.0.1",
     "@emirror/plugin-text-background-color": "^0.0.1",
-    "@emirror/plugin-text-color": "^0.0.1"
+    "@emirror/plugin-text-color": "^0.0.1",
+    "@emirror/plugin-hr": "^0.0.1"
   }
 }

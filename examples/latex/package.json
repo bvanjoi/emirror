@@ -29,6 +29,7 @@
     "@emirror/plugin-latex-inline": "^0.0.1",
     "@emirror/plugin-latex-block": "^0.0.1",
     "@emirror/plugin-latex-select": "^0.0.1",
-    "@emirror/plugin-latex-basic": "^0.0.1"
+    "@emirror/plugin-latex-basic": "^0.0.1",
+    "@emirror/plugin-hr": "^0.0.1"
   }
 }

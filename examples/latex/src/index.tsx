@@ -8,6 +8,7 @@ import LatexBasic from '@emirror/plugin-latex-basic';
 import LatexInline from '@emirror/plugin-latex-inline';
 import LatexBlock from '@emirror/plugin-latex-block';
 import LatexSelect from '@emirror/plugin-latex-select';
+import Hr from '@emirror/plugin-hr';
 
 const DefaultEMirror = () => {
   return (
@@ -21,6 +22,7 @@ const DefaultEMirror = () => {
         new LatexBlock(),
         new LatexInline(),
         new LatexSelect(),
+        new Hr(),
       ]}
     >
       <p>
@@ -28,6 +30,7 @@ const DefaultEMirror = () => {
         insert block-latex using $$yyy$$.
       </p>
       <p>Following is a example(copy from wikipedia):</p>
+      <hr />
       <p>
         Stirling's approximation is an approximation for factorials. It is a
         good approximation, leading to accurate results even for small values of

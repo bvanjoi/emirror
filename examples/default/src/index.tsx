@@ -16,6 +16,7 @@ import ListItem from '@emirror/plugin-list-item';
 import OrderList from '@emirror/plugin-order-list';
 import TextBgColor from '@emirror/plugin-text-background-color';
 import TextColor from '@emirror/plugin-text-color';
+import HR from '@emirror/plugin-hr';
 
 const DefaultEMirror = () => {
   return (
@@ -37,6 +38,7 @@ const DefaultEMirror = () => {
         new BulletList(),
         new TextBgColor(),
         new TextColor(),
+        new HR(),
       ]}
     >
       <h4>Hello, This is the default setup of EMirror.</h4>
@@ -93,6 +95,9 @@ const DefaultEMirror = () => {
         </li>
         <li>
           <p>More useful featuers...</p>
+        </li>
+        <li>
+          <p>Auto link</p>
         </li>
       </ol>
       <p>
