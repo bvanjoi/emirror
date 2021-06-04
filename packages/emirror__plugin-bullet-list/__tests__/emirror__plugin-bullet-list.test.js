@@ -3,5 +3,5 @@
 const emirrorPluginBulletList = require('..');
 
 describe('emirror__plugin-bullet-list', () => {
-    it('needs tests');
+  it('needs tests');
 });

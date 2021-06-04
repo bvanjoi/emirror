@@ -2,7 +2,6 @@ import { Mark } from '@emirror/core-structure';
 import { MarkSpec } from '@emirror/pm/model';
 import { toggleMark } from '@emirror/pm/commands';
 import { markInputRules } from '@emirror/utils';
-import './style.css';
 
 class Code extends Mark {
   get name() {

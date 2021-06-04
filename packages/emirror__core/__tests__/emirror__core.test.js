@@ -3,5 +3,5 @@
 const emirrorCore = require('..');
 
 describe('emirror__core', () => {
-    it('needs tests');
+  it('needs tests');
 });

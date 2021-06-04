@@ -1,0 +1,4 @@
+{
+  "main": "dist/emirror-pm-gapCursor.cjs.js",
+  "module": "dist/emirror-pm-gapCursor.esm.js"
+}

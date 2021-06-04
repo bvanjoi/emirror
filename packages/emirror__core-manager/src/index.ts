@@ -28,10 +28,10 @@ export class Manager {
   get names() {
     return {
       N: this.emPlugins
-        .filter(plugin => plugin.type === 'node')
+        .filter((plugin) => plugin.type === 'node')
         .map(({ name }) => name),
       M: this.emPlugins
-        .filter(plugin => plugin.type === 'mark')
+        .filter((plugin) => plugin.type === 'mark')
         .map(({ name }) => name),
     };
   }
@@ -40,11 +40,11 @@ export class Manager {
    * EMirror Node to Prosemirror Node
    */
   get nodes() {
-    return (this.emPlugins.filter(
-      plugin => plugin.type === 'node'
-    ) as Node[]).reduce(
+    return (
+      this.emPlugins.filter((plugin) => plugin.type === 'node') as Node[]
+    ).reduce(
       (nodes, { name, schema }) => ({ ...nodes, [name]: schema }),
-      {} as { [name: string]: NodeSpec }
+      {} as { [name: string]: NodeSpec },
     );
   }
 
@@ -52,11 +52,11 @@ export class Manager {
    * EMirror Mark to Prosemirror Mark
    */
   get marks() {
-    return (this.emPlugins.filter(
-      plugin => plugin.type === 'mark'
-    ) as Mark[]).reduce(
+    return (
+      this.emPlugins.filter((plugin) => plugin.type === 'mark') as Mark[]
+    ).reduce(
       (marks, { name, schema }) => ({ ...marks, [name]: schema }),
-      {} as { [name: string]: MarkSpec }
+      {} as { [name: string]: MarkSpec },
     );
   }
 
@@ -66,7 +66,7 @@ export class Manager {
   get plugins() {
     return this.emPlugins.reduce(
       (allPlugins, { plugins }) => [...allPlugins, ...plugins],
-      [] as Plugin[]
+      [] as Plugin[],
     );
   }
 
@@ -78,11 +78,11 @@ export class Manager {
     const nodeViews = {};
     this.emPlugins
       .filter(
-        plugin =>
-          ['node', 'mark'].includes(plugin.type) && plugin.reactComponent
+        (plugin) =>
+          ['node', 'mark'].includes(plugin.type) && plugin.reactComponent,
       )
       .map(
-        plugin =>
+        (plugin) =>
           [plugin.name, createReactNodeViews(plugin.reactComponent, ctx)] as [
             string,
             (
@@ -91,7 +91,7 @@ export class Manager {
               getPos: (() => number) | boolean,
               decoration: Decoration[],
             ) => NodeView,
-          ]
+          ],
       )
       .forEach(([name, nodeView]) => {
         if (nodeViews[name]) {
@@ -108,8 +108,8 @@ export class Manager {
    */
   extensionsReactComponent = () =>
     this.emPlugins
-      .filter(plugin => plugin.type === 'extension' && plugin.reactComponent)
-      .map(p => p.reactComponent);
+      .filter((plugin) => plugin.type === 'extension' && plugin.reactComponent)
+      .map((p) => p.reactComponent);
 
   /**
    * Generate InputRules from EMPlugins
@@ -117,16 +117,18 @@ export class Manager {
    * @returns inputRules[], and when typed, caused something happened.
    */
   inputRules = (schema: Schema) =>
-    (this.emPlugins.filter(plugin =>
-      ['node', 'mark'].includes(plugin.type)
-    ) as (Node | Mark)[])
-      .filter(plugin => plugin.inputRules)
-      .map(plugin =>
+    (
+      this.emPlugins.filter((plugin) =>
+        ['node', 'mark'].includes(plugin.type),
+      ) as (Node | Mark)[]
+    )
+      .filter((plugin) => plugin.inputRules)
+      .map((plugin) =>
         plugin.inputRules({
           type: schema[`${plugin.type}s`][plugin.name],
-        })
+        }),
       )
-      .filter(rules => rules && Array.isArray(rules))
+      .filter((rules) => rules && Array.isArray(rules))
       .reduce((allRules, rules) => [...allRules, ...rules], [] as InputRule[]);
 
   /**
@@ -137,37 +139,41 @@ export class Manager {
   keymaps = (schema: Schema): Keymap => {
     const allKeymap = {};
     // keymap of Mark and Node
-    (this.emPlugins.filter(plugin =>
-      ['node', 'mark'].includes(plugin.type)
-    ) as (Node | Mark)[])
-      .map(plugin =>
+    (
+      this.emPlugins.filter((plugin) =>
+        ['node', 'mark'].includes(plugin.type),
+      ) as (Node | Mark)[]
+    )
+      .map((plugin) =>
         plugin.keymap({
           type: schema[`${plugin.type}s`][plugin.name],
-        })
+        }),
       )
-      .forEach(obj =>
+      .forEach((obj) =>
         Object.entries(obj).forEach(([key, value]) => {
           if (allKeymap[key]) {
             allKeymap[key] = chainCommands(value, allKeymap[key]);
           } else {
             allKeymap[key] = value;
           }
-        })
+        }),
       );
 
     // keymap of Extension
-    (this.emPlugins.filter(
-      plugin => plugin.type === 'extension'
-    ) as Extension[])
-      .map(plugin => plugin.keymap({}))
-      .forEach(obj =>
+    (
+      this.emPlugins.filter(
+        (plugin) => plugin.type === 'extension',
+      ) as Extension[]
+    )
+      .map((plugin) => plugin.keymap({}))
+      .forEach((obj) =>
         Object.entries(obj).forEach(([key, value]) => {
           if (allKeymap[key]) {
             allKeymap[key] = chainCommands(value, allKeymap[key]);
           } else {
             allKeymap[key] = value;
           }
-        })
+        }),
       );
 
     return allKeymap;

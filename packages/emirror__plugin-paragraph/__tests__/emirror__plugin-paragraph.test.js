@@ -3,5 +3,5 @@
 const emirrorPluginParagraph = require('..');
 
 describe('emirror__plugin-paragraph', () => {
-    it('needs tests');
+  it('needs tests');
 });

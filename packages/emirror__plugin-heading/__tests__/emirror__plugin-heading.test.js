@@ -3,5 +3,5 @@
 const emirrorPluginHeading = require('..');
 
 describe('emirror__plugin-heading', () => {
-    it('needs tests');
+  it('needs tests');
 });

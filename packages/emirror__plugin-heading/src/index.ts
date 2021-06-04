@@ -22,7 +22,7 @@ class Heading extends Node {
           default: 1,
         },
       },
-      parseDOM: levels.map(level => ({ tag: `h${level}`, attrs: { level } })),
+      parseDOM: levels.map((level) => ({ tag: `h${level}`, attrs: { level } })),
       toDOM: (node: PMNode) => [
         `h${node.attrs.level}`,
         { id: genID(), class: `emirror-heading emirror-h${node.attrs.level}` },
@@ -33,17 +33,17 @@ class Heading extends Node {
 
   keymap = ({ type }) =>
     Object.fromEntries(
-      this.levels.map(level => [
+      this.levels.map((level) => [
         `Ctrl-Shift-${level}`,
         setBlockType(type, { level }),
-      ])
+      ]),
     );
 
   inputRules = ({ type }) =>
-    this.levels.map(level =>
+    this.levels.map((level) =>
       textblockTypeInputRule(new RegExp(`^(#{1,${level}})\\s$`), type, () => ({
         level,
-      }))
+      })),
     );
 }
 

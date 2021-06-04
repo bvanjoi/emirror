@@ -4,7 +4,7 @@ import { InputRule } from '@emirror/pm/inputrules';
 export const markInputRules = (
   regexp: RegExp,
   markType: MarkType,
-  getAttributes?: Function
+  getAttributes?: Function,
 ): InputRule =>
   new InputRule(regexp, (state, match, start, end) => {
     const attributes =

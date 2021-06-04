@@ -3,5 +3,5 @@
 const emirrorPluginUnderline = require('..');
 
 describe('emirror__plugin-underline', () => {
-    it('needs tests');
+  it('needs tests');
 });

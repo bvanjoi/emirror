@@ -3,5 +3,5 @@
 const emirrorCoreEmitter = require('..');
 
 describe('emirror__core-emitter', () => {
-    it('needs tests');
+  it('needs tests');
 });

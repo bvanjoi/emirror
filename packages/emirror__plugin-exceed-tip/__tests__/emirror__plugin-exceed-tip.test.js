@@ -3,5 +3,5 @@
 const emirrorPluginExceedTip = require('..');
 
 describe('emirror__plugin-exceed-tip', () => {
-    it('needs tests');
+  it('needs tests');
 });

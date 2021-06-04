@@ -3,5 +3,5 @@
 const emirrorPluginCode = require('..');
 
 describe('emirror__plugin-code', () => {
-    it('needs tests');
+  it('needs tests');
 });

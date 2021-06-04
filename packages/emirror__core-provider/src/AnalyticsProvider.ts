@@ -61,11 +61,7 @@ export class AnalyticsProvider {
         this.measure(namespace, method, 'error');
       }
     },
-    stop: (
-      namespace: string,
-      method: string,
-      durationThreshold = 0
-    ) => {
+    stop: (namespace: string, method: string, durationThreshold = 0) => {
       this.stopMeasure(namespace, method, durationThreshold);
     },
   };
@@ -105,9 +101,7 @@ export class AnalyticsProvider {
         return logLevel === 'debug' || logLevel === 'info';
       case 'warn':
         return (
-          logLevel === 'debug' ||
-          logLevel === 'info' ||
-          logLevel === 'warn'
+          logLevel === 'debug' || logLevel === 'info' || logLevel === 'warn'
         );
       case 'error':
         return (
@@ -152,7 +146,7 @@ export class AnalyticsProvider {
         console[level](msg);
       } else {
         throw Error(
-          `Stopping measurement for namespace ${namespace} with non-existent method: ${method}`
+          `Stopping measurement for namespace ${namespace} with non-existent method: ${method}`,
         );
       }
     } else {
@@ -171,26 +165,18 @@ export class AnalyticsProvider {
     }
   }
 
-  stopMeasure(
-    namespace: string,
-    method: string,
-    durationThreshold = 0
-  ) {
-    stopMeasure(
-      this.getName(namespace, method),
-      (duration, start) => {
-        if (
-          this.shouldTrack &&
-          this.logToConsole &&
-          durationThreshold <= duration
-        ) {
-          const msg = `${this.getName(
-            namespace,
-            method
-          )} took ${Math.round(duration)} ms`;
-          this.endLog(namespace, method, msg);
-        }
+  stopMeasure(namespace: string, method: string, durationThreshold = 0) {
+    stopMeasure(this.getName(namespace, method), (duration, start) => {
+      if (
+        this.shouldTrack &&
+        this.logToConsole &&
+        durationThreshold <= duration
+      ) {
+        const msg = `${this.getName(namespace, method)} took ${Math.round(
+          duration,
+        )} ms`;
+        this.endLog(namespace, method, msg);
       }
-    );
+    });
   }
 }

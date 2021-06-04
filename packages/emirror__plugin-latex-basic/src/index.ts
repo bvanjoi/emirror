@@ -3,7 +3,7 @@ import { Extension } from '@emirror/core-structure';
 import { LatexPluginState } from './types';
 import {
   createLatexBlockNodeView,
-  createLatexInlineNodeView
+  createLatexInlineNodeView,
 } from './createLatexNodeview';
 import './style.css';
 import 'katex/dist/katex.min.css';

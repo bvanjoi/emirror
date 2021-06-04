@@ -3,5 +3,5 @@
 const emirrorPluginHr = require('..');
 
 describe('emirror__plugin-hr', () => {
-    it('needs tests');
+  it('needs tests');
 });

@@ -1,0 +1,30 @@
+{
+  "name": "@emirror/menu",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "bvanjoi <610376039@qq.com>",
+  "homepage": "https://github.com/bvanjoi/emirror#readme",
+  "license": "MIT",
+  "main": "dist/emirror-menu.cjs.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvanjoi/emirror.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/bvanjoi/emirror/issues"
+  },
+  "dependencies": {
+    "styled-components": "^5.2.3",
+    "classnames": "^2.3.1",
+    "@emirror/core-structure": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.9"
+  }
+}

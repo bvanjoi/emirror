@@ -1,0 +1,9 @@
+.emirror .emirror-image {
+  margin: auto;
+  border: 1px solid transparent;
+  display: block;
+  max-width: 200px;
+}
+.emirror .emirror-image.ProseMirror-selectednode {
+  border: 1px solid dodgerblue;
+}

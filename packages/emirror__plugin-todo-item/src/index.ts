@@ -5,7 +5,7 @@ import { wrappingInputRule } from '@emirror/pm/inputrules';
 import {
   liftListItem,
   sinkListItem,
-  splitListItem
+  splitListItem,
 } from '@emirror/pm/schema-list';
 
 import './style.css';
@@ -69,7 +69,7 @@ class TodoItem extends Node {
                 view.dispatch(
                   view.state.tr.setNodeMarkup(getPos(), undefined, {
                     checked: !checked,
-                  })
+                  }),
                 );
               });
 
@@ -80,7 +80,7 @@ class TodoItem extends Node {
               return {
                 dom: listItem,
                 contentDOM: content,
-                update: node => {
+                update: (node) => {
                   if (node.type.name === 'todoItem') {
                     return false;
                   }
@@ -102,7 +102,7 @@ class TodoItem extends Node {
   }
 
   inputRules = ({ type }) => [
-    wrappingInputRule(/(\[([ |x])\]|\[\])\x20$/, type, match => ({
+    wrappingInputRule(/(\[([ |x])\]|\[\])\x20$/, type, (match) => ({
       checked: match[match.length - 1] === 'x',
     })),
   ];

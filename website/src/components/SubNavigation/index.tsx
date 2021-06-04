@@ -4,6 +4,8 @@ import Link from '../../basic-components/link';
 import styled from 'styled-components';
 
 const WrappedLink = styled(Link)`
+  border-bottom: 1px solid transparent;
+
   &.selected {
     border-bottom: 1px solid black;
   }
@@ -25,11 +27,12 @@ const SubNavWrapper = styled.div`
   * {
     margin: 0 8px;
   }
-
-  margin-bottom: 10px;
+  width: clac(100% - 32px);
+  margin: 8px auto;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
+  flex-wrap: wrap;
 `;
 
 const SubNavigation = (props: Props) => {

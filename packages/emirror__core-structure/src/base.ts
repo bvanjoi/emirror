@@ -1,4 +1,3 @@
-import { EditorView } from '@emirror/pm/view';
 import { MarkType, NodeType } from '@emirror/pm/model';
 import { Keymap, Command } from '@emirror/pm/commands';
 import { Plugin, PluginKey } from '@emirror/pm/state';
@@ -41,9 +40,9 @@ export class Base {
   /**
    * Commands for this plugin
    */
-  commands: (options: {
-    view: EditorView;
-  }) => Record<string, Command> = () => ({});
+  get commands(): Record<string, Command> {
+    return {};
+  }
 
   /**
    * When hit some keys it will exec corresponding command.

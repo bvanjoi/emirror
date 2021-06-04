@@ -23,6 +23,5 @@ export class Mark extends Base {
    * Input something and trigger rules will create new Mark.
    * @returns Some input rules.
    */
-  inputRules: (options: { type: MarkType }) => InputRule[] = () =>
-    null;
+  inputRules: (options: { type: MarkType }) => InputRule[] = () => null;
 }

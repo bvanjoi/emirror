@@ -1,0 +1,4 @@
+{
+  "main": "dist/emirror-pm-dropCursor.cjs.js",
+  "module": "dist/emirror-pm-dropCursor.esm.js"
+}

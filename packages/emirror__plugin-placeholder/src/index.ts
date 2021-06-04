@@ -31,7 +31,7 @@ class Placeholder extends Extension {
       new Plugin({
         key: this.placeholderKey,
         props: {
-          decorations: state => {
+          decorations: (state) => {
             const { doc, selection } = state;
             const { anchor } = selection;
 

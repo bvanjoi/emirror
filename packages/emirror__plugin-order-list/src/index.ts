@@ -19,23 +19,23 @@ class OrderList extends Node {
         {
           tag: 'ol',
           getAttrs: (dom: HTMLElement) => ({
-            order: dom.getAttribute('data-order-start') ?
-              parseInt(dom.getAttribute('data-order-start'), 10) :
-              1,
+            order: dom.getAttribute('data-order-start')
+              ? parseInt(dom.getAttribute('data-order-start'), 10)
+              : 1,
           }),
         },
       ],
-      toDOM: node =>
-        (node.attrs.order === 1 ?
-          ['ol', { class: 'emirror-order-li' }, 0] :
-          [
-            'ol',
-            {
-              class: 'emirror-order-li',
-              'data-order-start': node.attrs.order,
-            },
-            0,
-          ]),
+      toDOM: (node) =>
+        node.attrs.order === 1
+          ? ['ol', { class: 'emirror-order-li' }, 0]
+          : [
+              'ol',
+              {
+                class: 'emirror-order-li',
+                'data-order-start': node.attrs.order,
+              },
+              0,
+            ],
     };
   }
 
@@ -47,9 +47,9 @@ class OrderList extends Node {
     wrappingInputRule(
       /^^(\d+)\.\s$/,
       type,
-      match => ({ order: parseInt(match[1], 10) }),
+      (match) => ({ order: parseInt(match[1], 10) }),
       (match, node) =>
-        node.childCount + node.attrs.order === parseInt(match[1], 10)
+        node.childCount + node.attrs.order === parseInt(match[1], 10),
     ),
   ];
 }

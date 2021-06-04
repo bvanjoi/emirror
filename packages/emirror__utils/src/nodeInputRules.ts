@@ -4,7 +4,7 @@ import { InputRule } from '@emirror/pm/inputrules';
 export function nodeInputRules(
   regexp: RegExp,
   type: NodeType,
-  getAttributes?: (match: any) => any
+  getAttributes?: (match: any) => any,
 ) {
   return new InputRule(regexp, (state, match, start, end) => {
     const attrs =

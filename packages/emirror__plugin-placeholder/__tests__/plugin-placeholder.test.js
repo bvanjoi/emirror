@@ -3,5 +3,5 @@
 const pluginPlaceholder = require('..');
 
 describe('@emirror/plugin-placeholder', () => {
-    it('needs tests');
+  it('needs tests');
 });

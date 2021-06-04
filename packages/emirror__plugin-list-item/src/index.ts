@@ -3,7 +3,7 @@ import { NodeSpec } from '@emirror/pm/model';
 import {
   liftListItem,
   sinkListItem,
-  splitListItem
+  splitListItem,
 } from '@emirror/pm/schema-list';
 
 class ListItem extends Node {

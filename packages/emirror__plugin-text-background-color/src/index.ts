@@ -24,7 +24,7 @@ class TextBgColor extends Mark {
         },
         {
           style: 'background-color',
-          getAttrs: bgColor => {
+          getAttrs: (bgColor) => {
             if (typeof bgColor !== 'string') {
               return;
             }
@@ -34,7 +34,7 @@ class TextBgColor extends Mark {
           },
         },
       ],
-      toDOM: mark => {
+      toDOM: (mark) => {
         const { attrs } = mark;
         const { bgColor } = attrs;
         if (!bgColor) {

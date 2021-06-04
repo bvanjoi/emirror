@@ -23,6 +23,5 @@ export class Node extends Base {
    * Input something and trigger rules will create new Node.
    * @returns Some input rules.
    */
-  inputRules: (options: { type: NodeType }) => InputRule[] = () =>
-    null;
+  inputRules: (options: { type: NodeType }) => InputRule[] = () => null;
 }

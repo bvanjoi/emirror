@@ -14,7 +14,7 @@ class Underline extends Mark {
         { tag: 'u' },
         {
           tag: 'text-decoration',
-          getAttrs: n => (n === 'underline' ? {} : false),
+          getAttrs: (n) => (n === 'underline' ? {} : false),
         },
       ],
       toDOM: () => ['u', { class: 'emirror-underline' }, 0],

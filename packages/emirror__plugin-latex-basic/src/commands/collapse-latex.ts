@@ -15,7 +15,7 @@ export default function (
   outerView: EditorView,
   dir: 'before' | 'after',
   requireOnBorder: boolean,
-  requireEmptySelection = true
+  requireEmptySelection = true,
 ): Command {
   return (innerState, dispatch) => {
     // get selection info
@@ -50,8 +50,8 @@ export default function (
       const targetPos = dir === 'after' ? outerTo : outerFrom;
       outerView.dispatch(
         outerState.tr.setSelection(
-          TextSelection.create(outerState.doc, targetPos)
-        )
+          TextSelection.create(outerState.doc, targetPos),
+        ),
       );
 
       outerView.focus();

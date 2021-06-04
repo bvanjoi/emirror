@@ -4,7 +4,7 @@ import {
   EditorState,
   PluginKey,
   TextSelection,
-  Transaction
+  Transaction,
 } from '@emirror/pm/state';
 import katex, { KatexOptions, ParseError } from 'katex';
 import { LatexPluginState } from './types';
@@ -117,7 +117,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     this.isEditing = false;
     this.katexOptions = Object.assign(
       { globalGroup: true, throwOnError: false },
-      props.options.katexOptions
+      props.options.katexOptions,
     );
     this.dom = this.createContainerDOM();
 
@@ -138,9 +138,9 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
    */
   createContainerDOM(): HTMLElement {
     const containerDOM: HTMLElement =
-      this.node.isInline === false ?
-        document.createElement('div') :
-        document.createElement('span');
+      this.node.isInline === false
+        ? document.createElement('div')
+        : document.createElement('span');
     containerDOM.classList.add(`emirror-${this.node.type.name}__nodeview-dom`);
     containerDOM.classList.add('emirror-latex-node');
 
@@ -162,15 +162,15 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
   } {
     // if inline, then both span
     // else both div.
-    const latexRenderElement = this.katexOptions.displayMode ?
-      document.createElement('div') :
-      document.createElement('span');
+    const latexRenderElement = this.katexOptions.displayMode
+      ? document.createElement('div')
+      : document.createElement('span');
     latexRenderElement.textContent = '';
     latexRenderElement.classList.add('emirror-latex-render');
 
-    const latexSourceElement = this.katexOptions.displayMode ?
-      document.createElement('div') :
-      document.createElement('span');
+    const latexSourceElement = this.katexOptions.displayMode
+      ? document.createElement('div')
+      : document.createElement('span');
     latexSourceElement.classList.add('emirror-latex-source');
 
     return { latexRenderElement, latexSourceElement };
@@ -247,7 +247,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
           this.innerView.dispatch(
             state.tr
               .replace(start, endB, node.slice(start, endA))
-              .setMeta('fromOutside', true)
+              .setMeta('fromOutside', true),
           );
         }
       }
@@ -374,11 +374,12 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
 
     // request pos that cursor should appear within the expanded latex node
     const innerState = this.innerView.state;
-    const maybePos = this.pluginKey.getState(this.outerView.state)
-      ?.prevCursorPos;
+    const maybePos = this.pluginKey.getState(
+      this.outerView.state,
+    )?.prevCursorPos;
     if (!maybePos) {
       console.error(
-        '[latex-node]: Error: Unable to fetch latex plugin state from key'
+        '[latex-node]: Error: Unable to fetch latex plugin state from key',
       );
     }
     const prevCursorPos = maybePos ?? 0;
@@ -389,8 +390,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
 
     this.innerView.dispatch(
       innerState.tr.setSelection(
-        TextSelection.create(innerState.doc, innerPos)
-      )
+        TextSelection.create(innerState.doc, innerPos),
+      ),
     );
 
     this.isEditing = true;

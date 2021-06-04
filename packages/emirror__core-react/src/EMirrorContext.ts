@@ -3,15 +3,10 @@ import {
   PluginsProvider,
   ViewProvider,
   AnalyticsProvider,
-  RenderProvider
+  RenderProvider,
 } from '@emirror/core-provider';
 
-export {
-  PluginsProvider,
-  ViewProvider,
-  AnalyticsProvider,
-  RenderProvider
-};
+export { PluginsProvider, ViewProvider, AnalyticsProvider, RenderProvider };
 
 export type ContextProps = {
   /**
@@ -35,13 +30,10 @@ export type ContextProps = {
 /**
  * The React.Context for EMirror.
  */
-export const EMirrorContext = React.createContext<ContextProps | null>(
-  null
-);
+export const EMirrorContext = React.createContext<ContextProps | null>(null);
 
 /**
  *
  * @returns The hooks for emirror context
  */
-export const useEmirrorContext = () =>
-  React.useContext(EMirrorContext);
+export const useEmirrorContext = () => React.useContext(EMirrorContext);

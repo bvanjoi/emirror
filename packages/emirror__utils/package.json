@@ -17,6 +17,8 @@
     "@babel/runtime": "^7.14.0",
     "@emirror/core-provider": "^0.0.1",
     "@emirror/pm": "^0.0.1",
+    "@emirror/plugin": "^0.0.1",
+    "@emirror/core-structure": "^0.0.1",
     "nanoid": "^3.1.23"
   }
 }

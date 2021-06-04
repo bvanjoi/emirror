@@ -15,7 +15,7 @@ class Strike extends Mark {
         { tag: 'del' },
         {
           tag: 'text-decoration',
-          getAttrs: n => (n === 'line-through' ? {} : false),
+          getAttrs: (n) => (n === 'line-through' ? {} : false),
         },
       ],
       toDOM: () => ['s', { class: 'emirror-strike' }, 0],

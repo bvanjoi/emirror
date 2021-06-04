@@ -3,5 +3,5 @@
 const emirrorPluginLatexInline = require('..');
 
 describe('emirror__plugin-latex-inline', () => {
-    it('needs tests');
+  it('needs tests');
 });

@@ -47,7 +47,7 @@ export class EventEmitter<T = any> {
     if (!this.listeners[event]) {
       console.error(ErrorMsg.INVALID_EVENT);
     } else {
-      this.listeners[event].forEach(cb => cb(data));
+      this.listeners[event].forEach((cb) => cb(data));
     }
   }
 
@@ -64,17 +64,17 @@ export class EventEmitter<T = any> {
  * @param eventEmitter the emitter for emirror.
  * @returns A function which will notify listeners about the plugin's state of PM changed.
  */
-export const createDispatch = <T>(
-  eventEmitter: EventEmitter<T>
-): Dispatch<T> => (eventName: string | PluginKey, data: T) => {
-  if (!eventName) {
-    throw Error(ErrorMsg.INVALID_EVENT);
-  }
-  let event: string;
-  if (typeof eventName === 'string') {
-    event = eventName;
-  } else {
-    event = eventName.name;
-  }
-  eventEmitter.emit(event, data);
-};
+export const createDispatch =
+  <T>(eventEmitter: EventEmitter<T>): Dispatch<T> =>
+  (eventName: string | PluginKey, data: T) => {
+    if (!eventName) {
+      throw Error(ErrorMsg.INVALID_EVENT);
+    }
+    let event: string;
+    if (typeof eventName === 'string') {
+      event = eventName;
+    } else {
+      event = eventName.name;
+    }
+    eventEmitter.emit(event, data);
+  };

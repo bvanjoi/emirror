@@ -3,5 +3,5 @@
 const emirrorPluginItalic = require('..');
 
 describe('emirror__plugin-italic', () => {
-    it('needs tests');
+  it('needs tests');
 });

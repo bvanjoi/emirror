@@ -3,5 +3,5 @@
 const emirrorPluginTextColor = require('..');
 
 describe('emirror__plugin-text-color', () => {
-    it('needs tests');
+  it('needs tests');
 });

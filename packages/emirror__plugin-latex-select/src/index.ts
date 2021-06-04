@@ -47,8 +47,8 @@ class LatexSelect extends Mark {
       return DecorationSet.create(
         doc,
         result.map(({ start, end }) =>
-          Decoration.node(start, end, { class: 'emirror-latex-select' })
-        )
+          Decoration.node(start, end, { class: 'emirror-latex-select' }),
+        ),
       );
     };
 

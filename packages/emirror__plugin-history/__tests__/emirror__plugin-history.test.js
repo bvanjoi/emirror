@@ -3,5 +3,5 @@
 const emirrorPluginHistory = require('..');
 
 describe('emirror__plugin-history', () => {
-    it('needs tests');
+  it('needs tests');
 });

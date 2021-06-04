@@ -14,13 +14,13 @@ export const findChangedNodesFromTr = (tr: Transaction) => {
     slice?: Slice;
   })[];
 
-  steps.forEach(step => {
+  steps.forEach((step) => {
     const { from, to, slice } = step;
     const size = slice?.content ? slice.content.size : 0;
     for (let i = from; i <= to + size; i++) {
       if (i <= tr.doc.content.size) {
         const topLevelNode = tr.doc.resolve(i).node(1);
-        if (topLevelNode && !nodes.find(n => n === topLevelNode)) {
+        if (topLevelNode && !nodes.find((n) => n === topLevelNode)) {
           nodes.push(topLevelNode);
         }
       }

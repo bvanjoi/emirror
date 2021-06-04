@@ -3,5 +3,5 @@
 const emirrorPluginTodoList = require('..');
 
 describe('emirror__plugin-todo-list', () => {
-    it('needs tests');
+  it('needs tests');
 });

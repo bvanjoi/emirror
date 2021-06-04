@@ -3,5 +3,5 @@
 const emirrorPluginLatexBlock = require('..');
 
 describe('emirror__plugin-latex-block', () => {
-    it('needs tests');
+  it('needs tests');
 });

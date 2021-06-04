@@ -13,11 +13,7 @@ class Paragraph extends Node {
       content: 'inline*',
       parseDOM: [{ tag: 'p' }],
       toDOM: () =>
-        [
-          'p',
-          { class: 'emirror-paragraph' },
-          0,
-        ] as DOMOutputSpecArray,
+        ['p', { class: 'emirror-paragraph' }, 0] as DOMOutputSpecArray,
     };
   }
 

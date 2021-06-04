@@ -33,7 +33,7 @@ class ExceedTip extends Extension {
       new Plugin({
         key: this.exceedTipKey,
         props: {
-          decorations: state => {
+          decorations: (state) => {
             const { doc } = state;
             const { lastChild } = doc;
 

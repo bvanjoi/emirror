@@ -13,14 +13,16 @@ import {
   ExceedTipEditor,
   TodoEditor,
   LatexEditor,
+  imageEditor,
 } from './pages';
+import Logo from './basic-components/logo';
 
 const AppView = styled.div`
   * {
     box-sizing: border-box;
   }
-
-  width: 100%;
+  margin: 0 auto;
+  width: calc(100% - 64px);
 
   display: flex;
   flex-direction: column;
@@ -36,6 +38,7 @@ const AppView = styled.div`
   @media screen and (max-width: 800px) {
     .emirror {
       max-width: calc(100% - 8px);
+      min-width: 95%;
     }
   }
   @media screen and (min-width: 800px) {
@@ -43,6 +46,14 @@ const AppView = styled.div`
       width: 760px;
     }
   }
+`;
+
+const StyledLogo = styled(Logo)`
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+
+  margin-bottom: 16px;
 `;
 
 /**
@@ -95,12 +106,17 @@ const App = () => {
       path: 'latex',
       component: LatexEditor,
     },
+    {
+      path: 'image',
+      component: imageEditor,
+    },
   ];
 
   return (
     <AppView>
       <Nav />
       <Introduction />
+      <StyledLogo />
       <SubNavigation
         pathname={pathname}
         menus={routeComponents.map((editor) => editor.path)}

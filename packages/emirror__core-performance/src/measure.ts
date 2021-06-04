@@ -17,21 +17,19 @@ export function startMeasure(measureName: string) {
 
 export function stopMeasure(
   measureName: string,
-  onMeasureComplete?: (duration: number, startTime: number) => void
+  onMeasureComplete?: (duration: number, startTime: number) => void,
 ) {
   if (!isPerformanceAPIAvailable()) {
     console.error(ErrorMsg.NOT_AVAILABLE_PERFORMANCE_API);
     return;
   }
   performance.mark(`${measureName}::end`);
-  const start = onMeasureComplete ?
-    measureMap.get(measureName) :
-    undefined;
+  const start = onMeasureComplete ? measureMap.get(measureName) : undefined;
   try {
     performance.measure(
       measureName,
       `${measureName}::start`,
-      `${measureName}::end`
+      `${measureName}::end`,
     );
   } catch (err) {
   } finally {

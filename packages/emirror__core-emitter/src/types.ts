@@ -17,5 +17,5 @@ export interface Listeners {
  */
 export type Dispatch<T = any> = (
   eventName: PluginKey | string,
-  data: T
+  data: T,
 ) => void;

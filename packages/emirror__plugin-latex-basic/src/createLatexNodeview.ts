@@ -35,9 +35,9 @@ function createLatexNodeView(props: Props) {
 }
 
 export const createLatexInlineNodeView = (
-  pluginKey: PluginKey<LatexPluginState>
+  pluginKey: PluginKey<LatexPluginState>,
 ) => createLatexNodeView({ displayMode: 'inline', pluginKey });
 
 export const createLatexBlockNodeView = (
-  pluginKey: PluginKey<LatexPluginState>
+  pluginKey: PluginKey<LatexPluginState>,
 ) => createLatexNodeView({ displayMode: 'block', pluginKey });

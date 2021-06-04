@@ -4,7 +4,7 @@ import { InputRule } from '@emirror/pm/inputrules';
 export default function (
   pattern: RegExp,
   nodeType: NodeType,
-  getAttrs?: (match: string[]) => any
+  getAttrs?: (match: string[]) => any,
 ) {
   return new InputRule(pattern, (state, match, start, end) => {
     const $start = state.doc.resolve(start);
@@ -45,7 +45,7 @@ export default function (
       tr.mapping.map(start),
       tr.mapping.map(start),
       nodeType,
-      attrs
+      attrs,
     );
   });
 }
