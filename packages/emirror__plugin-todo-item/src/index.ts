@@ -73,13 +73,13 @@ class TodoItem extends Node {
                 );
               });
 
-              const content = document.createElement('span');
-              content.classList.add('emirror-todo-item-content');
-              listItem.append(checkbox, content);
+              const contentDOM = document.createElement('span');
+              contentDOM.classList.add('emirror-todo-item-content');
+              listItem.append(checkbox, contentDOM);
 
               return {
                 dom: listItem,
-                contentDOM: content,
+                contentDOM,
                 update: (node) => {
                   if (node.type.name === 'todoItem') {
                     return false;

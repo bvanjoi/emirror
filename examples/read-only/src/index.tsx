@@ -10,16 +10,14 @@ const ReadOnlyEMirror = () => {
 
   return (
     <div>
-      <div>
-        <input
-          type="checkbox"
-          name="editable"
-          id="editable"
-          checked={editable}
-          onChange={() => setEditable(!editable)}
-        />
-        <label>editable</label>
-      </div>
+      <input
+        type="checkbox"
+        name="editable"
+        id="editable"
+        checked={editable}
+        onChange={() => setEditable(!editable)}
+      />
+      <label>editable</label>
       <EMirror
         topNode={new Doc()}
         editable={editable}

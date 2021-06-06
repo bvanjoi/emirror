@@ -7,6 +7,7 @@ import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import Bold from '@emirror/plugin-bold';
 import Code from '@emirror/plugin-code';
+import CodeBlock from '@emirror/plugin-code-block';
 import Italic from '@emirror/plugin-italic';
 import Strike from '@emirror/plugin-strike';
 import UnderLine from '@emirror/plugin-underline';
@@ -25,6 +26,7 @@ const DefaultEMirror = () => {
 
   const bold = new Bold();
   const code = new Code();
+  const codeBlock = new CodeBlock();
   const italic = new Italic();
   const strike = new Strike();
   const underline = new UnderLine();
@@ -75,6 +77,7 @@ const DefaultEMirror = () => {
           orderList,
           bulletList,
           hr,
+          codeBlock,
         ]}
       >
         <h4>Hello, This is the default setup of EMirror.</h4>
@@ -119,6 +122,7 @@ const DefaultEMirror = () => {
           </li>
         </ul>
         <p>More features is under development, such as:</p>
+        <pre className="emirror-code-block">{"console.log('hello world')"}</pre>
         <ol>
           <li>
             <p>Auto link</p>

@@ -26,6 +26,7 @@
     "@emirror/pm": "^0.0.1",
     "@emirror/plugin-bold": "^0.0.1",
     "@emirror/plugin-code": "^0.0.1",
+    "@emirror/plugin-code-block": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
     "@emirror/plugin-italic": "^0.0.1",

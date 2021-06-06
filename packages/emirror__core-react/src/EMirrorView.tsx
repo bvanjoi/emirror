@@ -108,7 +108,7 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   useEffect(() => {
     //! Why viewProvider.view return undefine?
     const view = viewRef.current;
-    view.update({
+    view?.update({
       ...view.props,
       editable: () => editable,
     });

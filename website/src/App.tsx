@@ -14,6 +14,7 @@ import {
   TodoEditor,
   LatexEditor,
   imageEditor,
+  codeEditor,
 } from './pages';
 import Logo from './basic-components/logo';
 
@@ -109,6 +110,10 @@ const App = () => {
     {
       path: 'image',
       component: imageEditor,
+    },
+    {
+      path: 'code-editor',
+      component: codeEditor,
     },
   ];
 

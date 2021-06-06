@@ -32,8 +32,9 @@ const DefaultEMirror = () => {
       <p>Following is a example(copy from wikipedia):</p>
       <hr />
       <p>
-        Stirling's approximation is an approximation for factorials. It is a
-        good approximation, leading to accurate results even for small values of
+        Stirling&apos;s approximation is an approximation for factorials. It is
+        a good approximation, leading to accurate results even for small values
+        of
         <span className="emirror-latex-inline">\, n</span>.
       </p>
       <p>The version of the formula typically used in applications of is:</p>

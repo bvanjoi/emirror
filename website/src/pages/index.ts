@@ -8,6 +8,7 @@ import ExceedTipEditor from './exceedTipEditor';
 import TodoEditor from './todoEditor';
 import LatexEditor from './latexEditor';
 import imageEditor from './imageEditor';
+import codeEditor from './codeEditor';
 
 export {
   MiniEMirror,
@@ -20,4 +21,5 @@ export {
   TodoEditor,
   LatexEditor,
   imageEditor,
+  codeEditor,
 };

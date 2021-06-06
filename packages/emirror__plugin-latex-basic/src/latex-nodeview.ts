@@ -145,9 +145,9 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     containerDOM.classList.add('emirror-latex-node');
 
     if (this.katexOptions.displayMode) {
-      containerDOM.classList.add('emirror-latex-node-block');
+      containerDOM.classList.add('emirror-latex-block');
     } else {
-      containerDOM.classList.add('emirror-latex-node-inline');
+      containerDOM.classList.add('emirror-latex-inline');
     }
     return containerDOM;
   }
@@ -193,6 +193,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     }
 
     // get latex string to render
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const content = this.node.content.content as PMNode[];
 

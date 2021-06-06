@@ -22,12 +22,18 @@ module.exports = (env) => {
     resolve: {
       extensions: ['.tsx', 'jsx', '.ts', '.js'],
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './public/index.html',
+        minify: 'auto',
+      }),
+    ],
     module: {
       rules: [
         {
-          test: /.js|.jsx|.ts|.tsx$/,
+          test: /\.(js|jsx|ts|tsx)$/,
+          exclude: '/node_modules/',
           loader: 'babel-loader',
-          exclude: '/node_modules',
           options: {
             presets: ['@babel/react', '@babel/env'],
           },
@@ -40,15 +46,10 @@ module.exports = (env) => {
           test: /\.(ttf|eot|woff|woff2)$/,
           loader: 'file-loader',
           options: {
-            name: 'fonts/[name].[ext]',
+            name: 'fonts/[name]_[hash:8].[ext]',
           },
         },
       ],
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './public/index.html',
-      }),
-    ],
   };
 };
