@@ -22,9 +22,9 @@
     "url": "git+https://github.com/bvanjoi/emirror.git"
   },
   "scripts": {
-    "dev": "webpack serve --env dev",
-    "build": "webpack build",
-    "predeploy": "yarn build",
+    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack build --config webpack.prod.js",
+    "predeploy": "rm -rf ./dist && yarn build",
     "deploy": "gh-pages -d dist"
   },
   "bugs": {
@@ -33,6 +33,7 @@
   "dependencies": {
     "@babel/runtime": "^7.14.0",
     "@emirro/example-highlight-block": "^0.0.1",
+    "@emirror/example-code-editor": "^0.0.1",
     "@emirror/example-default": "^0.0.1",
     "@emirror/example-exceed-tip": "^0.0.1",
     "@emirror/example-mini-setup": "^0.0.1",
@@ -40,9 +41,7 @@
     "@emirror/example-read-only": "^0.0.1",
     "@emirror/example-title-doc": "^0.0.1",
     "@emirror/example-todo-list": "^0.0.1",
-    "@emirror/example-code-editor": "^0.0.1",
     "classnames": "^2.3.1",
-    "file-loader": "^6.2.0",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.7",
     "styled-components": "^5.2.3"
@@ -57,9 +56,12 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
     "css-loader": "^5.2.6",
+    "css-minimizer-webpack-plugin": "^3.0.1",
     "gh-pages": "^3.2.0",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
+    "postcss-loader": "^5.3.0",
+    "postcss-preset-env": "^6.7.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.6.0",

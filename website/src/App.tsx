@@ -116,7 +116,6 @@ const App = () => {
       component: codeEditor,
     },
   ];
-
   return (
     <AppView>
       <Nav />
