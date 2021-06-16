@@ -20,12 +20,11 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.0",
     "@emirror/core": "^0.0.1",
-    "@emirror/plugin-title-doc": "^0.0.1",
-    "@emirror/plugin-title": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
     "@emirror/plugin-paragraph": "^0.0.1",
-    "@emirror/plugin-text": "^0.0.1"
+    "@emirror/plugin-text": "^0.0.1",
+    "@emirror/plugin-title": "^0.0.1",
+    "@emirror/plugin-title-doc": "^0.0.1"
   }
 }

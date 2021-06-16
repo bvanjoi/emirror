@@ -16,7 +16,6 @@ import {
   imageEditor,
   codeEditor,
 } from './pages';
-import Logo from './basic-components/logo';
 
 const AppView = styled.div`
   * {
@@ -47,14 +46,6 @@ const AppView = styled.div`
       width: 760px;
     }
   }
-`;
-
-const StyledLogo = styled(Logo)`
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
-
-  margin-bottom: 16px;
 `;
 
 /**
@@ -120,7 +111,6 @@ const App = () => {
     <AppView>
       <Nav />
       <Introduction />
-      <StyledLogo />
       <SubNavigation
         pathname={pathname}
         menus={routeComponents.map((editor) => editor.path)}

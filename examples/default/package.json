@@ -20,28 +20,27 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.0",
     "@emirror/core": "^0.0.1",
     "@emirror/core-structure": "^0.0.1",
-    "@emirror/pm": "^0.0.1",
+    "@emirror/menu": "^0.0.1",
+    "@emirror/plugin-blockquote": "^0.0.1",
     "@emirror/plugin-bold": "^0.0.1",
+    "@emirror/plugin-bullet-list": "^0.0.1",
     "@emirror/plugin-code": "^0.0.1",
     "@emirror/plugin-code-block": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
+    "@emirror/plugin-heading": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
+    "@emirror/plugin-hr": "^0.0.1",
     "@emirror/plugin-italic": "^0.0.1",
+    "@emirror/plugin-list-item": "^0.0.1",
+    "@emirror/plugin-order-list": "^0.0.1",
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-strike": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",
-    "@emirror/plugin-underline": "^0.0.1",
-    "@emirror/plugin-blockquote": "^0.0.1",
-    "@emirror/plugin-heading": "^0.0.1",
-    "@emirror/plugin-order-list": "^0.0.1",
-    "@emirror/plugin-bullet-list": "^0.0.1",
-    "@emirror/plugin-list-item": "^0.0.1",
     "@emirror/plugin-text-background-color": "^0.0.1",
     "@emirror/plugin-text-color": "^0.0.1",
-    "@emirror/plugin-hr": "^0.0.1",
-    "@emirror/menu": "^0.0.1"
+    "@emirror/plugin-underline": "^0.0.1",
+    "@emirror/pm": "^0.0.1"
   }
 }

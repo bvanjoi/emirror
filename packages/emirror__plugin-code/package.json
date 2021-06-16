@@ -20,9 +20,8 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.0",
-    "@emirror/utils": "^0.0.1",
+    "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1",
-    "@emirror/core-structure": "^0.0.1"
+    "@emirror/utils": "^0.0.1"
   }
 }

@@ -20,15 +20,14 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.0",
     "@emirror/core": "^0.0.1",
+    "@emirror/plugin-bullet-list": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
-    "@emirror/plugin-paragraph": "^0.0.1",
-    "@emirror/plugin-text": "^0.0.1",
-    "@emirror/plugin-order-list": "^0.0.1",
-    "@emirror/plugin-bullet-list": "^0.0.1",
     "@emirror/plugin-list-item": "^0.0.1",
-    "@emirror/plugin-react-highlight-block": "^0.0.1"
+    "@emirror/plugin-order-list": "^0.0.1",
+    "@emirror/plugin-paragraph": "^0.0.1",
+    "@emirror/plugin-react-highlight-block": "^0.0.1",
+    "@emirror/plugin-text": "^0.0.1"
   }
 }
