@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import Link from '../../basic-components/link';
 
 const IntroStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
   word-break: normal;
+`;
+
+const TextCenterParagraph = styled.p`
+  text-align: center;
+  padding: 0 24px;
 `;
 
 const UnderLineSpan = styled.span`
@@ -17,7 +19,7 @@ const UnderLineSpan = styled.span`
 const Introduction = () => {
   return (
     <IntroStyled>
-      <p>
+      <TextCenterParagraph>
         <strong>EMirror</strong> - a WYSIWYG eidtor based on
         <span> </span>
         <Link>
@@ -28,11 +30,11 @@ const Introduction = () => {
           <UnderLineSpan>React</UnderLineSpan>
         </Link>
         .
-      </p>
-      <p>
+      </TextCenterParagraph>
+      <TextCenterParagraph>
         It means <i>Extension Prosemirror</i>, and it aims is provide a toolkit
         for build modern web editor fluently.
-      </p>
+      </TextCenterParagraph>
     </IntroStyled>
   );
 };

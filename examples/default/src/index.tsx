@@ -122,7 +122,6 @@ const DefaultEMirror = () => {
           </li>
         </ul>
         <p>More features is under development, such as:</p>
-        <pre className="emirror-code-block">{"console.log('hello world')"}</pre>
         <ol>
           <li>
             <p>Auto link</p>

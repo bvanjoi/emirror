@@ -9,7 +9,7 @@ type Props = {
   url: string;
 };
 
-const Wrap = styled.span`
+const WrapperSpan = styled.span`
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 5px;
@@ -18,11 +18,11 @@ const Wrap = styled.span`
 const ShowCodeLink = (props: Props) => {
   const { url } = props;
   return (
-    <Wrap>
+    <WrapperSpan>
       <Link href={url} target="__blank">
         SHOW CODE
       </Link>
-    </Wrap>
+    </WrapperSpan>
   );
 };
 

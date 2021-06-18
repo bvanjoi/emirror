@@ -3,11 +3,22 @@ import cls from 'classnames';
 import Link from '../../basic-components/link';
 import styled from 'styled-components';
 
-const WrappedLink = styled(Link)`
-  border-bottom: 1px solid transparent;
+const SubNavUl = styled.ul`
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+const SubNavLi = styled.li`
+  margin: 0 4px;
+  padding: 4px;
+  list-style: none;
 
   &.selected {
-    border-bottom: 1px solid black;
+    background-color: #eee;
   }
 `;
 
@@ -23,32 +34,19 @@ type Props = {
   pathname: string;
 };
 
-const SubNavWrapper = styled.div`
-  * {
-    margin: 0 8px;
-  }
-  width: clac(100% - 32px);
-  margin: 8px auto;
-
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
-`;
-
 const SubNavigation = (props: Props) => {
   const { menus, pathname } = props;
   return (
-    <SubNavWrapper>
+    <SubNavUl>
       {menus.map((menu) => (
-        <WrappedLink
+        <SubNavLi
           key={menu}
-          href={`#/${menu}`}
           className={cls({ selected: pathname === `/${menu}` })}
         >
-          {menu}
-        </WrappedLink>
+          <Link href={`#/${menu}`}>{menu}</Link>
+        </SubNavLi>
       ))}
-    </SubNavWrapper>
+    </SubNavUl>
   );
 };
 

@@ -210,7 +210,6 @@ const EMirrorInnerView = styled.div`
     min-height: 140px;
     overflow-wrap: break-word;
     outline: none;
-    padding: 10px;
     white-space: pre-wrap;
     font-variant-ligatures: none;
     word-break: break-word;

@@ -16,36 +16,19 @@ import {
   imageEditor,
   codeEditor,
 } from './pages';
+import './App.css';
 
 const AppView = styled.div`
   * {
     box-sizing: border-box;
   }
-  margin: 0 auto;
-  width: calc(100% - 64px);
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
-  .emirror {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 1em;
-  }
-
-  @media screen and (max-width: 800px) {
-    .emirror {
-      max-width: calc(100% - 8px);
-      min-width: 95%;
-    }
-  }
-  @media screen and (min-width: 800px) {
-    .emirror {
-      width: 760px;
-    }
-  }
+  margin-bottom: 18px;
 `;
 
 /**
