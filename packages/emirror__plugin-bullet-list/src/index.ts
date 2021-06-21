@@ -17,11 +17,19 @@ class BulletList extends Node {
     };
   }
 
+  get commands() {
+    return {
+      toggleBulletList: toggleList(this.name, 'listItem'),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Shift-Ctrl-7': toggleList(type, 'listItem'),
   });
 
-  inputRules = ({ type }) => [wrappingInputRule(/^\s*[-+*]\s$/, type)];
+  inputRules = ({ type }) => [
+    wrappingInputRule(/^\s*[-+*]\s$/, type),
+  ];
 }
 
 export default BulletList;

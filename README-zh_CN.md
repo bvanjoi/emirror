@@ -1,6 +1,6 @@
 # EMirror
 
-[中文](./README-zh_CN.md) | [英文](./README.md)
+中文 | [英文](./README.md)
 
 EMirror, 旨在提供一份不受框架限制、开箱即用的富文本编辑器，其底层依赖为[ProseMirror](https://prosemirror.net/). 目前仅提供 React 接口。
 

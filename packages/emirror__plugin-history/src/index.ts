@@ -11,6 +11,13 @@ class History extends Extension {
     return [history()];
   }
 
+  get commands() {
+    return {
+      redo,
+      undo,
+    };
+  }
+
   keymap = () => {
     const binding = {};
     binding['Mod-z'] = undo;

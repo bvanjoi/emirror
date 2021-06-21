@@ -11,7 +11,11 @@ type Props = {
 
 function createLatexNodeView(props: Props) {
   const { displayMode, pluginKey } = props;
-  return (node: PMNode, view: EditorView, getPos: () => number): NodeView => {
+  return (
+    node: PMNode,
+    view: EditorView,
+    getPos: () => number,
+  ): NodeView => {
     const pluginState = pluginKey.getState(view.state);
     if (!pluginState) {
       throw Error('latex plugin is empty');

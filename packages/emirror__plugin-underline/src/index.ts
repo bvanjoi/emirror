@@ -21,12 +21,20 @@ class Underline extends Mark {
     };
   }
 
+  get commands() {
+    return {
+      toggleUnderline: toggleMark(this.name),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Mod-u': toggleMark(type),
     'Mod-U': toggleMark(type),
   });
 
-  inputRules = ({ type }) => [markInputRules(/(?:~)([^*_]+)(?:~)\x20$/, type)];
+  inputRules = ({ type }) => [
+    markInputRules(/(?:~)([^*_]+)(?:~)\x20$/, type),
+  ];
 }
 
 export default Underline;

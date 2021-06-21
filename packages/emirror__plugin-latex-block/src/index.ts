@@ -21,6 +21,7 @@ class LatexBlock extends Node {
           tag: 'div.emirror-latex-block',
         },
       ],
+      toDOM: () => ['div', { class: 'emirror-latex-block' }, 0],
     };
   }
 

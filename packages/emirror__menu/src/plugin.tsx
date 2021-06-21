@@ -27,11 +27,13 @@ class MenuView {
         continue;
       }
 
-      const attrs = ele.getAttribute('data-plugin-attrs') || {};
+      const attrs =
+        JSON.parse(ele.getAttribute('data-plugin-attrs')) || {};
+
       if (isActive(this.view.state, this.items[name], attrs)) {
-        ele.classList.add('is-active');
+        ele.classList.add('activated');
       } else {
-        ele.classList.remove('is-active');
+        ele.classList.remove('activated');
       }
     }
   }

@@ -15,12 +15,20 @@ class Code extends Mark {
     };
   }
 
+  get commands() {
+    return {
+      toggleCode: toggleMark(this.name),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Mod-Ctrl-c': toggleMark(type),
     'Mod-Ctrl-C': toggleMark(type),
   });
 
-  inputRules = ({ type }) => [markInputRules(/(?:`)([^*_]+)(?:`)\x20$/, type)];
+  inputRules = ({ type }) => [
+    markInputRules(/(?:`)([^*_]+)(?:`)\x20$/, type),
+  ];
 }
 
 export default Code;

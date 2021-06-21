@@ -37,7 +37,9 @@ export const isNodeActiveType = (
           }
           return type.name === nodeRange.node.type.name;
         })
-        .find((nodeRange) => objectIncludes(nodeRange.node.attrs, attrs)),
+        .find((nodeRange) =>
+          objectIncludes(nodeRange.node.attrs, attrs),
+        ),
     );
   }
 
@@ -45,7 +47,9 @@ export const isNodeActiveType = (
 
   const range = nodeRanges
     .filter((nodeRange) => type.name === nodeRange.node.type.name)
-    .filter((nodeRange) => objectIncludes(nodeRange.node.attrs, attrs))
+    .filter((nodeRange) =>
+      objectIncludes(nodeRange.node.attrs, attrs),
+    )
     .reduce((sum, { from, to }) => sum + (to - from), 0);
 
   return range >= selectionRange;

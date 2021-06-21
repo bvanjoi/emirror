@@ -35,7 +35,11 @@ export const toggleList =
       selection,
     );
 
-    if (range.depth >= 1 && parentList && range.depth - parentList.depth <= 1) {
+    if (
+      range.depth >= 1 &&
+      parentList &&
+      range.depth - parentList.depth <= 1
+    ) {
       // remove list
       if (parentList.node.type === listType) {
         return liftListItem(itemType)(state, dispatch);

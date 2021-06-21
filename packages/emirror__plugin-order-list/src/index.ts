@@ -39,6 +39,12 @@ class OrderList extends Node {
     };
   }
 
+  get commands() {
+    return {
+      toggleOrderList: toggleList(this.name, 'listItem'),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Shift-Ctrl-8': toggleList(type, 'listItem'),
   });

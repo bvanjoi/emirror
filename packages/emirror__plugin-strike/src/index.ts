@@ -22,6 +22,12 @@ class Strike extends Mark {
     };
   }
 
+  get commands() {
+    return {
+      toggleStrike: toggleMark(this.name),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Mod-Shift-x': toggleMark(type),
     'Mod-Shift-X': toggleMark(type),

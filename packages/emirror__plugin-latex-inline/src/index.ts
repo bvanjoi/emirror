@@ -17,6 +17,7 @@ class LatexInline extends Node {
       inline: true,
       atom: true,
       parseDOM: [{ tag: 'span.emirror-latex-inline' }],
+      toDOM: () => ['span', { class: 'emirror-latex-inline' }, 0],
     };
   }
 

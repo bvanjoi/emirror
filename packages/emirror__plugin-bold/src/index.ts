@@ -27,6 +27,12 @@ class Bold extends Mark {
     };
   }
 
+  get commands() {
+    return {
+      toggleBold: toggleMark(this.name),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Mod-b': toggleMark(type),
     'Mod-B': toggleMark(type),

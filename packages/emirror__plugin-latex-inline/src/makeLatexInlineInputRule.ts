@@ -12,15 +12,17 @@ export default function (
 
     const $end = state.doc.resolve(end);
 
-    const attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
-    if (!$start.parent.canReplaceWith(index, $end.index(), nodeType)) {
+    const attrs =
+      getAttrs instanceof Function ? getAttrs(match) : getAttrs;
+    if (
+      !$start.parent.canReplaceWith(index, $end.index(), nodeType)
+    ) {
       return null;
     }
 
     if (end - start === 4 && match[0] === '$$$$ ') {
       return null;
     }
-    console.log('hit', end - start, match[0]);
 
     return state.tr.replaceRangeWith(
       start,

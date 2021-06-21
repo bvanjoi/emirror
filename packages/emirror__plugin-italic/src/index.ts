@@ -10,8 +10,18 @@ class Italic extends Mark {
 
   get schema(): MarkSpec {
     return {
-      parseDOM: [{ tag: 'em' }, { tag: 'i' }, { style: 'font-style=italic' }],
+      parseDOM: [
+        { tag: 'em' },
+        { tag: 'i' },
+        { style: 'font-style=italic' },
+      ],
       toDOM: () => ['em', { class: 'emirror-italic' }, 0],
+    };
+  }
+
+  get commands() {
+    return {
+      toggleItalic: toggleMark(this.name),
     };
   }
 

@@ -1,5 +1,5 @@
 import { MarkType, NodeType } from '@emirror/pm/model';
-import { Keymap, Command } from '@emirror/pm/commands';
+import { Keymap } from '@emirror/pm/commands';
 import { Plugin, PluginKey } from '@emirror/pm/state';
 import { PluginType, NodeViewComponentProps } from './types';
 import { ErrorMsg } from './constant';
@@ -40,7 +40,7 @@ export class Base {
   /**
    * Commands for this plugin
    */
-  get commands(): Record<string, Command> {
+  get commands(): Record<string, Function> {
     return {};
   }
 
@@ -48,7 +48,8 @@ export class Base {
    * When hit some keys it will exec corresponding command.
    * @returns Some key map
    */
-  keymap: (options: { type?: MarkType | NodeType }) => Keymap = () => ({});
+  keymap: (options: { type?: MarkType | NodeType }) => Keymap =
+    () => ({});
 
   /**
    * React component to provider a more complicated nodeview.

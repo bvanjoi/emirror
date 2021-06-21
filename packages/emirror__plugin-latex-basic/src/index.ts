@@ -34,7 +34,9 @@ class Latex extends Extension {
         },
         props: {
           nodeViews: {
-            latexInline: createLatexInlineNodeView(this.latexPluginKey),
+            latexInline: createLatexInlineNodeView(
+              this.latexPluginKey,
+            ),
             latexBlock: createLatexBlockNodeView(this.latexPluginKey),
           },
         },

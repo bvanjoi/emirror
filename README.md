@@ -1,6 +1,6 @@
 # EMirror
 
-[English](./README.md) | [Chinese](./README-zh_CN.md)
+English | [Chinese](./README-zh_CN.md)
 
 EMirror, which based on [ProseMirror](https://prosemirror.net/), designed to provide a free framework, out-of-the-box web editor.
 

@@ -19,10 +19,16 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        jsxSingleQuote: true,
+      },
+    ],
     'require-jsdoc': 'off',
-    'react/prop-types': 'off',
     'no-console': ['error', { allow: ['error', 'warn', 'info'] }],
+    'no-extra-boolean-cast': 'error',
+    'react/prop-types': 'off',
     '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/explicit-module-boundary-types': 'off',

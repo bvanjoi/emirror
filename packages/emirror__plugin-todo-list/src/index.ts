@@ -22,6 +22,12 @@ class TodoList extends Node {
     };
   }
 
+  get commands() {
+    return {
+      toggleTodoList: toggleList(this.name, 'todoItem'),
+    };
+  }
+
   keymap = ({ type }) => ({
     'Shift-Ctrl-9': toggleList(type, 'todoItem'),
   });

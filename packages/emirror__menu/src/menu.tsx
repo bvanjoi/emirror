@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import { MenuProps } from './types';
 import menuPlugin from './plugin';
 
-const BaseMenu = (props: MenuProps) => {
+/**
+ * The container for menu view.
+ * register the PM plugin and update.
+ */
+const MenuContainer = (props: MenuProps) => {
   const elementRef = React.useRef<HTMLDivElement>(null);
   const { view, items, children } = props;
 
@@ -14,10 +18,10 @@ const BaseMenu = (props: MenuProps) => {
   }, []);
 
   return (
-    <div className="base-menu" ref={elementRef}>
+    <div className='base-menu menu' ref={elementRef}>
       {children}
     </div>
   );
 };
 
-export default BaseMenu;
+export default MenuContainer;

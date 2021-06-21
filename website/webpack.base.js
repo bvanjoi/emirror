@@ -39,15 +39,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        type: 'asset',
+        test: /\.(ttf|eot|woff|woff2|png|svg|jpg|jpeg|gif)$/,
+        type: 'asset/resource',
         parser: {
           dataUrlCondition: {
             maxSize: 4 * 1024,
           },
         },
         generator: {
-          filename: 'fonts/[name]_[hash:8].[ext]',
+          filename: '[name]_[hash:8].[ext]',
         },
       },
     ],

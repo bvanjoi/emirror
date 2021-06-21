@@ -1,6 +1,6 @@
 import * as PMCommands from 'prosemirror-commands';
-import { MarkType, Schema } from 'prosemirror-model';
-import { getMarkType } from '@emirror/utils';
+import { MarkType, NodeType, Schema } from 'prosemirror-model';
+import { getMarkType, getNodeType } from '@emirror/utils';
 
 /**
  * // Extends the type to nameOrType.
@@ -23,5 +23,15 @@ function toggleMark<S extends Schema = any>(
   };
 }
 
+function setBlockType<S extends Schema = any>(
+  nodeNameOrType: NodeType<S> | string,
+  attrs?: { [key: string]: any },
+): PMCommands.Command {
+  return function (state, dispatch) {
+    const nodeType = getNodeType(nodeNameOrType, state.schema);
+    return PMCommands.setBlockType(nodeType, attrs)(state, dispatch);
+  };
+}
+
 export * from 'prosemirror-commands';
-export { toggleMark };
+export { toggleMark, setBlockType };

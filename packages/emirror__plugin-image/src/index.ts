@@ -30,20 +30,29 @@ class Image extends Node {
       ],
       toDOM: (node) => {
         const { src, alt, title } = node.attrs;
-        return ['img', { src, alt, title, class: 'emirror-image' }];
+        return [
+          'img',
+          { src, alt, title, class: 'emirror-image' },
+        ];
       },
     };
   }
 
   get commands() {
     return {
-      insertImageAtNowPos: (url: string, view: EditorView) => {
+      insertImageAtNowPos: (
+        url: string,
+        view: EditorView,
+      ) => {
         const imageNode = (
           view.state.schema.nodes[this.name] as NodeType
         ).create({
           src: url,
         });
-        return insertNode(imageNode)(view.state, view.dispatch);
+        return insertNode(imageNode)(
+          view.state,
+          view.dispatch,
+        );
       },
     };
   }

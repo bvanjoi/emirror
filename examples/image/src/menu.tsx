@@ -10,7 +10,7 @@ type Props = {
 };
 
 const ActiveButton = styled.button`
-  &.is-active {
+  &.activated {
     background-color: rgba(0, 0, 0);
     color: white;
   }
