@@ -9,6 +9,13 @@ type Props = {
   url: string;
 };
 
+const WrapperDiv = styled.div`
+  width: 100%;
+  margin: 12px;
+  display: flex;
+  justify-content: center;
+`;
+
 const WrapperSpan = styled.span`
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -18,11 +25,11 @@ const WrapperSpan = styled.span`
 const ShowCodeLink = (props: Props) => {
   const { url } = props;
   return (
-    <WrapperSpan>
-      <Link href={url} target="__blank">
-        SHOW CODE
+    <WrapperDiv>
+      <Link href={url} target='__blank'>
+        <WrapperSpan>SHOW CODE</WrapperSpan>
       </Link>
-    </WrapperSpan>
+    </WrapperDiv>
   );
 };
 

@@ -22,18 +22,18 @@ const Introduction = () => {
       <TextCenterParagraph>
         <strong>EMirror</strong> - a WYSIWYG eidtor based on
         <span> </span>
-        <Link>
+        <Link href='https://prosemirror.net/' target='__blank'>
           <UnderLineSpan>Prosemirror</UnderLineSpan>
         </Link>
         {' and '}
-        <Link>
+        <Link href='https://reactjs.org/' target='__blank'>
           <UnderLineSpan>React</UnderLineSpan>
         </Link>
         .
       </TextCenterParagraph>
       <TextCenterParagraph>
-        It means <i>Extension Prosemirror</i>, and it aims is provide a toolkit
-        for build modern web editor fluently.
+        It means <i>Extension Prosemirror</i>, and it aims is provide a
+        toolkit for build modern web editor fluently.
       </TextCenterParagraph>
     </IntroStyled>
   );

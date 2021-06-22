@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.base.js');
 
 const devConfig = {
   mode: 'development',
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   devServer: {
     hot: true,
     open: true,

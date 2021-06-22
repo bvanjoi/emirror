@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import githubIcon from '@/assets/github.png';
 import Link from '../../basic-components/link';
 
 const NavStyled = styled.div`
@@ -12,23 +13,16 @@ const NavStyled = styled.div`
   height: 72px;
 `;
 
-const Navigation = () => {
-  /**
-   * The reaction of click EMirror logo.
-   */
-  const handleClickLogo = (event: React.MouseEvent) => {
-    if (location.pathname === '/') {
-      event.preventDefault();
-    }
-  };
+const IconStyled = styled.img`
+  width: 28px;
+`;
 
+const Navigation = () => {
   return (
     <NavStyled>
-      <Link href="/" onClick={handleClickLogo}>
-        Emirror
-      </Link>
-      <Link href="https://github.com/bvanjoi/emirror" target="__blank">
-        Github Repo
+      <span>Emirror</span>
+      <Link href='https://github.com/bvanjoi/emirror' target='__blank'>
+        <IconStyled src={githubIcon} alt='repo' />
       </Link>
     </NavStyled>
   );

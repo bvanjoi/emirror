@@ -1,11 +1,11 @@
 {
-  "name": "@emirro/example-highlight-block",
+  "name": "@emirror/example-highlight-block",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirro-example-highlight-block.cjs.js",
+  "main": "dist/emirror-example-highlight-block.cjs.js",
   "publishConfig": {
     "access": "public"
   },

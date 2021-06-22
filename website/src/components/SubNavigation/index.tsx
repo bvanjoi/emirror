@@ -1,24 +1,45 @@
 import React from 'react';
-import cls from 'classnames';
-import Link from '../../basic-components/link';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const SubNavUl = styled.ul`
+const StyledUl = styled.ul`
   padding: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-`;
 
-const SubNavLi = styled.li`
-  margin: 0 4px;
-  padding: 4px;
-  list-style: none;
+  li {
+    margin: 0 4px;
+    padding: 2px;
+    list-style: none;
+  }
 
-  &.selected {
-    background-color: #eee;
+  a {
+    padding: 2px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    :active {
+      color: black;
+    }
+
+    :visited {
+      color: black;
+    }
+
+    :focus-visible {
+      outline: none;
+    }
+
+    &.selected {
+      background-color: #eee;
+    }
   }
 `;
 
@@ -27,26 +48,26 @@ type Props = {
    * all pages EMirror editor.
    */
   menus: string[];
-  /**
-   * now pathname of url.
-   * It can use to selecte menu.
-   */
-  pathname: string;
 };
 
 const SubNavigation = (props: Props) => {
-  const { menus, pathname } = props;
+  const { menus } = props;
   return (
-    <SubNavUl>
+    <StyledUl>
       {menus.map((menu) => (
-        <SubNavLi
-          key={menu}
-          className={cls({ selected: pathname === `/${menu}` })}
-        >
-          <Link href={`#/${menu}`}>{menu}</Link>
-        </SubNavLi>
+        <li key={menu}>
+          <NavLink
+            to={`/${menu}`}
+            activeClassName='selected'
+            isActive={(match, location) =>
+              match?.url === location.pathname
+            }
+          >
+            {menu}
+          </NavLink>
+        </li>
       ))}
-    </SubNavUl>
+    </StyledUl>
   );
 };
 

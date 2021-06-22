@@ -2114,6 +2114,15 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@loadable/component@^5.15.0":
+  version "5.15.0"
+  resolved "https://registry.nlark.com/@loadable/component/download/@loadable/component-5.15.0.tgz?cache=0&sync_timestamp=1620459046561&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40loadable%2Fcomponent%2Fdownload%2F%40loadable%2Fcomponent-5.15.0.tgz#48b9524237be553f48b158f8c9152593f3f3fded"
+  integrity sha1-SLlSQje+VT9IsVj4yRUlk/Pz/e0=
+  dependencies:
+    "@babel/runtime" "^7.7.7"
+    hoist-non-react-statics "^3.3.1"
+    react-is "^16.12.0"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.nlark.com/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz?cache=0&sync_timestamp=1622792706054&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40nodelib%2Ffs.scandir%2Fdownload%2F%40nodelib%2Ffs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -2572,6 +2581,13 @@
   version "0.11.0"
   resolved "https://registry.nlark.com/@types/katex/download/@types/katex-0.11.0.tgz#b16c54ee670925ffef0616beae9e90c557e17334"
   integrity sha1-sWxU7mcJJf/vBha+rp6QxVfhczQ=
+
+"@types/loadable__component@^5.13.3":
+  version "5.13.3"
+  resolved "https://registry.nlark.com/@types/loadable__component/download/@types/loadable__component-5.13.3.tgz#ea620b218fb2b6744ce5b2efd9a6a5c1a525a021"
+  integrity sha1-6mILIY+ytnRM5bLv2aalwaUloCE=
+  dependencies:
+    "@types/react" "*"
 
 "@types/minimatch@*", "@types/minimatch@^3.0.3":
   version "3.0.4"
@@ -6237,7 +6253,7 @@ history@^4.9.0:
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
 
-hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1:
   version "3.3.2"
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
@@ -10362,7 +10378,7 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=

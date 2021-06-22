@@ -1,10 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import cls from 'classnames';
 
-type Props = {} & React.AnchorHTMLAttributes<Element>;
-
-const LinkStyled = styled.a`
+const Link = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: black;
@@ -21,15 +17,5 @@ const LinkStyled = styled.a`
     outline: none;
   }
 `;
-
-const Link = (props: Props) => {
-  const { children, className } = props;
-
-  return (
-    <LinkStyled {...props} className={cls('brc-link', className)}>
-      {children}
-    </LinkStyled>
-  );
-};
 
 export default Link;

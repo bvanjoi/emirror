@@ -10,6 +10,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', 'jsx', '.ts', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   module: {
     rules: [
@@ -40,14 +43,14 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|woff|woff2|png|svg|jpg|jpeg|gif)$/,
-        type: 'asset/resource',
+        type: 'asset',
         parser: {
           dataUrlCondition: {
             maxSize: 4 * 1024,
           },
         },
         generator: {
-          filename: '[name]_[hash:8].[ext]',
+          filename: '[name]_[hash:8][ext]',
         },
       },
     ],
