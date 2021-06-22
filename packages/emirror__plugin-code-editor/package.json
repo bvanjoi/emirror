@@ -23,7 +23,7 @@
     "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1",
     "@emirror/utils": "^0.0.1",
-    "codemirror": "^5.61.1"
+    "codemirror": "^5.62.0"
   },
   "devDependencies": {
     "@types/codemirror": "^5.60.0"

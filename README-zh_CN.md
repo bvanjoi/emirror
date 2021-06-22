@@ -1,6 +1,6 @@
 # EMirror
 
-中文 | [英文](./README.md)
+中文 | [English](./README.md)
 
 EMirror, 旨在提供一份不受框架限制、开箱即用的富文本编辑器，其底层依赖为[ProseMirror](https://prosemirror.net/). 目前仅提供 React 接口。
 
@@ -39,7 +39,7 @@ import { Node } from '@emirror/core-structure';
 import { NodeSpec, Node as PMNode } from '@emirror/pm/model';
 import { setBlockType } from '@emirror/pm/commands';
 import { textblockTypeInputRule } from '@emirror/pm/inputrules';
-import { genID } from '@emirror/utils';
+import { genID, toggleNode } from '@emirror/utils';
 
 class Heading extends Node {
   levels = [1, 2, 3, 4, 5, 6];
@@ -59,12 +59,25 @@ class Heading extends Node {
           default: 1,
         },
       },
-      parseDOM: levels.map((level) => ({ tag: `h${level}`, attrs: { level } })),
+      parseDOM: levels.map((level) => ({
+        tag: `h${level}`,
+        attrs: { level },
+      })),
       toDOM: (node: PMNode) => [
         `h${node.attrs.level}`,
-        { id: genID()},
+        {
+          id: genID(),
+          class: `emirror-heading emirror-h${node.attrs.level}`,
+        },
         0,
       ],
+    };
+  }
+
+  get commands() {
+    return {
+      toggleHeading: (level: number) =>
+        toggleNode(this.name, 'paragraph', { level }),
     };
   }
 
@@ -78,13 +91,18 @@ class Heading extends Node {
 
   inputRules = ({ type }) =>
     this.levels.map((level) =>
-      textblockTypeInputRule(new RegExp(`^(#{1,${level}})\\s$`), type, () => ({
-        level,
-      })),
+      textblockTypeInputRule(
+        new RegExp(`^(#{1,${level}})\\s$`),
+        type,
+        () => ({
+          level,
+        }),
+      ),
     );
 }
 
 export default Heading;
+
 ```
 
 更多插件示例可以参看[官网](https://emirror.dev/)。

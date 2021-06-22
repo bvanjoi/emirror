@@ -48,8 +48,7 @@ export class Base {
    * When hit some keys it will exec corresponding command.
    * @returns Some key map
    */
-  keymap: (options: { type?: MarkType | NodeType }) => Keymap =
-    () => ({});
+  keymap: (options: { type?: MarkType | NodeType }) => Keymap = () => ({});
 
   /**
    * React component to provider a more complicated nodeview.

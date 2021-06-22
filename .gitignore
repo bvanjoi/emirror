@@ -7,6 +7,9 @@ coverage/
 # Log files
 *.log*
 
+# huksy
+.husky
+
 # Editor directories and files
 .idea
 .vscode

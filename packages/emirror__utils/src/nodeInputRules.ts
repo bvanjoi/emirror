@@ -8,7 +8,9 @@ export function nodeInputRules(
 ) {
   return new InputRule(regexp, (state, match, start, end) => {
     const attrs =
-      getAttributes instanceof Function ? getAttributes(match) : getAttributes;
+      getAttributes instanceof Function
+        ? getAttributes(match)
+        : getAttributes;
     const { tr } = state;
 
     if (match[0]) {

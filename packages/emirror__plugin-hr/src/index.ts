@@ -1,6 +1,7 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
 import { nodeInputRules } from '@emirror/utils';
+import { insertHR } from './commands';
 import './style.css';
 
 class HR extends Node {
@@ -14,6 +15,10 @@ class HR extends Node {
       parseDOM: [{ tag: 'hr' }],
       toDOM: () => ['hr', { class: 'emirror-hr' }],
     };
+  }
+
+  get commands() {
+    return { insertHR: insertHR(this.name) };
   }
 
   inputRules = ({ type }) => [nodeInputRules(/^---/, type)];

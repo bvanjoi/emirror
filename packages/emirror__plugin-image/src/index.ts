@@ -1,6 +1,6 @@
 import { Node } from '@emirror/core-structure';
-import { NodeSpec, NodeType } from '@emirror/pm/model';
-import { insertNode } from '@emirror/utils';
+import { NodeSpec } from '@emirror/pm/model';
+import { getNodeType, insertNode } from '@emirror/utils';
 import { EditorView } from '@emirror/pm/view';
 import './style.css';
 
@@ -30,29 +30,19 @@ class Image extends Node {
       ],
       toDOM: (node) => {
         const { src, alt, title } = node.attrs;
-        return [
-          'img',
-          { src, alt, title, class: 'emirror-image' },
-        ];
+        return ['img', { src, alt, title, class: 'emirror-image' }];
       },
     };
   }
 
   get commands() {
     return {
-      insertImageAtNowPos: (
-        url: string,
-        view: EditorView,
-      ) => {
-        const imageNode = (
-          view.state.schema.nodes[this.name] as NodeType
-        ).create({
+      insertImageAtNowPos: (url: string, view: EditorView) => {
+        const nodeType = getNodeType(this.name, view.state.schema);
+        const imageNode = nodeType.create({
           src: url,
         });
-        return insertNode(imageNode)(
-          view.state,
-          view.dispatch,
-        );
+        return insertNode(imageNode)(view.state, view.dispatch);
       },
     };
   }
