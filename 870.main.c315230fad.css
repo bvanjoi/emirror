@@ -1,0 +1,1 @@
+.emirror .emirror-placeholder:before{color:grey;content:attr(data-placeholder-content);position:absolute}

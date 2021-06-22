@@ -1,0 +1,1 @@
+:root{--exceed-tip-color:#be141e;--exceed-tip-margin-left:4px}.emirror .emirror-exceed-tip.after:after,.emirror .emirror-exceed-tip.before:before{color:#be141e;color:var(--exceed-tip-color);content:attr(data-exceed-tip-content);margin-left:4px;margin-left:var(--exceed-tip-margin-left)}.emirror .emirror-exceed-tip.before:before{position:absolute}
