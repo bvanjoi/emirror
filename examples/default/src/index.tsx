@@ -59,12 +59,10 @@ const DefaultEMirror = () => {
         <h4>Hello, This is the default setup of EMirror.</h4>
         <blockquote>
           <p>
-            The MiniEMirror only provide basic features, such as enter
-            to get a new line, ctrl-A to selection all.
+            The MiniEMirror only provide basic features, such as enter to
+            get a new line, ctrl-A to selection all.
           </p>
-          <p>
-            The default setup will provide more practical function.
-          </p>
+          <p>The default setup will provide more practical function.</p>
         </blockquote>
         <p>And in default EMirror, it provider following function:</p>
         <ul>
@@ -81,16 +79,15 @@ const DefaultEMirror = () => {
               <span data-text-color='#ba4b4b'>text color</span>...
             </p>
             <p>
-              And also, EMirror provider some relative markdown
-              shortcut: for example, if your input **something**, it
-              will be transfer it to
+              And also, EMirror provider some relative markdown shortcut:
+              for example, if your input **something**, it will be transfer
+              it to
               <span> </span>
               <strong>something</strong>.
             </p>
             <p>
-              Meanwhile, it also support key map, if you keydown
-              Ctrl-b, and then input, you will find the text is bold
-              font.
+              Meanwhile, it also support key map, if you keydown Ctrl-b,
+              and then input, you will find the text is bold font.
             </p>
           </li>
           <li>
@@ -99,9 +96,9 @@ const DefaultEMirror = () => {
               quote, headings.
             </p>
             <p>
-              For example, you can move your cursor to the head of
-              this line, and input # and space, you will find this
-              line become h1 tag.
+              For example, you can move your cursor to the head of this
+              line, and input # and space, you will find this line become
+              h1 tag.
             </p>
           </li>
         </ul>
@@ -121,10 +118,9 @@ const DefaultEMirror = () => {
           </li>
         </ol>
         <p>
-          And in the last, I want to say it again: the aim of EMirror
-          is to provider a struct to build modern editor easily, and
-          it will provider some examples to exhibit implementation
-          approach.
+          And in the last, I want to say it again: the aim of EMirror is to
+          provider a struct to build modern editor easily, and it will
+          provider some examples to exhibit implementation approach.
         </p>
         <p>There has a lots of things to do...</p>
       </EMirror>

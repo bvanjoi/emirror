@@ -31,8 +31,7 @@ const TitleDocEMirror = () => {
         ]}
       >
         <p>
-          May be you had somethings todo, then you can use todo
-          plugin.
+          May be you had somethings todo, then you can use todo plugin.
         </p>
         <p>
           For example, there are something that need to be done, and

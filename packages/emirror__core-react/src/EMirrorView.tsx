@@ -64,7 +64,9 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     children,
   } = props;
 
-  const [extensionsReactComponent, setExtensionsReactComponent] = useState([]);
+  const [extensionsReactComponent, setExtensionsReactComponent] = useState(
+    [],
+  );
 
   /**
    * The ref of ProsemirrorView DOM.
@@ -82,15 +84,19 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const emirrorContext = useEmirrorContext();
-  const { viewProvider, pluginsProvider, analyticsProvider } = emirrorContext;
+  const { viewProvider, pluginsProvider, analyticsProvider } =
+    emirrorContext;
 
   useEffect(() => {
     if (!viewDOMRef.current) {
       return;
     }
+
     const view = init(viewDOMRef.current);
     // set Selection to the doc end.
-    view.dispatch(view.state.tr.setSelection(Selection.atEnd(view.state.doc)));
+    view.dispatch(
+      view.state.tr.setSelection(Selection.atEnd(view.state.doc)),
+    );
 
     view.focus();
 
@@ -172,7 +178,10 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 
     analyticsProvider.perf.warn('view', 'dispatchTransaction');
 
-    analyticsProvider.perf.info('view', 'dispatchTransaction state::apply');
+    analyticsProvider.perf.info(
+      'view',
+      'dispatchTransaction state::apply',
+    );
     const newState = view.state.apply(tr);
     analyticsProvider.perf.stop(
       'view',
@@ -182,7 +191,11 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 
     analyticsProvider.perf.warn('view', 'dispatchTransaction updateState');
     view.updateState(newState);
-    analyticsProvider.perf.stop('view', 'dispatchTransaction updateState', 100);
+    analyticsProvider.perf.stop(
+      'view',
+      'dispatchTransaction updateState',
+      100,
+    );
 
     afterUpdate && afterUpdate(view);
 
@@ -191,11 +204,9 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 
   return (
     <div className={cls('emirror', className)}>
-      <EMirrorInnerView>
-        <div ref={viewDOMRef} spellCheck="false">
-          <div ref={contentRef} style={{ display: 'none' }}>
-            {children}
-          </div>
+      <EMirrorInnerView ref={viewDOMRef} spellCheck='false'>
+        <div ref={contentRef} style={{ display: 'none' }}>
+          {children}
         </div>
       </EMirrorInnerView>
       {extensionsReactComponent?.map((rc, index) => (
@@ -206,8 +217,11 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 };
 
 const EMirrorInnerView = styled.div`
-  & .ProseMirror {
+  & > .ProseMirror {
     min-height: 140px;
+  }
+
+  & .ProseMirror {
     overflow-wrap: break-word;
     outline: none;
     white-space: pre-wrap;

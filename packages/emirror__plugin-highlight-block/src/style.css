@@ -1,0 +1,25 @@
+.emirror-highlight-block {
+  border-radius: 5px;
+  padding: 6px 12px;
+  margin: 8px 0;
+  display: flex;
+  background-color: rgb(240, 244, 255);
+  border: 1px solid rgb(186, 206, 253);
+  color: unset;
+}
+
+.emirror-highlight-emoji {
+  width: 24px;
+  height: 24px;
+  margin: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.emirror-highlight-emoji::selection {
+  background-color: transparent;
+}
+
+.emirror-highlight-emoji::before {
+  content: attr(data-emoji);
+}

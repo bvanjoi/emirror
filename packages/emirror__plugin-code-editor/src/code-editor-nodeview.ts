@@ -119,7 +119,8 @@ class CodeEditorView implements NodeView {
 
   asPMSelection(doc: PMNode) {
     const offset = this.getPos() + 1;
-    const anchor = this.cm.indexFromPos(this.cm.getCursor('anchor')) + offset;
+    const anchor =
+      this.cm.indexFromPos(this.cm.getCursor('anchor')) + offset;
     const head = this.cm.indexFromPos(this.cm.getCursor('head')) + offset;
     return TextSelection.create(doc, anchor, head);
   }
@@ -239,7 +240,10 @@ class CodeEditorView implements NodeView {
       return false;
     }
     this.node = node;
-    const change = this.computeChange(this.cm.getValue(), node.textContent);
+    const change = this.computeChange(
+      this.cm.getValue(),
+      node.textContent,
+    );
     if (change) {
       this.updating = true;
       this.cm.replaceRange(

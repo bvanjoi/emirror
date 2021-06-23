@@ -33,6 +33,7 @@ class CodeEditor extends Node {
           preserveWhitespace: 'full',
         },
       ],
+      toDOM: () => ['div', { class: 'emirror-code-editor' }, 0],
     };
   }
 

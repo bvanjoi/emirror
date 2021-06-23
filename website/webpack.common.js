@@ -10,6 +10,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', 'jsx', '.ts', '.js'],
+    mainFields: ['jsnext:main', 'browser', 'main'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },

@@ -10,13 +10,18 @@ const CodeEditorEMirror = () => {
   return (
     <EMirror
       topNode={new Doc()}
-      plugins={[new Paragraph(), new Text(), new History(), new CodeEditor()]}
+      plugins={[
+        new Paragraph(),
+        new Text(),
+        new History(),
+        new CodeEditor(),
+      ]}
     >
       <p>
         This plugin is copy from webiste example, and it will expend this
         feature.
       </p>
-      <div className="emirror-code-editor">
+      <div className='emirror-code-editor'>
         {`/**
  * get the sum of a and b.
  * @param(number) a

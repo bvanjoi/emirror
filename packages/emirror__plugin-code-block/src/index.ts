@@ -38,7 +38,10 @@ class CodeBlock extends Node {
       ],
       toDOM: (node) => [
         'pre',
-        { class: 'emirror-code-pre', 'data-language': node.attrs.language },
+        {
+          class: 'emirror-code-pre',
+          'data-language': node.attrs.language,
+        },
         ['code', { class: 'emirror-code-block' }, 0],
       ],
     };

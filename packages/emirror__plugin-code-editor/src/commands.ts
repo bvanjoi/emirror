@@ -1,7 +1,9 @@
 import { Command } from '@emirror/pm/commands';
 import { Selection } from '@emirror/pm/state';
 
-export function arrowHandler(dir: 'left' | 'down' | 'up' | 'right'): Command {
+export function arrowHandler(
+  dir: 'left' | 'down' | 'up' | 'right',
+): Command {
   return (state, dispatch, view) => {
     if (state.selection.empty && view.endOfTextblock(dir)) {
       const side = dir == 'left' || dir == 'up' ? -1 : 1;
@@ -10,7 +12,10 @@ export function arrowHandler(dir: 'left' | 'down' | 'up' | 'right'): Command {
         state.doc.resolve(side > 0 ? $head.after() : $head.before()),
         side,
       );
-      if (nextPos.$head && nextPos.$head.parent.type.name == 'codeEditor') {
+      if (
+        nextPos.$head &&
+        nextPos.$head.parent.type.name == 'codeEditor'
+      ) {
         dispatch(state.tr.setSelection(nextPos));
         return true;
       }

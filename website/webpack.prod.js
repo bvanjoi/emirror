@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const CSSMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
-const baseConfig = require('./webpack.base.js');
+const baseConfig = require('./webpack.common.js');
 
 const prodConfig = {
   mode: 'production',

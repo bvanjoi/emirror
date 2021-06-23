@@ -32,11 +32,18 @@ class TodoItem extends Node {
           priority: 51,
           tag: 'li.emirror-todo-item',
           getAttrs: (dom: HTMLElement) => ({
-            checked: dom.getAttribute('data-checked') === 'true',
+            checked: dom.getAttribute('data-checked') == 'true',
           }),
         },
       ],
-      // toDOM use nodeview in plugin
+      toDOM: (node) => [
+        'li',
+        {
+          class: 'emirror-todo-item',
+          'data-checked': node.attrs.checked,
+        },
+        0,
+      ],
     };
   }
 
@@ -52,14 +59,17 @@ class TodoItem extends Node {
         key: this.todoItemNodeViewKey,
         props: {
           nodeViews: {
-            todoItem: (node, view, getPos) => {
+            [this.name]: (node, view, getPos) => {
+              // dom
               const listItem = document.createElement('li');
-              const checkbox = document.createElement('span');
 
               const { checked } = node.attrs;
 
               listItem.classList.add('emirror-todo-item');
               listItem.setAttribute('data-checked', checked);
+
+              // checkbox item
+              const checkbox = document.createElement('span');
 
               checkbox.classList.add('emirror-todo-item-checkbox');
               checkbox.addEventListener('click', () => {
@@ -73,15 +83,18 @@ class TodoItem extends Node {
                 );
               });
 
+              // contentDOM
               const contentDOM = document.createElement('span');
               contentDOM.classList.add('emirror-todo-item-content');
+
+              // append to dom
               listItem.append(checkbox, contentDOM);
 
               return {
                 dom: listItem,
                 contentDOM,
                 update: (node) => {
-                  if (node.type.name === 'todoItem') {
+                  if (node.type.name === this.name) {
                     return false;
                   }
                   return true;

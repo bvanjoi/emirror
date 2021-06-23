@@ -1,6 +1,5 @@
 import { Mark } from '@emirror/core-structure';
 import { MarkSpec } from '@emirror/pm/model';
-
 class TextColor extends Mark {
   get name() {
     return 'textColor' as const;

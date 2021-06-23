@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/plugin-react-highlight-block",
+  "name": "@emirror/plugin-highlight-block",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-plugin-react-highlight-block.cjs.js",
+  "main": "dist/emirror-plugin-highlight-block.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -20,10 +20,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1",
-    "styled-components": "^5.2.3"
+    "@emirror/core-structure": "^0.0.1"
   }
 }
