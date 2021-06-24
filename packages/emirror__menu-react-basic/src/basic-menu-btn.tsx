@@ -12,7 +12,7 @@ type Props = {
   /**
    * The Command when you click this menu button
    */
-  handleClick: Command;
+  onClick: Command;
   /**
    * The instance ProseMirror view
    */
@@ -24,7 +24,7 @@ type Props = {
   /**
    * The chidren inner Menu Button
    */
-  children?: React.ReactNode;
+  children?: React.ReactChild;
   /**
    * The attrs of plugin, it determined weather show actived.
    */
@@ -57,25 +57,25 @@ const StyledMenuButton = styled.button`
   }
 `;
 
-const MenuButton = ({
+const BasicMenuBtn = ({
   view,
   attrs,
   plugin,
   children,
   className = '',
-  handleClick,
+  onClick,
 }: Props) => (
   <StyledMenuButton
     className={className}
-    onClick={() => {
-      handleClick(view.state, view.dispatch, view);
-      view.focus();
-    }}
     data-plugin-name={plugin?.name}
     data-plugin-attrs={JSON.stringify(attrs)}
+    onClick={() => {
+      onClick(view.state, view.dispatch, view);
+      view.focus();
+    }}
   >
     {children}
   </StyledMenuButton>
 );
 
-export default MenuButton;
+export default BasicMenuBtn;

@@ -5,6 +5,7 @@
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
+  "private": "true",
   "main": "dist/emirror-example-image.cjs.js",
   "publishConfig": {
     "access": "public"
@@ -22,6 +23,7 @@
   "dependencies": {
     "@emirror/core": "^0.0.1",
     "@emirror/menu": "^0.0.1",
+    "@emirror/menu-react-basic": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
     "@emirror/plugin-image": "^0.0.1",

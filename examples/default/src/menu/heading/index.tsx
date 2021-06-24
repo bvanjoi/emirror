@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from '@emirror/plugin-heading';
 import { EditorView } from '@emirror/pm/view';
-import { BaseMenuBtn } from '@emirror/menu';
+import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import h1Icon from './assets/h1-icon.svg';
 import h2Icon from './assets/h2-icon.svg';
 import h3Icon from './assets/h3-icon.svg';
@@ -21,16 +21,15 @@ const HeadingBtn = ({ view, plugin }: Props) => {
   return (
     <React.Fragment>
       {levels.map((level, index) => (
-        <BaseMenuBtn
+        <BasicMenuBtn
           key={level}
           view={view}
           plugin={plugin}
-          className={`heading-menu heading-${level}-menu`}
-          handleClick={plugin.commands.toggleHeading(level)}
+          onClick={plugin.commands.toggleHeading(level)}
           attrs={{ level }}
         >
-          <img src={icons[index]} alt={`heading-${level}-menu`} />
-        </BaseMenuBtn>
+          <img src={icons[index]} />
+        </BasicMenuBtn>
       ))}
     </React.Fragment>
   );

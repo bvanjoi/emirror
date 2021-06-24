@@ -1,8 +1,8 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { getNodeType, insertNode } from '@emirror/utils';
-import { EditorView } from '@emirror/pm/view';
+import { Command } from '@emirror/pm/commands';
 import './style.css';
+import { insertImageAtNowPos } from './commands';
 
 class Image extends Node {
   get name() {
@@ -28,7 +28,7 @@ class Image extends Node {
           }),
         },
       ],
-      toDOM: (node) => {
+      toDOM: node => {
         const { src, alt, title } = node.attrs;
         return ['img', { src, alt, title, class: 'emirror-image' }];
       },
@@ -37,13 +37,8 @@ class Image extends Node {
 
   get commands() {
     return {
-      insertImageAtNowPos: (url: string, view: EditorView) => {
-        const nodeType = getNodeType(this.name, view.state.schema);
-        const imageNode = nodeType.create({
-          src: url,
-        });
-        return insertNode(imageNode)(view.state, view.dispatch);
-      },
+      insertImageAtNowPos: (url: string): Command =>
+        insertImageAtNowPos(this.name, url),
     };
   }
 }

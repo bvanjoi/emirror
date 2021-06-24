@@ -41,6 +41,7 @@
     "@emirror/example-read-only": "^0.0.1",
     "@emirror/example-title-doc": "^0.0.1",
     "@emirror/example-todo-list": "^0.0.1",
+    "@emirror/example-popover-menu": "^0.0.1",
     "@loadable/component": "^5.15.0",
     "classnames": "^2.3.1",
     "express": "^4.17.1",

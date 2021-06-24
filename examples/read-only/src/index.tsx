@@ -11,9 +11,9 @@ const ReadOnlyEMirror = () => {
   return (
     <div>
       <input
-        type="checkbox"
-        name="editable"
-        id="editable"
+        type='checkbox'
+        name='editable'
+        id='editable'
         checked={editable}
         onChange={() => setEditable(!editable)}
       />

@@ -1,5 +1,6 @@
 import React from 'react';
-import MenuContainer from '@emirror/menu';
+import MenuContainer from '@emirror/menu-react-basic';
+import MenuPlugin from '@emirror/menu';
 import { EditorView } from '@emirror/pm/view';
 import TodoListBtn from './todo-list';
 
@@ -11,7 +12,7 @@ type Props = {
 const Menu = (props: Props) => {
   const { view, plugins } = props;
   return (
-    <MenuContainer view={view} items={plugins}>
+    <MenuContainer view={view} items={plugins} menuPlugin={MenuPlugin}>
       <TodoListBtn view={view} plugin={plugins.todoList} />
     </MenuContainer>
   );

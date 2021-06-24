@@ -43,8 +43,8 @@ const DefaultEMirror = () => {
     <div>
       {view && <Menu view={view} plugins={plugins} />}
       <EMirror
-        afterInit={(view) => {
-          setView(view);
+        afterInit={_view => {
+          setView(_view);
         }}
         topNode={new Doc()}
         plugins={[

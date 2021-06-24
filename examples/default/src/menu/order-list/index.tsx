@@ -1,7 +1,7 @@
 import React from 'react';
 import OrderList from '@emirror/plugin-order-list';
 import { EditorView } from '@emirror/pm/view';
-import { BaseMenuBtn } from '@emirror/menu';
+import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import icon from './assets/icon.svg';
 
 type Props = {
@@ -11,14 +11,13 @@ type Props = {
 
 const OrderListBtn = ({ plugin, view }: Props) => {
   return (
-    <BaseMenuBtn
+    <BasicMenuBtn
       view={view}
-      className='order-list-menu'
       plugin={plugin}
-      handleClick={plugin.commands.toggleOrderList}
+      onClick={plugin.commands.toggleOrderList}
     >
-      <img src={icon} alt='order-list-icon' />
-    </BaseMenuBtn>
+      <img src={icon} />
+    </BasicMenuBtn>
   );
 };
 

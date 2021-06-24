@@ -33,7 +33,7 @@ class ExceedTip extends Extension {
       new Plugin({
         key: this.exceedTipKey,
         props: {
-          decorations: (state) => {
+          decorations: state => {
             const { doc } = state;
             const { lastChild } = doc;
 
@@ -55,10 +55,14 @@ class ExceedTip extends Extension {
               className += 'after';
             }
 
-            const decoration = Decoration.node(pos, pos + lastChild.nodeSize, {
-              class: className,
-              'data-exceed-tip-content': `${doc.textContent.length}/${this.options.maxSize}`,
-            });
+            const decoration = Decoration.node(
+              pos,
+              pos + lastChild.nodeSize,
+              {
+                class: className,
+                'data-exceed-tip-content': `${doc.textContent.length}/${this.options.maxSize}`,
+              },
+            );
 
             return DecorationSet.create(doc, [decoration]);
           },

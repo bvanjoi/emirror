@@ -37,7 +37,7 @@ class HighlightBlock extends Node {
           }),
         },
       ],
-      toDOM: (n) => [
+      toDOM: n => [
         'div',
         { class: 'emirror-highlight-block', 'data-emoji': n.attrs.emoji },
         0,

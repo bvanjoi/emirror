@@ -5,6 +5,7 @@
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
+  "private": "true",
   "main": "dist/emirror-example-placeholder.cjs.js",
   "publishConfig": {
     "access": "public"

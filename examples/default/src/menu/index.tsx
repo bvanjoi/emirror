@@ -1,5 +1,6 @@
 import React from 'react';
-import MenuContainer from '@emirror/menu';
+import MenuContainer from '@emirror/menu-react-basic';
+import MenuPlugin from '@emirror/menu';
 import { EditorView } from '@emirror/pm/view';
 import BoldBtn from './bold';
 import CodeBtn from './code';
@@ -13,6 +14,7 @@ import BlockquoteBtn from './blockquote';
 import OrderListBtn from './order-list';
 import BulletListBtn from './bullet-list';
 import HRBtn from './hr';
+
 type Props = {
   view: EditorView;
   plugins: Record<string, any>;
@@ -21,7 +23,7 @@ type Props = {
 const Menu = (props: Props) => {
   const { view, plugins } = props;
   return (
-    <MenuContainer view={view} items={plugins}>
+    <MenuContainer view={view} items={plugins} menuPlugin={MenuPlugin}>
       <BoldBtn view={view} plugin={plugins.bold} />
       <ItalicBtn view={view} plugin={plugins.italic} />
       <StrikeBtn view={view} plugin={plugins.strike} />

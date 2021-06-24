@@ -1,7 +1,7 @@
 import React from 'react';
 import Code from '@emirror/plugin-code';
 import { EditorView } from '@emirror/pm/view';
-import { BaseMenuBtn } from '@emirror/menu';
+import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import icon from './assets/icon.svg';
 
 type Props = {
@@ -11,14 +11,13 @@ type Props = {
 
 const CodeBtn = ({ plugin, view }: Props) => {
   return (
-    <BaseMenuBtn
+    <BasicMenuBtn
       view={view}
-      className='code-menu'
       plugin={plugin}
-      handleClick={plugin.commands.toggleCode}
+      onClick={plugin.commands.toggleCode}
     >
-      <img src={icon} alt='code-icon' />
-    </BaseMenuBtn>
+      <img src={icon} />
+    </BasicMenuBtn>
   );
 };
 

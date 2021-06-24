@@ -31,7 +31,7 @@ export const toggleList =
       return;
     }
 
-    const parentList = findParentNode((node) => isList(node, schema))(
+    const parentList = findParentNode(node => isList(node, schema))(
       selection,
     );
 

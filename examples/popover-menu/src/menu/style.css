@@ -1,0 +1,14 @@
+.popover-menu-container {
+  display: block;
+  position: absolute;
+
+  border: 1px solid#dee0e3;
+  border-radius: 4px;
+
+  padding: 2px 6px;
+  margin: 4px;
+}
+
+.popover-menu-container.hidden {
+  display: none;
+}

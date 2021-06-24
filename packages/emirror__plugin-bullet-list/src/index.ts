@@ -27,9 +27,7 @@ class BulletList extends Node {
     'Shift-Ctrl-7': toggleList(type, 'listItem'),
   });
 
-  inputRules = ({ type }) => [
-    wrappingInputRule(/^\s*[-+*]\s$/, type),
-  ];
+  inputRules = ({ type }) => [wrappingInputRule(/^\s*[-+*]\s$/, type)];
 }
 
 export default BulletList;

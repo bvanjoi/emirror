@@ -1,7 +1,7 @@
 import React from 'react';
 import Underline from '@emirror/plugin-underline';
 import { EditorView } from '@emirror/pm/view';
-import { BaseMenuBtn } from '@emirror/menu';
+import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import icon from './assets/icon.svg';
 
 type Props = {
@@ -11,14 +11,13 @@ type Props = {
 
 const UnderlineBtn = ({ view, plugin }: Props) => {
   return (
-    <BaseMenuBtn
+    <BasicMenuBtn
       view={view}
       plugin={plugin}
-      className='underline-menu'
-      handleClick={plugin.commands.toggleUnderline}
+      onClick={plugin.commands.toggleUnderline}
     >
-      <img src={icon} alt='underline-icon' />
-    </BaseMenuBtn>
+      <img src={icon} />
+    </BasicMenuBtn>
   );
 };
 

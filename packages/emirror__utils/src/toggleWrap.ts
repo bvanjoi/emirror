@@ -16,7 +16,6 @@ export function toggleWrap(
 ): Command {
   return (state, dispatch) => {
     const nodeType = getNodeType(nodeNameOrType, state.schema);
-
     if (isNodeActiveType(state, nodeType, attrs)) {
       return lift(state, dispatch);
     } else {

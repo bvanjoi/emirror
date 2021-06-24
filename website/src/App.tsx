@@ -17,8 +17,9 @@ import {
   ExceedTipEditor,
   TodoEditor,
   LatexEditor,
-  imageEditor,
-  codeEditor,
+  CodeEditor,
+  PopoverEditor,
+  ImageEditor,
 } from './pages';
 import './App.css';
 
@@ -105,11 +106,15 @@ const routeComponents = [
   },
   {
     path: 'image',
-    component: imageEditor,
+    component: ImageEditor,
   },
   {
     path: 'code-editor',
-    component: codeEditor,
+    component: CodeEditor,
+  },
+  {
+    path: 'popover-menu',
+    component: PopoverEditor,
   },
 ];
 
@@ -118,9 +123,7 @@ const App = () => {
     <AppView>
       <Nav />
       <Introduction />
-      <SubNavigation
-        menus={routeComponents.map((editor) => editor.path)}
-      />
+      <SubNavigation menus={routeComponents.map(editor => editor.path)} />
       <EditorContainer>
         <Routes routeComponents={routeComponents} />
       </EditorContainer>

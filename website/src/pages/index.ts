@@ -7,8 +7,9 @@ import PlaceholderEMirror from './placeholderEditor';
 import ExceedTipEditor from './exceedTipEditor';
 import TodoEditor from './todoEditor';
 import LatexEditor from './latexEditor';
-import imageEditor from './imageEditor';
-import codeEditor from './codeEditor';
+import ImageEditor from './imageEditor';
+import CodeEditor from './codeEditor';
+import PopoverEditor from './popoverEditor';
 
 export {
   MiniEMirror,
@@ -20,6 +21,7 @@ export {
   ExceedTipEditor,
   TodoEditor,
   LatexEditor,
-  imageEditor,
-  codeEditor,
+  ImageEditor,
+  CodeEditor,
+  PopoverEditor,
 };

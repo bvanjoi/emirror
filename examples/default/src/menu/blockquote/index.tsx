@@ -1,7 +1,7 @@
 import React from 'react';
 import Blockquote from '@emirror/plugin-blockquote';
 import { EditorView } from '@emirror/pm/view';
-import { BaseMenuBtn } from '@emirror/menu';
+import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import icon from './assets/icon.svg';
 
 type Props = {
@@ -11,14 +11,13 @@ type Props = {
 
 const BlockquoteBtn = ({ plugin, view }: Props) => {
   return (
-    <BaseMenuBtn
+    <BasicMenuBtn
       view={view}
-      className='blockquote-menu'
       plugin={plugin}
-      handleClick={plugin.commands.toggleBlockquote}
+      onClick={plugin.commands.toggleBlockquote}
     >
-      <img src={icon} alt='blockquote-icon' />
-    </BaseMenuBtn>
+      <img src={icon} />
+    </BasicMenuBtn>
   );
 };
 

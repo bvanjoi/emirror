@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
+import cls from 'classnames';
 import { MenuProps } from './types';
-import menuPlugin from './plugin';
 
 /**
  * The container for menu view.
@@ -8,7 +8,7 @@ import menuPlugin from './plugin';
  */
 const MenuContainer = (props: MenuProps) => {
   const elementRef = React.useRef<HTMLDivElement>(null);
-  const { view, items, children } = props;
+  const { view, items, children, className, menuPlugin } = props;
 
   useEffect(() => {
     const { plugins } = view.state;
@@ -18,7 +18,7 @@ const MenuContainer = (props: MenuProps) => {
   }, []);
 
   return (
-    <div className='base-menu menu' ref={elementRef}>
+    <div className={cls('menu-container', className)} ref={elementRef}>
       {children}
     </div>
   );

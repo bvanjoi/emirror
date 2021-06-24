@@ -5,6 +5,7 @@
   "description": "> TODO: description",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "author": "bvanjoi <610376039@qq.com>",
+  "private": "true",
   "main": "dist/emirror-example-mini-setup.cjs.js",
   "publishConfig": {
     "access": "public"

@@ -19,14 +19,8 @@ export function toggleNode(
   normalNodeAttrs: { [key: string]: any } = {},
 ): Command {
   return (state, dispatch) => {
-    const activeNodeType = getNodeType(
-      activeNodeNameOrType,
-      state.schema,
-    );
-    const normalNodeType = getNodeType(
-      normalNoeNameOrType,
-      state.schema,
-    );
+    const activeNodeType = getNodeType(activeNodeNameOrType, state.schema);
+    const normalNodeType = getNodeType(normalNoeNameOrType, state.schema);
 
     if (isNodeActiveType(state, activeNodeType, activeNodeAttrs)) {
       return setBlockType(normalNodeType, normalNodeAttrs)(
