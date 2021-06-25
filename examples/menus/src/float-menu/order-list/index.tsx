@@ -1,24 +1,24 @@
 import React from 'react';
-import BulletList from '@emirror/plugin-bullet-list';
+import OrderList from '@emirror/plugin-order-list';
 import { EditorView } from '@emirror/pm/view';
 import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import icon from './assets/icon.svg';
 
 type Props = {
-  plugin: BulletList;
+  plugin: OrderList;
   view: EditorView;
 };
 
-const BulletListBtn = ({ plugin, view }: Props) => {
+const OrderListBtn = ({ plugin, view }: Props) => {
   return (
     <BasicMenuBtn
       view={view}
       plugin={plugin}
-      onClick={plugin.commands.toggleBulletList}
+      onClick={plugin.commands.toggleOrderList}
     >
       <img src={icon} />
     </BasicMenuBtn>
   );
 };
 
-export default BulletListBtn;
+export default OrderListBtn;

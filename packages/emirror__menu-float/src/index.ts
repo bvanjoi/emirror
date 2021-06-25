@@ -66,7 +66,19 @@ class MenuView {
    * It will add/remove hidden class name.
    */
   updateHidden(view: EditorView): boolean {
-    if (view.state.selection.empty) {
+    const { selection } = view.state;
+    const { $from, empty } = selection;
+    const { parent } = $from;
+    /**
+     * is out node is outermost node?
+     */
+    const isRootDepth = $from.depth === 1;
+    /**
+     * is node is empty?
+     * if true, pos must in front of this node.
+     */
+    const isNodeEmpty = !parent.isLeaf && !parent.textContent;
+    if (!(empty && isRootDepth && isNodeEmpty)) {
       this.element.classList.add('hidden');
       return true;
     }
@@ -79,14 +91,13 @@ class MenuView {
    * Update container position style
    */
   updatePosStyle(view: EditorView) {
-    const { from, to } = view.state.selection;
+    const { from } = view.state.selection;
     const start = view.coordsAtPos(from);
-    const end = view.coordsAtPos(to);
     const box = this.element.offsetParent.getBoundingClientRect();
-    const left = Math.max((start.left + end.left) / 2, start.left + 3);
-    this.element.style.left = left - box.left + 'px';
-    this.element.style.bottom = box.bottom - start.top + 'px';
-    this.element.style.transform = `translateX(-50%)`;
+    // 13 is a trike
+    // it come from the h tag's height.
+    this.element.style.top =
+      (start.bottom + start.top) / 2 - box.top - 13 + 'px';
   }
 
   /**
@@ -108,26 +119,9 @@ class MenuView {
 
 export default function (props: Props) {
   return new Plugin({
-    key: new PluginKey('menu-popover'),
+    key: new PluginKey('menu-float'),
     view(view) {
       return new MenuView({ ...props, view });
-    },
-    props: {
-      handleDOMEvents: {
-        blur(_view, event) {
-          const { relatedTarget } = event;
-          if (
-            relatedTarget &&
-            props.element.parentNode?.contains(
-              relatedTarget as globalThis.Node,
-            )
-          ) {
-            return true;
-          }
-          props.element.classList.add('hidden');
-          return false;
-        },
-      },
     },
   });
 }

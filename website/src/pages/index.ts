@@ -9,7 +9,7 @@ import TodoEditor from './todoEditor';
 import LatexEditor from './latexEditor';
 import ImageEditor from './imageEditor';
 import CodeEditor from './codeEditor';
-import PopoverEditor from './popoverEditor';
+import MenusEditor from './menusEditor';
 
 export {
   MiniEMirror,
@@ -23,5 +23,5 @@ export {
   LatexEditor,
   ImageEditor,
   CodeEditor,
-  PopoverEditor,
+  MenusEditor,
 };

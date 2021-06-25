@@ -112,7 +112,7 @@ export const EMirrorView = (props: EMirrorViewProps) => {
   }, []);
 
   useEffect(() => {
-    //! Why viewProvider.view return undefine?
+    // ! Why viewProvider.view return undefine?
     const view = viewRef.current;
     view?.update({
       ...view.props,

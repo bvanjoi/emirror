@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/plugin-code-editor",
+  "name": "@emirror/menu-float",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-plugin-code-editor.cjs.js",
+  "main": "dist/emirror-menu-float.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -18,14 +18,5 @@
   },
   "bugs": {
     "url": "https://github.com/bvanjoi/emirror/issues"
-  },
-  "dependencies": {
-    "@emirror/core-structure": "^0.0.1",
-    "@emirror/pm": "^0.0.1",
-    "@emirror/utils": "^0.0.1",
-    "codemirror": "^5.62.0"
-  },
-  "devDependencies": {
-    "@types/codemirror": "^5.60.1"
   }
 }

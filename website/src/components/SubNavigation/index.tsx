@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const StyledUl = styled.ul`
-  padding: 0;
+  padding: 0 8px;
 
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ const StyledUl = styled.ul`
   }
 
   a {
-    padding: 2px;
+    padding: 2px 4px;
     border: 1px solid transparent;
     border-radius: 4px;
 
@@ -54,7 +54,7 @@ const SubNavigation = (props: Props) => {
   const { menus } = props;
   return (
     <StyledUl>
-      {menus.map((menu) => (
+      {menus.map(menu => (
         <li key={menu}>
           <NavLink
             to={`/${menu}`}

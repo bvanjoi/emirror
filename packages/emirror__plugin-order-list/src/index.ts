@@ -25,7 +25,7 @@ class OrderList extends Node {
           }),
         },
       ],
-      toDOM: (node) =>
+      toDOM: node =>
         node.attrs.order === 1
           ? ['ol', { class: 'emirror-order-li' }, 0]
           : [
@@ -53,7 +53,7 @@ class OrderList extends Node {
     wrappingInputRule(
       /^^(\d+)\.\s$/,
       type,
-      (match) => ({ order: parseInt(match[1], 10) }),
+      match => ({ order: parseInt(match[1], 10) }),
       (match, node) =>
         node.childCount + node.attrs.order === parseInt(match[1], 10),
     ),

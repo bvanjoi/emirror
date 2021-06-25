@@ -9,7 +9,7 @@ type Props = {
   view: EditorView;
 };
 
-const BulletListBtn = ({ plugin, view }: Props) => {
+const OrderListBtn = ({ plugin, view }: Props) => {
   return (
     <BasicMenuBtn
       view={view}
@@ -21,4 +21,4 @@ const BulletListBtn = ({ plugin, view }: Props) => {
   );
 };
 
-export default BulletListBtn;
+export default OrderListBtn;

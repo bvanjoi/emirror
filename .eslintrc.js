@@ -273,9 +273,6 @@ module.exports = {
     // 禁止在 if、for、while 中出现赋值语句，除非用圆括号括起来
     'no-cond-assign': [2, 'except-parens'],
 
-    // 禁止出现难以理解的箭头函数，除非用圆括号括起来
-    'no-confusing-arrow': [2, { allowParens: true }],
-
     // 禁止使用常量作为判断条件
     'no-constant-condition': [2, { checkLoops: false }],
 

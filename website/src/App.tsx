@@ -18,7 +18,7 @@ import {
   TodoEditor,
   LatexEditor,
   CodeEditor,
-  PopoverEditor,
+  MenusEditor,
   ImageEditor,
 } from './pages';
 import './App.css';
@@ -113,8 +113,8 @@ const routeComponents = [
     component: CodeEditor,
   },
   {
-    path: 'popover-menu',
-    component: PopoverEditor,
+    path: 'menus',
+    component: MenusEditor,
   },
 ];
 

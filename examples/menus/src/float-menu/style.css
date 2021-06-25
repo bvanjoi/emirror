@@ -1,0 +1,11 @@
+.float-menu-container {
+  visibility: visible;
+  position: absolute;
+
+  margin-left: 8px;
+  padding: 2px 8px;
+}
+
+.float-menu-container.hidden {
+  visibility: hidden;
+}
