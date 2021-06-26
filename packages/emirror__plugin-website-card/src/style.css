@@ -1,0 +1,23 @@
+.emirror-website-card {
+  height: 128px;
+  display: flex;
+  flex: 1 3;
+
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+.emirror-website-card.ProseMirror-selectednode,
+.emirror-website-card:hover {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* left */
+.emirror-website-card .left.content {
+  flex: 4;
+}
+
+/* right */
+.emirror-website-card .right.image {
+  flex: 1;
+}

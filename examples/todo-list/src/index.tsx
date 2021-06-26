@@ -18,7 +18,7 @@ const TitleDocEMirror = () => {
     <div>
       {view && <Menu view={view} plugins={{ todoList }} />}
       <EMirror
-        afterInit={(view) => {
+        afterInit={_view => {
           setView(view);
         }}
         topNode={new Doc()}

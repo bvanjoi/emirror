@@ -10,6 +10,7 @@ import LatexEditor from './latexEditor';
 import ImageEditor from './imageEditor';
 import CodeEditor from './codeEditor';
 import MenusEditor from './menusEditor';
+import WebsiteCardEditor from './websiteCardEditor';
 
 export {
   MiniEMirror,
@@ -24,4 +25,5 @@ export {
   ImageEditor,
   CodeEditor,
   MenusEditor,
+  WebsiteCardEditor,
 };

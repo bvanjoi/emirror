@@ -10,8 +10,7 @@ import Menu from './menu';
 
 const IMG_SOURCE =
   'https://d3d9mb8xdsbq52.cloudfront.net/180919/20180919205914804.jpg';
-const GIF_SOURCE =
-  'https://media.giphy.com/media/OzHKDlB6CqwZG/giphy.gif';
+const GIF_SOURCE = 'https://media.giphy.com/media/OzHKDlB6CqwZG/giphy.gif';
 
 const ImageEmirror = () => {
   const [view, setView] = useState<EditorView>(null);
@@ -21,7 +20,7 @@ const ImageEmirror = () => {
     <div>
       {view && <Menu view={view} plugins={{ image }} />}
       <Emirror
-        afterInit={(view) => {
+        afterInit={_view => {
           setView(view);
         }}
         topNode={new Doc()}
@@ -32,8 +31,8 @@ const ImageEmirror = () => {
         <p>It also support gif:</p>
         <img src={GIF_SOURCE} />
         <p>
-          It also support upload form local, but in real world, It
-          better to upload to CDN firstly.
+          It also support upload form local, but in real world, It better
+          to upload to CDN firstly.
         </p>
       </Emirror>
     </div>

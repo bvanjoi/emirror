@@ -32,11 +32,11 @@ class TodoItem extends Node {
           priority: 51,
           tag: 'li.emirror-todo-item',
           getAttrs: (dom: HTMLElement) => ({
-            checked: dom.getAttribute('data-checked') == 'true',
+            checked: dom.getAttribute('data-checked') === 'true',
           }),
         },
       ],
-      toDOM: (node) => [
+      toDOM: node => [
         'li',
         {
           class: 'emirror-todo-item',
@@ -93,8 +93,8 @@ class TodoItem extends Node {
               return {
                 dom: listItem,
                 contentDOM,
-                update: (node) => {
-                  if (node.type.name === this.name) {
+                update: _node => {
+                  if (_node.type.name === this.name) {
                     return false;
                   }
                   return true;
@@ -115,7 +115,7 @@ class TodoItem extends Node {
   }
 
   inputRules = ({ type }) => [
-    wrappingInputRule(/(\[([ |x])\]|\[\])\x20$/, type, (match) => ({
+    wrappingInputRule(/(\[([ |x])\]|\[\])\x20$/, type, match => ({
       checked: match[match.length - 1] === 'x',
     })),
   ];

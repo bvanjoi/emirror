@@ -13,7 +13,7 @@ const Routes = (props: Props) => {
 
   return (
     <Switch>
-      {routeComponents.map((c) => (
+      {routeComponents.map(c => (
         <Route
           exact
           key={c.path}

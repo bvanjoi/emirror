@@ -1,6 +1,6 @@
 import { Extension } from '@emirror/core-structure';
 import { EditorState, Plugin, PluginKey } from '@emirror/pm/state';
-import { Decoration, DecorationSet } from '../../emirror__pm/src/view';
+import { Decoration, DecorationSet } from '@emirror/pm/view';
 
 class NodePlaceholder extends Extension {
   nodePlaceholderKey = new PluginKey<DecorationSet>(this.name);
@@ -17,7 +17,8 @@ class NodePlaceholder extends Extension {
           init() {
             return DecorationSet.empty;
           },
-          apply(tr, set) {
+          apply(tr, _set) {
+            let set = _set;
             set = set.map(tr.mapping, tr.doc);
             const action = tr.getMeta(this);
             if (action?.add) {
@@ -28,7 +29,7 @@ class NodePlaceholder extends Extension {
               set = set.add(tr.doc, [deco]);
             } else if (action?.remove) {
               set = set.remove(
-                set.find(null, null, (spec) => spec.id === action.remove.id),
+                set.find(null, null, spec => spec.id === action.remove.id),
               );
             }
             return set;
@@ -53,7 +54,7 @@ class NodePlaceholder extends Extension {
   get commands() {
     const findPlaceholder = (state: EditorState, id: string) => {
       const decos = this.pluginsKey.nodePlaceholderKey.getState(state);
-      const found = decos.find(null, null, (spec) => spec.id === id);
+      const found = decos.find(null, null, spec => spec.id === id);
       return found.length ? found[0].from : null;
     };
     return {

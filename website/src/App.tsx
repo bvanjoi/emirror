@@ -20,6 +20,7 @@ import {
   CodeEditor,
   MenusEditor,
   ImageEditor,
+  WebsiteCardEditor,
 } from './pages';
 import './App.css';
 
@@ -116,6 +117,10 @@ const routeComponents = [
     path: 'menus',
     component: MenusEditor,
   },
+  // {
+  //   path: 'website-card',
+  //   component: WebsiteCardEditor,
+  // },
 ];
 
 const App = () => {

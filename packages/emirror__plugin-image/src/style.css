@@ -1,9 +1,24 @@
 .emirror .emirror-image {
   margin: auto;
-  border: 1px solid transparent;
   display: block;
   max-width: 200px;
+  border: 1px solid transparent;
 }
+
 .emirror .emirror-image.ProseMirror-selectednode {
   border: 1px solid dodgerblue;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.emirror .emirror-image.loading {
+  height: 128px;
+  width: 128px;
 }

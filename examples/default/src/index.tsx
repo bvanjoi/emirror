@@ -108,13 +108,25 @@ const DefaultEMirror = () => {
             <p>Auto link</p>
           </li>
           <li>
-            <p>bubble and float menu</p>
+            <p>code block</p>
           </li>
           <li>
-            <p>fantastic input</p>
+            <p>typography</p>
           </li>
           <li>
-            <p>More useful featuers...</p>
+            <p>table</p>
+          </li>
+          <li>
+            <p>collab</p>
+          </li>
+          <li>
+            <p>canvs table</p>
+          </li>
+          <li>
+            <p>search highligting</p>
+          </li>
+          <li>
+            <p>and more useful featuers...</p>
           </li>
         </ol>
         <p>

@@ -1,8 +1,9 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
 import { Command } from '@emirror/pm/commands';
-import './style.css';
+import { Plugin } from '@emirror/pm/state';
 import { insertImageAtNowPos } from './commands';
+import './style.css';
 
 class Image extends Node {
   get name() {
@@ -13,8 +14,6 @@ class Image extends Node {
     return {
       attrs: {
         src: {},
-        alt: { default: null },
-        title: { default: null },
       },
       group: 'block',
       draggable: true,
@@ -23,16 +22,42 @@ class Image extends Node {
           tag: 'img[src]',
           getAttrs: (dom: HTMLElement) => ({
             src: dom.getAttribute('src'),
-            title: dom.getAttribute('title'),
-            alt: dom.getAttribute('alt'),
           }),
         },
       ],
       toDOM: node => {
-        const { src, alt, title } = node.attrs;
-        return ['img', { src, alt, title, class: 'emirror-image' }];
+        const { src } = node.attrs;
+        return ['img', { src, class: 'emirror-image' }];
       },
     };
+  }
+
+  get plugins() {
+    return [
+      new Plugin({
+        props: {
+          nodeViews: {
+            [this.name]: node => {
+              const { src } = node.attrs;
+              // dom
+              const dom = document.createElement('img');
+
+              dom.setAttribute('src', src);
+              dom.classList.add('emirror-image');
+
+              dom.classList.add('loading');
+              dom.addEventListener('load', () => {
+                dom.classList.remove('loading');
+              });
+
+              return {
+                dom,
+              };
+            },
+          },
+        },
+      }),
+    ];
   }
 
   get commands() {
