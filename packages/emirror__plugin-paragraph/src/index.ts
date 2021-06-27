@@ -1,6 +1,6 @@
 import { Node } from '@emirror/core-structure';
 import { DOMOutputSpecArray } from '@emirror/pm/model';
-import { baseKeymap } from '@emirror/pm/commands';
+import { baseKeymap, setBlockType } from '@emirror/pm/commands';
 
 class Paragraph extends Node {
   get name() {
@@ -14,6 +14,12 @@ class Paragraph extends Node {
       parseDOM: [{ tag: 'p' }],
       toDOM: () =>
         ['p', { class: 'emirror-paragraph' }, 0] as DOMOutputSpecArray,
+    };
+  }
+
+  get commands() {
+    return {
+      setParagraph: setBlockType(this.name),
     };
   }
 

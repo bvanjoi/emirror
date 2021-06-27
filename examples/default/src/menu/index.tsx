@@ -14,7 +14,7 @@ import BlockquoteBtn from './blockquote';
 import OrderListBtn from './order-list';
 import BulletListBtn from './bullet-list';
 import HRBtn from './hr';
-
+import ParagraphBtn from './paragraph';
 type Props = {
   view: EditorView;
   plugins: Record<string, any>;
@@ -29,6 +29,7 @@ const Menu = (props: Props) => {
       <StrikeBtn view={view} plugin={plugins.strike} />
       <UnderlineBtn view={view} plugin={plugins.underline} />
       <CodeBtn view={view} plugin={plugins.code} />
+      <ParagraphBtn view={view} plugin={plugins.paragraph} />
       <HeadingBtn view={view} plugin={plugins.heading} />
       <BlockquoteBtn view={view} plugin={plugins.blockquote} />
       <OrderListBtn view={view} plugin={plugins.orderList} />

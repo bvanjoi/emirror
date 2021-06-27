@@ -2641,10 +2641,10 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-15.12.2.tgz#1f2b42c4be7156ff4a6f914b2fb03d05fa84e38d"
   integrity sha1-HytCxL5xVv9Kb5FLL7A9BfqE440=
 
-"@types/node@^15.12.4":
-  version "15.12.4"
-  resolved "https://registry.nlark.com/@types/node/download/@types/node-15.12.4.tgz?cache=0&sync_timestamp=1624050302481&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-15.12.4.tgz#e1cf817d70a1e118e81922c4ff6683ce9d422e26"
-  integrity sha1-4c+BfXCh4RjoGSLE/2aDzp1CLiY=
+"@types/node@^15.12.5":
+  version "15.12.5"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-15.12.5.tgz?cache=0&sync_timestamp=1624763053899&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
+  integrity sha1-mngxikXXXJUj0jlhMb08ylSy0YU=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -4525,17 +4525,17 @@ css-loader@^5.2.6:
     schema-utils "^3.0.0"
     semver "^7.3.5"
 
-css-minimizer-webpack-plugin@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.nlark.com/css-minimizer-webpack-plugin/download/css-minimizer-webpack-plugin-3.0.1.tgz?cache=0&sync_timestamp=1622476553478&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-minimizer-webpack-plugin%2Fdownload%2Fcss-minimizer-webpack-plugin-3.0.1.tgz#2f866079411d42309a485512642c0cb08b5468ae"
-  integrity sha1-L4ZgeUEdQjCaSFUSZCwMsItUaK4=
+css-minimizer-webpack-plugin@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.nlark.com/css-minimizer-webpack-plugin/download/css-minimizer-webpack-plugin-3.0.2.tgz#8fadbdf10128cb40227bff275a4bb47412534245"
+  integrity sha1-j6298QEoy0Aie/8nWku0dBJTQkU=
   dependencies:
-    cssnano "^5.0.0"
+    cssnano "^5.0.6"
     jest-worker "^27.0.2"
     p-limit "^3.0.2"
-    postcss "^8.2.9"
+    postcss "^8.3.5"
     schema-utils "^3.0.0"
-    serialize-javascript "^5.0.1"
+    serialize-javascript "^6.0.0"
     source-map "^0.6.1"
 
 css-prefers-color-scheme@^3.1.1:
@@ -4649,7 +4649,7 @@ cssnano-utils@^2.0.1:
   resolved "https://registry.nlark.com/cssnano-utils/download/cssnano-utils-2.0.1.tgz#8660aa2b37ed869d2e2f22918196a9a8b6498ce2"
   integrity sha1-hmCqKzfthp0uLyKRgZapqLZJjOI=
 
-cssnano@^5.0.0:
+cssnano@^5.0.6:
   version "5.0.6"
   resolved "https://registry.nlark.com/cssnano/download/cssnano-5.0.6.tgz?cache=0&sync_timestamp=1623330447215&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcssnano%2Fdownload%2Fcssnano-5.0.6.tgz#2a91ad34c6521ae31eab3da9c90108ea3093535d"
   integrity sha1-KpGtNMZSGuMeqz2pyQEI6jCTU10=
@@ -8330,10 +8330,10 @@ mini-create-react-context@^0.4.0:
     "@babel/runtime" "^7.12.1"
     tiny-warning "^1.0.3"
 
-mini-css-extract-plugin@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.nlark.com/mini-css-extract-plugin/download/mini-css-extract-plugin-1.6.0.tgz?cache=0&sync_timestamp=1619783258317&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmini-css-extract-plugin%2Fdownload%2Fmini-css-extract-plugin-1.6.0.tgz#b4db2525af2624899ed64a23b0016e0036411893"
-  integrity sha1-tNslJa8mJIme1kojsAFuADZBGJM=
+mini-css-extract-plugin@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.nlark.com/mini-css-extract-plugin/download/mini-css-extract-plugin-1.6.1.tgz#7b57bbd85f07702c7d93c4eb40a1da9d10b7a815"
+  integrity sha1-e1e72F8HcCx9k8TrQKHanRC3qBU=
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
@@ -9992,7 +9992,7 @@ postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.2.15, postcss@^8.2.9:
+postcss@^8.2.15, postcss@^8.3.5:
   version "8.3.5"
   resolved "https://registry.nlark.com/postcss/download/postcss-8.3.5.tgz#982216b113412bc20a86289e91eb994952a5b709"
   integrity sha1-mCIWsRNBK8IKhiiekeuZSVKltwk=
@@ -10018,10 +10018,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.nlark.com/prettier/download/prettier-2.3.1.tgz?cache=0&sync_timestamp=1622888592750&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fprettier%2Fdownload%2Fprettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
-  integrity sha1-dpA8P4xESbyaxZes76JNxa1MvqY=
+prettier@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.nlark.com/prettier/download/prettier-2.3.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fprettier%2Fdownload%2Fprettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
+  integrity sha1-7ygKBewlNxLkhiM9tcbyNEHnNC0=
 
 pretty-error@^3.0.4:
   version "3.0.4"
@@ -11028,6 +11028,13 @@ serialize-javascript@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npm.taobao.org/serialize-javascript/download/serialize-javascript-5.0.1.tgz#7886ec848049a462467a97d3d918ebb2aaf934f4"
   integrity sha1-eIbshIBJpGJGepfT2Rjrsqr5NPQ=
+  dependencies:
+    randombytes "^2.1.0"
+
+serialize-javascript@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.nlark.com/serialize-javascript/download/serialize-javascript-6.0.0.tgz#efae5d88f45d7924141da8b5c3a7a7e663fefeb8"
+  integrity sha1-765diPRdeSQUHai1w6en5mP+/rg=
   dependencies:
     randombytes "^2.1.0"
 

@@ -35,11 +35,13 @@ module.exports = {
     'array-element-newline': 0,
 
     // 箭头函数的书写规则
-    // @off 不限制
-    'arrow-body-style': 0,
+    'arrow-body-style': [
+      'error',
+      'as-needed',
+      { requireReturnForObjectLiteral: false },
+    ],
 
     // 箭头函数的圆括号使用规则
-    // @off 不限制
     'arrow-parens': ['error', 'as-needed'],
 
     // 箭头函数的空格使用规则

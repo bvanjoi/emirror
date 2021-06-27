@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const UnderlineBtn = ({ view, plugin }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleUnderline}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const UnderlineBtn = ({ view, plugin }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleUnderline}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default UnderlineBtn;

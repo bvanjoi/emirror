@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const CodeBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleCode}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const CodeBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleCode}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default CodeBtn;

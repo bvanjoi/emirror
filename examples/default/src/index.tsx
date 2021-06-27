@@ -19,6 +19,8 @@ import OrderList from '@emirror/plugin-order-list';
 import TextBgColor from '@emirror/plugin-text-background-color';
 import TextColor from '@emirror/plugin-text-color';
 import HR from '@emirror/plugin-hr';
+import Sub from '@emirror/plugin-sub';
+import Sup from '@emirror/plugin-sup';
 import Menu from './menu';
 
 const DefaultEMirror = () => {
@@ -31,6 +33,7 @@ const DefaultEMirror = () => {
     italic: new Italic(),
     strike: new Strike(),
     underline: new UnderLine(),
+    paragraph: new Paragraph(),
     blockquote: new Blockquote(),
     heading: new Heading(),
     orderList: new OrderList(),
@@ -48,11 +51,12 @@ const DefaultEMirror = () => {
         }}
         topNode={new Doc()}
         plugins={[
-          new Paragraph(),
           new Text(),
           new ListItem(),
           new TextBgColor(),
           new TextColor(),
+          new Sub(),
+          new Sup(),
           ...Object.values(plugins),
         ]}
       >
@@ -71,7 +75,7 @@ const DefaultEMirror = () => {
               Some text mark: <strong>bold</strong>, <u>underline</u>,
               <span> </span>
               <i>italic</i>, <code>code</code>, <s>strike</s>,
-              <span> </span>
+              <sub> sub</sub>,<sup> sup</sup>, <span> </span>
               <span data-text-bg-color='#faf594'>
                 text background color
               </span>

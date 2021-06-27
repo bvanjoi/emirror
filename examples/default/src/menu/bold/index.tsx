@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const BoldBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleBold}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const BoldBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleBold}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default BoldBtn;

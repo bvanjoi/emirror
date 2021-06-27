@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const HRBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.insertHR}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const HRBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.insertHR}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default HRBtn;

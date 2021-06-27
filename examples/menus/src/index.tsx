@@ -24,6 +24,7 @@ const DefaultEMirror = () => {
   };
 
   const floatPlugins = {
+    paragraph: new Paragraph(),
     heading: new Heading(),
     bulletList: new BulletList(),
     orderList: new OrderList(),
@@ -39,7 +40,6 @@ const DefaultEMirror = () => {
         }}
         topNode={new Doc()}
         plugins={[
-          new Paragraph(),
           new Text(),
           new ListItem(),
           ...Object.values(popoverPlugins),

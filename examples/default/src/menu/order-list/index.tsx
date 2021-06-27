@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const OrderListBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleOrderList}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const OrderListBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleOrderList}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default OrderListBtn;

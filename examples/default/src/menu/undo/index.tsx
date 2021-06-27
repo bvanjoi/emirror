@@ -9,12 +9,10 @@ type Props = {
   view: EditorView;
 };
 
-const UndoButton = ({ view, plugin }: Props) => {
-  return (
-    <BasicMenuBtn view={view} onClick={plugin.commands.undo}>
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const UndoButton = ({ view, plugin }: Props) => (
+  <BasicMenuBtn view={view} onClick={plugin.commands.undo}>
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default UndoButton;

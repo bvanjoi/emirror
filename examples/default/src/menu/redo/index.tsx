@@ -9,12 +9,10 @@ type Props = {
   view: EditorView;
 };
 
-const RedoButton = ({ view, plugin }: Props) => {
-  return (
-    <BasicMenuBtn view={view} onClick={plugin.commands.redo}>
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const RedoButton = ({ view, plugin }: Props) => (
+  <BasicMenuBtn view={view} onClick={plugin.commands.redo}>
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default RedoButton;

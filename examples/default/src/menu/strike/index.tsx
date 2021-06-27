@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const StrikeBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleStrike}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const StrikeBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleStrike}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default StrikeBtn;

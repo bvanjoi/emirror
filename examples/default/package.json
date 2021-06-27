@@ -43,6 +43,8 @@
     "@emirror/plugin-text-background-color": "^0.0.1",
     "@emirror/plugin-text-color": "^0.0.1",
     "@emirror/plugin-underline": "^0.0.1",
+    "@emirror/plugin-sup": "^0.0.1",
+    "@emirror/plugin-sub": "^0.0.1",
     "@emirror/pm": "^0.0.1"
   }
 }

@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const ItalicBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleItalic}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const ItalicBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleItalic}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default ItalicBtn;

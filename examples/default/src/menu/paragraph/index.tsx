@@ -1,22 +1,22 @@
 import React from 'react';
-import Blockquote from '@emirror/plugin-blockquote';
+import Paragraph from '@emirror/plugin-paragraph';
 import { EditorView } from '@emirror/pm/view';
 import { BasicMenuBtn } from '@emirror/menu-react-basic';
 import icon from './assets/icon.svg';
 
 type Props = {
-  plugin: Blockquote;
+  plugin: Paragraph;
   view: EditorView;
 };
 
-const BlockquoteBtn = ({ plugin, view }: Props) => (
+const ParagraphBtn = ({ view, plugin }: Props) => (
   <BasicMenuBtn
     view={view}
     plugin={plugin}
-    onClick={plugin.commands.toggleBlockquote}
+    onClick={plugin.commands.setParagraph}
   >
     <img src={icon} />
   </BasicMenuBtn>
 );
 
-export default BlockquoteBtn;
+export default ParagraphBtn;

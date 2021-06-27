@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const BulletListBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleBulletList}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const BulletListBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleBulletList}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default BulletListBtn;
