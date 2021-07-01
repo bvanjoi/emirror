@@ -139,7 +139,6 @@ export const EMirrorView = (props: EMirrorViewProps) => {
      * marks of ProseMirror
      */
     const marks = manager.createMarks();
-    console.log(nodes, marks);
     /**
      * Scheme of Prosemirror
      */
