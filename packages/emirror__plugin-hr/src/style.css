@@ -1,11 +1,7 @@
 .emirror-hr {
-  height: 1px;
-  border: none;
-  background-color: black;
-  margin: 24px 0;
   cursor: pointer;
 }
 
 .emirror-hr.ProseMirror-selectednode {
-  background-color: slategray;
+  border-color: black;
 }

@@ -8,7 +8,7 @@ class Bold extends Mark {
     return 'bold' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [
         { tag: 'strong' },
@@ -33,10 +33,12 @@ class Bold extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-b': toggleMark(type),
-    'Mod-B': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-b': toggleMark(this.name),
+      'Mod-B': toggleMark(this.name),
+    };
+  }
 
   inputRules = ({ type }) => [
     markInputRules(/(?:\*\*)([^*_]+)(?:\*\*)\x20$/, type),

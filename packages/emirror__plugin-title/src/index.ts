@@ -6,7 +6,7 @@ class Title extends Node {
     return 'title' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       content: 'inline*',
       parseDOM: [

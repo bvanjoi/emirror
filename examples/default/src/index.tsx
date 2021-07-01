@@ -21,25 +21,27 @@ import TextColor from '@emirror/plugin-text-color';
 import HR from '@emirror/plugin-hr';
 import Sub from '@emirror/plugin-sub';
 import Sup from '@emirror/plugin-sup';
+import HardBreak from '@emirror/plugin-hard-break';
 import Menu from './menu';
 
 const DefaultEMirror = () => {
   const [view, setView] = useState<EditorView>(null);
 
   const plugins = {
+    paragraph: new Paragraph(),
     bold: new Bold(),
     code: new Code(),
     codeBlock: new CodeBlock(),
     italic: new Italic(),
     strike: new Strike(),
     underline: new UnderLine(),
-    paragraph: new Paragraph(),
     blockquote: new Blockquote(),
     heading: new Heading(),
     orderList: new OrderList(),
     bulletList: new BulletList(),
     hr: new HR(),
     history: new History(),
+    hardBreak: new HardBreak(),
   };
 
   return (

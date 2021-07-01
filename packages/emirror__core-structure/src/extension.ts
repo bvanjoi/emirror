@@ -1,5 +1,5 @@
 import { Base } from './base';
-import { PluginType } from './types';
+import { GlobalAttrs, PluginType } from './types';
 
 /**
  * The integration for some extension.
@@ -10,4 +10,6 @@ export class Extension extends Base {
   get type(): PluginType {
     return 'extension';
   }
+
+  addGlobalAttrs = (): GlobalAttrs => null;
 }

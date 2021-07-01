@@ -1,0 +1,18 @@
+.typo .emirror-hr {
+  height: 50px;
+  border: none;
+  text-align: center;
+}
+
+.typo .emirror-hr::after {
+  content: '...';
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+.typo .emirror-hr.ProseMirror-selectednode::after {
+  color: gainsboro;
+}

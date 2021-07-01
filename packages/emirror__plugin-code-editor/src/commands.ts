@@ -6,7 +6,7 @@ export function arrowHandler(
 ): Command {
   return (state, dispatch, view) => {
     if (state.selection.empty && view.endOfTextblock(dir)) {
-      const side = dir == 'left' || dir == 'up' ? -1 : 1;
+      const side = ['left', 'up'].includes(dir) ? -1 : 1;
       const { $head } = state.selection;
       const nextPos = Selection.near(
         state.doc.resolve(side > 0 ? $head.after() : $head.before()),
@@ -14,7 +14,7 @@ export function arrowHandler(
       );
       if (
         nextPos.$head &&
-        nextPos.$head.parent.type.name == 'codeEditor'
+        nextPos.$head.parent.type.name === 'codeEditor'
       ) {
         dispatch(state.tr.setSelection(nextPos));
         return true;

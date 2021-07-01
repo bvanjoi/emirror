@@ -5,7 +5,7 @@ class TextColor extends Mark {
     return 'textColor' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       attrs: {
         color: {},
@@ -23,7 +23,7 @@ class TextColor extends Mark {
         },
         {
           style: 'color',
-          getAttrs: (color) => {
+          getAttrs: color => {
             if (typeof color !== 'string') {
               return;
             }
@@ -33,7 +33,7 @@ class TextColor extends Mark {
           },
         },
       ],
-      toDOM: (mark) => {
+      toDOM: mark => {
         const { attrs } = mark;
         const { color } = attrs;
         if (!color) {

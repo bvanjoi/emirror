@@ -1,19 +1,28 @@
-import { Node } from '@emirror/core-structure';
-import { DOMOutputSpecArray } from '@emirror/pm/model';
+import { Node, GlobalAttrs } from '@emirror/core-structure';
+import { NodeSpec } from '@emirror/pm/model';
 import { baseKeymap, setBlockType } from '@emirror/pm/commands';
+import {
+  mergeParseDOMGetAttrs,
+  mergeSpecAttrs,
+  mergeToDOMAttrs,
+} from '@emirror/utils';
 
 class Paragraph extends Node {
   get name() {
     return 'paragraph' as const;
   }
 
-  get schema() {
+  createNodeSpec(globalAttrs: GlobalAttrs): NodeSpec {
     return {
+      attrs: mergeSpecAttrs({}, globalAttrs),
       group: 'block',
       content: 'inline*',
-      parseDOM: [{ tag: 'p' }],
-      toDOM: () =>
-        ['p', { class: 'emirror-paragraph' }, 0] as DOMOutputSpecArray,
+      parseDOM: [mergeParseDOMGetAttrs({ tag: 'p' }, globalAttrs)],
+      toDOM: node => [
+        'p',
+        mergeToDOMAttrs({ class: 'emirror-paragraph' }, node, globalAttrs),
+        0,
+      ],
     };
   }
 
@@ -23,7 +32,9 @@ class Paragraph extends Node {
     };
   }
 
-  keymap = () => baseKeymap;
+  get keymap() {
+    return baseKeymap;
+  }
 }
 
 export default Paragraph;

@@ -14,7 +14,7 @@ import OrderList from '@emirror/plugin-order-list';
 import PopoverMenu from './popover-menu';
 import FloatMenu from './float-menu';
 
-const DefaultEMirror = () => {
+const MenusEMirror = () => {
   const [view, setView] = useState<EditorView>(null);
 
   const popoverPlugins = {
@@ -60,4 +60,4 @@ const DefaultEMirror = () => {
   );
 };
 
-export default DefaultEMirror;
+export default MenusEMirror;

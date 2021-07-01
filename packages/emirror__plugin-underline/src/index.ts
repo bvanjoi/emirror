@@ -8,13 +8,13 @@ class Underline extends Mark {
     return 'underline' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [
         { tag: 'u' },
         {
           tag: 'text-decoration',
-          getAttrs: (n) => (n === 'underline' ? {} : false),
+          getAttrs: n => (n === 'underline' ? {} : false),
         },
       ],
       toDOM: () => ['u', { class: 'emirror-underline' }, 0],
@@ -27,10 +27,12 @@ class Underline extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-u': toggleMark(type),
-    'Mod-U': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-u': toggleMark(this.name),
+      'Mod-U': toggleMark(this.name),
+    };
+  }
 
   inputRules = ({ type }) => [
     markInputRules(/(?:~)([^*_]+)(?:~)\x20$/, type),

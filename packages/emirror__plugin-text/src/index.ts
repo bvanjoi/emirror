@@ -5,7 +5,7 @@ class Text extends Node {
     return 'text' as const;
   }
 
-  get schema() {
+  createNodeSpec() {
     return {
       group: 'inline',
       inline: true,

@@ -10,7 +10,7 @@ class Blockquote extends Node {
     return 'blockquote' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       content: 'block+',
       group: 'block',
@@ -26,14 +26,14 @@ class Blockquote extends Node {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod->': wrapIn(type),
-    'Mod-》': wrapIn(type),
-  });
+  get keymap() {
+    return {
+      'Mod->': wrapIn(this.name),
+      'Mod-》': wrapIn(this.name),
+    };
+  }
 
-  inputRules = ({ type }) => [
-    wrappingInputRule(/^\s*(>|》)\x20$/, type),
-  ];
+  inputRules = ({ type }) => [wrappingInputRule(/^\s*(>|》)\x20$/, type)];
 }
 
 export default Blockquote;

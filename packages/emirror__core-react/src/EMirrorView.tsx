@@ -64,9 +64,9 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     children,
   } = props;
 
-  const [extensionsReactComponent, setExtensionsReactComponent] = useState(
-    [],
-  );
+  // const [extensionsReactComponent, setExtensionsReactComponent] = useState(
+  //   [],
+  // );
 
   /**
    * The ref of ProsemirrorView DOM.
@@ -130,25 +130,26 @@ export const EMirrorView = (props: EMirrorViewProps) => {
     const manager = new Manager(emPlugins);
 
     // nodes and marks of Prosemirror
-    const { nodes, marks, names, plugins } = manager;
-
-    /** Scheme of Prosemirror */
+    const { plugins, keymaps } = manager;
+    /**
+     * nodes of ProseMirror
+     */
+    const nodes = manager.createNodes();
+    /**
+     * marks of ProseMirror
+     */
+    const marks = manager.createMarks();
+    console.log(nodes, marks);
+    /**
+     * Scheme of Prosemirror
+     */
     const schema = new Schema({ nodes, marks, topNode: topNode.name });
-
-    /** All nodeVies of Prosemirror */
-    const nodeViews = manager.nodeAndMarkReactComponent(emirrorContext);
-
-    /** All outer reactComponent  */
-    const extensionReactComponent = manager.extensionsReactComponent();
-    setExtensionsReactComponent(extensionReactComponent);
 
     /** All inputRules for Prosemirror */
     const rules = manager.inputRules(schema);
     // if input rules are not empty, then push it to plugins.
     rules.length && plugins.push(inputRules({ rules }));
 
-    /** All key map for Prosemirror */
-    const keymaps = manager.keymaps(schema);
     // if key map are not empty, then push it to plugins.
     Object.keys(keymaps).length && plugins.push(keymap(keymaps));
 
@@ -160,7 +161,6 @@ export const EMirrorView = (props: EMirrorViewProps) => {
 
     return new EditorView(ele, {
       state,
-      nodeViews,
       dispatchTransaction,
     });
   };
@@ -209,9 +209,9 @@ export const EMirrorView = (props: EMirrorViewProps) => {
           {children}
         </div>
       </EMirrorInnerView>
-      {extensionsReactComponent?.map((rc, index) => (
+      {/* {extensionsReactComponent?.map((rc, index) => (
         <div key={index}>{rc}</div>
-      ))}
+      ))} */}
     </div>
   );
 };

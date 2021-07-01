@@ -8,7 +8,9 @@ export const markInputRules = (
 ): InputRule =>
   new InputRule(regexp, (state, match, start, end) => {
     const attributes =
-      getAttributes instanceof Function ? getAttributes(match) : getAttributes;
+      getAttributes instanceof Function
+        ? getAttributes(match)
+        : getAttributes;
     const { tr } = state;
     const captureGroup = match[match.length - 1];
     const fullMatch = match[0];
@@ -27,7 +29,11 @@ export const markInputRules = (
         tr.delete(start + startSpaces, textStart);
       }
       markEnd = start + startSpaces + captureGroup.length;
-      tr.addMark(start + startSpaces, markEnd, markType.create(attributes));
+      tr.addMark(
+        start + startSpaces,
+        markEnd,
+        markType.create(attributes),
+      );
     }
     return tr;
   });

@@ -15,3 +15,6 @@ export * from './insertNode';
 export * from './insertNodeAt';
 export * from './toggleNode';
 export * from './toggleWrap';
+export * from './mergeDefaultAttrs';
+export * from './mergeParseDOMGetAttrs';
+export * from './mergeToDOMAttrs';

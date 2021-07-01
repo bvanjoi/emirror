@@ -1,11 +1,11 @@
 import { MarkSpec, MarkType } from '@emirror/pm/model';
 import { InputRule } from '@emirror/pm/inputrules';
 import { Base } from './base';
-import { PluginType } from './types';
+import { GlobalAttrs, PluginType } from './types';
 import { ErrorMsg } from './constant';
 
 /**
- * The integration for ProsemirrorMark.
+ * The integration for ProseMirror Mark.
  */
 export class Mark extends Base {
   get type(): PluginType {
@@ -13,9 +13,9 @@ export class Mark extends Base {
   }
 
   /**
-   * The schema for ProsemirrorMark.
+   * get ProseMirror MarkSpec to generator MarkType.
    */
-  get schema(): MarkSpec {
+  createMarkSpec(globalAttrs?: GlobalAttrs): MarkSpec {
     throw Error(ErrorMsg.INVALID_MARK);
   }
 

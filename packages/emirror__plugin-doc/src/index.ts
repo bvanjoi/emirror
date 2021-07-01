@@ -1,5 +1,4 @@
 import { Node } from '@emirror/core-structure';
-import { gapCursor } from '@emirror/pm/gapCursor';
 import { dropCursor } from '@emirror/pm/dropCursor';
 
 class Doc extends Node {
@@ -7,14 +6,14 @@ class Doc extends Node {
     return 'doc' as const;
   }
 
-  get schema() {
+  createNodeSpec() {
     return {
       content: 'block+',
     };
   }
 
   get plugins() {
-    return [gapCursor(), dropCursor()];
+    return [dropCursor()];
   }
 }
 

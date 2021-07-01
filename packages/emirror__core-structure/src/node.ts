@@ -1,11 +1,11 @@
 import { NodeSpec, NodeType } from '@emirror/pm/model';
 import { InputRule } from '@emirror/pm/inputrules';
 import { Base } from './base';
-import { PluginType } from './types';
 import { ErrorMsg } from './constant';
+import { GlobalAttrs, PluginType } from './types';
 
 /**
- * The integration for ProsemirrorNode.
+ * The integration for ProseMirrorNode.
  */
 export class Node extends Base {
   get type(): PluginType {
@@ -13,9 +13,9 @@ export class Node extends Base {
   }
 
   /**
-   * The schema for ProseMirrorNode.
+   * get ProseMirror NodeSpec to generator NodeType.
    */
-  get schema(): NodeSpec {
+  createNodeSpec(globalAttrs?: GlobalAttrs): NodeSpec {
     throw Error(ErrorMsg.INVALID_NODE);
   }
 
@@ -23,6 +23,5 @@ export class Node extends Base {
    * Input something and trigger rules will create new Node.
    * @returns Some input rules.
    */
-  inputRules: (options: { type: NodeType }) => InputRule[] = () =>
-    null;
+  inputRules: (options: { type: NodeType }) => InputRule[] = () => null;
 }

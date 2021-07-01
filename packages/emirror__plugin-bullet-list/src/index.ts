@@ -8,7 +8,7 @@ class BulletList extends Node {
     return 'bulletList' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       content: 'listItem+',
       group: 'block',
@@ -23,9 +23,11 @@ class BulletList extends Node {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Shift-Ctrl-7': toggleList(type, 'listItem'),
-  });
+  get keymap() {
+    return {
+      'Shift-Ctrl-7': toggleList(this.name, 'listItem'),
+    };
+  }
 
   inputRules = ({ type }) => [wrappingInputRule(/^\s*[-+*]\s$/, type)];
 }

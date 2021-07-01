@@ -8,7 +8,7 @@ class Italic extends Mark {
     return 'italic' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [
         { tag: 'em' },
@@ -25,10 +25,12 @@ class Italic extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-i': toggleMark(type),
-    'Mod-I': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-i': toggleMark(this.name),
+      'Mod-I': toggleMark(this.name),
+    };
+  }
 
   inputRules = ({ type }) => [
     markInputRules(/(?:\*)([^*_]+)(?:\*)\x20$/, type),

@@ -15,6 +15,8 @@ import OrderListBtn from './order-list';
 import BulletListBtn from './bullet-list';
 import HRBtn from './hr';
 import ParagraphBtn from './paragraph';
+import HardBreakBtn from './hard-break';
+
 type Props = {
   view: EditorView;
   plugins: Record<string, any>;
@@ -34,6 +36,7 @@ const Menu = (props: Props) => {
       <BlockquoteBtn view={view} plugin={plugins.blockquote} />
       <OrderListBtn view={view} plugin={plugins.orderList} />
       <BulletListBtn view={view} plugin={plugins.bulletList} />
+      <HardBreakBtn view={view} plugin={plugins.hardBreak} />
       <HRBtn view={view} plugin={plugins.hr} />
       <UndoBtn view={view} plugin={plugins.history} />
       <RedoBtn view={view} plugin={plugins.history} />

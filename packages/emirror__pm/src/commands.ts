@@ -33,5 +33,15 @@ function setBlockType<S extends Schema = any>(
   };
 }
 
+function wrapIn<S extends Schema = any>(
+  nodeNameOrType: NodeType<S> | string,
+  attrs?: { [key: string]: any },
+): PMCommands.Command {
+  return function (state, dispatch) {
+    const nodeType = getNodeType(nodeNameOrType, state.schema);
+    return PMCommands.wrapIn(nodeType, attrs)(state, dispatch);
+  };
+}
+
 export * from 'prosemirror-commands';
-export { toggleMark, setBlockType };
+export { toggleMark, setBlockType, wrapIn };

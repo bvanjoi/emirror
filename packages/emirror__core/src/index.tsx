@@ -13,7 +13,7 @@ export const EMirror = (props: EMirrorProps) => {
   /**
    * forceUpdate NodeViews
    */
-  const [state, forceUpdate] = useReducer((x) => x + 1, 0);
+  const [state, forceUpdate] = useReducer(x => x + 1, 0);
   return (
     <EMirrorContext.Provider
       value={{

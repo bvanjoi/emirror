@@ -10,7 +10,7 @@ class WebsiteCard extends Node {
     return 'websiteCard' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       attrs: {
         href: {

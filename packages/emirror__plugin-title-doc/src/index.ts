@@ -5,7 +5,7 @@ class TitleDoc extends Node {
     return 'titleDoc' as const;
   }
 
-  get schema() {
+  createNodeSpec() {
     return {
       content: 'title block+',
     };

@@ -5,12 +5,13 @@ import { Node as PMNode, Schema } from '@emirror/pm/model';
  * The Plugin type of emirror/core-structure
  *
  * - base: The base class for all emirror plugin.
- * - node: The integration for ProsemirrorNode.
+ * - node: The integration for ProseMirrorNode.
  *      For example, paragraph is a node.
- * - mark: The integration for ProsemirrorMark.
+ * - mark: The integration for ProseMirrorMark.
  *      For example, bold is a mark.
- * - extension: The plugin outside the Prosemirror.
- *      For example, the article menu is a extend plugin.
+ * - extension: it not contain schema, and it will provide some features, such as:
+ *    - globalAttrs, it will pass all plugin.
+ *    - only plugins, for example, history and it's keymap.
  */
 export type PluginType = 'base' | 'node' | 'mark' | 'extension';
 
@@ -33,3 +34,46 @@ export interface NodeViewComponentProps<S extends Schema = any> {
    */
   decorations: Decoration[];
 }
+
+/**
+ * Which nodeSpec/markSpec will receive this attrs?
+ *
+ * - `all` means all em plugins. **Default**.
+ * - `nodes` means only em node plugins.
+ * - `marks` means only em mark plugins.
+ * - use string[] to define pointed plugins.
+ */
+export type GlobalAttrScope = 'all' | 'nodes' | 'marks' | string[];
+
+/**
+ * The global attrs which passed to EMirror
+ * createNodeSpec and createMarkSpec's first argument.
+ */
+export type ApplySchemaAttrs = {
+  /**
+   * The attr name.
+   */
+  name: string;
+  /**
+   * The default value of this attrs, to use when no explicit
+   * value is provided. Attributes that no default must be
+   * provided whenever a node or mark of a type that has them is
+   * created.
+   */
+  default?: any;
+  /**
+   * extract attrs from DOM. And it will be applied `parseDOM[].getAttrs`.
+   */
+  parseDOM?: (domNode: Node | string) => Record<string, any>;
+  /**
+   * The attrs will pass to toDOM.attrs.
+   */
+  toDOM?: (attrs: Record<string, any>) => Record<string, any> | null;
+};
+
+/**
+ * The global attrs options.
+ */
+export type GlobalAttrs = ({
+  scope?: GlobalAttrScope;
+} & ApplySchemaAttrs)[];

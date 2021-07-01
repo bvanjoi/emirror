@@ -8,7 +8,7 @@ class Code extends Mark {
     return 'code' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [{ tag: 'code' }],
       toDOM: () => ['code', { class: 'emirror-code' }, 0],
@@ -21,10 +21,12 @@ class Code extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-Ctrl-c': toggleMark(type),
-    'Mod-Ctrl-C': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-Ctrl-c': toggleMark(this.name),
+      'Mod-Ctrl-C': toggleMark(this.name),
+    };
+  }
 
   inputRules = ({ type }) => [
     markInputRules(/(?:`)([^*_]+)(?:`)\x20$/, type),

@@ -10,7 +10,7 @@ class LatexBlock extends Node {
     return 'latexBlock' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       group: 'block',
       content: 'text*',

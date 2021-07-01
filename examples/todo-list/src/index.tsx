@@ -9,7 +9,7 @@ import TodoItem from '@emirror/plugin-todo-item';
 import TodoList from '@emirror/plugin-todo-list';
 import Menu from './menu';
 
-const TitleDocEMirror = () => {
+const TodoListEMirror = () => {
   const [view, setView] = useState<EditorView>(null);
 
   const todoList = new TodoList();
@@ -53,4 +53,4 @@ const TitleDocEMirror = () => {
   );
 };
 
-export default TitleDocEMirror;
+export default TodoListEMirror;

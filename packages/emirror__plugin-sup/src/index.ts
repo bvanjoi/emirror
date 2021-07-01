@@ -7,7 +7,7 @@ class Sup extends Mark {
     return 'sup' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [{ tag: 'sup' }],
       toDOM: () => ['sup', { class: 'emirror-sup' }, 0],
@@ -20,9 +20,11 @@ class Sup extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-+': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-+': toggleMark(this.name),
+    };
+  }
 }
 
 export default Sup;

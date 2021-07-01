@@ -10,7 +10,7 @@ class LatexInline extends Node {
     return 'latexInline' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       group: 'inline',
       content: 'text*',

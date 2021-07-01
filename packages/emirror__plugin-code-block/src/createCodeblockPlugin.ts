@@ -1,4 +1,3 @@
-import hljs from 'highlight.js';
 import { Node as PMNode } from '@emirror/pm/model';
 
 type Props = {

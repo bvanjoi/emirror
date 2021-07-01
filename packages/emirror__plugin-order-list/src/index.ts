@@ -8,7 +8,7 @@ class OrderList extends Node {
     return 'orderList' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       attrs: {
         order: { default: 1 },
@@ -45,9 +45,11 @@ class OrderList extends Node {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Shift-Ctrl-8': toggleList(type, 'listItem'),
-  });
+  get keymap() {
+    return {
+      'Shift-Ctrl-8': toggleList(this.name, 'listItem'),
+    };
+  }
 
   inputRules = ({ type }) => [
     wrappingInputRule(

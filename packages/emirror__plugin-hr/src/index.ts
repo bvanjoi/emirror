@@ -1,7 +1,7 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
 import { nodeInputRules } from '@emirror/utils';
-import { insertHR } from './commands';
+import { insertHR } from './command';
 import './style.css';
 
 class HR extends Node {
@@ -9,7 +9,7 @@ class HR extends Node {
     return 'hr';
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       group: 'block',
       parseDOM: [{ tag: 'hr' }],

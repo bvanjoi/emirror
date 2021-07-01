@@ -8,7 +8,7 @@ class TodoList extends Node {
     return 'todoList' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       content: 'todoItem+',
       group: 'block',
@@ -28,9 +28,11 @@ class TodoList extends Node {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Shift-Ctrl-9': toggleList(type, 'todoItem'),
-  });
+  get keymap() {
+    return {
+      'Shift-Ctrl-9': toggleList(this.name, 'todoItem'),
+    };
+  }
 }
 
 export default TodoList;

@@ -8,7 +8,7 @@ class Strike extends Mark {
     return 'strike' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [
         { tag: 's' },
@@ -28,10 +28,12 @@ class Strike extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-Shift-x': toggleMark(type),
-    'Mod-Shift-X': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-Shift-x': toggleMark(this.name),
+      'Mod-Shift-X': toggleMark(this.name),
+    };
+  }
 
   inputRules = ({ type }) => [
     markInputRules(/(?:~~)([^*_]+)(?:~~)\x20$/, type),

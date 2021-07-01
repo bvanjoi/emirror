@@ -1,29 +1,14 @@
-import MiniEMirror from './miniEditor';
-import DefaultEMirror from './defaultEditor';
-import ReadOnlyEMirror from './readonlyEditor';
-import TitleDocEMirror from './titleDocEditor';
-import HighlightEMirror from './highlightEditor';
-import PlaceholderEMirror from './placeholderEditor';
-import ExceedTipEditor from './exceedTipEditor';
-import TodoEditor from './todoEditor';
-import LatexEditor from './latexEditor';
-import ImageEditor from './imageEditor';
-import CodeEditor from './codeEditor';
-import MenusEditor from './menusEditor';
-import WebsiteCardEditor from './websiteCardEditor';
-
-export {
-  MiniEMirror,
-  DefaultEMirror,
-  ReadOnlyEMirror,
-  TitleDocEMirror,
-  HighlightEMirror,
-  PlaceholderEMirror,
-  ExceedTipEditor,
-  TodoEditor,
-  LatexEditor,
-  ImageEditor,
-  CodeEditor,
-  MenusEditor,
-  WebsiteCardEditor,
-};
+export { default as MiniEMirror } from './miniEditor';
+export { default as DefaultEMirror } from './defaultEditor';
+export { default as ReadOnlyEMirror } from './readonlyEditor';
+export { default as TitleDocEMirror } from './titleDocEditor';
+export { default as HighlightEMirror } from './highlightEditor';
+export { default as PlaceholderEMirror } from './placeholderEditor';
+export { default as ExceedTipEditor } from './exceedTipEditor';
+export { default as TodoEditor } from './todoEditor';
+export { default as LatexEditor } from './latexEditor';
+export { default as ImageEditor } from './imageEditor';
+export { default as CodeEditor } from './codeEditor';
+export { default as MenusEditor } from './menusEditor';
+export { default as WebsiteCardEditor } from './websiteCardEditor';
+export { default as TypoEditor } from './typoEditor';

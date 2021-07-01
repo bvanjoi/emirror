@@ -11,7 +11,7 @@ class ListItem extends Node {
     return 'listItem' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       content: 'block*',
       defining: true,
@@ -21,11 +21,13 @@ class ListItem extends Node {
     };
   }
 
-  keymap = ({ type }) => ({
-    Enter: splitListItem(type),
-    Tab: sinkListItem(type),
-    'Shift-Tab': liftListItem(type),
-  });
+  get keymap() {
+    return {
+      Enter: splitListItem(this.name),
+      Tab: sinkListItem(this.name),
+      'Shift-Tab': liftListItem(this.name),
+    };
+  }
 }
 
 export default ListItem;

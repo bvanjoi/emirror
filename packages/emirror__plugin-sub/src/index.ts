@@ -7,7 +7,7 @@ class Sub extends Mark {
     return 'sub' as const;
   }
 
-  get schema(): MarkSpec {
+  createMarkSpec(): MarkSpec {
     return {
       parseDOM: [{ tag: 'sub' }],
       toDOM: () => ['sub', { class: 'emirror-sub' }, 0],
@@ -20,9 +20,11 @@ class Sub extends Mark {
     };
   }
 
-  keymap = ({ type }) => ({
-    'Mod-=': toggleMark(type),
-  });
+  get keymap() {
+    return {
+      'Mod-=': toggleMark(this.name),
+    };
+  }
 }
 
 export default Sub;

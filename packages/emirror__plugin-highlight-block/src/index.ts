@@ -20,7 +20,7 @@ class HighlightBlock extends Node {
     return 'highlightBlock' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       attrs: {
         emoji: {

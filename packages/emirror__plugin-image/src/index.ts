@@ -10,7 +10,7 @@ class Image extends Node {
     return 'image';
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       attrs: {
         src: {},

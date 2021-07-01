@@ -10,7 +10,7 @@ class CodeEditor extends Node {
     return 'codeEditor' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       attrs: {
         language: {
@@ -24,10 +24,6 @@ class CodeEditor extends Node {
       defining: true,
       isolating: true,
       parseDOM: [
-        {
-          tag: `div.emirror-${this.name}__nodeview-dom`,
-          preserveWhitespace: 'full',
-        },
         {
           tag: `div.emirror-code-editor`,
           preserveWhitespace: 'full',

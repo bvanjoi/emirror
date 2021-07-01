@@ -17,7 +17,7 @@ class TodoItem extends Node {
     return 'todoItem' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec(): NodeSpec {
     return {
       attrs: {
         checked: {
@@ -47,11 +47,13 @@ class TodoItem extends Node {
     };
   }
 
-  keymap = ({ type }) => ({
-    Enter: splitListItem(type),
-    Tab: sinkListItem(type),
-    'Shift-Tab': liftListItem(type),
-  });
+  get keymap() {
+    return {
+      Enter: splitListItem(this.name),
+      Tab: sinkListItem(this.name),
+      'Shift-Tab': liftListItem(this.name),
+    };
+  }
 
   get plugins() {
     return [

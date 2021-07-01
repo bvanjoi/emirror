@@ -6,7 +6,7 @@ import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import Placeholder from '@emirror/plugin-placeholder';
 
-const MiniEMirror = () => {
+const PlaceholderEMirror = () => {
   const content =
     'This is a empty document, and this is a placeholder, write anything here to eliminate that.';
   return (
@@ -22,4 +22,4 @@ const MiniEMirror = () => {
   );
 };
 
-export default MiniEMirror;
+export default PlaceholderEMirror;

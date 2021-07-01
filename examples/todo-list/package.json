@@ -29,6 +29,7 @@
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",
     "@emirror/plugin-todo-item": "^0.0.1",
-    "@emirror/plugin-todo-list": "^0.0.1"
+    "@emirror/plugin-todo-list": "^0.0.1",
+    "@emirror/plugin-doc": "^0.0.1"
   }
 }

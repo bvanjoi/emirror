@@ -20,7 +20,7 @@ import {
   CodeEditor,
   MenusEditor,
   ImageEditor,
-  WebsiteCardEditor,
+  TypoEditor,
 } from './pages';
 import './App.css';
 
@@ -117,24 +117,26 @@ const routeComponents = [
     path: 'menus',
     component: MenusEditor,
   },
+  {
+    path: 'typography',
+    component: TypoEditor,
+  },
   // {
   //   path: 'website-card',
   //   component: WebsiteCardEditor,
   // },
 ];
 
-const App = () => {
-  return (
-    <AppView>
-      <Nav />
-      <Introduction />
-      <SubNavigation menus={routeComponents.map(editor => editor.path)} />
-      <EditorContainer>
-        <Routes routeComponents={routeComponents} />
-      </EditorContainer>
-      <ShowCodeLink url={`${prefix}${location.pathname}`} />
-    </AppView>
-  );
-};
+const App = () => (
+  <AppView>
+    <Nav />
+    <Introduction />
+    <SubNavigation menus={routeComponents.map(editor => editor.path)} />
+    <EditorContainer>
+      <Routes routeComponents={routeComponents} />
+    </EditorContainer>
+    <ShowCodeLink url={`${prefix}${location.pathname}`} />
+  </AppView>
+);
 
 export default App;
