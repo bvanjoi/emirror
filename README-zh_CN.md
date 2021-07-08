@@ -35,11 +35,17 @@ export default Editor;
 EMirror 内，所有能力均来自于插件机制，你可以用下述方法创建插件：
 
 ```js
-import { Node } from '@emirror/core-structure';
+import { GlobalAttrs, Node } from '@emirror/core-structure';
 import { NodeSpec, Node as PMNode } from '@emirror/pm/model';
 import { setBlockType } from '@emirror/pm/commands';
 import { textblockTypeInputRule } from '@emirror/pm/inputrules';
-import { genID, toggleNode } from '@emirror/utils';
+import {
+  genID,
+  mergeParseDOMGetAttrs,
+  mergeSpecAttrs,
+  mergeToDOMAttrs,
+  toggleNode,
+} from '@emirror/utils';
 
 class Heading extends Node {
   levels = [1, 2, 3, 4, 5, 6];
@@ -48,31 +54,44 @@ class Heading extends Node {
     return 'heading' as const;
   }
 
-  get schema(): NodeSpec {
+  createNodeSpec = (globalAttrs: GlobalAttrs): NodeSpec => {
     const { levels } = this;
     return {
       group: 'block',
       content: 'inline*',
       defining: true,
-      attrs: {
-        level: {
-          default: 1,
+      attrs: mergeSpecAttrs(
+        {
+          level: {
+            default: 1,
+          },
         },
-      },
-      parseDOM: levels.map((level) => ({
-        tag: `h${level}`,
-        attrs: { level },
-      })),
+        globalAttrs,
+      ),
+
+      parseDOM: levels.map(level =>
+        mergeParseDOMGetAttrs(
+          {
+            tag: `h${level}`,
+            attrs: { level },
+          },
+          globalAttrs,
+        ),
+      ),
       toDOM: (node: PMNode) => [
         `h${node.attrs.level}`,
-        {
-          id: genID(),
-          class: `emirror-heading emirror-h${node.attrs.level}`,
-        },
+        mergeToDOMAttrs(
+          {
+            id: genID(),
+            class: `emirror-heading emirror-h${node.attrs.level}`,
+          },
+          node,
+          globalAttrs,
+        ),
         0,
       ],
     };
-  }
+  };
 
   get commands() {
     return {
@@ -81,16 +100,17 @@ class Heading extends Node {
     };
   }
 
-  keymap = ({ type }) =>
-    Object.fromEntries(
-      this.levels.map((level) => [
+  get keymap() {
+    return Object.fromEntries(
+      this.levels.map(level => [
         `Ctrl-Shift-${level}`,
-        setBlockType(type, { level }),
+        setBlockType(this.name, { level }),
       ]),
     );
+  }
 
   inputRules = ({ type }) =>
-    this.levels.map((level) =>
+    this.levels.map(level =>
       textblockTypeInputRule(
         new RegExp(`^(#{1,${level}})\\s$`),
         type,
@@ -102,7 +122,6 @@ class Heading extends Node {
 }
 
 export default Heading;
-
 ```
 
 更多插件示例可以参看[官网](https://emirror.dev/)。

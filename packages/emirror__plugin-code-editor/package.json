@@ -26,6 +26,6 @@
     "codemirror": "^5.62.0"
   },
   "devDependencies": {
-    "@types/codemirror": "^5.60.1"
+    "@types/codemirror": "^5.60.2"
   }
 }

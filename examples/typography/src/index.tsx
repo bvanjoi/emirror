@@ -14,10 +14,13 @@ import Menu from './menu';
 
 const TypoEMirror = () => {
   const [view, setView] = useState<EditorView>(null);
+  const plugins = {
+    textAlign: new TextAlign(),
+  };
 
   return (
     <div className='typo'>
-      {/* {view && <Menu view={view} plugins={{}} />} */}
+      {view && <Menu view={view} plugins={plugins} />}
       <EMirror
         afterInit={_view => {
           setView(_view);
@@ -29,21 +32,27 @@ const TypoEMirror = () => {
           new History(),
           new Heading(),
           new HardBreak(),
-          new TextAlign(),
           // new HR(),
+          ...Object.values(plugins),
         ]}
       >
         <h2 style={{ textAlign: 'center' }}>Believe in the Future</h2>
         <p style={{ textAlign: 'center' }}>
-          When cobwebs relentlessly clog my stove <br />
-          When its dying smoke sighs for poverty <br />
-          I will stubbornly dig out the disappointing ash <br />
+          When cobwebs relentlessly clog my stove
+          <br />
+          When its dying smoke sighs for poverty
+          <br />
+          I will stubbornly dig out the disappointing ash
+          <br />
           And write with beautiful snowflakes: Believe in the Future
         </p>
         <p style={{ textAlign: 'center' }}>
-          When my overripe grapes melt into late autumn dew <br />
-          When myfresh flower lies in another's arms <br />
-          I will stubbornly write on the bleak earth <br />
+          When my overripe grapes melt into late autumn dew
+          <br />
+          When myfresh flower lies in another's arms
+          <br />
+          I will stubbornly write on the bleak earth
+          <br />
           With a dry frozen vine: Believe in the Future
         </p>
       </EMirror>

@@ -15,30 +15,30 @@
     "access": "public"
   },
   "dependencies": {
-    "prosemirror-commands": "^1.1.9",
+    "prosemirror-commands": "^1.1.10",
     "prosemirror-dropcursor": "^1.3.5",
     "prosemirror-gapcursor": "^1.1.5",
     "prosemirror-history": "^1.1.3",
     "prosemirror-inputrules": "^1.1.3",
     "prosemirror-keymap": "^1.1.4",
     "prosemirror-model": "^1.14.2",
-    "prosemirror-schema-list": "^1.1.4",
+    "prosemirror-schema-list": "^1.1.5",
     "prosemirror-state": "^1.3.4",
     "prosemirror-transform": "^1.3.2",
     "prosemirror-view": "^1.18.8"
   },
   "devDependencies": {
     "@types/prosemirror-commands": "^1.0.4",
-    "@types/prosemirror-dropcursor": "^1.0.1",
-    "@types/prosemirror-gapcursor": "^1.0.3",
-    "@types/prosemirror-history": "^1.0.2",
+    "@types/prosemirror-dropcursor": "^1.0.2",
+    "@types/prosemirror-gapcursor": "^1.0.4",
+    "@types/prosemirror-history": "^1.0.3",
     "@types/prosemirror-inputrules": "^1.0.4",
     "@types/prosemirror-keymap": "^1.0.4",
-    "@types/prosemirror-model": "^1.13.0",
+    "@types/prosemirror-model": "^1.13.1",
     "@types/prosemirror-schema-list": "^1.0.3",
-    "@types/prosemirror-state": "^1.2.6",
-    "@types/prosemirror-transform": "^1.1.3",
-    "@types/prosemirror-view": "^1.17.1"
+    "@types/prosemirror-state": "^1.2.7",
+    "@types/prosemirror-transform": "^1.1.4",
+    "@types/prosemirror-view": "^1.17.2"
   },
   "preconstruct": {
     "entrypoints": [

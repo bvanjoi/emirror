@@ -12,15 +12,23 @@ export const isMarkActiveType = (
   attrs: Record<string, any>,
 ) => {
   const { from, to, empty } = state.selection;
-  const type = getMarkType(typeOrName, state.schema);
+  const type = typeOrName ? getMarkType(typeOrName, state.schema) : null;
 
   // if selection is empty
   if (empty) {
     return Boolean(
       (state.storedMarks || state.selection.$from.marks())
-        .filter((mark) => type.name === mark.type.name)
-        .find((mark) => objectIncludes(mark.attrs, attrs)),
+        .filter(mark => {
+          if (!type) {
+            return true;
+          }
+          return type.name === mark.type.name;
+        })
+        .find(mark => objectIncludes(mark.attrs, attrs)),
     );
+  }
+  if (!type) {
+    return false;
   }
   // else if has selection
   return Boolean(state.doc.rangeHasMark(from, to, type));

@@ -10,6 +10,5 @@ export function objectIncludes(
   if (!keys.length) {
     return true;
   }
-
-  return Boolean(keys.filter((key) => o1[key] === o2[key]).length);
+  return Boolean(keys.filter(key => o1[key] === o2[key]).length);
 }

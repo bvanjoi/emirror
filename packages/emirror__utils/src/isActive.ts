@@ -1,5 +1,5 @@
 import { EditorState } from '@emirror/pm/state';
-import { Node, Mark } from '@emirror/core-structure';
+import { Node, Mark, Extension } from '@emirror/core-structure';
 import { isMarkActiveType } from './isMarkActive';
 import { isNodeActiveType } from './isNodeActive';
 
@@ -8,7 +8,7 @@ import { isNodeActiveType } from './isNodeActive';
  */
 export const isActive = (
   state: EditorState,
-  plugin: Node | Mark,
+  plugin: Node | Mark | Extension,
   attrs: Record<string, any> = {},
 ) => {
   if (!state) {
@@ -18,6 +18,10 @@ export const isActive = (
     return isNodeActiveType(state, plugin.name, attrs);
   } else if (plugin.type === 'mark') {
     return isMarkActiveType(state, plugin.name, attrs);
+  } else {
+    return (
+      isNodeActiveType(state, null, attrs) ||
+      isMarkActiveType(state, null, attrs)
+    );
   }
-  console.error('the plugin type must be node or mark');
 };

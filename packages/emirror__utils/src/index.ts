@@ -18,3 +18,5 @@ export * from './toggleWrap';
 export * from './mergeDefaultAttrs';
 export * from './mergeParseDOMGetAttrs';
 export * from './mergeToDOMAttrs';
+export * from './getSchemaTypeNameByName';
+export * from './updateGlobalAttrs';

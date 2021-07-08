@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Command } from '@emirror/pm/commands';
 import { EditorView } from '@emirror/pm/view';
-import { Mark, Node } from '@emirror/core-structure';
+import { Extension, Mark, Node } from '@emirror/core-structure';
 
 type Props = {
   /**
@@ -20,7 +20,7 @@ type Props = {
   /**
    * The instance plugin of EMirror
    */
-  plugin?: Node | Mark;
+  plugin?: Node | Mark | Extension;
   /**
    * The chidren inner Menu Button
    */

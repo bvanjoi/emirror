@@ -41,7 +41,6 @@ class WebsiteCard extends Node {
           nodeViews: {
             [this.name]: (node, view, getPos) => {
               const { href } = node.attrs;
-              console.log('ref', href);
               // dom
               const dom = document.createElement('div');
               dom.setAttribute('data-href', href);
