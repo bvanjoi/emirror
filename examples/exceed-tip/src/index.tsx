@@ -17,22 +17,22 @@ const ExceedTipEMirror = () => (
     ]}
   >
     <p>
-      At some social Apps, such as weibo, Twitter, The editor has restrict
-      the content length of document.
+      At some social Apps, such as Weibo, Twitter, The editor has
+      restricted the content length of document.
     </p>
     <p>
-      And now, ExceedTip plugin had implement similar feature, If you input
-      content exceed 140 chars, it will show error tip. Of course, you can
-      define it custom.
+      And now, ExceedTip plugin had implemented similar feature, If you
+      input content exceed 140 chars, it will show error tip. Of course,
+      you can define it custom.
     </p>
 
     <p>
-      Meanwhile, as a tip, because of the complexity of unicode, the count
+      Meanwhile, as a tip, because of the complexity of Unicode, the count
       of content may be not as you see.
     </p>
     <p>
-      such as 🤚, although it seems take up 1 char in visual, it occur 2
-      chars indeed.
+      Such as 🤚, although it seems to take up 1 char in visual, it
+      occurred 2 chars indeed.
     </p>
   </EMirror>
 );

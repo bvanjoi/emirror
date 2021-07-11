@@ -26,12 +26,12 @@ const ImageEmirror = () => {
         topNode={new Doc()}
         plugins={[new Paragraph(), new Text(), image, new History()]}
       >
-        <p>EMirror also provide iamge plugin.</p>
+        <p>EMirror also provide image plugin.</p>
         <img src={IMG_SOURCE}></img>
-        <p>It also support gif:</p>
+        <p>It also supports GIF:</p>
         <img src={GIF_SOURCE} />
         <p>
-          It also support upload form local, but in real world, It better
+          It also supports upload form local, but in real world, It better
           to upload to CDN firstly.
         </p>
       </Emirror>

@@ -48,9 +48,11 @@ const MenusEMirror = () => {
       >
         <p>This example show:</p>
         <ul>
-          <li>popover menu, you can selection any thing to get it.</li>
           <li>
-            float menu, when you focus on the first of paragraph, it will
+            Popover menu, you can select some areas anything to get it.
+          </li>
+          <li>
+            Float menu, when you focus on the first of paragraph, it will
             appear.
           </li>
         </ul>

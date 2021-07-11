@@ -23,7 +23,7 @@ const ReadOnlyEMirror = () => {
         editable={editable}
         plugins={[new Paragraph(), new Text(), new History()]}
       >
-        <p>This is a example show how to config editable of EMirror.</p>
+        <p>This is an example show how to config editable of EMirror.</p>
         <p>You can use checkbox the changed this state.</p>
       </EMirror>
     </div>

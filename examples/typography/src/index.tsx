@@ -49,7 +49,7 @@ const TypoEMirror = () => {
         <p style={{ textAlign: 'center' }}>
           When my overripe grapes melt into late autumn dew
           <br />
-          When myfresh flower lies in another's arms
+          When my fresh flower lies in another's arms
           <br />
           I will stubbornly write on the bleak earth
           <br />

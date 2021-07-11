@@ -17,7 +17,7 @@ const CodeEditorEMirror = () => (
     ]}
   >
     <p>
-      This plugin is copy from webiste example, and it will expend this
+      This plugin is copy from website example, and it will expend this
       feature.
     </p>
     <div className='emirror-code-editor'>

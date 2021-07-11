@@ -70,7 +70,7 @@ const DefaultEMirror = () => {
           </p>
           <p>The default setup will provide more practical function.</p>
         </blockquote>
-        <p>And in default EMirror, it provider following function:</p>
+        <p>And in default EMirror, it provides following function:</p>
         <ul>
           <li>
             <p>
@@ -92,7 +92,7 @@ const DefaultEMirror = () => {
               <strong>something</strong>.
             </p>
             <p>
-              Meanwhile, it also support key map, if you keydown Ctrl-b,
+              Meanwhile, it also supports key map, if you press on Ctrl-b,
               and then input, you will find the text is bold font.
             </p>
           </li>
@@ -108,7 +108,7 @@ const DefaultEMirror = () => {
             </p>
           </li>
         </ul>
-        <p>More features is under development, such as:</p>
+        <p>More features are under development, such as:</p>
         <ol>
           <li>
             <p>Auto link</p>
@@ -126,21 +126,21 @@ const DefaultEMirror = () => {
             <p>collab</p>
           </li>
           <li>
-            <p>canvs table</p>
+            <p>canvas table</p>
           </li>
           <li>
-            <p>search highligting</p>
+            <p>search highlighting</p>
           </li>
           <li>
-            <p>and more useful featuers...</p>
+            <p>and more useful features...</p>
           </li>
         </ol>
         <p>
           And in the last, I want to say it again: the aim of EMirror is to
           provider a struct to build modern editor easily, and it will
-          provider some examples to exhibit implementation approach.
+          provide some examples to exhibit implementation approach.
         </p>
-        <p>There has a lots of things to do...</p>
+        <p>There has lots of things to do...</p>
       </EMirror>
     </div>
   );

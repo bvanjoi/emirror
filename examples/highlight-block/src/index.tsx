@@ -56,15 +56,15 @@ const HighlightBlockEMirror = () => (
       new BulletList(),
     ]}
   >
-    <p>HighLight block it make you written some important thing.</p>
+    <p>Highlight block it make you written some important thing.</p>
     <div className='emirror-highlight-block'>
       <span className='emirror-highlight-emoji'></span>
-      <p>Yau can record here, such as:</p>
+      <p>You can record here, such as:</p>
       <ul>
         <li>Do not forget to brush your teeth.</li>
       </ul>
     </div>
-    <p>This example shows how build a little complex block node.</p>
+    <p>This example shows how to build a little complex block node.</p>
   </EMirror>
 );
 

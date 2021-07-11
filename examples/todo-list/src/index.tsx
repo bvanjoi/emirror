@@ -31,7 +31,8 @@ const TodoListEMirror = () => {
         ]}
       >
         <p>
-          May be you had somethings todo, then you can use todo plugin.
+          Maybe you had something's to do, then you can use ToDoList
+          plugin.
         </p>
         <p>
           For example, there are something that need to be done, and
@@ -45,9 +46,9 @@ const TodoListEMirror = () => {
             Book table at restaurant
           </li>
           <li className='emirror-todo-item'>Review subscriptions</li>
-          <li className='emirror-todo-item'>Pacage delivery</li>
+          <li className='emirror-todo-item'>Package delivery</li>
         </ul>
-        <p>Also, it support markdown shortcut.</p>
+        <p>Also, it supports markdown shortcut.</p>
       </EMirror>
     </div>
   );

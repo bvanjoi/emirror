@@ -23,10 +23,10 @@ const LatexEMirror = () => (
     ]}
   >
     <p>
-      Latex plugin of EMirror. You can insert a inline-latex using $xxx$,
+      Latex plugin of EMirror. You can insert an inline-latex using $xxx$,
       or insert block-latex using $$yyy$$.
     </p>
-    <p>Following is a example(copy from wikipedia):</p>
+    <p>Following is an example(copy from Wikipedia):</p>
     <hr />
     <p>
       Stirling&apos;s approximation is an approximation for factorials. It
@@ -38,15 +38,15 @@ const LatexEMirror = () => (
     <div className='emirror-latex-block'>ln n! = nln - n + O(lnn)</div>
     <p>
       (in big O notation, as
-      <span className='emirror-latex-inline'>\, n \to \infty</span>) , or,
+      <span className='emirror-latex-inline'>\, n \to \infty</span>), or,
       by changing the base of the logarithm (for instance in the worst-case
-      lower bound for comparsion sorting),
+      lower bound for comparison sorting),
     </p>
     <div className='emirror-latex-block'>
       log_2 n! = nlog_2 n - nlog_2e + O(log_2 n)
     </div>
     <p>
-      Sepcifying the constant in the
+      Specifying the constant in the
       <span className='emirror-latex-inline'>\, O(lnn)</span>
       error therm gives
       <span className='emirror-latex-inline'>
@@ -60,14 +60,14 @@ const LatexEMirror = () => (
       {'{e}'})^n
     </div>
     <p>
-      where the sign <span className='emirror-latex-inline'>\sim</span>{' '}
-      means means that the two quantities are asymptotic: their ratio tends
-      to 1 as
+      Where the sign <span className='emirror-latex-inline'>\sim</span>{' '}
+      means that the two quantities are asymptotic: their ratio tends to 1
+      as
       <span className='emirror-latex-inline'>\, n \,</span>
       tends to infinity.
     </p>
     <p>
-      one way also give simple bounds valid for all positive intgers
+      One way also give simple bounds valid for all positive integers
       <span className='emirror-latex-inline'>\, n</span>
       rather than only for large
       <span className='emirror-latex-inline'>\, n</span>:
@@ -77,7 +77,7 @@ const LatexEMirror = () => (
       e ^{'{1-n}'} n ^ {'{n + \\frac{1}{2}}'}
     </div>
     <p>
-      for <span className='emirror-latex-inline'>n = 1,2,3...</span>
+      For <span className='emirror-latex-inline'>n = 1,2,3... </span>
       These follow from the more precise error bounds discussed below.
     </p>
   </EMirror>
