@@ -21,6 +21,7 @@ import {
   MenusEditor,
   ImageEditor,
   TypoEditor,
+  AutoLinkEditor,
 } from './pages';
 import './App.css';
 
@@ -121,10 +122,10 @@ const routeComponents = [
     path: 'typography',
     component: TypoEditor,
   },
-  // {
-  //   path: 'website-card',
-  //   component: WebsiteCardEditor,
-  // },
+  {
+    path: 'auto-link',
+    component: AutoLinkEditor,
+  },
 ];
 
 const App = () => (

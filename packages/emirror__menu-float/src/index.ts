@@ -5,7 +5,7 @@ import { isActive } from '@emirror/utils';
 
 type Items = Record<string, Node | Mark>;
 
-type Props = {
+type Options = {
   /**
    * all plugins of EMirror
    */
@@ -26,11 +26,11 @@ class MenuView {
    */
   items: Items;
 
-  constructor(props: Props & { view: EditorView }) {
-    this.element = props.element;
-    this.items = props.items;
+  constructor(opts: Options & { view: EditorView }) {
+    this.element = opts.element;
+    this.items = opts.items;
 
-    this.update(props.view, null);
+    this.update(opts.view, null);
   }
 
   update(view: EditorView, prevState: EditorState) {
@@ -117,11 +117,11 @@ class MenuView {
   }
 }
 
-export default function (props: Props) {
+export default function (opts: Options) {
   return new Plugin({
     key: new PluginKey('menu-float'),
     view(view) {
-      return new MenuView({ ...props, view });
+      return new MenuView({ ...opts, view });
     },
   });
 }

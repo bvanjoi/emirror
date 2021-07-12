@@ -21,7 +21,7 @@ const ImageEmirror = () => {
       {view && <Menu view={view} plugins={{ image }} />}
       <Emirror
         afterInit={_view => {
-          setView(view);
+          setView(_view);
         }}
         topNode={new Doc()}
         plugins={[new Paragraph(), new Text(), image, new History()]}
