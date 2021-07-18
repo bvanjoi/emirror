@@ -4,7 +4,6 @@ import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
-import LatexBasic from '@emirror/plugin-latex-basic';
 import LatexInline from '@emirror/plugin-latex-inline';
 import LatexBlock from '@emirror/plugin-latex-block';
 import Hr from '@emirror/plugin-hr';
@@ -16,7 +15,6 @@ const LatexEMirror = () => (
       new Paragraph(),
       new Text(),
       new History(),
-      new LatexBasic(),
       new LatexBlock(),
       new LatexInline(),
       new Hr(),

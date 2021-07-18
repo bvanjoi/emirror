@@ -1,9 +1,9 @@
-import { Node } from '@emirror/core-structure';
+import LatexBasic from '@emirror/plugin-latex-basic';
 import { NodeSpec } from '@emirror/pm/model';
 import makeLatexBlockInputRule from './makeLatexBlockInputRule';
 import './style.css';
 
-class LatexBlock extends Node {
+class LatexBlock extends LatexBasic {
   LATEX_BLOCK_REGEX = /\$\$(.+)\$\$\x20/;
 
   get name() {

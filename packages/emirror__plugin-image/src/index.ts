@@ -40,18 +40,18 @@ class Image extends Node {
             [this.name]: node => {
               const { src } = node.attrs;
               // dom
-              const dom = document.createElement('img');
+              const imgDOM = document.createElement('img');
 
-              dom.setAttribute('src', src);
-              dom.classList.add('emirror-image');
+              imgDOM.setAttribute('src', src);
+              imgDOM.classList.add('emirror-image');
 
-              dom.classList.add('loading');
-              dom.addEventListener('load', () => {
-                dom.classList.remove('loading');
+              imgDOM.classList.add('loading');
+              imgDOM.addEventListener('load', () => {
+                imgDOM.classList.remove('loading');
               });
 
               return {
-                dom,
+                dom: imgDOM,
               };
             },
           },

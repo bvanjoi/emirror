@@ -20,7 +20,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/core-structure": "^0.0.1",
-    "@emirror/pm": "^0.0.1"
+    "@emirror/pm": "^0.0.1",
+    "@emirror/plugin-latex-basic": "^0.0.1"
   }
 }

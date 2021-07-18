@@ -1,5 +1,5 @@
 import { Plugin, PluginKey } from '@emirror/pm/state';
-import { Extension } from '@emirror/core-structure';
+import { Node } from '@emirror/core-structure';
 import { LatexPluginState } from './types';
 import {
   createLatexBlockNodeView,
@@ -8,7 +8,7 @@ import {
 import './style.css';
 import 'katex/dist/katex.min.css';
 
-class Latex extends Extension {
+class LatexBasic extends Node {
   latexPluginKey = new PluginKey<LatexPluginState>('latex');
 
   get name() {
@@ -50,4 +50,4 @@ class Latex extends Extension {
   }
 }
 
-export default Latex;
+export default LatexBasic;
