@@ -1,7 +1,7 @@
 import React from 'react';
 import Code from '@emirror/plugin-code';
 import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-react-basic';
+import { BasicMenuBtn } from '@emirror/menu-basic-react';
 import icon from './assets/icon.svg';
 
 type Props = {

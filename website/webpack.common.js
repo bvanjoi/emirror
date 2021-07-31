@@ -50,7 +50,7 @@ module.exports = {
           },
         },
         generator: {
-          filename: '[name]_[hash:8][ext]',
+          filename: 'static/[name]_[hash:8][ext]',
         },
       },
     ],

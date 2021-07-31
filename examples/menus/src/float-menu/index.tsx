@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuContainer from '@emirror/menu-react-basic';
+import MenuContainer from '@emirror/menu-basic-react';
 import MenuPlugin from '@emirror/menu-float';
 import { EditorView } from '@emirror/pm/view';
 import HeadingBtn from './heading';

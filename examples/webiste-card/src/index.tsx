@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import EMirror from '@emirror/core';
+import EMirror from '@emirror/react';
 import { EditorView } from '@emirror/pm/view';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';

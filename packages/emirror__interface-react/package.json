@@ -1,11 +1,12 @@
 {
-  "name": "@emirror/menu-react-basic",
+  "name": "@emirror/react",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-menu-react-basic.cjs.js",
+  "main": "dist/emirror-react.cjs.js",
+  "module": "dist/emirror-react.esm.js",
   "publishConfig": {
     "access": "public"
   },
@@ -20,12 +21,10 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
+    "@emirror/core": "^0.0.1",
+    "@emirror/core-provider": "^0.0.1",
     "@emirror/core-structure": "^0.0.1",
-    "@emirror/pm": "^0.0.1",
     "classnames": "^2.3.1",
     "styled-components": "^5.2.3"
-  },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.11"
   }
 }

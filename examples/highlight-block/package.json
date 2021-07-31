@@ -21,7 +21,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/core": "^0.0.1",
+    "@emirror/react": "^0.0.1",
     "@emirror/plugin-bullet-list": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",

@@ -1,13 +1,12 @@
 import React, { useReducer } from 'react';
 import {
   EMirrorContext,
-  EMirrorProps,
-  EMirrorView,
   ViewProvider,
   PluginsProvider,
   AnalyticsProvider,
   RenderProvider,
-} from '@emirror/core-react';
+} from './EMirrorContext';
+import { EMirrorProps, EMirrorView } from './EMirrorView';
 
 export const EMirror = (props: EMirrorProps) => {
   /**
@@ -29,3 +28,5 @@ export const EMirror = (props: EMirrorProps) => {
 };
 
 export default EMirror;
+export * from './EMirrorContext';
+export * from './EMirrorView';

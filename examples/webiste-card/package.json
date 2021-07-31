@@ -22,9 +22,9 @@
   },
   "dependencies": {
     "@emirror/pm": "^0.0.1",
-    "@emirror/core": "^0.0.1",
+    "@emirror/react": "^0.0.1",
     "@emirror/menu": "^0.0.1",
-    "@emirror/menu-react-basic": "^0.0.1",
+    "@emirror/menu-basic-react": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",

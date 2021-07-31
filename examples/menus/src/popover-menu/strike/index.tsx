@@ -1,7 +1,7 @@
 import React from 'react';
 import Strike from '@emirror/plugin-strike';
 import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-react-basic';
+import { BasicMenuBtn } from '@emirror/menu-basic-react';
 import icon from './assets/icon.svg';
 
 type Props = {
@@ -9,16 +9,14 @@ type Props = {
   view: EditorView;
 };
 
-const StrikeBtn = ({ plugin, view }: Props) => {
-  return (
-    <BasicMenuBtn
-      view={view}
-      plugin={plugin}
-      onClick={plugin.commands.toggleStrike}
-    >
-      <img src={icon} />
-    </BasicMenuBtn>
-  );
-};
+const StrikeBtn = ({ plugin, view }: Props) => (
+  <BasicMenuBtn
+    view={view}
+    plugin={plugin}
+    onClick={plugin.commands.toggleStrike}
+  >
+    <img src={icon} />
+  </BasicMenuBtn>
+);
 
 export default StrikeBtn;

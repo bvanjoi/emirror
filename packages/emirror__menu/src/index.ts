@@ -21,12 +21,8 @@ class MenuView {
   }
 
   update(view: EditorView, prevState: EditorState) {
-    if (
-      prevState?.doc.eq(view.state.doc) &&
-      prevState?.selection.eq(view.state.selection)
-    ) {
-      // If doc or selection had no any change
-      // do nothing.
+    if (view.composing) {
+      // If in composing, do nothing.
       return;
     }
 
@@ -38,7 +34,6 @@ class MenuView {
 
       const attrs =
         JSON.parse(ele.getAttribute('data-plugin-attrs')) || {};
-
       this.updateActivated(view, this.items[name], attrs, ele);
     }
   }

@@ -21,11 +21,11 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/core": "^0.0.1",
+    "@emirror/react": "^0.0.1",
     "@emirror/core-structure": "^0.0.1",
     "@emirror/menu-popover": "^0.0.1",
     "@emirror/menu-float": "^0.0.1",
-    "@emirror/menu-react-basic": "^0.0.1",
+    "@emirror/menu-basic-react": "^0.0.1",
     "@emirror/plugin-bold": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-italic": "^0.0.1",

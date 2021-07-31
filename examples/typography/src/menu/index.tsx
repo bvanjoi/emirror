@@ -1,4 +1,4 @@
-import MenuContainer from '@emirror/menu-react-basic';
+import MenuContainer from '@emirror/menu-basic-react';
 import { EditorView } from '@emirror/pm/view';
 import MenuPlugin from '@emirror/menu';
 import React from 'react';

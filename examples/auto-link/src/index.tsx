@@ -1,5 +1,5 @@
 import React from 'react';
-import Emirror from '@emirror/core';
+import Emirror from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';

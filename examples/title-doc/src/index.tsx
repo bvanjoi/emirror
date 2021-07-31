@@ -1,5 +1,5 @@
 import React from 'react';
-import EMirror from '@emirror/core';
+import EMirror from '@emirror/react';
 import Title from '@emirror/plugin-title';
 import TitleDoc from '@emirror/plugin-title-doc';
 import Paragraph from '@emirror/plugin-paragraph';

@@ -1,4 +1,4 @@
-# `emirror__core-react`
+# `emirror__interface-react`
 
 > TODO: description
 

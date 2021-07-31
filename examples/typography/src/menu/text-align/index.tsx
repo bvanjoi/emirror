@@ -1,7 +1,7 @@
 import React from 'react';
 import TextAlign from '@emirror/plugin-text-align';
 import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-react-basic';
+import { BasicMenuBtn } from '@emirror/menu-basic-react';
 import { Property } from 'csstype';
 import center from './assets/center.svg';
 import justify from './assets/justify.svg';

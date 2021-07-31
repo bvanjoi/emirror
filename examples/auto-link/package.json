@@ -20,9 +20,9 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/core": "^0.0.1",
+    "@emirror/react": "^0.0.1",
     "@emirror/menu": "^0.0.1",
-    "@emirror/menu-react-basic": "^0.0.1",
+    "@emirror/menu-basic-react": "^0.0.1",
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-history": "^0.0.1",
     "@emirror/plugin-link": "^0.0.1",

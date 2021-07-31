@@ -12,7 +12,7 @@ EMirror, 旨在提供一份不受框架限制、开箱即用的富文本编辑�
 
 ```js
 import React from 'react';
-import EMirror from '@emirror/core';
+import EMirror from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';

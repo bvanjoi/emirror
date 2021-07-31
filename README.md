@@ -12,7 +12,7 @@ The Mini-Editor:
 
 ```js
 import React from 'react';
-import EMirror from '@emirror/core';
+import EMirror from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';

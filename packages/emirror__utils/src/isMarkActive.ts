@@ -13,7 +13,6 @@ export const isMarkActiveType = (
 ) => {
   const { from, to, empty } = state.selection;
   const type = typeOrName ? getMarkType(typeOrName, state.schema) : null;
-
   // if selection is empty
   if (empty) {
     return Boolean(
