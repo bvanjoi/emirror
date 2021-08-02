@@ -23,6 +23,6 @@
     "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1",
     "@emirror/utils": "^0.0.1",
-    "highlight.js": "^11.1.0"
+    "highlight.js": "^11.2.0"
   }
 }

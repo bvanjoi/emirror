@@ -39,23 +39,21 @@ class CodeBlock extends Node {
     };
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: new PluginKey(this.name),
-        props: {
-          // nodeViews: {
-          //   [this.name]: (node, view, getPos: () => number) =>
-          //     new CodeBlockView({
-          //       node,
-          //       view,
-          //       getPos,
-          //       options: { language: 'javascript' },
-          //     }),
-          // },
-        },
-      }),
-    ];
+  get plugin() {
+    return new Plugin({
+      key: new PluginKey(this.name),
+      props: {
+        // nodeViews: {
+        //   [this.name]: (node, view, getPos: () => number) =>
+        //     new CodeBlockView({
+        //       node,
+        //       view,
+        //       getPos,
+        //       options: { language: 'javascript' },
+        //     }),
+        // },
+      },
+    });
   }
 }
 

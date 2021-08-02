@@ -40,31 +40,29 @@ class Link extends Mark {
     };
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        props: {
-          handleClick: (view, pos, event) => {
-            const node = view.state.doc.resolve(pos).nodeBefore;
-            if (!node) {
-              return false;
-            }
-            const linkMark = node.marks.find(
-              mark => mark.type.name === this.name,
-            );
-            if (!linkMark) {
-              return false;
-            }
-            const { href } = linkMark.attrs;
-            if (href) {
-              window.open(href, '_blank');
-              return true;
-            }
+  get plugin() {
+    return new Plugin({
+      props: {
+        handleClick: (view, pos, event) => {
+          const node = view.state.doc.resolve(pos).nodeBefore;
+          if (!node) {
             return false;
-          },
+          }
+          const linkMark = node.marks.find(
+            mark => mark.type.name === this.name,
+          );
+          if (!linkMark) {
+            return false;
+          }
+          const { href } = linkMark.attrs;
+          if (href) {
+            window.open(href, '_blank');
+            return true;
+          }
+          return false;
         },
-      }),
-    ];
+      },
+    });
   }
 }
 

@@ -18,9 +18,21 @@ export default class Manager {
    * All EMirror plugins
    */
   #emPlugins: (Node | Mark | Extension)[];
+  /**
+   * All EMirror Nodes
+   */
   #emNodes: Node[];
+  /**
+   * All EMirror Marks
+   */
   #emMarks: Mark[];
+  /**
+   * All EMirror Extensions
+   */
   #emExtensions: Extension[];
+  /**
+   * GlobalAttrs from #exExtensions
+   */
   #globalAttrs: GlobalAttrs;
 
   constructor(plugins: (Node | Mark | Extension)[]) {
@@ -81,13 +93,15 @@ export default class Manager {
     );
 
   /**
-   * get plugins of ProseMirror from EMirror.
+   * Get all plugins of PM from EMirror.
    */
   get plugins() {
-    return this.#emPlugins.reduce(
-      (allPlugins, { plugins }) => [...allPlugins, ...plugins],
-      [] as Plugin[],
-    );
+    return this.#emPlugins
+      .filter(({ plugin }) => plugin)
+      .reduce(
+        (allPlugins, { plugin }) => [...allPlugins, plugin],
+        [] as Plugin[],
+      );
   }
 
   /**
@@ -112,7 +126,7 @@ export default class Manager {
 
   /**
    * Generate InputRules from EMPlugins
-   * @param schema The scheme generate from nodes and marks of Prosemirror
+   * @param schema The scheme generate from nodes and marks of PM
    * @returns inputRules[], and when typed, caused something happened.
    */
   inputRules = (schema: Schema) =>

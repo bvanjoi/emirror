@@ -7,21 +7,21 @@ import {
   Transaction,
 } from '@emirror/pm/state';
 import katex, { KatexOptions, ParseError } from 'katex';
-import { LatexPluginState } from './types';
+import { LatexPluginState } from '../types';
 import { StepMap } from '@emirror/pm/transform';
 import { keymap } from '@emirror/pm/keymap';
-import { history, redo, undo } from '@emirror/pm/history';
-import tab from './inner-keydown/tab';
-import backspace from './inner-keydown/backspace';
-import enter from './inner-keydown/enter';
-import arrowLeft from './inner-keydown/arrow-left';
-import arrowRight from './inner-keydown/arrow-right';
-import arrowUp from './inner-keydown/arrow-up';
-import arrowDown from './inner-keydown/arrow-down';
-import ctrlBackspace from './inner-keydown/ctrl-backspace';
-import ctrlEnter from './inner-keydown/ctrl-enter';
-import modShiftZ from './inner-keydown/mod-shift-z';
-import modZ from './inner-keydown/mod-z';
+import { history } from '@emirror/pm/history';
+import tab from '../inner-keydown/tab';
+import backspace from '../inner-keydown/backspace';
+import enter from '../inner-keydown/enter';
+import arrowLeft from '../inner-keydown/arrow-left';
+import arrowRight from '../inner-keydown/arrow-right';
+import arrowUp from '../inner-keydown/arrow-up';
+import arrowDown from '../inner-keydown/arrow-down';
+import ctrlBackspace from '../inner-keydown/ctrl-backspace';
+import ctrlEnter from '../inner-keydown/ctrl-enter';
+import modShiftZ from '../inner-keydown/mod-shift-z';
+import modZ from '../inner-keydown/mod-z';
 
 interface ICursorPosObserver {
   /**
@@ -121,7 +121,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     );
     this.dom = this.createContainerDOM();
 
-    const { latexRenderElement, latexSourceElement } = this.createContentDOM();
+    const { latexRenderElement, latexSourceElement } =
+      this.createContentDOM();
     this.latexRenderElement = latexRenderElement;
     this.latexSourceElement = latexSourceElement;
 
@@ -141,7 +142,9 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
       this.node.isInline === false
         ? document.createElement('div')
         : document.createElement('span');
-    containerDOM.classList.add(`emirror-${this.node.type.name}__nodeview-dom`);
+    containerDOM.classList.add(
+      `emirror-${this.node.type.name}__nodeview-dom`,
+    );
     containerDOM.classList.add('emirror-latex-node');
 
     if (this.katexOptions.displayMode) {
@@ -321,7 +324,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     if (!this.innerView) {
       return;
     }
-    const { state, transactions } = this.innerView.state.applyTransaction(tr);
+    const { state, transactions } =
+      this.innerView.state.applyTransaction(tr);
     this.innerView.updateState(state);
 
     if (!tr.getMeta('fromOutside')) {

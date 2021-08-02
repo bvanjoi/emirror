@@ -14,9 +14,7 @@ export default function (
 
     const attrs =
       getAttrs instanceof Function ? getAttrs(match) : getAttrs;
-    if (
-      !$start.parent.canReplaceWith(index, $end.index(), nodeType)
-    ) {
+    if (!$start.parent.canReplaceWith(index, $end.index(), nodeType)) {
       return null;
     }
 

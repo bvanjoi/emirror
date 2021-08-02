@@ -20,3 +20,4 @@ export * from './mergeParseDOMGetAttrs';
 export * from './mergeToDOMAttrs';
 export * from './getSchemaTypeNameByName';
 export * from './updateGlobalAttrs';
+export * from './isEmptyObject';

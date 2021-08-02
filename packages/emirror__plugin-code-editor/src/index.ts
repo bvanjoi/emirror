@@ -1,8 +1,7 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
 import { Plugin, PluginKey } from '@emirror/pm/state';
-import { keymap } from '@emirror/pm/keymap';
-import CodeEditorView from './code-editor-nodeview';
+import CodeEditorView from './nodeview';
 import { arrowHandler } from './commands';
 
 class CodeEditor extends Node {
@@ -33,29 +32,30 @@ class CodeEditor extends Node {
     };
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: new PluginKey(this.name),
-        props: {
-          nodeViews: {
-            [this.name]: (node, view, getPos: () => number) =>
-              new CodeEditorView({
-                view,
-                node,
-                getPos,
-                options: { language: node.attrs.language || 'javascript' },
-              }),
-          },
+  get plugin() {
+    return new Plugin({
+      key: new PluginKey(this.name),
+      props: {
+        nodeViews: {
+          [this.name]: (node, view, getPos: () => number) =>
+            new CodeEditorView({
+              view,
+              node,
+              getPos,
+              options: { language: node.attrs.language || 'javascript' },
+            }),
         },
-      }),
-      keymap({
-        ArrowLeft: arrowHandler('left'),
-        ArrowRight: arrowHandler('right'),
-        ArrowUp: arrowHandler('up'),
-        ArrowDown: arrowHandler('down'),
-      }),
-    ];
+      },
+    });
+  }
+
+  get keymap() {
+    return {
+      ArrowLeft: arrowHandler('left'),
+      ArrowRight: arrowHandler('right'),
+      ArrowUp: arrowHandler('up'),
+      ArrowDown: arrowHandler('down'),
+    };
   }
 }
 

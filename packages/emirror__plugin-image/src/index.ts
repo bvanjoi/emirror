@@ -32,32 +32,30 @@ class Image extends Node {
     };
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        props: {
-          nodeViews: {
-            [this.name]: node => {
-              const { src } = node.attrs;
-              // dom
-              const imgDOM = document.createElement('img');
+  get plugin() {
+    return new Plugin({
+      props: {
+        nodeViews: {
+          [this.name]: node => {
+            const { src } = node.attrs;
+            // dom
+            const imgDOM = document.createElement('img');
 
-              imgDOM.setAttribute('src', src);
-              imgDOM.classList.add('emirror-image');
+            imgDOM.setAttribute('src', src);
+            imgDOM.classList.add('emirror-image');
 
-              imgDOM.classList.add('loading');
-              imgDOM.addEventListener('load', () => {
-                imgDOM.classList.remove('loading');
-              });
+            imgDOM.classList.add('loading');
+            imgDOM.addEventListener('load', () => {
+              imgDOM.classList.remove('loading');
+            });
 
-              return {
-                dom: imgDOM,
-              };
-            },
+            return {
+              dom: imgDOM,
+            };
           },
         },
-      }),
-    ];
+      },
+    });
   }
 
   get commands() {

@@ -4,7 +4,7 @@ import { LatexPluginState } from './types';
 import {
   createLatexBlockNodeView,
   createLatexInlineNodeView,
-} from './createLatexNodeview';
+} from './nodeview';
 import './style.css';
 import 'katex/dist/katex.min.css';
 
@@ -15,38 +15,29 @@ class LatexBasic extends Node {
     return 'latex';
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: this.latexPluginKey,
-        state: {
-          init() {
-            return {
-              macros: {},
-              activeNodeViews: [],
-              prevCursorPos: 0,
-            };
-          },
-          apply: (_tr, value, oldState) => ({
-            ...value,
-            prevCursorPos: oldState.selection.from,
-          }),
+  get plugin() {
+    return new Plugin({
+      key: this.latexPluginKey,
+      state: {
+        init() {
+          return {
+            macros: {},
+            activeNodeViews: [],
+            prevCursorPos: 0,
+          };
         },
-        props: {
-          nodeViews: {
-            latexInline: createLatexInlineNodeView(this.latexPluginKey),
-            latexBlock: createLatexBlockNodeView(this.latexPluginKey),
-          },
+        apply: (_tr, value, oldState) => ({
+          ...value,
+          prevCursorPos: oldState.selection.from,
+        }),
+      },
+      props: {
+        nodeViews: {
+          latexInline: createLatexInlineNodeView(this.latexPluginKey),
+          latexBlock: createLatexBlockNodeView(this.latexPluginKey),
         },
-      }),
-    ];
-  }
-
-  get pluginsKey() {
-    const { latexPluginKey } = this;
-    return {
-      latexPluginKey,
-    };
+      },
+    });
   }
 }
 

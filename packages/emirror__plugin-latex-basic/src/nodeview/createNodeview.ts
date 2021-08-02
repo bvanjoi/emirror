@@ -1,8 +1,8 @@
 import { EditorView, NodeView } from '@emirror/pm/view';
 import { Node as PMNode } from '@emirror/pm/model';
 import { PluginKey } from '@emirror/pm/state';
-import { LatexPluginState } from './types';
-import LatexNodeView from './latex-nodeview';
+import { LatexPluginState } from '../types';
+import LatexNodeView from './nodeview';
 
 type Props = {
   displayMode: 'inline' | 'block';

@@ -18,14 +18,12 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 
-const Editor = () => {
-  return (
-    <EMirror
-      topNode={new Doc()}
-      plugins={[new Paragraph(), new Text(), new History()]}
-    />
-  );
-};
+const Editor = () => (
+  <EMirror
+    topNode={new Doc()}
+    plugins={[new Paragraph(), new Text(), new History()]}
+  />
+);
 
 export default Editor;
 ```

@@ -1,5 +1,4 @@
 import { Node } from '@emirror/core-structure';
-import { dropCursor } from '@emirror/pm/dropCursor';
 
 class Doc extends Node {
   get name() {
@@ -10,10 +9,6 @@ class Doc extends Node {
     return {
       content: 'block+',
     };
-  }
-
-  get plugins() {
-    return [dropCursor()];
   }
 }
 

@@ -1,7 +1,6 @@
 import { Keymap } from '@emirror/pm/commands';
-import { Plugin, PluginKey } from '@emirror/pm/state';
+import { Plugin as PMPlugin } from '@emirror/pm/state';
 import { PluginType } from './types';
-import { ErrorMsg } from './constant';
 
 /**
  * The base integration for ProseMirror.
@@ -9,9 +8,10 @@ import { ErrorMsg } from './constant';
 export class Base {
   /**
    * The name of this emirror plugin.
+   * @returns a string represent the key of this plugin.
    */
-  get name(): string | null {
-    throw Error(ErrorMsg.INVALID_NAME);
+  get name(): string {
+    throw Error('The name of plugin is undefined');
   }
 
   /**
@@ -22,18 +22,10 @@ export class Base {
   }
 
   /**
-   * All pluginKey for plugins
+   * The PMPlugin of this emPlugin.
    */
-  get pluginsKey(): { [name: string]: PluginKey } {
-    return {};
-  }
-
-  /**
-   * Provider plugins
-   * @returns All plugins in Base class.
-   */
-  get plugins(): Plugin[] {
-    return [];
+  get plugin(): PMPlugin {
+    return null;
   }
 
   /**

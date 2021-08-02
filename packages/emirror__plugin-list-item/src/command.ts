@@ -13,7 +13,7 @@ const isList = (node: PMNode, schema: Schema) => {
 };
 
 /**
- * toggle this paragraph to list and reverse.
+ * Toggle this paragraph to list and reverse.
  */
 export const toggleList =
   (

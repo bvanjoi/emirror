@@ -5,6 +5,7 @@ import { EditorState, Transaction } from '@emirror/pm/state';
 import { Schema, DOMParser } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';
+import { isEmptyObject } from '@emirror/utils';
 
 export type EMirrorOptions = {
   /**
@@ -48,7 +49,7 @@ export default class EMirror {
 
   constructor(opts: EMirrorOptions) {
     this.opts = opts;
-    const manager = new Manager([opts.topNode, ...opts.plugins] || []);
+    const manager = new Manager([opts.topNode, ...opts.plugins]);
 
     const { plugins, keymaps } = manager;
 
@@ -80,7 +81,7 @@ export default class EMirror {
     rules.length && plugins.push(inputRules({ rules }));
 
     // if key map are not empty, then push it to plugins.
-    Object.keys(keymaps).length && plugins.push(keymap(keymaps));
+    !isEmptyObject(keymaps) && plugins.push(keymap(keymaps));
 
     /**
      * Init doc of PM

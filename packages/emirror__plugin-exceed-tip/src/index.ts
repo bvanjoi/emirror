@@ -28,47 +28,45 @@ class ExceedTip extends Extension {
     return 'placeholder' as const;
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: this.exceedTipKey,
-        props: {
-          decorations: state => {
-            const { doc } = state;
-            const { lastChild } = doc;
+  get plugin() {
+    return new Plugin({
+      key: this.exceedTipKey,
+      props: {
+        decorations: state => {
+          const { doc } = state;
+          const { lastChild } = doc;
 
-            if (!lastChild) {
-              return;
-            }
+          if (!lastChild) {
+            return;
+          }
 
-            if (doc.textContent.length <= this.options.maxSize) {
-              return;
-            }
+          if (doc.textContent.length <= this.options.maxSize) {
+            return;
+          }
 
-            const pos = doc.content.size - lastChild.nodeSize;
+          const pos = doc.content.size - lastChild.nodeSize;
 
-            let className = 'emirror-exceed-tip ';
-            if (lastChild.isTextblock && !lastChild.textContent.length) {
-              // this if-else stat aims to format content
-              className += 'before';
-            } else {
-              className += 'after';
-            }
+          let className = 'emirror-exceed-tip ';
+          if (lastChild.isTextblock && !lastChild.textContent.length) {
+            // this if-else stat aims to format content
+            className += 'before';
+          } else {
+            className += 'after';
+          }
 
-            const decoration = Decoration.node(
-              pos,
-              pos + lastChild.nodeSize,
-              {
-                class: className,
-                'data-exceed-tip-content': `${doc.textContent.length}/${this.options.maxSize}`,
-              },
-            );
+          const decoration = Decoration.node(
+            pos,
+            pos + lastChild.nodeSize,
+            {
+              class: className,
+              'data-exceed-tip-content': `${doc.textContent.length}/${this.options.maxSize}`,
+            },
+          );
 
-            return DecorationSet.create(doc, [decoration]);
-          },
+          return DecorationSet.create(doc, [decoration]);
         },
-      }),
-    ];
+      },
+    });
   }
 }
 

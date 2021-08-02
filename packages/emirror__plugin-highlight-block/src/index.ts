@@ -46,52 +46,50 @@ class HighlightBlock extends Node {
     };
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: this.highlightBlockPluginKey,
-        props: {
-          nodeViews: {
-            [this.name]: (node, view, getPos) => {
-              // dom
-              const highlightBlockDOM = document.createElement('div');
-              highlightBlockDOM.classList.add('emirror-highlight-block');
-              // emoji Item
-              const { emoji } = node.attrs;
+  get plugin() {
+    return new Plugin({
+      key: this.highlightBlockPluginKey,
+      props: {
+        nodeViews: {
+          [this.name]: (node, view, getPos) => {
+            // dom
+            const highlightBlockDOM = document.createElement('div');
+            highlightBlockDOM.classList.add('emirror-highlight-block');
+            // emoji Item
+            const { emoji } = node.attrs;
 
-              const emojiItem = document.createElement('span');
-              emojiItem.classList.add('emirror-highlight-emoji');
-              emojiItem.setAttribute('data-emoji', emoji);
+            const emojiItem = document.createElement('span');
+            emojiItem.classList.add('emirror-highlight-emoji');
+            emojiItem.setAttribute('data-emoji', emoji);
 
-              emojiItem.addEventListener('click', () => {
-                if (typeof getPos === 'boolean') {
-                  return;
-                }
-                view.dispatch(
-                  view.state.tr.setNodeMarkup(getPos(), undefined, {
-                    emoji:
-                      this.emojis[
-                        Math.floor(Math.random() * this.emojis.length)
-                      ],
-                  }),
-                );
-              });
-              // contentDOM
-              const contentDOM = document.createElement('div');
-              contentDOM.classList.add('emirror-highligh-block-content');
+            emojiItem.addEventListener('click', () => {
+              if (typeof getPos === 'boolean') {
+                return;
+              }
+              view.dispatch(
+                view.state.tr.setNodeMarkup(getPos(), undefined, {
+                  emoji:
+                    this.emojis[
+                      Math.floor(Math.random() * this.emojis.length)
+                    ],
+                }),
+              );
+            });
+            // contentDOM
+            const contentDOM = document.createElement('div');
+            contentDOM.classList.add('emirror-highligh-block-content');
 
-              // append to dom
-              highlightBlockDOM.append(emojiItem, contentDOM);
+            // append to dom
+            highlightBlockDOM.append(emojiItem, contentDOM);
 
-              return {
-                dom: highlightBlockDOM,
-                contentDOM,
-              };
-            },
+            return {
+              dom: highlightBlockDOM,
+              contentDOM,
+            };
           },
         },
-      }),
-    ];
+      },
+    });
   }
 }
 

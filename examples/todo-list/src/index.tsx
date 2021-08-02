@@ -19,7 +19,7 @@ const TodoListEMirror = () => {
       {view && <Menu view={view} plugins={{ todoList }} />}
       <EMirror
         afterInit={_view => {
-          setView(view);
+          setView(_view);
         }}
         topNode={new Doc()}
         plugins={[
@@ -31,7 +31,7 @@ const TodoListEMirror = () => {
         ]}
       >
         <p>
-          Maybe you had something's to do, then you can use ToDoList
+          Maybe you had something's to do, then you can use TODO List
           plugin.
         </p>
         <p>

@@ -26,36 +26,34 @@ class Placeholder extends Extension {
     return 'placeholder' as const;
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: this.placeholderKey,
-        props: {
-          decorations: (state) => {
-            const { doc, selection } = state;
-            const { anchor } = selection;
+  get plugin() {
+    return new Plugin({
+      key: this.placeholderKey,
+      props: {
+        decorations: state => {
+          const { doc, selection } = state;
+          const { anchor } = selection;
 
-            if (doc.childCount > 1) {
-              return;
-            }
+          if (doc.childCount > 1) {
+            return;
+          }
 
-            const pos = 0;
-            const emptyNodeSize = 2;
-            const hasAnchor = anchor >= pos && anchor <= pos + emptyNodeSize;
-            if (!hasAnchor) {
-              return;
-            }
+          const pos = 0;
+          const emptyNodeSize = 2;
+          const hasAnchor = anchor >= pos && anchor <= pos + emptyNodeSize;
+          if (!hasAnchor) {
+            return;
+          }
 
-            const decoration = Decoration.node(pos, pos + emptyNodeSize, {
-              class: 'emirror-placeholder',
-              'data-placeholder-content': this.options.content,
-            });
+          const decoration = Decoration.node(pos, pos + emptyNodeSize, {
+            class: 'emirror-placeholder',
+            'data-placeholder-content': this.options.content,
+          });
 
-            return DecorationSet.create(doc, [decoration]);
-          },
+          return DecorationSet.create(doc, [decoration]);
         },
-      }),
-    ];
+      },
+    });
   }
 }
 

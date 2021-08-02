@@ -33,53 +33,51 @@ class WebsiteCard extends Node {
     };
   }
 
-  get plugins() {
-    return [
-      new Plugin({
-        key: this.websiteCardPluginKey,
-        props: {
-          nodeViews: {
-            [this.name]: (node, view, getPos) => {
-              const { href } = node.attrs;
-              // dom
-              const dom = document.createElement('div');
-              dom.setAttribute('data-href', href);
-              dom.classList.add('emirror-website-card');
+  get plugin() {
+    return new Plugin({
+      key: this.websiteCardPluginKey,
+      props: {
+        nodeViews: {
+          [this.name]: (node, view, getPos) => {
+            const { href } = node.attrs;
+            // dom
+            const dom = document.createElement('div');
+            dom.setAttribute('data-href', href);
+            dom.classList.add('emirror-website-card');
 
-              dom.addEventListener('click', () => {
-                window.open(href);
-              });
+            dom.addEventListener('click', () => {
+              window.open(href);
+            });
 
-              // left
-              const leftDiv = document.createElement('div');
-              leftDiv.classList.add('left', 'content');
+            // left
+            const leftDiv = document.createElement('div');
+            leftDiv.classList.add('left', 'content');
 
-              const titleSpan = document.createElement('span');
-              titleSpan.classList.add('title');
+            const titleSpan = document.createElement('span');
+            titleSpan.classList.add('title');
 
-              const contentSpan = document.createElement('span');
-              contentSpan.classList.add('desc');
+            const contentSpan = document.createElement('span');
+            contentSpan.classList.add('desc');
 
-              const hrefSpan = document.createElement('span');
-              hrefSpan.classList.add('href');
+            const hrefSpan = document.createElement('span');
+            hrefSpan.classList.add('href');
 
-              leftDiv.append(titleSpan, contentSpan, hrefSpan);
+            leftDiv.append(titleSpan, contentSpan, hrefSpan);
 
-              // right
-              const rightDiv = document.createElement('div');
-              rightDiv.classList.add('right', 'image');
+            // right
+            const rightDiv = document.createElement('div');
+            rightDiv.classList.add('right', 'image');
 
-              dom.append(leftDiv, rightDiv);
-              const contentDOM = document.createElement('span');
-              return {
-                dom,
-                contentDOM,
-              };
-            },
+            dom.append(leftDiv, rightDiv);
+            const contentDOM = document.createElement('span');
+            return {
+              dom,
+              contentDOM,
+            };
           },
         },
-      }),
-    ];
+      },
+    });
   }
 }
 

@@ -1,7 +1,6 @@
 import { NodeSpec, NodeType } from '@emirror/pm/model';
 import { InputRule } from '@emirror/pm/inputrules';
 import { Base } from './base';
-import { ErrorMsg } from './constant';
 import { GlobalAttrs, PluginType } from './types';
 
 /**
@@ -13,10 +12,12 @@ export class Node extends Base {
   }
 
   /**
-   * get ProseMirror NodeSpec to generator NodeType.
+   * Get PM NodeSpec to generate PM NodeType.
+   * @param globalAttrs which can be defined in Extension, It should combine
+   *                    @emirror/utils/mergeAttrs.
    */
   createNodeSpec(globalAttrs?: GlobalAttrs): NodeSpec {
-    throw Error(ErrorMsg.INVALID_NODE);
+    throw Error(`NodeSpec of ${this.name} can not be undefined`);
   }
 
   /**

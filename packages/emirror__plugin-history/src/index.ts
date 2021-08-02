@@ -8,8 +8,8 @@ class History extends Extension {
     return 'history' as const;
   }
 
-  get plugins() {
-    return [history()];
+  get plugin() {
+    return history();
   }
 
   get commands() {

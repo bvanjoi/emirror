@@ -8,7 +8,8 @@ export default function (
 ) {
   return new InputRule(pattern, (state, match, start, end) => {
     const $start = state.doc.resolve(start);
-    const attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
+    const attrs =
+      getAttrs instanceof Function ? getAttrs(match) : getAttrs;
 
     if (
       !$start
