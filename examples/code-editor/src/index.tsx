@@ -5,6 +5,7 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import CodeEditor from '@emirror/plugin-code-editor';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const CodeEditorEMirror = () => (
   <EMirror
@@ -12,6 +13,7 @@ const CodeEditorEMirror = () => (
     plugins={[
       new Paragraph(),
       new Text(),
+      new BaseKeymap(),
       new History(),
       new CodeEditor(),
     ]}

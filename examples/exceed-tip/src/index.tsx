@@ -5,6 +5,7 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import ExceedTip from '@emirror/plugin-exceed-tip';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const ExceedTipEMirror = () => (
   <EMirror
@@ -12,6 +13,7 @@ const ExceedTipEMirror = () => (
     plugins={[
       new Paragraph(),
       new Text(),
+      new BaseKeymap(),
       new History(),
       new ExceedTip({ maxSize: 140 }),
     ]}

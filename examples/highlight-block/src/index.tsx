@@ -8,6 +8,7 @@ import HighlightBlock from '@emirror/plugin-highlight-block';
 import BulletList from '@emirror/plugin-bullet-list';
 import ListItem from '@emirror/plugin-list-item';
 import OrderList from '@emirror/plugin-order-list';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const emojis = [
   '🙂',
@@ -49,6 +50,7 @@ const HighlightBlockEMirror = () => (
     plugins={[
       new Paragraph(),
       new Text(),
+      new BaseKeymap(),
       new History(),
       new HighlightBlock({ emojis }),
       new ListItem(),

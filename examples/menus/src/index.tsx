@@ -11,6 +11,7 @@ import Heading from '@emirror/plugin-heading';
 import BulletList from '@emirror/plugin-bullet-list';
 import ListItem from '@emirror/plugin-list-item';
 import OrderList from '@emirror/plugin-order-list';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 import PopoverMenu from './popover-menu';
 import FloatMenu from './float-menu';
 
@@ -41,6 +42,7 @@ const MenusEMirror = () => {
         topNode={new Doc()}
         plugins={[
           new Text(),
+          new BaseKeymap(),
           new ListItem(),
           ...Object.values(popoverPlugins),
           ...Object.values(floatPlugins),

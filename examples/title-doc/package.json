@@ -26,6 +26,7 @@
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",
     "@emirror/plugin-title": "^0.0.1",
+    "@emirror/plugin-basekeymap": "^0.0.1",
     "@emirror/plugin-title-doc": "^0.0.1"
   }
 }

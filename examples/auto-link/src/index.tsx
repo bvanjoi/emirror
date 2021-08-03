@@ -5,12 +5,19 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import Link from '@emirror/plugin-link';
 import History from '@emirror/plugin-history';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const LinkEmirror = () => (
   <div>
     <Emirror
       topNode={new Doc()}
-      plugins={[new Paragraph(), new Text(), new Link(), new History()]}
+      plugins={[
+        new Paragraph(),
+        new Text(),
+        new BaseKeymap(),
+        new Link(),
+        new History(),
+      ]}
     >
       <p>
         This is a<span> </span>

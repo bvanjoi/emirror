@@ -30,6 +30,7 @@
     "@emirror/plugin-doc": "^0.0.1",
     "@emirror/plugin-heading": "^0.0.1",
     "@emirror/plugin-hr": "^0.0.1",
+    "@emirror/plugin-basekeymap": "^0.0.1",
     "@emirror/plugin-hard-break": "^0.0.1"
   }
 }

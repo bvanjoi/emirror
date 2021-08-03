@@ -8,6 +8,7 @@ import History from '@emirror/plugin-history';
 import Heading from '@emirror/plugin-heading';
 import HardBreak from '@emirror/plugin-hard-break';
 import TextAlign from '@emirror/plugin-text-align';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 import HR from '@emirror/plugin-hr';
 import Menu from './menu';
 // import './style.css';
@@ -29,6 +30,7 @@ const TypoEMirror = () => {
         plugins={[
           new Paragraph(),
           new Text(),
+          new BaseKeymap(),
           new History(),
           new Heading(),
           new HardBreak(),

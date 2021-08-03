@@ -1,12 +1,11 @@
 {
-  "name": "@emirror/example-latex",
+  "name": "@emirror/plugin-basekeymap",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "private": "true",
-  "main": "dist/emirror-example-latex.cjs.js",
+  "main": "dist/emirror-plugin-basekeymap.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -21,14 +20,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/react": "^0.0.1",
-    "@emirror/plugin-doc": "^0.0.1",
-    "@emirror/plugin-history": "^0.0.1",
-    "@emirror/plugin-hr": "^0.0.1",
-    "@emirror/plugin-latex-block": "^0.0.1",
-    "@emirror/plugin-latex-inline": "^0.0.1",
-    "@emirror/plugin-paragraph": "^0.0.1",
-    "@emirror/plugin-basekeymap": "^0.0.1",
-    "@emirror/plugin-text": "^0.0.1"
+    "@emirror/core-structure": "^0.0.1",
+    "@emirror/pm": "^0.0.1"
   }
 }

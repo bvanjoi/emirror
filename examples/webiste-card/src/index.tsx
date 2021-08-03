@@ -5,6 +5,7 @@ import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import WebsiteCard from '@emirror/plugin-website-card';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 import Menu from './menu';
 
 const TitleDocEMirror = () => {
@@ -20,7 +21,12 @@ const TitleDocEMirror = () => {
           setView(view);
         }}
         topNode={new Doc()}
-        plugins={[new Paragraph(), new Text(), websiteCard]}
+        plugins={[
+          new Paragraph(),
+          new Text(),
+          new BaseKeymap(),
+          websiteCard,
+        ]}
       >
         <p>
           this is website card, it provide more infomation of a website.

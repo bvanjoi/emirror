@@ -5,6 +5,7 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import Image from '@emirror/plugin-image';
 import History from '@emirror/plugin-history';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 import { EditorView } from '@emirror/pm/view';
 import Menu from './menu';
 
@@ -24,7 +25,13 @@ const ImageEmirror = () => {
           setView(_view);
         }}
         topNode={new Doc()}
-        plugins={[new Paragraph(), new Text(), image, new History()]}
+        plugins={[
+          new Paragraph(),
+          new Text(),
+          new BaseKeymap(),
+          image,
+          new History(),
+        ]}
       >
         <p>EMirror also provide image plugin.</p>
         <img src={IMG_SOURCE}></img>

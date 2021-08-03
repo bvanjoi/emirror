@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 import Routes from './routes';
 import {
   Nav,
@@ -128,16 +129,25 @@ const routeComponents = [
   },
 ];
 
-const App = () => (
-  <AppView>
-    <Nav />
-    <Introduction />
-    <SubNavigation menus={routeComponents.map(editor => editor.path)} />
-    <EditorContainer>
-      <Routes routeComponents={routeComponents} />
-    </EditorContainer>
-    <ShowCodeLink url={`${prefix}${location.pathname}`} />
-  </AppView>
-);
+const App = () => {
+  const location = useLocation();
+  const [pathname, setPathname] = useState(location.pathname);
+
+  useEffect(() => {
+    setPathname(location.pathname);
+  }, [location]);
+
+  return (
+    <AppView>
+      <Nav />
+      <Introduction />
+      <SubNavigation menus={routeComponents.map(editor => editor.path)} />
+      <EditorContainer>
+        <Routes routeComponents={routeComponents} />
+      </EditorContainer>
+      <ShowCodeLink url={`${prefix}${pathname}`} />
+    </AppView>
+  );
+};
 
 export default App;

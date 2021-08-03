@@ -7,6 +7,7 @@ import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import TodoItem from '@emirror/plugin-todo-item';
 import TodoList from '@emirror/plugin-todo-list';
+import BaseKeymap from '@emirror/plugin-basekeymap';
 import Menu from './menu';
 
 const TodoListEMirror = () => {
@@ -25,6 +26,7 @@ const TodoListEMirror = () => {
         plugins={[
           new Paragraph(),
           new Text(),
+          new BaseKeymap(),
           new History(),
           new TodoItem(),
           todoList,
