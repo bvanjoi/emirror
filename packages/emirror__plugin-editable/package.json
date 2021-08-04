@@ -1,12 +1,11 @@
 {
-  "name": "@emirror/example-read-only",
+  "name": "@emirror/plugin-editable",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
-  "license": "ISC",
-  "private": "true",
-  "main": "dist/emirror-example-read-only.cjs.js",
+  "license": "MIT",
+  "main": "dist/emirror-plugin-editable.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -21,12 +20,7 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/react": "^0.0.1",
-    "@emirror/plugin-doc": "^0.0.1",
-    "@emirror/plugin-history": "^0.0.1",
-    "@emirror/plugin-paragraph": "^0.0.1",
-    "@emirror/plugin-basekeymap": "^0.0.1",
-    "@emirror/plugin-text": "^0.0.1",
-    "@emirror/plugin-editable": "^0.0.1"
+    "@emirror/pm": "^0.0.1",
+    "@emirror/core-structure": "^0.0.1"
   }
 }

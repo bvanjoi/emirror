@@ -72,12 +72,6 @@ export const EMirrorView = (props: EMirrorProps) => {
     };
   }, []);
 
-  useEffect(() => {
-    // ! Why viewProvider.view return undefine?
-    const emirror = emirrorRef.current;
-    emirror.setEditable(editable);
-  }, [editable]);
-
   return (
     <div className={cls('emirror', className)}>
       <EMirrorInnerView ref={viewDOMRef} spellCheck='false'>

@@ -5,24 +5,40 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import BaseKeymap from '@emirror/plugin-basekeymap';
+import Editable from '@emirror/plugin-editable';
 
 const ReadOnlyEMirror = () => {
-  const [editable, setEditable] = useState(false);
+  const [editableState, setEditableState] = useState(false);
+  const [view, setView] = useState(null);
+  const editable = new Editable();
+
+  const handleClick = (newState: boolean) => {
+    editable.commands.setEditable(newState)(undefined, undefined, view);
+    setEditableState(newState);
+  };
 
   return (
     <div>
-      <div onClick={() => setEditable(!editable)}>
-        <input
-          type='checkbox'
-          name='editable'
-          id='editable'
-          checked={editable}
-        />
-        <label>editable</label>
-      </div>
+      {view && (
+        <>
+          <input
+            type='checkbox'
+            name='editable'
+            id='editable'
+            checked={editableState}
+            onChange={() => {
+              handleClick(!editableState);
+            }}
+          />
+          <label>editable</label>
+        </>
+      )}
       <EMirror
         topNode={new Doc()}
-        editable={editable}
+        afterInit={_view => {
+          setView(_view);
+        }}
+        editable={editableState}
         plugins={[
           new Paragraph(),
           new Text(),

@@ -100,6 +100,7 @@ export default class EMirror {
      */
     const view = new EditorView(opts.container, {
       state,
+      editable: () => opts.editable ?? true,
       dispatchTransaction: this.dispatchTransaction,
     });
 
@@ -117,17 +118,6 @@ export default class EMirror {
     this.view.updateState(newState);
     this.opts.afterUpdate?.(this.view);
   };
-
-  /**
-   * Set Editable.
-   * @param editable Can Editable?
-   */
-  setEditable(editable: boolean) {
-    this.view.update({
-      ...this.view.props,
-      editable: () => editable,
-    });
-  }
 
   /**
    * Destroy EMirror editor.
