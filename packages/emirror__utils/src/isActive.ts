@@ -14,9 +14,9 @@ export const isActive = (
   if (!state) {
     return false;
   }
-  if (plugin.type === 'node') {
+  if (plugin instanceof Node) {
     return isNodeActiveType(state, plugin.name, attrs);
-  } else if (plugin.type === 'mark') {
+  } else if (plugin instanceof Mark) {
     return isMarkActiveType(state, plugin.name, attrs);
   } else {
     return (

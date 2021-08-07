@@ -16,6 +16,10 @@ class Image extends Node {
         src: {},
       },
       group: 'block',
+      // Because spec.content is empty, so it will be
+      // a leaf node(which can't editable), and write `atom`
+      // is `true` just for clarity.
+      atom: true,
       draggable: true,
       parseDOM: [
         {

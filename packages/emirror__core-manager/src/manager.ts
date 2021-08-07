@@ -39,15 +39,15 @@ export default class Manager {
     this.#emPlugins = plugins;
 
     this.#emNodes = plugins.filter(
-      plugin => plugin.type === 'node',
+      plugin => plugin instanceof Node,
     ) as Node[];
 
     this.#emMarks = plugins.filter(
-      plugin => plugin.type === 'mark',
+      plugin => plugin instanceof Mark,
     ) as Mark[];
 
     this.#emExtensions = plugins.filter(
-      plugin => plugin.type === 'extension',
+      plugin => plugin instanceof Extension,
     ) as Extension[];
 
     this.#globalAttrs = this.#emExtensions.reduce((all, nowExtension) => {
@@ -130,12 +130,14 @@ export default class Manager {
    * @returns inputRules[], and when typed, caused something happened.
    */
   inputRules = (schema: Schema) =>
-    [...this.#emNodes, ...this.#emMarks]
-      .map(plugin =>
-        plugin.inputRules({
-          type: schema[`${plugin.type}s`][plugin.name],
-        }),
-      )
+    [
+      ...this.#emNodes.map(plugin =>
+        plugin.inputRules({ type: schema['nodes'][plugin.name] }),
+      ),
+      ...this.#emMarks.map(plugin =>
+        plugin.inputRules({ type: schema['marks'][plugin.name] }),
+      ),
+    ]
       .filter(rules => rules && Array.isArray(rules))
       .reduce(
         (allRules, rules) => [...allRules, ...rules],
