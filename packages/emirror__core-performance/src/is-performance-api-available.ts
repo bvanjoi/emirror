@@ -11,13 +11,15 @@ export const isPerformanceAPIAvailable = () =>
     'getEntriesByName',
     'getEntriesByType',
     'now',
-  ].every((api) => Boolean((performance as any)[api]));
+  ].every(api => Boolean((performance as any)[api]));
 
 /**
  * Is there has PerformanceObserver in env?
  */
 export const isPerformanceObserverAvailable = () =>
-  Boolean(typeof window !== 'undefined' && 'PerformanceObserver' in window);
+  Boolean(
+    typeof window !== 'undefined' && 'PerformanceObserver' in window,
+  );
 
 /**
  * Is PerformanceObserver support longtask?

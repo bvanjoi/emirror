@@ -24,7 +24,9 @@ export function stopMeasure(
     return;
   }
   performance.mark(`${measureName}::end`);
-  const start = onMeasureComplete ? measureMap.get(measureName) : undefined;
+  const start = onMeasureComplete
+    ? measureMap.get(measureName)
+    : undefined;
   try {
     performance.measure(
       measureName,
