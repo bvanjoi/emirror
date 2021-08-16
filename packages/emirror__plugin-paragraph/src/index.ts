@@ -28,7 +28,7 @@ class Paragraph extends Node {
 
   get commands() {
     return {
-      setParagraph: setBlockType(this.name),
+      setParagraph: () => setBlockType(this.name),
     };
   }
 }

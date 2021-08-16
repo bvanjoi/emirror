@@ -16,14 +16,10 @@ import BulletListBtn from './bullet-list';
 import HRBtn from './hr';
 import ParagraphBtn from './paragraph';
 import HardBreakBtn from './hard-break';
+import { useEMirrorContext } from '@emirror/react';
 
-type Props = {
-  view: EditorView;
-  plugins: Record<string, any>;
-};
-
-const Menu = (props: Props) => {
-  const { view, plugins } = props;
+const Menu = () => {
+  const emirror = useEMirrorContext();
   return (
     <MenuContainer view={view} items={plugins} menuPlugin={MenuPlugin}>
       <BoldBtn view={view} plugin={plugins.bold} />

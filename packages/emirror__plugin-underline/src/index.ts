@@ -23,7 +23,7 @@ class Underline extends Mark {
 
   get commands() {
     return {
-      toggleUnderline: toggleMark(this.name),
+      toggleUnderline: () => toggleMark(this.name),
     };
   }
 

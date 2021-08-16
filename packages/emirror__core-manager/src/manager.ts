@@ -3,6 +3,7 @@ import {
   Mark,
   Extension,
   GlobalAttrs,
+  Command,
 } from '@emirror/core-structure';
 import { MarkSpec, NodeSpec, Schema } from '@emirror/pm/model';
 import { Plugin } from '@emirror/pm/state';
@@ -106,24 +107,38 @@ export default class Manager {
 
   /**
    * Generate Keymap from EMPlugins
-   * @param schema The scheme generate from nodes and marks of Prosemirror
+   * @param schema The scheme generate from nodes and marks of ProseMirror
    * @returns When keydown some keyboard, some command will exec.
    */
-  get keymaps(): Keymap {
+  get keymaps() {
     return this.#emPlugins
       .map(plugin => plugin.keymap)
-      .reduce((kms, obj) => {
-        Object.entries(obj).forEach(([key, value]) => {
-          if (kms[key]) {
-            kms[key] = chainCommands(value, kms[key]);
+      .reduce((allKms, kms) => {
+        Object.entries(kms).forEach(([key, km]) => {
+          if (allKms[key]) {
+            allKms[key] = chainCommands(km, allKms[key]);
           } else {
-            kms[key] = value;
+            allKms[key] = km;
           }
-        }, kms);
-        return kms;
-      }, {});
+        }, allKms);
+        return allKms;
+      }, {} as Keymap);
   }
 
+  get commands() {
+    return this.#emPlugins
+      .map(plugin => plugin.commands)
+      .reduce((allCmds, cmds) => {
+        Object.entries(cmds).forEach(([key, cmd]) => {
+          if (allCmds[key]) {
+            console.error(`The command ${key} had same name.`);
+          } else {
+            allCmds[key] = cmd;
+          }
+        });
+        return allCmds;
+      }, {} as Record<string, Command>);
+  }
   /**
    * Generate InputRules from EMPlugins
    * @param schema The scheme generate from nodes and marks of PM

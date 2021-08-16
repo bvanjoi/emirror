@@ -41,7 +41,7 @@ class OrderList extends Node {
 
   get commands() {
     return {
-      toggleOrderList: toggleList(this.name, 'listItem'),
+      toggleOrderList: () => toggleList(this.name, 'listItem'),
     };
   }
 

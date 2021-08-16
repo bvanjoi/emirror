@@ -21,7 +21,7 @@ class Italic extends Mark {
 
   get commands() {
     return {
-      toggleItalic: toggleMark(this.name),
+      toggleItalic: () => toggleMark(this.name),
     };
   }
 

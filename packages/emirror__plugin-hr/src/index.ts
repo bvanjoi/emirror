@@ -18,7 +18,7 @@ class HR extends Node {
   }
 
   get commands() {
-    return { insertHR: insertHR(this.name) };
+    return { insertHR: () => insertHR(this.name) };
   }
 
   inputRules = ({ type }) => [nodeInputRules(/^---/, type)];

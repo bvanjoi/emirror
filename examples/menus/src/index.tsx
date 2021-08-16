@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import EMirror from '@emirror/react';
-import { EditorView } from '@emirror/pm/view';
+import React from 'react';
+import {
+  useEmirror,
+  EMirrorContext,
+  EMirrorComponent,
+} from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
@@ -16,51 +19,42 @@ import PopoverMenu from './popover-menu';
 import FloatMenu from './float-menu';
 
 const MenusEMirror = () => {
-  const [view, setView] = useState<EditorView>(null);
-
-  const popoverPlugins = {
-    bold: new Bold(),
-    italic: new Italic(),
-    strike: new Strike(),
-  };
-
-  const floatPlugins = {
-    paragraph: new Paragraph(),
-    heading: new Heading(),
-    bulletList: new BulletList(),
-    orderList: new OrderList(),
-  };
+  const emirror = useEmirror({
+    topNode: new Doc(),
+    emPlugins: [
+      new Bold(),
+      new Italic(),
+      new Strike(),
+      new Paragraph(),
+      new Heading(),
+      new BulletList(),
+      new OrderList(),
+      new Text(),
+      new BaseKeymap(),
+      new ListItem(),
+    ],
+  });
 
   return (
-    <div style={{ position: 'relative' }}>
-      {view && <PopoverMenu view={view} plugins={popoverPlugins} />}
-      {view && <FloatMenu view={view} plugins={floatPlugins} />}
-      <EMirror
-        afterInit={_view => {
-          setView(_view);
-        }}
-        topNode={new Doc()}
-        plugins={[
-          new Text(),
-          new BaseKeymap(),
-          new ListItem(),
-          ...Object.values(popoverPlugins),
-          ...Object.values(floatPlugins),
-        ]}
-      >
-        <p>This example show:</p>
-        <ul>
-          <li>
-            Popover menu, you can select some areas anything to get it.
-          </li>
-          <li>
-            Float menu, when you focus on the first of paragraph, it will
-            appear.
-          </li>
-        </ul>
-        <p></p>
-      </EMirror>
-    </div>
+    emirror && (
+      <EMirrorContext.Provider value={emirror}>
+        {/* {view && <PopoverMenu view={view} plugins={popoverPlugins} />} */}
+        {/* {view && <FloatMenu view={view} plugins={floatPlugins} />} */}
+        <EMirrorComponent>
+          <p>This example show:</p>
+          <ul>
+            <li>
+              Popover menu, you can select some areas anything to get it.
+            </li>
+            <li>
+              Float menu, when you focus on the first of paragraph, it will
+              appear.
+            </li>
+          </ul>
+          <p></p>
+        </EMirrorComponent>
+      </EMirrorContext.Provider>
+    )
   );
 };
 

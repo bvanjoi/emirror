@@ -1,9 +1,9 @@
 import React from 'react';
 import { EditorView } from '@emirror/pm/view';
-import { Node, Mark } from '@emirror/core-structure';
+import { Node, Mark, Extension } from '@emirror/core-structure';
 import { Plugin } from '@emirror/pm/state';
 
-export type Items = Record<string, Node | Mark>;
+export type Items = Record<string, Node | Mark | Extension>;
 
 export interface MenuProps {
   /**

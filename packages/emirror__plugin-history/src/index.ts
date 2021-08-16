@@ -14,8 +14,8 @@ class History extends Extension {
 
   get commands() {
     return {
-      redo,
-      undo,
+      redo: () => redo,
+      undo: () => undo,
     };
   }
 

@@ -19,7 +19,7 @@ class BulletList extends Node {
 
   get commands() {
     return {
-      toggleBulletList: toggleList(this.name, 'listItem'),
+      toggleBulletList: () => toggleList(this.name, 'listItem'),
     };
   }
 

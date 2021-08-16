@@ -29,7 +29,7 @@ class Bold extends Mark {
 
   get commands() {
     return {
-      toggleBold: toggleMark(this.name),
+      toggleBold: () => toggleMark(this.name),
     };
   }
 

@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import Emirror from '@emirror/react';
+import React from 'react';
+import {
+  EMirrorComponent,
+  EMirrorContext,
+  useEmirror,
+} from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import Image from '@emirror/plugin-image';
 import History from '@emirror/plugin-history';
 import BaseKeymap from '@emirror/plugin-basekeymap';
-import { EditorView } from '@emirror/pm/view';
+import NodePlaceholder from '@emirror/plugin-node-placeholder';
 import Menu from './menu';
 
 const IMG_SOURCE =
@@ -14,35 +18,34 @@ const IMG_SOURCE =
 const GIF_SOURCE = 'https://media.giphy.com/media/OzHKDlB6CqwZG/giphy.gif';
 
 const ImageEmirror = () => {
-  const [view, setView] = useState<EditorView>(null);
-  const image = new Image();
+  const emirror = useEmirror({
+    topNode: new Doc(),
+    emPlugins: [
+      new Paragraph(),
+      new Text(),
+      new BaseKeymap(),
+      new History(),
+      new Image(),
+      new NodePlaceholder(),
+    ],
+  });
 
   return (
-    <div>
-      {view && <Menu view={view} plugins={{ image }} />}
-      <Emirror
-        afterInit={_view => {
-          setView(_view);
-        }}
-        topNode={new Doc()}
-        plugins={[
-          new Paragraph(),
-          new Text(),
-          new BaseKeymap(),
-          image,
-          new History(),
-        ]}
-      >
-        <p>EMirror also provide image plugin.</p>
-        <img src={IMG_SOURCE}></img>
-        <p>It also supports GIF:</p>
-        <img src={GIF_SOURCE} />
-        <p>
-          It also supports upload form local, but in real world, It better
-          to upload to CDN firstly.
-        </p>
-      </Emirror>
-    </div>
+    emirror && (
+      <EMirrorContext.Provider value={emirror}>
+        {/* {view && <Menu view={view} plugins={{ image, nodePlaceholder }} />} */}
+        <EMirrorComponent>
+          <p>EMirror also provide image plugin.</p>
+          <img src={IMG_SOURCE}></img>
+          <p>It also supports GIF:</p>
+          <img src={GIF_SOURCE} />
+          <p>
+            It also supports upload form local, but in real world, It
+            better to upload to CDN firstly.
+          </p>
+        </EMirrorComponent>
+      </EMirrorContext.Provider>
+    )
   );
 };
 

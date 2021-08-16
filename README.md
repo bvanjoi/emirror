@@ -12,24 +12,36 @@ The Mini-Editor:
 
 ```js
 import React from 'react';
-import EMirror from '@emirror/react';
+import {
+  useEmirror,
+  EMirrorContext,
+  EMirrorComponent,
+} from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import BaseKeymap from '@emirror/plugin-basekeymap';
 
-const Editor = () => (
-  <EMirror
-    topNode={new Doc()}
-    plugins={[
+const Editor = () => {
+  const emirror = useEmirror({
+    topNode: new Doc(),
+    emPlugins: [
       new Paragraph(),
       new Text(),
       new BaseKeymap(),
       new History(),
-    ]}
-  />
-);
+    ],
+  });
+
+  return (
+    emirror && (
+      <EMirrorContext.Provider value={emirror}>
+        <EMirrorComponent />
+      </EMirrorContext.Provider>
+    )
+  );
+};
 
 export default Editor;
 ```

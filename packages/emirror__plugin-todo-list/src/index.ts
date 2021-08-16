@@ -24,7 +24,7 @@ class TodoList extends Node {
 
   get commands() {
     return {
-      toggleTodoList: toggleList(this.name, 'todoItem'),
+      toggleTodoList: () => toggleList(this.name, 'todoItem'),
     };
   }
 

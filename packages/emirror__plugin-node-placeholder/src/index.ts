@@ -1,10 +1,10 @@
 import { Extension } from '@emirror/core-structure';
-import { EditorState, Plugin, PluginKey } from '@emirror/pm/state';
+import { Plugin, PluginKey } from '@emirror/pm/state';
 import { Decoration, DecorationSet } from '@emirror/pm/view';
+import './style.css';
 
 class NodePlaceholder extends Extension {
   nodePlaceholderKey = new PluginKey<DecorationSet>(this.name);
-
   get name() {
     return 'nodePlaceholder';
   }
@@ -16,10 +16,9 @@ class NodePlaceholder extends Extension {
         init() {
           return DecorationSet.empty;
         },
-        apply(tr, _set) {
-          let set = _set;
-          set = set.map(tr.mapping, tr.doc);
-          const action = tr.getMeta(this);
+        apply: (tr, _set) => {
+          let set = _set.map(tr.mapping, tr.doc);
+          const action = tr.getMeta(this.nodePlaceholderKey);
           if (action?.add) {
             const widget = document.createElement('node-placeholder');
             const deco = Decoration.widget(action.add.pos, widget, {
@@ -35,22 +34,9 @@ class NodePlaceholder extends Extension {
         },
       },
       props: {
-        decorations(state) {
-          return this.getState(state);
-        },
+        decorations: state => this.nodePlaceholderKey.getState(state),
       },
     });
-  }
-
-  get commands() {
-    const findPlaceholder = (state: EditorState, id: string) => {
-      const decos = this.nodePlaceholderKey.getState(state);
-      const found = decos.find(null, null, spec => spec.id === id);
-      return found.length ? found[0].from : null;
-    };
-    return {
-      findPlaceholder,
-    };
   }
 }
 

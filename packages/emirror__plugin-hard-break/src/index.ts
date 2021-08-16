@@ -18,7 +18,7 @@ class HardBreak extends Node {
 
   get commands() {
     return {
-      insertHardBreak: insertHardBreak(this.name),
+      insertHardBreak: () => insertHardBreak(this.name),
     };
   }
 

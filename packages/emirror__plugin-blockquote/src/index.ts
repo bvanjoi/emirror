@@ -22,7 +22,7 @@ class Blockquote extends Node {
 
   get commands() {
     return {
-      toggleBlockquote: toggleWrap(this.name),
+      toggleBlockquote: () => toggleWrap(this.name),
     };
   }
 

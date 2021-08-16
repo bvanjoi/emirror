@@ -16,7 +16,7 @@ class Sub extends Mark {
 
   get commands() {
     return {
-      toggleSub: toggleMark(this.name),
+      toggleSub: () => toggleMark(this.name),
     };
   }
 

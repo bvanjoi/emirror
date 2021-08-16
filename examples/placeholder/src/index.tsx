@@ -1,5 +1,9 @@
 import React from 'react';
-import EMirror from '@emirror/react';
+import {
+  useEmirror,
+  EMirrorContext,
+  EMirrorComponent,
+} from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
@@ -10,17 +14,23 @@ import BaseKeymap from '@emirror/plugin-basekeymap';
 const PlaceholderEMirror = () => {
   const content =
     'This is a empty document, and this is a placeholder, write anything here to eliminate that.';
+
+  const emirror = useEmirror({
+    topNode: new Doc(),
+    emPlugins: [
+      new Paragraph(),
+      new Text(),
+      new BaseKeymap(),
+      new History(),
+      new Placeholder({ content }),
+    ],
+  });
   return (
-    <EMirror
-      topNode={new Doc()}
-      plugins={[
-        new Paragraph(),
-        new Text(),
-        new BaseKeymap(),
-        new History(),
-        new Placeholder({ content }),
-      ]}
-    />
+    emirror && (
+      <EMirrorContext.Provider value={emirror}>
+        <EMirrorComponent />
+      </EMirrorContext.Provider>
+    )
   );
 };
 

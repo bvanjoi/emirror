@@ -17,7 +17,7 @@ class Code extends Mark {
 
   get commands() {
     return {
-      toggleCode: toggleMark(this.name),
+      toggleCode: () => toggleMark(this.name),
     };
   }
 

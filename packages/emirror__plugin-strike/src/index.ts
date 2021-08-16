@@ -24,7 +24,7 @@ class Strike extends Mark {
 
   get commands() {
     return {
-      toggleStrike: toggleMark(this.name),
+      toggleStrike: () => toggleMark(this.name),
     };
   }
 

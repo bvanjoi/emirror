@@ -1,0 +1,43 @@
+.emirror .emirror-image {
+  margin: auto;
+  display: block;
+  max-width: 200px;
+  border: 1px solid transparent;
+}
+
+.emirror .ProseMirror-selectednode.emirror-image {
+  border: 1px solid dodgerblue;
+}
+
+/* ---- resize box ------------------------ */
+.emirror-image-node .emirror-image-resize-box-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: relative;
+}
+.emirror-image-node.ProseMirror-selectednode
+  .emirror-image-resize-box-container {
+  display: inline;
+}
+
+.emirror-image-node .emirror-image-resize-box::after {
+  content: ' ';
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+.emirror-image-node.top_left {
+}
+
+.emirror-image-node.top_right {
+}
+
+.emirror-image-node.bottom_left {
+}
+
+.emirror-image-node.bottom_right {
+}
+
+/* ---- resize box end ------------------------ */

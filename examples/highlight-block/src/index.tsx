@@ -1,5 +1,9 @@
 import React from 'react';
-import EMirror from '@emirror/react';
+import {
+  useEmirror,
+  EMirrorContext,
+  EMirrorComponent,
+} from '@emirror/react';
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
@@ -44,10 +48,10 @@ const emojis = [
   '🍆',
 ];
 
-const HighlightBlockEMirror = () => (
-  <EMirror
-    topNode={new Doc()}
-    plugins={[
+const HighlightBlockEMirror = () => {
+  const emirror = useEmirror({
+    topNode: new Doc(),
+    emPlugins: [
       new Paragraph(),
       new Text(),
       new BaseKeymap(),
@@ -56,18 +60,28 @@ const HighlightBlockEMirror = () => (
       new ListItem(),
       new OrderList(),
       new BulletList(),
-    ]}
-  >
-    <p>Highlight block it make you written some important thing.</p>
-    <div className='emirror-highlight-block'>
-      <span className='emirror-highlight-emoji'></span>
-      <p>You can record here, such as:</p>
-      <ul>
-        <li>Do not forget to brush your teeth.</li>
-      </ul>
-    </div>
-    <p>This example shows how to build a little complex block node.</p>
-  </EMirror>
-);
+    ],
+  });
+
+  return (
+    emirror && (
+      <EMirrorContext.Provider value={emirror}>
+        <EMirrorComponent>
+          <p>Highlight block it make you written some important thing.</p>
+          <div className='emirror-highlight-block'>
+            <span className='emirror-highlight-emoji'></span>
+            <p>You can record here, such as:</p>
+            <ul>
+              <li>Do not forget to brush your teeth.</li>
+            </ul>
+          </div>
+          <p>
+            This example shows how to build a little complex block node.
+          </p>
+        </EMirrorComponent>
+      </EMirrorContext.Provider>
+    )
+  );
+};
 
 export default HighlightBlockEMirror;

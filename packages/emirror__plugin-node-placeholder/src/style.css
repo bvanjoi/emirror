@@ -1,0 +1,12 @@
+.emirror .node-placeholder {
+  display: inline;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.emirror .node-placeholder::after {
+  content: '☁';
+  font-size: 200%;
+  line-height: 0.1;
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import { Command, Keymap } from '@emirror/pm/commands';
+import { Keymap, Command } from '@emirror/pm/commands';
 import { Plugin as PMPlugin } from '@emirror/pm/state';
 
 /**
@@ -23,7 +23,7 @@ export class Base {
   /**
    * Commands for this plugin
    */
-  get commands(): Record<string, Command> {
+  get commands(): Record<string, (...args: any[]) => Command> {
     return {};
   }
 
