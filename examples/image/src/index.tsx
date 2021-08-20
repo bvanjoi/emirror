@@ -33,7 +33,7 @@ const ImageEmirror = () => {
   return (
     emirror && (
       <EMirrorContext.Provider value={emirror}>
-        {/* {view && <Menu view={view} plugins={{ image, nodePlaceholder }} />} */}
+        <Menu />
         <EMirrorComponent>
           <p>EMirror also provide image plugin.</p>
           <img src={IMG_SOURCE}></img>

@@ -1,7 +1,7 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
 import { wrapIn } from '@emirror/pm/commands';
-import { toggleWrap } from '@emirror/utils';
+import { toggleWrap } from '@emirror/core-helpers';
 import { wrappingInputRule } from '@emirror/pm/inputrules';
 import './style.css';
 

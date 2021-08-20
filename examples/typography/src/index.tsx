@@ -33,8 +33,8 @@ const TypoEMirror = () => {
   return (
     emirror && (
       <EMirrorContext.Provider value={emirror}>
+        <Menu />
         <EMirrorComponent>
-          {/* {view && <Menu view={view} plugins={plugins} />} */}
           <h2 style={{ textAlign: 'center' }}>Believe in the Future</h2>
           <p style={{ textAlign: 'center' }}>
             When cobwebs relentlessly clog my stove

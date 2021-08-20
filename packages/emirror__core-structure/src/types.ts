@@ -27,7 +27,7 @@ export interface NodeViewComponentProps<S extends Schema = any> {
  * - `all` means all em plugins. **Default**.
  * - `nodes` means only em node plugins.
  * - `marks` means only em mark plugins.
- * - use string[] to define pointed plugins.
+ * - use string[] to define specified plugins.
  */
 export type GlobalAttrScope = 'all' | 'nodes' | 'marks' | string[];
 

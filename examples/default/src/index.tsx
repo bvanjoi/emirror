@@ -59,7 +59,7 @@ const DefaultEMirror = () => {
   return (
     emirror && (
       <EMirrorContext.Provider value={emirror}>
-        {/* <Menu /> */}
+        <Menu />
         <EMirrorComponent>
           <h4>Hello, This is the default setup of EMirror.</h4>
           <blockquote>

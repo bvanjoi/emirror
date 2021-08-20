@@ -1,22 +1,24 @@
 import React from 'react';
-import Code from '@emirror/plugin-code';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isMarkActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Code;
-  view: EditorView;
+const CodeBtn = () => {
+  const emirror = useEMirrorContext();
+  return (
+    <MenuButton
+      activated={isMarkActive(
+        emirror.view.state,
+        emirror.emPlugins.code.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleCode());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='code-icon' />
+    </MenuButton>
+  );
 };
-
-const CodeBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleCode}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
 
 export default CodeBtn;

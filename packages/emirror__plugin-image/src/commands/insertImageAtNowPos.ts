@@ -1,6 +1,7 @@
 import { Command } from '@emirror/pm/commands';
 import { NodeType } from '@emirror/pm/model';
-import { getNodeType, insertNode } from '@emirror/utils';
+import { insertNode } from '@emirror/utils';
+import { getNodeType } from '@emirror/core-helpers';
 
 /**
  *

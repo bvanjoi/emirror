@@ -1,11 +1,11 @@
 {
-  "name": "@emirror/menu",
+  "name": "@emirror/core-helpers",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-menu.cjs.js",
+  "main": "dist/emirror-core-helpers.cjs.js",
   "publishConfig": {
     "access": "public"
   },
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@emirror/pm": "^0.0.1",
-    "@emirror/utils": "^0.0.1",
-    "@emirror/core-structure": "^0.0.1"
+    "@emirror/core-structure": "^0.0.1",
+    "@emirror/utils": "^0.0.1"
   }
 }

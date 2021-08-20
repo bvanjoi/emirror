@@ -1,22 +1,25 @@
 import React from 'react';
-import HardBreak from '@emirror/plugin-hard-break';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isNodeActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: HardBreak;
-  view: EditorView;
+const HardBreakBtn = () => {
+  const emirror = useEMirrorContext();
+
+  return (
+    <MenuButton
+      activated={isNodeActive(
+        emirror.view.state,
+        emirror.emPlugins.hr.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.insertHardBreak());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='hr-icon' />
+    </MenuButton>
+  );
 };
 
-const CodeBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.insertHardBreak}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
-
-export default CodeBtn;
+export default HardBreakBtn;

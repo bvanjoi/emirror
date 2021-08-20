@@ -2,12 +2,12 @@ import { GlobalAttrs, Node } from '@emirror/core-structure';
 import { NodeSpec, Node as PMNode } from '@emirror/pm/model';
 import { setBlockType } from '@emirror/pm/commands';
 import { textblockTypeInputRule } from '@emirror/pm/inputrules';
+import { toggleNode } from '@emirror/core-helpers';
 import {
   genID,
   mergeParseDOMGetAttrs,
   mergeSpecAttrs,
   mergeToDOMAttrs,
-  toggleNode,
 } from '@emirror/utils';
 
 class Heading extends Node {

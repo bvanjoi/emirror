@@ -1,6 +1,6 @@
 import * as PMCommands from 'prosemirror-commands';
 import { MarkType, NodeType, Schema } from 'prosemirror-model';
-import { getMarkType, getNodeType } from '@emirror/utils';
+import { getMarkType, getNodeType } from '@emirror/core-helpers';
 
 /**
  * // Extends the type to nameOrType.

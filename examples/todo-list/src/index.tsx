@@ -29,8 +29,8 @@ const TodoListEMirror = () => {
   return (
     emirror && (
       <EMirrorContext.Provider value={emirror}>
+        <Menu />
         <EMirrorComponent>
-          {/* {view && <Menu view={view} plugins={{ todoList }} />} */}
           <p>
             Maybe you had something's to do, then you can use TODO List
             plugin.

@@ -1,7 +1,7 @@
 import { Command, lift, wrapIn } from '@emirror/pm/commands';
 import { NodeType } from '@emirror/pm/model';
+import { isNodeActive } from './isNodeActive';
 import { getNodeType } from './getNodeType';
-import { isNodeActiveType } from './isNodeActive';
 
 /**
  * if wrap in, wrap out this node,
@@ -16,7 +16,7 @@ export function toggleWrap(
 ): Command {
   return (state, dispatch) => {
     const nodeType = getNodeType(nodeNameOrType, state.schema);
-    if (isNodeActiveType(state, nodeType, attrs)) {
+    if (isNodeActive(state, nodeType, attrs)) {
       return lift(state, dispatch);
     } else {
       return wrapIn(nodeType, attrs)(state, dispatch);

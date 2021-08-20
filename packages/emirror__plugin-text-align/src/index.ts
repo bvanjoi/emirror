@@ -1,6 +1,6 @@
 import { Extension, GlobalAttrs } from '@emirror/core-structure';
+import { updateGlobalAttrs } from '@emirror/core-helpers';
 import { Command } from '@emirror/pm/commands';
-import { updateAttrs } from '@emirror/utils';
 import { Property } from 'csstype';
 
 type Options = {
@@ -33,7 +33,7 @@ class TextAlign extends Extension {
         (textAlign: Property.TextAlign): Command =>
         (state, dispatch, view) =>
           this.scope.every(type =>
-            updateAttrs(type, { textAlign })(state, dispatch, view),
+            updateGlobalAttrs(type, { textAlign })(state, dispatch, view),
           ),
     };
   }

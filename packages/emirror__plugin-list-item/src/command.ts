@@ -1,7 +1,8 @@
 import { Command } from '@emirror/pm/commands';
 import { NodeType, Schema, Node as PMNode } from '@emirror/pm/model';
 import { liftListItem, wrapInList } from '@emirror/pm/schema-list';
-import { getNodeType, findParentNode } from '@emirror/utils';
+import { findParentNode } from '@emirror/utils';
+import { getNodeType } from '@emirror/core-helpers';
 
 const isList = (node: PMNode, schema: Schema) => {
   const { type } = node;

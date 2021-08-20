@@ -1,6 +1,7 @@
 import { chainCommands, Command } from '@emirror/pm/commands';
 import { TextSelection } from '@emirror/pm/state';
-import { getNodeType, insertNode } from '@emirror/utils';
+import { insertNode } from '@emirror/utils';
+import { getNodeType } from '@emirror/core-helpers';
 
 export function insertHR(nodeName: string): Command {
   return (state, dispatch, view) => {

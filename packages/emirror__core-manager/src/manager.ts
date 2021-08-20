@@ -3,12 +3,11 @@ import {
   Mark,
   Extension,
   GlobalAttrs,
-  Command,
 } from '@emirror/core-structure';
 import { MarkSpec, NodeSpec, Schema } from '@emirror/pm/model';
 import { Plugin } from '@emirror/pm/state';
 import { InputRule } from '@emirror/pm/inputrules';
-import { Keymap, chainCommands } from '@emirror/pm/commands';
+import { Keymap, chainCommands, Command } from '@emirror/pm/commands';
 import { canGlobalAttrsApply } from './utils';
 
 /**
@@ -137,7 +136,7 @@ export default class Manager {
           }
         });
         return allCmds;
-      }, {} as Record<string, Command>);
+      }, {} as Record<string, () => Command>);
   }
   /**
    * Generate InputRules from EMPlugins

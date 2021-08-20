@@ -1,5 +1,5 @@
 import { Command } from 'prosemirror-commands';
-import { getNodeType } from '@emirror/utils';
+import { getNodeType } from '@emirror/core-helpers';
 import { NodeType } from 'prosemirror-model';
 import * as PMList from 'prosemirror-schema-list';
 

@@ -4,7 +4,7 @@ import { getMarkType } from './getMarkType';
 import { getNodeType } from './getNodeType';
 import { getSchemaTypeNameByName } from './getSchemaTypeNameByName';
 
-export function updateAttrs(
+export function updateGlobalAttrs(
   typeOrName: string | NodeType | MarkType,
   attrs: Record<string, any> = {},
 ): Command {

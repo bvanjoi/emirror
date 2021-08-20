@@ -53,6 +53,10 @@ export default class EMirror {
    */
   opts: EMirrorOptions;
   /**
+   * The emPlugin.
+   */
+  emPlugins: Record<string, Node | Mark | Extension>;
+  /**
    * The commands extract from emPlugins.
    */
   commands: Record<string, (...args: any[]) => Command>;
@@ -112,6 +116,9 @@ export default class EMirror {
 
     this.view = view;
     this.commands = commands;
+    this.emPlugins = Object.fromEntries(
+      opts.emPlugins.map(emPlugin => [emPlugin.name, emPlugin]),
+    );
     this.opts.afterInit?.(this);
     this.view.focus();
   }

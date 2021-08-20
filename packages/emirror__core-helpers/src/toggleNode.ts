@@ -1,10 +1,10 @@
 import { Command, setBlockType } from '@emirror/pm/commands';
 import { NodeType } from '@emirror/pm/model';
 import { getNodeType } from './getNodeType';
-import { isNodeActiveType } from './isNodeActive';
+import { isNodeActive } from './isNodeActive';
 
 /**
- * if active, set this block to normal type,
+ * If active, set this block to normal type,
  * otherwise, set this block to active type
  *
  * @param activeNodeNameOrType **Active** node name or type
@@ -22,7 +22,7 @@ export function toggleNode(
     const activeNodeType = getNodeType(activeNodeNameOrType, state.schema);
     const normalNodeType = getNodeType(normalNoeNameOrType, state.schema);
 
-    if (isNodeActiveType(state, activeNodeType, activeNodeAttrs)) {
+    if (isNodeActive(state, activeNodeType, activeNodeAttrs)) {
       return setBlockType(normalNodeType, normalNodeAttrs)(
         state,
         dispatch,

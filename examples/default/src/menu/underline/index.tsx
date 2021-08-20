@@ -1,22 +1,25 @@
 import React from 'react';
-import Underline from '@emirror/plugin-underline';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isMarkActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Underline;
-  view: EditorView;
-};
+const UnderlineBtn = () => {
+  const emirror = useEMirrorContext();
 
-const UnderlineBtn = ({ view, plugin }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleUnderline}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
+  return (
+    <MenuButton
+      activated={isMarkActive(
+        emirror.view.state,
+        emirror.emPlugins.underline.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleUnderline());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='underline-icon' />
+    </MenuButton>
+  );
+};
 
 export default UnderlineBtn;

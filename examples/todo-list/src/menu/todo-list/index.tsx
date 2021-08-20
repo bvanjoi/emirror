@@ -1,22 +1,25 @@
 import React from 'react';
-import TodoList from '@emirror/plugin-todo-list';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isNodeActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: TodoList;
-  view: EditorView;
-};
+const TodoListBtn = () => {
+  const emirror = useEMirrorContext();
 
-const TodoListBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleTodoList}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
+  return (
+    <MenuButton
+      activated={isNodeActive(
+        emirror.view.state,
+        emirror.emPlugins.todoList.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleTodoList());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='todoList-icon' />
+    </MenuButton>
+  );
+};
 
 export default TodoListBtn;

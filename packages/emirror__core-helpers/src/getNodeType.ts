@@ -1,7 +1,7 @@
 import { NodeType, Schema } from '@emirror/pm/model';
 
 /**
- * Get the type of node if it exist in schema.
+ * Get the type of PMNode if it exist in specified schema.
  * If it's do not exist, it will throw error.
  */
 export function getNodeType(

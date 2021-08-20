@@ -1,22 +1,24 @@
 import React from 'react';
-import Paragraph from '@emirror/plugin-paragraph';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isNodeActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Paragraph;
-  view: EditorView;
+const ParagraphBtn = () => {
+  const emirror = useEMirrorContext();
+  return (
+    <MenuButton
+      activated={isNodeActive(
+        emirror.view.state,
+        emirror.emPlugins.paragraph.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.setParagraph());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='paragraph-icon' />
+    </MenuButton>
+  );
 };
-
-const ParagraphBtn = ({ view, plugin }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.setParagraph}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
 
 export default ParagraphBtn;

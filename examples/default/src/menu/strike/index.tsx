@@ -1,22 +1,25 @@
 import React from 'react';
-import Strike from '@emirror/plugin-strike';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isMarkActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Strike;
-  view: EditorView;
-};
+const StrikeBtn = () => {
+  const emirror = useEMirrorContext();
 
-const StrikeBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleStrike}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
+  return (
+    <MenuButton
+      activated={isMarkActive(
+        emirror.view.state,
+        emirror.emPlugins.strike.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleStrike());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='strike-icon' />
+    </MenuButton>
+  );
+};
 
 export default StrikeBtn;

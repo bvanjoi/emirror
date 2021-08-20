@@ -1,37 +1,38 @@
 import React from 'react';
-import TextAlign from '@emirror/plugin-text-align';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
 import { Property } from 'csstype';
 import center from './assets/center.svg';
 import justify from './assets/justify.svg';
 import left from './assets/left.svg';
 import right from './assets/right.svg';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isActive } from '@emirror/core-helpers';
 
-type Props = {
-  plugin: TextAlign;
-  view: EditorView;
-};
-
-const TextAlignBtns = ({ view, plugin }: Props) => {
+const TextAlignBtns = () => {
   const icons = [left, right, center, justify];
   const attrs = ['left', 'right', 'center', 'justify'];
-  const commands = 'setTextAlign';
+  const emirror = useEMirrorContext();
 
   return (
     <React.Fragment>
       {icons.map((icon, index) => (
-        <BasicMenuBtn
+        <MenuButton
           key={index}
-          view={view}
-          plugin={plugin}
-          onClick={plugin.commands[commands](
-            attrs[index] as Property.TextAlign,
+          activated={isActive(
+            emirror.view.state,
+            emirror.emPlugins.textAlign,
+            { textAlign: attrs[index] },
           )}
-          attrs={{ textAlign: attrs[index] }}
+          onClick={() => {
+            emirror.runCommand(
+              emirror.commands.setTextAlign(
+                attrs[index] as Property.TextAlign,
+              ),
+            );
+            emirror.view.focus();
+          }}
         >
           <img src={icon} />
-        </BasicMenuBtn>
+        </MenuButton>
       ))}
     </React.Fragment>
   );

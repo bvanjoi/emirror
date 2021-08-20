@@ -3,6 +3,7 @@ import EMirror, { EMirrorOptions } from '@emirror/core';
 
 const useForceUpdate = () => {
   const [, setState] = useState(0);
+  // ! why `() => setState(value + 1)` can't rerender.
   return () => setState(value => value + 1);
 };
 

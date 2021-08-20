@@ -1,66 +1,46 @@
 import React from 'react';
-import MenuContainer, { BasicMenuBtn } from '@emirror/menu-basic-react';
-import MenuPlugin from '@emirror/menu';
-import { EditorView } from '@emirror/pm/view';
-import { Command } from '@emirror/pm/commands';
-import Image, { uploadImageFromLocal } from '@emirror/plugin-image';
+import { uploadImageFromLocal } from '@emirror/plugin-image';
 import icon from './assets/icon.svg';
-import NodePlaceholder from '@emirror/plugin-node-placeholder';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
 
-type Props = {
-  view: EditorView;
-  plugins: { image: Image; nodePlaceholder: NodePlaceholder };
-};
-
-const UploadBtnFromCDN = ({
-  view,
-  plugin,
-}: {
-  view: EditorView;
-  plugin: Image;
-}) => {
-  const handleClick: Command = (state, disptach) => {
-    const url = window.prompt('URL');
-    return plugin.commands.insertImageAtNowPos(url)(state, disptach);
-  };
+const UploadBtnFromCDN = () => {
+  const emirror = useEMirrorContext();
 
   return (
-    <BasicMenuBtn view={view} onClick={handleClick}>
+    <MenuButton
+      onClick={() => {
+        const url = window.prompt('URL');
+        emirror.runCommand(emirror.commands.insertImageAtNowPos(url));
+        emirror.view.focus();
+      }}
+    >
       <img src={icon} alt='image-icon' />
-    </BasicMenuBtn>
+    </MenuButton>
   );
 };
 
-const UploadBtnFromLoacl = ({
-  view,
-  plugin,
-}: {
-  view: EditorView;
-  plugin: NodePlaceholder;
-}) => {
+const UploadBtnFromLoacl = () => {
+  const emirror = useEMirrorContext();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files.length) {
       uploadImageFromLocal(
-        view,
+        emirror.view,
         e.target.files[0],
-        plugin.nodePlaceholderKey,
+        emirror.emPlugins.nodePlaceholder.nodePlaceholderKey,
       );
     }
 
-    view.focus();
+    emirror.view.focus();
   };
   return <input type='file' onChange={handleChange} />;
 };
 
-const Menu = (props: Props) => {
-  const { view, plugins } = props;
-
-  return (
-    <UploadBtnFromLoacl view={view} plugin={plugins.nodePlaceholder} />
-    // <MenuContainer view={view} items={plugins} menuPlugin={MenuPlugin}>
-    // {/* <UploadBtnFromCDN view={view} plugin={plugins.image} /> */}
-    // </MenuContainer>
-  );
-};
+const Menu = () => (
+  <UploadBtnFromLoacl />
+  // <MenuContainer view={view} items={plugins} menuPlugin={MenuPlugin}>
+  // {/* <UploadBtnFromCDN view={view} plugin={plugins.image} /> */}
+  // </MenuContainer>
+);
 
 export default Menu;

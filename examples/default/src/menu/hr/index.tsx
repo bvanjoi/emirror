@@ -1,22 +1,25 @@
 import React from 'react';
-import HR from '@emirror/plugin-hr';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isNodeActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: HR;
-  view: EditorView;
-};
+const HRBtn = () => {
+  const emirror = useEMirrorContext();
 
-const HRBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.insertHR}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
+  return (
+    <MenuButton
+      activated={isNodeActive(
+        emirror.view.state,
+        emirror.emPlugins.hr.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.insertHR());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='hr-icon' />
+    </MenuButton>
+  );
+};
 
 export default HRBtn;

@@ -1,6 +1,7 @@
 import { chainCommands, Command, exitCode } from '@emirror/pm/commands';
 import { NodeType } from '@emirror/pm/model';
-import { insertNode, getNodeType } from '@emirror/utils';
+import { insertNode } from '@emirror/utils';
+import { getNodeType } from '@emirror/core-helpers';
 
 export function insertHardBreak(
   nodeNameOrType: string | NodeType,

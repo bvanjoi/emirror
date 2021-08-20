@@ -1,18 +1,20 @@
 import React from 'react';
-import Histroy from '@emirror/plugin-history';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Histroy;
-  view: EditorView;
-};
+const UndoButton = () => {
+  const emirror = useEMirrorContext();
 
-const UndoButton = ({ view, plugin }: Props) => (
-  <BasicMenuBtn view={view} onClick={plugin.commands.undo}>
-    <img src={icon} />
-  </BasicMenuBtn>
-);
+  return (
+    <MenuButton
+      onClick={() => {
+        emirror.runCommand(emirror.commands.undo());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='undo-icon' />
+    </MenuButton>
+  );
+};
 
 export default UndoButton;

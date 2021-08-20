@@ -42,7 +42,7 @@ export const EMirrorComponent: React.FC = ({
     emirror.view.focus();
     return () => {
       if (emirror.view.dom) {
-        viewDOMRef?.current.removeChild(emirror.view.dom);
+        viewDOMRef.current?.removeChild(emirror.view.dom);
       }
     };
   }, [emirror]);
