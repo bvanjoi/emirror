@@ -8,8 +8,7 @@ import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
-import CodeEditor from '@emirror/plugin-code-editor';
-import BaseKeymap from '@emirror/plugin-basekeymap';
+import CodeEditor from '@emirror/plugin-codemirror5';
 
 const CodeEditorEMirror = () => {
   const emirror = useEmirror({
@@ -17,7 +16,6 @@ const CodeEditorEMirror = () => {
     emPlugins: [
       new Paragraph(),
       new Text(),
-      new BaseKeymap(),
       new History(),
       new CodeEditor(),
     ],
@@ -31,7 +29,7 @@ const CodeEditorEMirror = () => {
             This plugin is copy from website example, and it will expend
             this feature.
           </p>
-          <div className='emirror-code-editor'>
+          <div className='emirror-codemirror5'>
             {`/**
  * get the sum of a and b.
  * @param(number) a

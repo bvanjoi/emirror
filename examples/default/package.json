@@ -43,7 +43,6 @@
     "@emirror/plugin-underline": "^0.0.1",
     "@emirror/plugin-sup": "^0.0.1",
     "@emirror/plugin-sub": "^0.0.1",
-    "@emirror/plugin-basekeymap": "^0.0.1",
     "@emirror/plugin-hard-break": "^0.0.1",
     "@emirror/core-helpers": "^0.0.1"
   }

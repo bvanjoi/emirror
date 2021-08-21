@@ -24,11 +24,11 @@ class CodeEditor extends Node {
       isolating: true,
       parseDOM: [
         {
-          tag: `div.emirror-code-editor`,
+          tag: `div.emirror-codemirror5`,
           preserveWhitespace: 'full',
         },
       ],
-      toDOM: () => ['div', { class: 'emirror-code-editor' }, 0],
+      toDOM: () => ['div', { class: 'emirror-codemirror5' }, 0],
     };
   }
 

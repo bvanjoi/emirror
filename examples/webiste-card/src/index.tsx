@@ -8,18 +8,12 @@ import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import WebsiteCard from '@emirror/plugin-website-card';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 import Menu from './menu';
 
-const TitleDocEMirror = () => {
+const WebsiteEMirror = () => {
   const emirror = useEmirror({
     topNode: new Doc(),
-    emPlugins: [
-      new Paragraph(),
-      new Text(),
-      new BaseKeymap(),
-      new WebsiteCard(),
-    ],
+    emPlugins: [new Paragraph(), new Text(), new WebsiteCard()],
   });
 
   return (
@@ -40,4 +34,4 @@ const TitleDocEMirror = () => {
   );
 };
 
-export default TitleDocEMirror;
+export default WebsiteEMirror;

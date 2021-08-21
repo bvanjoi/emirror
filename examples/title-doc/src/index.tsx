@@ -9,18 +9,11 @@ import TitleDoc from '@emirror/plugin-title-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const TitleDocEMirror = () => {
   const emirror = useEmirror({
     topNode: new TitleDoc(),
-    emPlugins: [
-      new Title(),
-      new Paragraph(),
-      new Text(),
-      new BaseKeymap(),
-      new History(),
-    ],
+    emPlugins: [new Title(), new Paragraph(), new Text(), new History()],
   });
   return (
     emirror && (

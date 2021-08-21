@@ -25,7 +25,6 @@ import HR from '@emirror/plugin-hr';
 import Sub from '@emirror/plugin-sub';
 import Sup from '@emirror/plugin-sup';
 import HardBreak from '@emirror/plugin-hard-break';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 import Menu from './menu';
 
 const DefaultEMirror = () => {
@@ -47,7 +46,6 @@ const DefaultEMirror = () => {
       new History(),
       new HardBreak(),
       new Text(),
-      new BaseKeymap(),
       new ListItem(),
       new TextBgColor(),
       new TextColor(),

@@ -113,7 +113,7 @@ const routeComponents = [
     component: ImageEditor,
   },
   {
-    path: 'code-editor',
+    path: 'codemirror5',
     component: CodeEditor,
   },
   {

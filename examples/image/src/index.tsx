@@ -9,7 +9,6 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import Image from '@emirror/plugin-image';
 import History from '@emirror/plugin-history';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 import NodePlaceholder from '@emirror/plugin-node-placeholder';
 import Menu from './menu';
 
@@ -23,7 +22,6 @@ const ImageEmirror = () => {
     emPlugins: [
       new Paragraph(),
       new Text(),
-      new BaseKeymap(),
       new History(),
       new Image(),
       new NodePlaceholder(),

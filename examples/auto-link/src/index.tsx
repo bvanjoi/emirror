@@ -9,18 +9,11 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import Link from '@emirror/plugin-link';
 import History from '@emirror/plugin-history';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const LinkEmirror = () => {
   const emirror = useEmirror({
     topNode: new Doc(),
-    emPlugins: [
-      new Paragraph(),
-      new Text(),
-      new BaseKeymap(),
-      new Link(),
-      new History(),
-    ],
+    emPlugins: [new Paragraph(), new Text(), new Link(), new History()],
   });
 
   return (

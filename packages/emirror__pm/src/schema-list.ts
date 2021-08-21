@@ -1,7 +1,7 @@
 import { Command } from 'prosemirror-commands';
-import { getNodeType } from '@emirror/core-helpers';
 import { NodeType } from 'prosemirror-model';
 import * as PMList from 'prosemirror-schema-list';
+import { getNodeType } from '@emirror/core-helpers';
 
 function splitListItem(nodeNameOrType: string | NodeType): Command {
   return (state, dispatch) => {

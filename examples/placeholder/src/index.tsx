@@ -9,7 +9,6 @@ import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
 import History from '@emirror/plugin-history';
 import Placeholder from '@emirror/plugin-placeholder';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const PlaceholderEMirror = () => {
   const content =
@@ -20,7 +19,6 @@ const PlaceholderEMirror = () => {
     emPlugins: [
       new Paragraph(),
       new Text(),
-      new BaseKeymap(),
       new History(),
       new Placeholder({ content }),
     ],

@@ -1,6 +1,6 @@
 import { Node, GlobalAttrs } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { setBlockType } from '@emirror/pm/commands';
+import { setBlockType, baseKeymap } from '@emirror/pm/commands';
 import {
   mergeParseDOMGetAttrs,
   mergeSpecAttrs,
@@ -30,6 +30,10 @@ class Paragraph extends Node {
     return {
       setParagraph: () => setBlockType(this.name),
     };
+  }
+
+  get keymap() {
+    return baseKeymap;
   }
 }
 

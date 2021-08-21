@@ -1,11 +1,11 @@
-# `code-editor`
+# `codemirror5`
 
 > TODO: description
 
 ## Usage
 
 ```
-const codeEditor = require('code-editor');
+const codeEditor = require('codemirror5');
 
 // TODO: DEMONSTRATE API
 ```

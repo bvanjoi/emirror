@@ -15,19 +15,19 @@
     "access": "public"
   },
   "dependencies": {
+    "@emirror/core-helpers": "^0.0.1",
+    "@emirror/utils": "^0.0.1",
     "prosemirror-commands": "^1.1.10",
     "prosemirror-dropcursor": "^1.3.5",
     "prosemirror-gapcursor": "^1.1.5",
-    "prosemirror-history": "^1.1.3",
+    "prosemirror-history": "^1.2.0",
     "prosemirror-inputrules": "^1.1.3",
     "prosemirror-keymap": "^1.1.4",
     "prosemirror-model": "^1.14.3",
     "prosemirror-schema-list": "^1.1.5",
     "prosemirror-state": "^1.3.4",
     "prosemirror-transform": "^1.3.2",
-    "prosemirror-view": "^1.19.0",
-    "@emirror/utils": "^0.0.1",
-    "@emirror/core-helpers": "^0.0.1"
+    "prosemirror-view": "^1.19.3"
   },
   "devDependencies": {
     "@types/prosemirror-commands": "^1.0.4",

@@ -34,7 +34,6 @@
     "@emirror/plugin-heading": "^0.0.1",
     "@emirror/plugin-list-item": "^0.0.1",
     "@emirror/plugin-order-list": "^0.0.1",
-    "@emirror/plugin-basekeymap": "^0.0.1",
     "@emirror/plugin-bullet-list": "^0.0.1"
   }
 }

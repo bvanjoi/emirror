@@ -11,7 +11,6 @@ import History from '@emirror/plugin-history';
 import LatexInline from '@emirror/plugin-latex-inline';
 import LatexBlock from '@emirror/plugin-latex-block';
 import Hr from '@emirror/plugin-hr';
-import BaseKeymap from '@emirror/plugin-basekeymap';
 
 const LatexEMirror = () => {
   const emirror = useEmirror({
@@ -19,7 +18,6 @@ const LatexEMirror = () => {
     emPlugins: [
       new Paragraph(),
       new Text(),
-      new BaseKeymap(),
       new History(),
       new LatexBlock(),
       new LatexInline(),

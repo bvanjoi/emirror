@@ -20,7 +20,8 @@ class NodePlaceholder extends Extension {
           let set = _set.map(tr.mapping, tr.doc);
           const action = tr.getMeta(this.nodePlaceholderKey);
           if (action?.add) {
-            const widget = document.createElement('node-placeholder');
+            const widget = document.createElement('div');
+            widget.classList.add('node-placeholder');
             const deco = Decoration.widget(action.add.pos, widget, {
               id: action.add.id,
             });
