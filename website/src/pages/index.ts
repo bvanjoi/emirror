@@ -13,4 +13,3 @@ export { default as MenusEditor } from './menusEditor';
 export { default as WebsiteCardEditor } from './websiteCardEditor';
 export { default as TypoEditor } from './typoEditor';
 export { default as AutoLinkEditor } from './autolinkEditor';
-export { default as LinesCountEditor } from './linesCountEditor';

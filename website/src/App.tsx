@@ -133,10 +133,6 @@ const routeComponents: {
     path: 'auto-link',
     component: AutoLinkEditor,
   },
-  {
-    path: 'lines-count',
-    component: LinesCountEditor,
-  },
 ];
 
 const App = () => {
