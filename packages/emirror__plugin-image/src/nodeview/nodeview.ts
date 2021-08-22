@@ -21,24 +21,24 @@ class ImageNodeView implements NodeView {
   /**
    * The Node of ProseMirror in the editor
    */
-  #node: PMNode;
+  node: PMNode;
   /**
    * The view of PM
    */
-  #view: EditorView;
+  view: EditorView;
   /**
    * The position of image node
    */
-  #getPos: () => number;
+  getPos: () => number;
   /**
    * The DOM container image node
    */
   dom: HTMLElement;
 
   constructor(props: ImageNodeViewProps) {
-    this.#node = props.node;
-    this.#view = props.view;
-    this.#getPos = props.getPos;
+    this.node = props.node;
+    this.view = props.view;
+    this.getPos = props.getPos;
 
     this.init();
   }
@@ -57,7 +57,7 @@ class ImageNodeView implements NodeView {
   createContainerDOM(): HTMLElement {
     const containerDOM = document.createElement('div');
     containerDOM.classList.add(
-      `emirror-${this.#node.type.name}__nodeview-dom`,
+      `emirror-${this.node.type.name}__nodeview-dom`,
     );
     containerDOM.classList.add('emirror-image-node');
     return containerDOM;
@@ -67,10 +67,28 @@ class ImageNodeView implements NodeView {
    * Content dom contain the image
    */
   createImageDOM() {
-    const { src } = this.#node.attrs;
+    const { view, node, getPos } = this;
+    const { src } = node.attrs;
     const imgDOM = document.createElement('img');
     imgDOM.setAttribute('src', src);
     imgDOM.classList.add('emirror-image');
+
+    imgDOM.onload = function () {
+      imgDOM.classList.remove('loading');
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      // ! why `this` don't contain `width` and `height`
+      const { width, height } = this;
+      imgDOM.setAttribute(
+        'style',
+        `width: ${width}px;height: ${height}px`,
+      );
+    };
+
+    imgDOM.onerror = function () {
+      console.error('Image load failed');
+    };
+
     return imgDOM;
   }
 

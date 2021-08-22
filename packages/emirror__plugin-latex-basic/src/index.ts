@@ -1,5 +1,5 @@
-import { Plugin, PluginKey } from '@emirror/pm/state';
 import { Node } from '@emirror/core-structure';
+import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import { LatexPluginState } from './types';
 import {
   createLatexBlockNodeView,
@@ -15,8 +15,8 @@ class LatexBasic extends Node {
     return 'latex';
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: this.latexPluginKey,
       state: {
         init() {
@@ -37,7 +37,7 @@ class LatexBasic extends Node {
           latexBlock: createLatexBlockNodeView(this.latexPluginKey),
         },
       },
-    });
+    };
   }
 }
 

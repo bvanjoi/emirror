@@ -6,8 +6,8 @@ class DropCursor extends Extension {
     return 'dropCursor';
   }
 
-  get plugin() {
-    return dropCursor();
+  addPlugin() {
+    return [dropCursor()];
   }
 }
 

@@ -23,8 +23,10 @@ import {
   ImageEditor,
   TypoEditor,
   AutoLinkEditor,
+  LinesCountEditor,
 } from './pages';
 import './App.css';
+import { LoadableComponent } from '@loadable/component';
 
 const AppView = styled.div`
   * {
@@ -71,7 +73,10 @@ const EditorContainer = styled.div`
  */
 const prefix = 'https://github.com/bvanjoi/emirror/tree/main/examples';
 
-const routeComponents = [
+const routeComponents: {
+  path: string;
+  component: LoadableComponent<unknown>;
+}[] = [
   {
     path: 'mini-setup',
     component: MiniEMirror,
@@ -128,12 +133,15 @@ const routeComponents = [
     path: 'auto-link',
     component: AutoLinkEditor,
   },
+  {
+    path: 'lines-count',
+    component: LinesCountEditor,
+  },
 ];
 
 const App = () => {
   const location = useLocation();
   const [pathname, setPathname] = useState(location.pathname);
-
   useEffect(() => {
     setPathname(location.pathname);
   }, [location]);

@@ -1,4 +1,5 @@
-.popover-menu-container {
+.popover-menu-container,
+.float-menu-container {
   visibility: visible;
   position: absolute;
 
@@ -6,10 +7,10 @@
   border-radius: 4px;
 
   background: #fff;
-  margin: 4px;
   padding: 2px 6px;
 }
 
-.popover-menu-container.hidden {
+.float-menu-container.hidden-menu,
+.popover-menu-container.hidden-menu {
   visibility: hidden;
 }

@@ -39,6 +39,7 @@ export const EMirrorComponent: React.FC = ({
   useEffect(() => {
     viewDOMRef?.current.append(emirror.view.dom);
     emirror.setContentFromHtml(contentRef.current);
+    window.emirror = emirror;
     emirror.view.focus();
     return () => {
       if (emirror.view.dom) {

@@ -1,6 +1,6 @@
 import { PluginKey, EditorState } from '@emirror/pm/state';
 import { EditorView, DecorationSet } from '@emirror/pm/view';
-import { uploadFile } from '@emirror/utils';
+import { uploadImage } from '@emirror/utils';
 
 export function uploadImageFromLocal(
   view: EditorView,
@@ -8,7 +8,7 @@ export function uploadImageFromLocal(
   nodePlaceholderKey: PluginKey<DecorationSet>,
 ) {
   /**
-   * upload ID
+   * node placeholder ID
    */
   const id = {};
   const { tr } = view.state;
@@ -24,7 +24,7 @@ export function uploadImageFromLocal(
     return found.length ? found[0].from : null;
   }
 
-  uploadFile(file).then(
+  uploadImage(file).then(
     url => {
       const pos = findNodePlaceholder(view.state);
       if (!pos) {
@@ -35,7 +35,9 @@ export function uploadImageFromLocal(
           .replaceWith(
             pos,
             pos,
-            view.state.schema.nodes['image'].create({ src: url }),
+            view.state.schema.nodes['image'].create({
+              src: url,
+            }),
           )
           .setMeta(nodePlaceholderKey, { remove: { id } }),
       );

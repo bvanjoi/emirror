@@ -1,5 +1,5 @@
 import { Keymap, Command } from '@emirror/pm/commands';
-import { Plugin as PMPlugin } from '@emirror/pm/state';
+import { PluginSpec, Plugin } from '@emirror/pm/state';
 
 /**
  * The base integration for ProseMirror.
@@ -14,14 +14,21 @@ export class Base {
   }
 
   /**
-   * The PMPlugin of this emPlugin.
+   * Create PM Plugin spec.
    */
-  get plugin(): PMPlugin {
+  createPluginSpec(): PluginSpec {
     return null;
   }
 
   /**
-   * Commands for this plugin
+   * Add PM Plugin.
+   */
+  addPlugin(): Plugin[] {
+    return [];
+  }
+
+  /**
+   * Commands for this exPlugin
    */
   get commands(): Record<string, (...args: any[]) => Command> {
     return {};

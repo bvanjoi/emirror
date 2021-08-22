@@ -1,22 +1,24 @@
 import React from 'react';
-import BulletList from '@emirror/plugin-bullet-list';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isNodeActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: BulletList;
-  view: EditorView;
+const BulletListBtn = () => {
+  const emirror = useEMirrorContext();
+  return (
+    <MenuButton
+      activated={isNodeActive(
+        emirror.view.state,
+        emirror.emPlugins.bulletList.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleBulletList());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='bulletList-icon' />
+    </MenuButton>
+  );
 };
 
-const OrderListBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleBulletList}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
-
-export default OrderListBtn;
+export default BulletListBtn;

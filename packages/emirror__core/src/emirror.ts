@@ -147,6 +147,7 @@ export default class EMirror {
     const docNode = DOMParser.fromSchema(this.view.state.schema).parse(
       contentDOM,
     );
+
     const from = 0;
     const end = this.view.state.doc.content.size;
     const tr = this.view.state.tr.replaceRangeWith(from, end, docNode);

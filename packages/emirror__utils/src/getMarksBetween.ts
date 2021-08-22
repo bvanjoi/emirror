@@ -10,7 +10,7 @@ export const getMarksBetween = (
   state.doc.nodesBetween(from, to, (node, pos) => {
     marks = [
       ...marks,
-      ...node.marks.map((mark) => ({
+      ...node.marks.map(mark => ({
         from: pos,
         to: pos + node.nodeSize,
         mark,

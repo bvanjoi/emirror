@@ -1,13 +1,14 @@
 import { Node } from '@emirror/core-structure';
-import { Plugin, PluginKey } from '@emirror/pm/state';
+import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import { NodeSpec } from '@emirror/pm/model';
 import { wrappingInputRule } from '@emirror/pm/inputrules';
-import TodoItemView from './nodeview';
 import {
   liftListItem,
   sinkListItem,
   splitListItem,
 } from '@emirror/pm/schema-list';
+import TodoItemView from './nodeview';
+
 import './style.css';
 
 class TodoItem extends Node {
@@ -55,8 +56,8 @@ class TodoItem extends Node {
     };
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: this.todoItemNodeViewKey,
       props: {
         nodeViews: {
@@ -64,7 +65,7 @@ class TodoItem extends Node {
             new TodoItemView(node, view, getPos),
         },
       },
-    });
+    };
   }
 
   inputRules = ({ type }) => [

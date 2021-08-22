@@ -6,8 +6,8 @@ class GapCursor extends Extension {
     return 'gapCursor';
   }
 
-  get plugin() {
-    return gapCursor();
+  addPlugin() {
+    return [gapCursor()];
   }
 }
 

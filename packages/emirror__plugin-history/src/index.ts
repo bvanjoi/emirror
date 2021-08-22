@@ -1,15 +1,15 @@
 import { Extension } from '@emirror/core-structure';
 import { isMac } from '@emirror/utils';
 import { history, undo, redo } from '@emirror/pm/history';
-import { Command } from '@emirror/pm/commands';
+import { Keymap } from '@emirror/pm/commands';
 
 class History extends Extension {
   get name() {
     return 'history' as const;
   }
 
-  get plugin() {
-    return history();
+  addPlugin() {
+    return [history()];
   }
 
   get commands() {
@@ -20,7 +20,7 @@ class History extends Extension {
   }
 
   get keymap() {
-    const binding: { [key: string]: Command } = {};
+    const binding: Keymap = {};
     binding['Mod-z'] = undo;
     binding['Shift-Mod-z'] = redo;
     if (!isMac) {

@@ -6,7 +6,6 @@ import {
   mergeSpecAttrs,
   mergeToDOMAttrs,
 } from '@emirror/utils';
-
 class Paragraph extends Node {
   get name() {
     return 'paragraph' as const;

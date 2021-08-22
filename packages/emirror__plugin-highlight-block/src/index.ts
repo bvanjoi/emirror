@@ -1,6 +1,6 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { Plugin, PluginKey } from '@emirror/pm/state';
+import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import './style.css';
 
 type Props = {
@@ -46,8 +46,8 @@ class HighlightBlock extends Node {
     };
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: this.highlightBlockPluginKey,
       props: {
         nodeViews: {
@@ -89,7 +89,7 @@ class HighlightBlock extends Node {
           },
         },
       },
-    });
+    };
   }
 }
 

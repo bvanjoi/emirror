@@ -1,15 +1,7 @@
 import { EditorState, Plugin, PluginKey } from '@emirror/pm/state';
 import { EditorView } from '@emirror/pm/view';
-import { Node, Mark } from '@emirror/core-structure';
-import { isActive } from '@emirror/utils';
-
-type Items = Record<string, Node | Mark>;
 
 type Options = {
-  /**
-   * all plugins of EMirror
-   */
-  items: Items;
   /**
    * The element of container
    */
@@ -21,14 +13,9 @@ class MenuView {
    * The element of container
    */
   element: HTMLElement;
-  /**
-   * all plugins of EMirror
-   */
-  items: Items;
 
   constructor(opts: Options & { view: EditorView }) {
     this.element = opts.element;
-    this.items = opts.items;
 
     this.update(opts.view, null);
   }
@@ -48,18 +35,6 @@ class MenuView {
     }
 
     this.updatePosStyle(view);
-
-    for (const ele of this.element.children) {
-      const name = ele.getAttribute('data-plugin-name');
-      if (!name) {
-        continue;
-      }
-
-      const attrs =
-        JSON.parse(ele.getAttribute('data-plugin-attrs')) || {};
-
-      this.updateActivated(view, this.items[name], attrs, ele);
-    }
   }
 
   /**
@@ -67,11 +42,11 @@ class MenuView {
    */
   updateHidden(view: EditorView): boolean {
     if (view.state.selection.empty) {
-      this.element.classList.add('hidden');
+      this.element.classList.add('hidden-menu');
       return true;
     }
 
-    this.element.classList.remove('hidden');
+    this.element.classList.remove('hidden-menu');
     return false;
   }
 
@@ -87,22 +62,6 @@ class MenuView {
     this.element.style.left = left - box.left + 'px';
     this.element.style.bottom = box.bottom - start.top + 'px';
     this.element.style.transform = `translateX(-50%)`;
-  }
-
-  /**
-   * It will add/remove activated class name.
-   */
-  updateActivated(
-    view: EditorView,
-    item: Node | Mark,
-    attrs: Record<string, any>,
-    ele: Element,
-  ) {
-    if (isActive(view.state, item, attrs)) {
-      ele.classList.add('activated');
-    } else {
-      ele.classList.remove('activated');
-    }
   }
 }
 
@@ -124,7 +83,7 @@ export default function (opts: Options) {
           ) {
             return true;
           }
-          opts.element.classList.add('hidden');
+          opts.element.classList.add('hidden-menu');
           return false;
         },
       },

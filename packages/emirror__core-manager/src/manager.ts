@@ -65,11 +65,14 @@ export default class Manager {
    */
   createNodes = () =>
     this.#emNodes.reduce(
-      (nodes, { name, createNodeSpec }) => ({
+      (nodes, emPlugin) => ({
         ...nodes,
-        [name]: createNodeSpec(
+        [emPlugin.name]: emPlugin.createNodeSpec(
           this.#globalAttrs.filter(item =>
-            canGlobalAttrsApply(item.scope, { name, type: 'node' }),
+            canGlobalAttrsApply(item.scope, {
+              name: emPlugin.name,
+              type: 'node',
+            }),
           ),
         ),
       }),
@@ -81,11 +84,14 @@ export default class Manager {
    */
   createMarks = () =>
     this.#emMarks.reduce(
-      (marks, { name, createMarkSpec }) => ({
+      (marks, emPlugin) => ({
         ...marks,
-        [name]: createMarkSpec(
+        [emPlugin.name]: emPlugin.createMarkSpec(
           this.#globalAttrs.filter(item =>
-            canGlobalAttrsApply(item.scope, { name, type: 'mark' }),
+            canGlobalAttrsApply(item.scope, {
+              name: emPlugin.name,
+              type: 'mark',
+            }),
           ),
         ),
       }),
@@ -97,11 +103,16 @@ export default class Manager {
    */
   get plugins() {
     return this.#emPlugins
-      .filter(({ plugin }) => plugin)
-      .reduce(
-        (allPlugins, { plugin }) => [...allPlugins, plugin],
-        [] as Plugin[],
-      );
+      .reduce((allPlugins, emPlugin) => {
+        const pluginSpec = emPlugin.createPluginSpec();
+        const pluginsArray = emPlugin.addPlugin();
+        if (pluginSpec) {
+          return [...allPlugins, ...pluginsArray, new Plugin(pluginSpec)];
+        } else {
+          return [...allPlugins, ...pluginsArray];
+        }
+      }, [] as Plugin[])
+      .filter(plugin => plugin);
   }
 
   /**

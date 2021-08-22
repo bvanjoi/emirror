@@ -7,10 +7,6 @@ type Items = Record<string, Node | Mark>;
 
 type Options = {
   /**
-   * all plugins of EMirror
-   */
-  items: Items;
-  /**
    * The element of container
    */
   element: HTMLDivElement;
@@ -21,14 +17,9 @@ class MenuView {
    * The element of container
    */
   element: HTMLElement;
-  /**
-   * all plugins of EMirror
-   */
-  items: Items;
 
   constructor(opts: Options & { view: EditorView }) {
     this.element = opts.element;
-    this.items = opts.items;
 
     this.update(opts.view, null);
   }
@@ -48,18 +39,6 @@ class MenuView {
     }
 
     this.updatePosStyle(view);
-
-    for (const ele of this.element.children) {
-      const name = ele.getAttribute('data-plugin-name');
-      if (!name) {
-        continue;
-      }
-
-      const attrs =
-        JSON.parse(ele.getAttribute('data-plugin-attrs')) || {};
-
-      this.updateActivated(view, this.items[name], attrs, ele);
-    }
   }
 
   /**
@@ -79,11 +58,11 @@ class MenuView {
      */
     const isNodeEmpty = !parent.isLeaf && !parent.textContent;
     if (!(empty && isRootDepth && isNodeEmpty)) {
-      this.element.classList.add('hidden');
+      this.element.classList.add('hidden-menu');
       return true;
     }
 
-    this.element.classList.remove('hidden');
+    this.element.classList.remove('hidden-menu');
     return false;
   }
 
@@ -98,22 +77,6 @@ class MenuView {
     // it come from the h tag's height.
     this.element.style.top =
       (start.bottom + start.top) / 2 - box.top - 13 + 'px';
-  }
-
-  /**
-   * It will add/remove activated class name.
-   */
-  updateActivated(
-    view: EditorView,
-    item: Node | Mark,
-    attrs: Record<string, any>,
-    ele: Element,
-  ) {
-    if (isActive(view.state, item, attrs)) {
-      ele.classList.add('activated');
-    } else {
-      ele.classList.remove('activated');
-    }
   }
 }
 

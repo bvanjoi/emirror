@@ -1,22 +1,24 @@
 import React from 'react';
-import Bold from '@emirror/plugin-bold';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isMarkActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Bold;
-  view: EditorView;
+const BoldBtn = () => {
+  const emirror = useEMirrorContext();
+  return (
+    <MenuButton
+      activated={isMarkActive(
+        emirror.view.state,
+        emirror.emPlugins.bold.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleBold());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='bold-icon' />
+    </MenuButton>
+  );
 };
-
-const BoldBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleBold}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
 
 export default BoldBtn;

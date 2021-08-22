@@ -1,22 +1,23 @@
 import React from 'react';
-import Italic from '@emirror/plugin-italic';
-import { EditorView } from '@emirror/pm/view';
-import { BasicMenuBtn } from '@emirror/menu-basic-react';
+import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isMarkActive } from '@emirror/core-helpers';
 import icon from './assets/icon.svg';
 
-type Props = {
-  plugin: Italic;
-  view: EditorView;
+const ItalicBtn = () => {
+  const emirror = useEMirrorContext();
+  return (
+    <MenuButton
+      activated={isMarkActive(
+        emirror.view.state,
+        emirror.emPlugins.italic.name,
+      )}
+      onClick={() => {
+        emirror.runCommand(emirror.commands.toggleItalic());
+        emirror.view.focus();
+      }}
+    >
+      <img src={icon} alt='italic-icon' />
+    </MenuButton>
+  );
 };
-
-const ItalicBtn = ({ plugin, view }: Props) => (
-  <BasicMenuBtn
-    view={view}
-    plugin={plugin}
-    onClick={plugin.commands.toggleItalic}
-  >
-    <img src={icon} />
-  </BasicMenuBtn>
-);
-
 export default ItalicBtn;

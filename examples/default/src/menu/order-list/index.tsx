@@ -13,6 +13,7 @@ const OrderListBtn = () => {
       )}
       onClick={() => {
         emirror.runCommand(emirror.commands.toggleOrderList());
+        emirror.view.focus();
       }}
     >
       <img src={icon} />

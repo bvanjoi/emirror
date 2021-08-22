@@ -1,0 +1,9 @@
+.line-decoration {
+  position: relative;
+  right: 20px;
+  background-color: aliceblue;
+}
+
+.line-decoration::before {
+  content: attr(data-index);
+}

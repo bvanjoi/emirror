@@ -1,6 +1,6 @@
 import { Mark } from '@emirror/core-structure';
 import { MarkSpec } from '@emirror/pm/model';
-import { Plugin } from '@emirror/pm/state';
+import { PluginSpec } from '@emirror/pm/state';
 
 type LinkOptions = {
   /**
@@ -40,10 +40,10 @@ class Link extends Mark {
     };
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       props: {
-        handleClick: (view, pos, event) => {
+        handleClick: (view, pos) => {
           const node = view.state.doc.resolve(pos).nodeBefore;
           if (!node) {
             return false;
@@ -62,7 +62,7 @@ class Link extends Mark {
           return false;
         },
       },
-    });
+    };
   }
 }
 

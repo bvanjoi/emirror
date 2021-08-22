@@ -5,8 +5,11 @@
   border: 1px solid transparent;
 }
 
-.emirror .ProseMirror-selectednode.emirror-image {
-  border: 1px solid dodgerblue;
+.emirror .emirror-image.loading::after {
+  content: ' ';
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
 
 /* ---- resize box ------------------------ */

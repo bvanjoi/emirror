@@ -2516,6 +2516,18 @@
   dependencies:
     "@types/react" "*"
 
+"@types/lodash.isequal@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.nlark.com/@types/lodash.isequal/download/@types/lodash.isequal-4.5.5.tgz#4fed1b1b00bef79e305de0352d797e9bb816c8ff"
+  integrity sha1-T+0bGwC+954wXeA1LXl+m7gWyP8=
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.172"
+  resolved "https://registry.nlark.com/@types/lodash/download/@types/lodash-4.14.172.tgz?cache=0&sync_timestamp=1627979755353&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Flodash%2Fdownload%2F%40types%2Flodash-4.14.172.tgz#aad774c28e7bfd7a67de25408e03ee5a8c3d028a"
+  integrity sha1-qtd0wo57/Xpn3iVAjgPuWow9Aoo=
+
 "@types/minimatch@^3.0.3":
   version "3.0.5"
   resolved "https://registry.nlark.com/@types/minimatch/download/@types/minimatch-3.0.5.tgz?cache=0&sync_timestamp=1625616294770&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fminimatch%2Fdownload%2F%40types%2Fminimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
@@ -7174,6 +7186,11 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.nlark.com/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.nlark.com/lodash.isequal/download/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
 lodash.ismatch@^4.4.0:
   version "4.4.0"

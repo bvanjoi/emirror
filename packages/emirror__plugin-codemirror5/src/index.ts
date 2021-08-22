@@ -1,6 +1,6 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { Plugin, PluginKey } from '@emirror/pm/state';
+import { PluginSpec, PluginKey } from '@emirror/pm/state';
 import CodeEditorView from './nodeview';
 import { arrowHandler } from './commands';
 
@@ -32,8 +32,8 @@ class CodeEditor extends Node {
     };
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: new PluginKey(this.name),
       props: {
         nodeViews: {
@@ -46,7 +46,7 @@ class CodeEditor extends Node {
             }),
         },
       },
-    });
+    };
   }
 
   get keymap() {

@@ -1,5 +1,5 @@
 import { Extension } from '@emirror/core-structure';
-import { PluginKey, Plugin } from '@emirror/pm/state';
+import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import { Decoration, DecorationSet } from '@emirror/pm/view';
 import './style.css';
 
@@ -26,8 +26,8 @@ class Placeholder extends Extension {
     return 'placeholder' as const;
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: this.placeholderKey,
       props: {
         decorations: state => {
@@ -53,7 +53,7 @@ class Placeholder extends Extension {
           return DecorationSet.create(doc, [decoration]);
         },
       },
-    });
+    };
   }
 }
 

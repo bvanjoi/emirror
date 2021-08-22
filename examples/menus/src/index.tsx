@@ -14,6 +14,7 @@ import Heading from '@emirror/plugin-heading';
 import BulletList from '@emirror/plugin-bullet-list';
 import ListItem from '@emirror/plugin-list-item';
 import OrderList from '@emirror/plugin-order-list';
+import History from '@emirror/plugin-history';
 import PopoverMenu from './popover-menu';
 import FloatMenu from './float-menu';
 
@@ -30,28 +31,32 @@ const MenusEMirror = () => {
       new OrderList(),
       new Text(),
       new ListItem(),
+      new History(),
     ],
   });
 
   return (
     emirror && (
-      <EMirrorContext.Provider value={emirror}>
-        {/* {view && <PopoverMenu view={view} plugins={popoverPlugins} />} */}
-        {/* {view && <FloatMenu view={view} plugins={floatPlugins} />} */}
-        <EMirrorComponent>
-          <p>This example show:</p>
-          <ul>
-            <li>
-              Popover menu, you can select some areas anything to get it.
-            </li>
-            <li>
-              Float menu, when you focus on the first of paragraph, it will
-              appear.
-            </li>
-          </ul>
-          <p></p>
-        </EMirrorComponent>
-      </EMirrorContext.Provider>
+      <div style={{ position: 'relative' }}>
+        <EMirrorContext.Provider value={emirror}>
+          <PopoverMenu />
+          <FloatMenu />
+          <EMirrorComponent>
+            <p>This example show:</p>
+            <ul>
+              <li>
+                Popover menu, you can select some area's anything to get
+                it.
+              </li>
+              <li>
+                Float menu, when you focus on the first of paragraph, it
+                will appear.
+              </li>
+            </ul>
+            <p></p>
+          </EMirrorComponent>
+        </EMirrorContext.Provider>
+      </div>
     )
   );
 };

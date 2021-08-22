@@ -34,7 +34,7 @@ const ImageEmirror = () => {
         <Menu />
         <EMirrorComponent>
           <p>EMirror also provide image plugin.</p>
-          <img src={IMG_SOURCE}></img>
+          <img src={IMG_SOURCE} />
           <p>It also supports GIF:</p>
           <img src={GIF_SOURCE} />
           <p>

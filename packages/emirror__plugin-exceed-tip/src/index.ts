@@ -1,5 +1,5 @@
 import { Extension } from '@emirror/core-structure';
-import { PluginKey, Plugin } from '@emirror/pm/state';
+import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import { Decoration, DecorationSet } from '@emirror/pm/view';
 import './style.css';
 
@@ -28,8 +28,8 @@ class ExceedTip extends Extension {
     return 'placeholder' as const;
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: this.exceedTipKey,
       props: {
         decorations: state => {
@@ -66,7 +66,7 @@ class ExceedTip extends Extension {
           return DecorationSet.create(doc, [decoration]);
         },
       },
-    });
+    };
   }
 }
 

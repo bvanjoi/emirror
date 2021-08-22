@@ -14,10 +14,14 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
+    "@emirror/core-helpers": "^0.0.1",
     "@emirror/core-structure": "^0.0.1",
     "@emirror/plugin": "^0.0.1",
     "@emirror/pm": "^0.0.1",
-    "@emirror/core-helpers": "^0.0.1",
+    "lodash.isequal": "^4.5.0",
     "nanoid": "^3.1.25"
+  },
+  "devDependencies": {
+    "@types/lodash.isequal": "^4.5.5"
   }
 }

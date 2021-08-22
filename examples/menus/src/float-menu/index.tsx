@@ -1,32 +1,38 @@
-import React from 'react';
-import MenuContainer from '@emirror/menu-basic-react';
+import React, { useEffect } from 'react';
+import { useEMirrorContext } from '@emirror/react';
 import MenuPlugin from '@emirror/menu-float';
-import { EditorView } from '@emirror/pm/view';
 import HeadingBtn from './heading';
 import OrderListBtn from './order-list';
 import BulletListBtn from './bullet-list';
 import ParagraphBtn from './paragraph';
 import './style.css';
 
-type Props = {
-  view: EditorView;
-  plugins: Record<string, any>;
-};
+const Menu = () => {
+  const emirror = useEMirrorContext();
+  const divRef = React.useRef(null);
 
-const Menu = (props: Props) => {
-  const { view, plugins } = props;
+  useEffect(() => {
+    if (!divRef.current) {
+      return;
+    }
+    const newState = emirror.view.state.reconfigure({
+      plugins: [
+        ...emirror.view.state.plugins,
+        MenuPlugin({
+          element: divRef.current,
+        }),
+      ],
+    });
+    emirror.view.updateState(newState);
+  }, []);
+
   return (
-    <MenuContainer
-      view={view}
-      items={plugins}
-      menuPlugin={MenuPlugin}
-      className='float-menu-container hidden'
-    >
-      <ParagraphBtn view={view} plugin={plugins.paragraph} />
-      <HeadingBtn view={view} plugin={plugins.heading} />
-      <BulletListBtn view={view} plugin={plugins.bulletList} />
-      <OrderListBtn view={view} plugin={plugins.orderList} />
-    </MenuContainer>
+    <div className='float-menu-container hidden-menu' ref={divRef}>
+      <ParagraphBtn />
+      <HeadingBtn />
+      <BulletListBtn />
+      <OrderListBtn />
+    </div>
   );
 };
 

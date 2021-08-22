@@ -1,6 +1,6 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { Plugin, PluginKey } from '@emirror/pm/state';
+import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import './style.css';
 
 class WebsiteCard extends Node {
@@ -33,8 +33,8 @@ class WebsiteCard extends Node {
     };
   }
 
-  get plugin() {
-    return new Plugin({
+  createPluginSpec(): PluginSpec {
+    return {
       key: this.websiteCardPluginKey,
       props: {
         nodeViews: {
@@ -77,7 +77,7 @@ class WebsiteCard extends Node {
           },
         },
       },
-    });
+    };
   }
 }
 
