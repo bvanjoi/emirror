@@ -1,0 +1,12 @@
+.emirror-image {
+  display: block;
+  border: 1px solid transparent;
+  display: block;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-image: url('./assets/loading.gif');
+}
+
+.emirror-image.ProseMirror-selectednode {
+  border: 1px solid darksalmon;
+}

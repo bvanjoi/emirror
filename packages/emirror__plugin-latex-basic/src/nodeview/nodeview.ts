@@ -22,6 +22,7 @@ import ctrlBackspace from '../inner-keydown/ctrl-backspace';
 import ctrlEnter from '../inner-keydown/ctrl-enter';
 import modShiftZ from '../inner-keydown/mod-shift-z';
 import modZ from '../inner-keydown/mod-z';
+import { renderDecoPlugin } from '../inner-deco';
 
 interface ICursorPosObserver {
   /**
@@ -59,7 +60,7 @@ type LatexNodeViewProps = {
    */
   options: LatexViewOptions;
   /**
-   * The latex plugin key.
+   * The latex plugin key, it local in outer view.
    */
   pluginKey: PluginKey<LatexPluginState>;
 };
@@ -190,12 +191,10 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
   }
   // ------------------ render ------------------------------
 
-  renderLatex() {
-    if (!this.latexRenderElement) {
-      return;
-    }
-
-    // get latex string to render
+  getRenderText() {
+    /**
+     * Get render string.
+     */
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const content = this.node.content.content as PMNode[];
@@ -204,9 +203,20 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     if (content.length > 0 && content[0].textContent !== null) {
       textString = content[0].textContent.trim();
     }
+    return textString;
+  }
+
+  /**
+   * render latex when innerEditor *close*
+   */
+  renderLatex() {
+    if (!this.latexRenderElement) {
+      return;
+    }
+    const renderText = this.getRenderText();
 
     // empty
-    if (textString.length < 1) {
+    if (renderText.length < 1) {
       this.dom.classList.add('empty-latex');
       // this node is in an invalid state, so clear it.
       while (this.latexRenderElement.firstChild) {
@@ -218,7 +228,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     }
 
     try {
-      katex.render(textString, this.latexRenderElement, this.katexOptions);
+      katex.render(renderText, this.latexRenderElement, this.katexOptions);
     } catch (err) {
       if (err instanceof ParseError) {
         this.latexRenderElement.classList.add('latex-parse-error');
@@ -227,6 +237,13 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
         throw err;
       }
     }
+  }
+
+  /**
+   * Render Latex when innerEditor *editing*
+   */
+  renderPreview() {
+    console.log('render Preview');
   }
 
   // ------------------ update ------------------------------
@@ -258,6 +275,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     }
     if (!this.isEditing) {
       this.renderLatex();
+    } else {
+      this.renderPreview();
     }
 
     return true;
@@ -369,6 +388,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
             'Mod-z': modZ,
             'Mod-Shift-z': modShiftZ,
           }),
+          renderDecoPlugin(),
         ],
       }),
       dispatchTransaction: this.dispatchInner,

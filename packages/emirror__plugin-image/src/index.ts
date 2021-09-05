@@ -1,13 +1,28 @@
 import { Node } from '@emirror/core-structure';
 import { NodeSpec } from '@emirror/pm/model';
-import { PluginKey, PluginSpec } from '@emirror/pm/state';
 import { parseDOMStyleAttribute } from '@emirror/utils';
-import { insertImageAtNowPos, uploadImageFromLocal } from './commands';
-import { createImageNodeView } from './nodeview';
+import { insertImageAtNowPos } from './commands';
+import { ImageUploader } from './plugins';
+import { ImageOptions } from './types';
+import './style.css';
+
+const defaultOptions: Pick<
+  ImageOptions,
+  'placeHolderImageSrc' | 'types' | 'genID'
+> = {
+  genID: () => Math.random().toString(36).substring(7),
+  placeHolderImageSrc:
+    "data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'/%3E\n",
+  types: ['image/jpeg', 'image/gif', 'image/png', 'image/jpg'],
+};
 
 class Image extends Node {
   get name() {
     return 'image';
+  }
+
+  constructor(public opts: ImageOptions) {
+    super();
   }
 
   createNodeSpec(): NodeSpec {
@@ -15,10 +30,13 @@ class Image extends Node {
       attrs: {
         src: {},
         width: {
-          default: 0,
+          default: 100,
         },
         height: {
-          default: 0,
+          default: 100,
+        },
+        uploadID: {
+          default: null,
         },
       },
       group: 'block',
@@ -35,34 +53,37 @@ class Image extends Node {
             );
             return {
               src: dom.getAttribute('src'),
-              width: parseInt(style.width as string, 10) || 0,
-              height: parseInt(style.height as string, 10) || 0,
+              width: parseInt(style.width as string, 10) || 100,
+              height: parseInt(style.height as string, 10) || 100,
+              uploadID: dom.getAttribute('uploadID'),
             };
           },
         },
       ],
       toDOM: node => {
-        const { src, width, height } = node.attrs;
+        const { src, width, height, uploadID } = node.attrs;
         return [
           'img',
           {
             src,
-            style: `width: ${width}; height:${height};`,
+            style: `width: ${width}px; height:${height}px;`,
             class: 'emirror-image',
+            uploadID,
           },
         ];
       },
     };
   }
 
-  createPluginSpec = (): PluginSpec => ({
-    key: new PluginKey(this.name),
-    props: {
-      nodeViews: {
-        [this.name]: createImageNodeView(),
-      },
-    },
-  });
+  addPlugin() {
+    return [
+      ImageUploader({
+        ...defaultOptions,
+        ...this.opts,
+        name: this.name,
+      }),
+    ];
+  }
 
   get commands() {
     return {
@@ -73,4 +94,4 @@ class Image extends Node {
 }
 
 export default Image;
-export { uploadImageFromLocal };
+export { default as upload } from './upload';

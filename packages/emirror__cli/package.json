@@ -1,11 +1,15 @@
 {
-  "name": "@emirror/plugin-node-placeholder",
+  "name": "@emirror/cli",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "bvanjoi <610376039@qq.com>",
   "homepage": "https://github.com/bvanjoi/emirror#readme",
   "license": "MIT",
-  "main": "dist/emirror-plugin-node-placeholder.cjs.js",
+  "main": "dist/emirror-cli.cjs.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -18,9 +22,5 @@
   },
   "bugs": {
     "url": "https://github.com/bvanjoi/emirror/issues"
-  },
-  "dependencies": {
-    "@emirror/core-structure": "^0.0.1",
-    "@emirror/pm": "^0.0.1"
   }
 }

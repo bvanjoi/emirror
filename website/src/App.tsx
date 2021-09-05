@@ -23,7 +23,6 @@ import {
   ImageEditor,
   TypoEditor,
   AutoLinkEditor,
-  LinesCountEditor,
 } from './pages';
 import './App.css';
 import { LoadableComponent } from '@loadable/component';

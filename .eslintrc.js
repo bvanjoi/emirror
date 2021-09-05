@@ -39,7 +39,9 @@ module.exports = {
     'arrow-body-style': [
       'error',
       'as-needed',
-      { requireReturnForObjectLiteral: false },
+      {
+        requireReturnForObjectLiteral: false,
+      },
     ],
 
     // 箭头函数的圆括号使用规则
@@ -118,7 +120,13 @@ module.exports = {
     'eol-last': 0,
 
     // 必须使用 === 和 !== ，和 null 对比时除外
-    eqeqeq: [2, 'always', { null: 'ignore' }],
+    eqeqeq: [
+      2,
+      'always',
+      {
+        null: 'ignore',
+      },
+    ],
 
     // for 循环不得因方向错误造成死循环
     'for-direction': 2,
@@ -144,7 +152,12 @@ module.exports = {
     'generator-star-spacing': 0,
 
     // getter 必须有返回值，允许返回 undefined
-    'getter-return': [2, { allowImplicit: true }],
+    'getter-return': [
+      2,
+      {
+        allowImplicit: true,
+      },
+    ],
 
     // require 必须在全局作用域下
     // @off 条件加载很常见
@@ -277,7 +290,12 @@ module.exports = {
     'no-cond-assign': [2, 'except-parens'],
 
     // 禁止使用常量作为判断条件
-    'no-constant-condition': [2, { checkLoops: false }],
+    'no-constant-condition': [
+      2,
+      {
+        checkLoops: false,
+      },
+    ],
 
     // 禁止对 const 定义重新赋值
     'no-const-assign': 2,
@@ -323,13 +341,23 @@ module.exports = {
 
     // 禁止空的 function
     // 包含注释的情况下允许
-    'no-empty-function': 2,
+    'no-empty-function': [
+      'error',
+      {
+        allow: ['constructors'],
+      },
+    ],
 
     // 禁止解构中出现空 {} 或 []
     'no-empty-pattern': 2,
 
     // 禁止出现空代码块
-    'no-empty': [2, { allowEmptyCatch: true }],
+    'no-empty': [
+      2,
+      {
+        allowEmptyCatch: true,
+      },
+    ],
 
     // 禁止 == 和 != 与 null 做比较，必须用 === 或 !==
     // @off 非严格相等可以同时判断 null 和 undefined
@@ -342,7 +370,12 @@ module.exports = {
     'no-ex-assign': 2,
 
     // 禁止扩展原生对象
-    'no-extend-native': [2, { exceptions: ['Array', 'Object'] }],
+    'no-extend-native': [
+      2,
+      {
+        exceptions: ['Array', 'Object'],
+      },
+    ],
 
     // 禁止额外的 bind
     'no-extra-bind': 2,
@@ -358,7 +391,12 @@ module.exports = {
 
     // 每一个 switch 的 case 都需要有 break, return 或 throw
     // 包含注释的情况下允许
-    'no-fallthrough': [2, { commentPattern: '.' }],
+    'no-fallthrough': [
+      2,
+      {
+        commentPattern: '.',
+      },
+    ],
 
     // 不允许使用 2. 或 .5 来表示数字，需要用 2、2.0、0.5 的格式
     'no-floating-decimal': 2,
@@ -435,7 +473,9 @@ module.exports = {
     'no-mixed-operators': [
       2,
       {
-        groups: [['&&', '||']],
+        groups: [
+          ['&&', '||']
+        ],
       },
     ],
 
@@ -626,7 +666,12 @@ module.exports = {
     'no-unmodified-loop-condition': 2,
 
     // 禁止不必要的三元表达式
-    'no-unneeded-ternary': [2, { defaultAssignment: false }],
+    'no-unneeded-ternary': [
+      2,
+      {
+        defaultAssignment: false,
+      },
+    ],
 
     // 禁止出现不可到达的代码，如在 return、throw 之后的代码
     'no-unreachable': 2,
@@ -669,9 +714,6 @@ module.exports = {
 
     // 禁止不必要的字符串拼接
     'no-useless-concat': 2,
-
-    // 禁止无用的构造函数
-    'no-useless-constructor': 2,
 
     // 禁止无用的转义
     'no-useless-escape': 2,
@@ -914,12 +956,22 @@ module.exports = {
     'require-jsdoc': 'off',
 
     // 禁止使用 console，提醒开发者，上线时要去掉
-    'no-console': ['error', { allow: ['error', 'warn', 'info'] }],
+    'no-console': [
+      'error',
+      {
+        allow: ['error', 'warn', 'info'],
+      },
+    ],
 
     // 禁止额外的布尔值转换
     'no-extra-boolean-cast': 'error',
     'react/prop-types': 'off',
-    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
+    '@typescript-eslint/no-unused-vars': [
+      2,
+      {
+        args: 'none',
+      },
+    ],
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',

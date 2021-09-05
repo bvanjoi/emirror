@@ -7,5 +7,7 @@ import { GlobalAttrs } from './types';
  * For example: history, menu and so on.
  */
 export class Extension extends Base {
-  addGlobalAttrs = (): GlobalAttrs => null;
+  addGlobalAttrs(): GlobalAttrs {
+    return null;
+  }
 }

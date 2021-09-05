@@ -7,9 +7,8 @@ import {
 import Doc from '@emirror/plugin-doc';
 import Paragraph from '@emirror/plugin-paragraph';
 import Text from '@emirror/plugin-text';
-import Image from '@emirror/plugin-image';
+import Image, { upload } from '@emirror/plugin-image';
 import History from '@emirror/plugin-history';
-import NodePlaceholder from '@emirror/plugin-node-placeholder';
 import Menu from './menu';
 
 const IMG_SOURCE =
@@ -23,8 +22,7 @@ const ImageEmirror = () => {
       new Paragraph(),
       new Text(),
       new History(),
-      new Image(),
-      new NodePlaceholder(),
+      new Image({ upload }),
     ],
   });
 
@@ -34,9 +32,9 @@ const ImageEmirror = () => {
         <Menu />
         <EMirrorComponent>
           <p>EMirror also provide image plugin.</p>
-          <img src={IMG_SOURCE} />
+          <img src={IMG_SOURCE} style={{ width: 198, height: 283 }} />
           <p>It also supports GIF:</p>
-          <img src={GIF_SOURCE} />
+          <img src={GIF_SOURCE} style={{ width: 198, height: 82 }} />
           <p>
             It also supports upload form local, but in real world, It
             better to upload to CDN firstly.

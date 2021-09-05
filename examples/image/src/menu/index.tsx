@@ -1,5 +1,4 @@
 import React from 'react';
-import { uploadImageFromLocal } from '@emirror/plugin-image';
 import icon from './assets/icon.svg';
 import { MenuButton, useEMirrorContext } from '@emirror/react';
 
@@ -24,11 +23,7 @@ const UploadBtnFromLoacl = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files.length) {
-      uploadImageFromLocal(
-        emirror.view,
-        e.target.files[0],
-        emirror.emPlugins.nodePlaceholder.nodePlaceholderKey,
-      );
+      //
     }
 
     emirror.view.focus();
@@ -37,7 +32,8 @@ const UploadBtnFromLoacl = () => {
 };
 
 const Menu = () => (
-  <UploadBtnFromLoacl />
+  <></>
+  // <UploadBtnFromLoacl />
   // <MenuContainer view={view} items={plugins} menuPlugin={MenuPlugin}>
   // {/* <UploadBtnFromCDN view={view} plugin={plugins.image} /> */}
   // </MenuContainer>
