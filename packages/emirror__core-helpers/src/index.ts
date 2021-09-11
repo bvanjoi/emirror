@@ -7,3 +7,4 @@ export * from './toggleNode';
 export * from './updateGlobalAttrs';
 export * from './getSchemaTypeNameByName';
 export * from './toggleWrap';
+export { default as checkViewPlugin } from './checkViewPlugin';

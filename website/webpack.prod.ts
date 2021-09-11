@@ -1,9 +1,10 @@
-const { merge } = require('webpack-merge');
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const CSSMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
-const baseConfig = require('./webpack.common.js');
+import webpack from 'webpack';
+import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
+import { merge } from 'webpack-merge';
+import CSSMinimizerWebpackPlugin from 'css-minimizer-webpack-plugin';
+import { baseConfig } from './webpack.common';
 
-const prodConfig = {
+const prodConfig: webpack.Configuration = {
   mode: 'production',
   module: {
     rules: [

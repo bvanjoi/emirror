@@ -1,12 +1,13 @@
 import Manager from '@emirror/core-manager';
 import { Node, Mark, Extension } from '@emirror/core-structure';
 import { EditorView } from '@emirror/pm/view';
-import { EditorState, Transaction } from '@emirror/pm/state';
+import { EditorState, Transaction, Plugin } from '@emirror/pm/state';
 import { Schema, DOMParser } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';
 import { Command } from '@emirror/pm/commands';
 import { isEmptyObject } from '@emirror/utils';
+import { checkViewPlugin } from '@emirror/core-helpers';
 
 /**
  * The option of Editor used
@@ -97,10 +98,13 @@ export default class EMirror {
     // if key map are not empty, then push it to plugins.
     !isEmptyObject(keymaps) && plugins.push(keymap(keymaps));
 
+    let statePlugins = plugins.filter(plugin => !checkViewPlugin(plugin));
+    let viewPlugins = plugins.filter(plugin => checkViewPlugin(plugin));
+
     /**
      * The init state of PM
      */
-    const state = EditorState.create({ schema, plugins });
+    const state = EditorState.create({ schema, plugins: statePlugins });
 
     /**
      * The view of PM
@@ -111,6 +115,7 @@ export default class EMirror {
         state,
         editable: () => opts.editable ?? true,
         dispatchTransaction: this.dispatchTransaction,
+        plugins: viewPlugins,
       },
     );
 

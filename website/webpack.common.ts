@@ -1,8 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
+import webpack from 'webpack';
 
-module.exports = {
+const baseConfig: webpack.Configuration = {
   entry: ['regenerator-runtime/runtime.js', './src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -65,3 +66,5 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
   ],
 };
+
+export { baseConfig };
