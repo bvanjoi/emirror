@@ -1,3 +1,4 @@
+import { NodeViewComponentProps } from '@emirror/core-structure';
 import { NodeView, EditorView } from '@emirror/pm/view';
 import { Node as PMNode } from '@emirror/pm/model';
 import {
@@ -44,18 +45,6 @@ interface LatexViewOptions {
 
 type LatexNodeViewProps = {
   /**
-   * The Node of ProseMirror in the editor.
-   */
-  node: PMNode;
-  /**
-   * The instance of ProseMirror.
-   */
-  view: EditorView;
-  /**
-   * A function get the node's position in editor.
-   */
-  getPos: () => number;
-  /**
    * Other options for nodeView
    */
   options: LatexViewOptions;
@@ -63,7 +52,7 @@ type LatexNodeViewProps = {
    * The latex plugin key, it local in outer view.
    */
   pluginKey: PluginKey<LatexPluginState>;
-};
+} & NodeViewComponentProps;
 
 class LatexNodeView implements NodeView, ICursorPosObserver {
   side: 'start' | 'end';
@@ -71,18 +60,6 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
    * The Node of ProseMirror in the editor.
    */
   private node: PMNode;
-  /**
-   * A function get the node's position in editor.
-   */
-  private getPos: () => number;
-  /**
-   * The latex plugin key.
-   */
-  private pluginKey: PluginKey<LatexPluginState>;
-  /**
-   * The view of outer Editor.
-   */
-  private outerView: EditorView;
   /**
    * The view of inner latex Editor.
    */
@@ -109,11 +86,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
 
   // ------------------ init ------------------------------
 
-  constructor(props: LatexNodeViewProps) {
-    this.getPos = props.getPos;
-    this.pluginKey = props.pluginKey;
+  constructor(public props: LatexNodeViewProps) {
     this.node = props.node;
-    this.outerView = props.view;
     this.side = 'start';
     this.isEditing = false;
     this.katexOptions = Object.assign(
@@ -139,10 +113,9 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
    * @returns if PMNode is inline, then return span, else return div;
    */
   createContainerDOM(): HTMLElement {
-    const containerDOM: HTMLElement =
-      this.node.isInline === false
-        ? document.createElement('div')
-        : document.createElement('span');
+    const containerDOM: HTMLElement = this.node.isInline
+      ? document.createElement('span')
+      : document.createElement('div');
     containerDOM.classList.add(
       `emirror-${this.node.type.name}__nodeview-dom`,
     );
@@ -157,7 +130,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
   }
 
   /**
-   * Create Content DOM for this.contentDOM
+   * Create Content DOM for
    * @returns if PMNode is leaf node, it returns null.
    */
   createContentDOM(): {
@@ -185,7 +158,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
    * This helps to prevent accidental deletions of latex block.
    */
   ensureFocus() {
-    if (this.innerView && this.outerView.hasFocus()) {
+    const { view: outerView } = this.props;
+    if (this.innerView && outerView.hasFocus()) {
       this.innerView.focus();
     }
   }
@@ -283,7 +257,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
   }
 
   updateCursorPos(state: EditorState<any>): void {
-    const pos = this.getPos();
+    const pos = (this.props.getPos as () => number)();
     const { nodeSize } = this.node;
     const inPMSelection =
       state.selection.from < pos + nodeSize && pos < state.selection.to;
@@ -343,13 +317,16 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     if (!this.innerView) {
       return;
     }
+
     const { state, transactions } =
       this.innerView.state.applyTransaction(tr);
     this.innerView.updateState(state);
 
+    const { view: outerView, getPos } = this.props;
+
     if (!tr.getMeta('fromOutside')) {
-      const outerTr = this.outerView.state.tr;
-      const offsetMap = StepMap.offset(this.getPos() + 1);
+      const outerTr = outerView.state.tr;
+      const offsetMap = StepMap.offset((getPos as () => number)() + 1);
       for (let i = 0; i < transactions.length; i++) {
         const { steps } = transactions[i];
         for (let j = 0; j < steps.length; j++) {
@@ -361,7 +338,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
         }
       }
       if (outerTr.docChanged) {
-        this.outerView.dispatch(outerTr);
+        outerView.dispatch(outerTr);
       }
     }
   };
@@ -370,6 +347,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     if (this.innerView) {
       throw Error('inner editor had exist');
     }
+    const { view: outerView } = this.props;
+
     this.innerView = new EditorView(this.latexSourceElement, {
       state: EditorState.create({
         doc: this.node,
@@ -377,14 +356,14 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
           history(),
           keymap({
             Tab: tab,
-            Backspace: backspace(this.node, this.outerView),
-            Enter: enter(this.outerView),
-            ArrowLeft: arrowLeft(this.outerView),
-            ArrowRight: arrowRight(this.outerView),
-            ArrowUp: arrowUp(this.outerView),
-            ArrowDown: arrowDown(this.outerView),
-            'Ctrl-Backspace': ctrlBackspace(this.outerView),
-            'Ctrl-Enter': ctrlEnter(this.outerView),
+            Backspace: backspace(this.node, outerView),
+            Enter: enter(outerView),
+            ArrowLeft: arrowLeft(outerView),
+            ArrowRight: arrowRight(outerView),
+            ArrowUp: arrowUp(outerView),
+            ArrowDown: arrowDown(outerView),
+            'Ctrl-Backspace': ctrlBackspace(outerView),
+            'Ctrl-Enter': ctrlEnter(outerView),
             'Mod-z': modZ,
             'Mod-Shift-z': modShiftZ,
           }),
@@ -399,8 +378,8 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
 
     // request pos that cursor should appear within the expanded latex node
     const innerState = this.innerView.state;
-    const maybePos = this.pluginKey.getState(
-      this.outerView.state,
+    const maybePos = this.props.pluginKey.getState(
+      outerView.state,
     )?.prevCursorPos;
     if (!maybePos) {
       console.error(
@@ -411,7 +390,9 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
 
     // compute position that cursor should appear within the expanded latex node
     const innerPos =
-      prevCursorPos <= this.getPos() ? 0 : this.node.content.size;
+      prevCursorPos <= (this.props.getPos as () => number)()
+        ? 0
+        : this.node.content.size;
 
     this.innerView.dispatch(
       innerState.tr.setSelection(

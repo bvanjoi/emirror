@@ -1,11 +1,13 @@
-import LatexBasic from '@emirror/plugin-latex-basic';
+import LatexBasic, {
+  createLatexBlockNodeView,
+  createPluginState,
+} from '@emirror/plugin-latex-basic';
+import { PluginSpec } from '@emirror/pm/state';
 import { NodeSpec } from '@emirror/pm/model';
 import makeLatexBlockInputRule from './makeLatexBlockInputRule';
 import './style.css';
 
 class LatexBlock extends LatexBasic {
-  LATEX_BLOCK_REGEX = /\$\$(.+)\$\$\x20/;
-
   get name() {
     return 'latexBlock' as const;
   }
@@ -25,8 +27,20 @@ class LatexBlock extends LatexBasic {
     };
   }
 
+  createPluginSpec(): PluginSpec {
+    return {
+      key: this.latexPluginKey,
+      state: createPluginState(),
+      props: {
+        nodeViews: {
+          [this.name]: createLatexBlockNodeView(this.latexPluginKey),
+        },
+      },
+    };
+  }
+
   inputRules = ({ type }) => [
-    makeLatexBlockInputRule(this.LATEX_BLOCK_REGEX, type),
+    makeLatexBlockInputRule(/\$\$(.+)\$\$\x20/, type),
   ];
 }
 

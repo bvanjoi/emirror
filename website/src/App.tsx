@@ -23,6 +23,7 @@ import {
   ImageEditor,
   TypoEditor,
   AutoLinkEditor,
+  NodePlaceholderEditor,
 } from './pages';
 import './App.css';
 import { LoadableComponent } from '@loadable/component';
@@ -131,6 +132,10 @@ const routeComponents: {
   {
     path: 'auto-link',
     component: AutoLinkEditor,
+  },
+  {
+    path: 'node-placeholder',
+    component: NodePlaceholderEditor,
   },
 ];
 

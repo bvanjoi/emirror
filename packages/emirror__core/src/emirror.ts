@@ -1,7 +1,7 @@
 import Manager from '@emirror/core-manager';
 import { Node, Mark, Extension } from '@emirror/core-structure';
 import { EditorView } from '@emirror/pm/view';
-import { EditorState, Transaction, Plugin } from '@emirror/pm/state';
+import { EditorState, Transaction } from '@emirror/pm/state';
 import { Schema, DOMParser } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';

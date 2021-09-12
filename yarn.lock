@@ -7720,10 +7720,10 @@ mini-create-react-context@^0.4.0:
     "@babel/runtime" "^7.12.1"
     tiny-warning "^1.0.3"
 
-mini-css-extract-plugin@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.nlark.com/mini-css-extract-plugin/download/mini-css-extract-plugin-2.2.2.tgz#df22f16bf43173050c6d652fa7d035318c310e04"
-  integrity sha1-3yLxa/QxcwUMbWUvp9A1MYwxDgQ=
+mini-css-extract-plugin@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.nlark.com/mini-css-extract-plugin/download/mini-css-extract-plugin-2.3.0.tgz#87515f185533752944d753ac7216fc876779dafe"
+  integrity sha1-h1FfGFUzdSlE11Oschb8h2d52v4=
   dependencies:
     schema-utils "^3.1.0"
 

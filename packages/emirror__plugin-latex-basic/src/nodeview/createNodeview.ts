@@ -1,4 +1,4 @@
-import { EditorView, NodeView } from '@emirror/pm/view';
+import { EditorView, NodeView, Decoration } from '@emirror/pm/view';
 import { Node as PMNode } from '@emirror/pm/model';
 import { PluginKey } from '@emirror/pm/state';
 import { LatexPluginState } from '../types';
@@ -15,6 +15,7 @@ function createLatexNodeView(props: Props) {
     node: PMNode,
     view: EditorView,
     getPos: () => number,
+    decorations: Decoration[],
   ): NodeView => {
     const pluginState = pluginKey.getState(view.state);
     if (!pluginState) {
@@ -32,6 +33,7 @@ function createLatexNodeView(props: Props) {
         },
       },
       pluginKey,
+      decorations,
     });
     activeNodeViews.push(nodeView);
     return nodeView;

@@ -1,0 +1,29 @@
+.emirror .emirror-node-placeholder {
+  border: 1px solid transparent;
+}
+
+.emirror .emirror-node-placeholder .emirror-node-placeholder-image {
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-image: url('../assets/loading.gif');
+}
+
+.emirror .emirror-node-placeholder.ProseMirror-selectednode {
+  border-color: bisque;
+}
+
+.emirror .emirror-node-placeholder.emirror-node-placeholder-inline {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.emirror .emirror-node-placeholder.emirror-node-placeholder-block {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,11 +1,13 @@
-import LatexBasic from '@emirror/plugin-latex-basic';
+import LatexBasic, {
+  createPluginState,
+  createLatexInlineNodeView,
+} from '@emirror/plugin-latex-basic';
+import { PluginSpec } from '@emirror/pm/state';
 import { NodeSpec } from '@emirror/pm/model';
 import makeLatexInlineInputRule from './makeLatexInlineInputRule';
 import './style.css';
 
 class LatexInline extends LatexBasic {
-  LATEX_INLINE_REGEX = /\$(.+)\$\x20/;
-
   get name() {
     return 'latexInline' as const;
   }
@@ -21,8 +23,20 @@ class LatexInline extends LatexBasic {
     };
   }
 
+  createPluginSpec(): PluginSpec {
+    return {
+      key: this.latexPluginKey,
+      state: createPluginState(),
+      props: {
+        nodeViews: {
+          [this.name]: createLatexInlineNodeView(this.latexPluginKey),
+        },
+      },
+    };
+  }
+
   inputRules = ({ type }) => [
-    makeLatexInlineInputRule(this.LATEX_INLINE_REGEX, type),
+    makeLatexInlineInputRule(/\$(.+)\$\x20/, type),
   ];
 }
 
