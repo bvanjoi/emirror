@@ -15,11 +15,13 @@ type PlaceholderOptions = {
 
 class Placeholder extends Extension {
   placeholderKey = new PluginKey(this.name);
-  options: PlaceholderOptions = { content: 'default placeholder content' };
 
-  constructor(options: PlaceholderOptions) {
+  constructor(
+    public options: PlaceholderOptions = {
+      content: 'default placeholder content',
+    },
+  ) {
     super();
-    this.options = options;
   }
 
   get name() {

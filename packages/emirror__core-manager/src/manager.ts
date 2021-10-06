@@ -15,10 +15,6 @@ import { canGlobalAttrsApply } from './utils';
  */
 export default class Manager {
   /**
-   * All EMirror plugins
-   */
-  #emPlugins: (Node | Mark | Extension)[];
-  /**
    * All EMirror Nodes
    */
   #emNodes: Node[];
@@ -35,18 +31,16 @@ export default class Manager {
    */
   #globalAttrs: GlobalAttrs;
 
-  constructor(plugins: (Node | Mark | Extension)[]) {
-    this.#emPlugins = plugins;
-
-    this.#emNodes = plugins.filter(
+  constructor(private emPlugins: (Node | Mark | Extension)[]) {
+    this.#emNodes = emPlugins.filter(
       plugin => plugin instanceof Node,
     ) as Node[];
 
-    this.#emMarks = plugins.filter(
+    this.#emMarks = emPlugins.filter(
       plugin => plugin instanceof Mark,
     ) as Mark[];
 
-    this.#emExtensions = plugins.filter(
+    this.#emExtensions = emPlugins.filter(
       plugin => plugin instanceof Extension,
     ) as Extension[];
 
@@ -102,7 +96,7 @@ export default class Manager {
    * Get all plugins of PM from EMirror.
    */
   get plugins() {
-    return this.#emPlugins
+    return this.emPlugins
       .reduce((allPlugins, emPlugin) => {
         const pluginSpec = emPlugin.createPluginSpec();
         const pluginsArray = emPlugin.addPlugin();
@@ -121,7 +115,7 @@ export default class Manager {
    * @returns When keydown some keyboard, some command will exec.
    */
   get keymaps() {
-    return this.#emPlugins
+    return this.emPlugins
       .map(plugin => plugin.keymap)
       .reduce((allKms, kms) => {
         Object.entries(kms).forEach(([key, km]) => {
@@ -136,7 +130,7 @@ export default class Manager {
   }
 
   get commands() {
-    return this.#emPlugins
+    return this.emPlugins
       .map(plugin => plugin.commands)
       .reduce((allCmds, cmds) => {
         Object.entries(cmds).forEach(([key, cmd]) => {

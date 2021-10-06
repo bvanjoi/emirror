@@ -9,14 +9,7 @@ type Options = {
 };
 
 class MenuView {
-  /**
-   * The element of container
-   */
-  element: HTMLElement;
-
-  constructor(opts: Options & { view: EditorView }) {
-    this.element = opts.element;
-
+  constructor(public opts: Options & { view: EditorView }) {
     this.update(opts.view, null);
   }
 
@@ -42,11 +35,11 @@ class MenuView {
    */
   updateHidden(view: EditorView): boolean {
     if (view.state.selection.empty) {
-      this.element.classList.add('hidden-menu');
+      this.opts.element.classList.add('hidden-menu');
       return true;
     }
 
-    this.element.classList.remove('hidden-menu');
+    this.opts.element.classList.remove('hidden-menu');
     return false;
   }
 
@@ -57,11 +50,11 @@ class MenuView {
     const { from, to } = view.state.selection;
     const start = view.coordsAtPos(from);
     const end = view.coordsAtPos(to);
-    const box = this.element.offsetParent.getBoundingClientRect();
+    const box = this.opts.element.offsetParent.getBoundingClientRect();
     const left = Math.max((start.left + end.left) / 2, start.left + 3);
-    this.element.style.left = left - box.left + 'px';
-    this.element.style.bottom = box.bottom - start.top + 'px';
-    this.element.style.transform = `translateX(-50%)`;
+    this.opts.element.style.left = left - box.left + 'px';
+    this.opts.element.style.bottom = box.bottom - start.top + 'px';
+    this.opts.element.style.transform = `translateX(-50%)`;
   }
 }
 

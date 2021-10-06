@@ -2,6 +2,7 @@ import { NodeViewComponentProps } from '@emirror/core-structure';
 import { NodeView } from '@emirror/pm/view';
 import { Props } from './types';
 import './style.css';
+import imgSource from '../assets/loading.gif';
 
 type NodePlaceholderProps = Props & NodeViewComponentProps;
 
@@ -34,6 +35,7 @@ class NodePlaceholderNodeView implements NodeView {
 
   createContentDOM() {
     const imageDOM = document.createElement('img');
+    imageDOM.src = imgSource;
     imageDOM.classList.add('emirror-node-placeholder-image');
     return imageDOM;
   }

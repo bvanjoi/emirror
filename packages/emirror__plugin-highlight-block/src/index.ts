@@ -8,12 +8,10 @@ type Props = {
 };
 
 class HighlightBlock extends Node {
-  emojis: string[] = [];
   highlightBlockPluginKey = new PluginKey(this.name);
 
-  constructor(props: Props) {
+  constructor(public props: Props) {
     super();
-    this.emojis = props.emojis;
   }
 
   get name() {
@@ -69,8 +67,8 @@ class HighlightBlock extends Node {
               view.dispatch(
                 view.state.tr.setNodeMarkup(getPos(), undefined, {
                   emoji:
-                    this.emojis[
-                      Math.floor(Math.random() * this.emojis.length)
+                    this.props.emojis[
+                    Math.floor(Math.random() * this.props.emojis.length)
                     ],
                 }),
               );

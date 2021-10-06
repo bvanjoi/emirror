@@ -15,13 +15,13 @@ type ExceedTipOptions = {
 
 class ExceedTip extends Extension {
   exceedTipKey = new PluginKey(this.name);
-  options: ExceedTipOptions = {
-    maxSize: 140,
-  };
 
-  constructor(options: ExceedTipOptions) {
+  constructor(
+    public options: ExceedTipOptions = {
+      maxSize: 140,
+    },
+  ) {
     super();
-    this.options = options;
   }
 
   get name() {

@@ -23,9 +23,9 @@
     "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1",
     "@emirror/utils": "^0.0.1",
-    "codemirror": "^5.62.3"
+    "codemirror": "^5.63.1"
   },
   "devDependencies": {
-    "@types/codemirror": "^5.60.2"
+    "@types/codemirror": "^5.60.4"
   }
 }

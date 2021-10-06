@@ -50,10 +50,6 @@ export default class EMirror {
    */
   view: EditorView;
   /**
-   * The options of EMirror.
-   */
-  opts: EMirrorOptions;
-  /**
    * The emPlugin.
    */
   emPlugins: Record<string, Node | Mark | Extension>;
@@ -62,8 +58,7 @@ export default class EMirror {
    */
   commands: Record<string, (...args: any[]) => Command>;
 
-  constructor(opts: EMirrorOptions) {
-    this.opts = opts;
+  constructor(public opts: EMirrorOptions) {
     const manager = new Manager([opts.topNode, ...opts.emPlugins]);
 
     const { plugins, keymaps, commands } = manager;
@@ -115,6 +110,9 @@ export default class EMirror {
         state,
         editable: () => opts.editable ?? true,
         dispatchTransaction: this.dispatchTransaction,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        // new feature: https://prosemirror.net/docs/ref/#view.DirectEditorProps.plugins
         plugins: viewPlugins,
       },
     );

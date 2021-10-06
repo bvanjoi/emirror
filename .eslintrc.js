@@ -181,9 +181,8 @@ module.exports = {
     // @off 没必要限制变量名
     'id-match': 0,
 
-    // 缩进使用 tab 还是空格
-    // @off 不关心
-    indent: 0,
+    // 缩进使用空格
+    indent: ['error', 'space'],
 
     // 变量必须在定义的时候赋值
     // @off 先定义后赋值很常见
@@ -422,7 +421,7 @@ module.exports = {
     'no-implicit-globals': 2,
 
     // 禁止行内注释
-    // @off 很常用
+    // @off 不禁止
     'no-inline-comments': 0,
 
     // 禁止在块作用域内使用 var 或函数声明

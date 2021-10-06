@@ -1,9 +1,5 @@
 import { EditorState, Plugin, PluginKey } from '@emirror/pm/state';
 import { EditorView } from '@emirror/pm/view';
-import { Node, Mark } from '@emirror/core-structure';
-import { isActive } from '@emirror/utils';
-
-type Items = Record<string, Node | Mark>;
 
 type Options = {
   /**
@@ -13,14 +9,7 @@ type Options = {
 };
 
 class MenuView {
-  /**
-   * The element of container
-   */
-  element: HTMLElement;
-
-  constructor(opts: Options & { view: EditorView }) {
-    this.element = opts.element;
-
+  constructor(public opts: Options & { view: EditorView }) {
     this.update(opts.view, null);
   }
 
@@ -58,11 +47,11 @@ class MenuView {
      */
     const isNodeEmpty = !parent.isLeaf && !parent.textContent;
     if (!(empty && isRootDepth && isNodeEmpty)) {
-      this.element.classList.add('hidden-menu');
+      this.opts.element.classList.add('hidden-menu');
       return true;
     }
 
-    this.element.classList.remove('hidden-menu');
+    this.opts.element.classList.remove('hidden-menu');
     return false;
   }
 
@@ -72,10 +61,10 @@ class MenuView {
   updatePosStyle(view: EditorView) {
     const { from } = view.state.selection;
     const start = view.coordsAtPos(from);
-    const box = this.element.offsetParent.getBoundingClientRect();
+    const box = this.opts.element.offsetParent.getBoundingClientRect();
     // 13 is a trike
     // it come from the h tag's height.
-    this.element.style.top =
+    this.opts.element.style.top =
       (start.bottom + start.top) / 2 - box.top - 13 + 'px';
   }
 }

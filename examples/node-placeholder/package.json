@@ -27,6 +27,8 @@
     "@emirror/plugin-paragraph": "^0.0.1",
     "@emirror/plugin-text": "^0.0.1",
     "@emirror/plugin-node-placeholder-inline": "^0.0.1",
-    "@emirror/plugin-node-placeholder-block": "^0.0.1"
+    "@emirror/plugin-node-placeholder-block": "^0.0.1",
+    "@emirror/utils": "^0.0.1",
+    "@emirror/core-helpers": "^0.0.1"
   }
 }

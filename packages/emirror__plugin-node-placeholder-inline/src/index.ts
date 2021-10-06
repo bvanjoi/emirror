@@ -1,9 +1,12 @@
-import { NodeSpec } from '@emirror/pm/model';
+import { NodeSpec, Node as PMNode } from '@emirror/pm/model';
 import NodePlaceholder, {
   createInlineNodePlaceholderNodeView,
+  createPluginState,
   insertNodePlaceholder,
+  removeNodePlaceholder,
 } from '@emirror/plugin-node-placeholder';
 import { PluginSpec } from '@emirror/pm/state';
+import { DecorationSet } from '@emirror/pm/view';
 
 class NodePlaceholderInline extends NodePlaceholder {
   get name() {
@@ -12,7 +15,19 @@ class NodePlaceholderInline extends NodePlaceholder {
 
   get commands() {
     return {
-      insertInlineNodePlaceholder: () => insertNodePlaceholder(this.name),
+      insertInlineNodePlaceholder: (id: string) =>
+        insertNodePlaceholder(
+          id,
+          this.nodePlaceholderPluginKey,
+          this.name,
+        ),
+      removeInlineNodePlaceholder: (node: PMNode, id: string) =>
+        removeNodePlaceholder(
+          node,
+          id,
+          this.nodePlaceholderPluginKey,
+          this.name,
+        ),
     };
   }
 
@@ -29,9 +44,10 @@ class NodePlaceholderInline extends NodePlaceholder {
     };
   }
 
-  createPluginSpec(): PluginSpec {
+  createPluginSpec(): PluginSpec<DecorationSet> {
     return {
       key: this.nodePlaceholderPluginKey,
+      state: createPluginState(),
       props: {
         nodeViews: {
           [this.name]: createInlineNodePlaceholderNodeView(

@@ -20,11 +20,11 @@
     "url": "https://github.com/bvanjoi/emirror/issues"
   },
   "dependencies": {
-    "@emirror/core-structure": "^0.0.1",
     "@emirror/core-helpers": "^0.0.1",
+    "@emirror/core-structure": "^0.0.1",
     "@emirror/pm": "^0.0.1"
   },
   "devDependencies": {
-    "csstype": "^3.0.8"
+    "csstype": "^3.0.9"
   }
 }

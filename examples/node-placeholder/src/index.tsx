@@ -38,14 +38,6 @@ const NodePlaceholderEMirror = () => {
             which take up this position and will replace by image node
             after image uploaded.
           </p>
-          <p>
-            This is inline node placeholder: <span> </span>
-            <span className='emirror-node-placeholder-inline' />
-          </p>
-          <p>
-            This is block node placeholder: <span> </span>
-          </p>
-          <div className='emirror-node-placeholder-block' />
         </EMirrorComponent>
       </EMirrorContext.Provider>
     )

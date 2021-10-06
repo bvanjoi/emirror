@@ -3,10 +3,8 @@
 }
 
 .emirror .emirror-node-placeholder .emirror-node-placeholder-image {
-  width: 26px;
-  height: 26px;
-  background-repeat: no-repeat;
-  background-image: url('../assets/loading.gif');
+  width: 24px;
+  height: 24px;
 }
 
 .emirror .emirror-node-placeholder.ProseMirror-selectednode {
@@ -14,8 +12,8 @@
 }
 
 .emirror .emirror-node-placeholder.emirror-node-placeholder-inline {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   display: inline-block;
 }
 
