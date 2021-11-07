@@ -58,10 +58,7 @@ const SubNavigation = (props: Props) => {
         <li key={menu}>
           <NavLink
             to={`/${menu}`}
-            activeClassName='selected'
-            isActive={(match, location) =>
-              match?.url === location.pathname
-            }
+            className={({ isActive }) => (isActive ? 'selected' : '')}
           >
             {menu}
           </NavLink>

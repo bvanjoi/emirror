@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Redirect, Route } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 type Props = {
   routeComponents: {
@@ -8,22 +8,22 @@ type Props = {
   }[];
 };
 
-const Routes = (props: Props) => {
+const PageRoutes = (props: Props) => {
   const { routeComponents } = props;
 
   return (
-    <Switch>
-      {routeComponents.map(c => (
-        <Route
-          exact
-          key={c.path}
-          path={`/${c.path}`}
-          component={c.component}
-        />
-      ))}
-      <Redirect to='/default' />
-    </Switch>
+    <>
+      <Routes>
+        {routeComponents.map(c => (
+          <Route
+            key={c.path}
+            path={`${c.path}`}
+            element={<c.component />}
+          />
+        ))}
+      </Routes>
+    </>
   );
 };
 
-export default Routes;
+export default PageRoutes;

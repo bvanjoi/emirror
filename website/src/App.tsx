@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Routes from './routes';
 import {
   Nav,
@@ -141,9 +141,18 @@ const routeComponents: {
 
 const App = () => {
   const location = useLocation();
+  const naviagte = useNavigate();
   const [pathname, setPathname] = useState(location.pathname);
+
   useEffect(() => {
     setPathname(location.pathname);
+    if (
+      !routeComponents
+        .map(({ path }) => `/${path}`)
+        .includes(location.pathname)
+    ) {
+      naviagte('/default');
+    }
   }, [location]);
 
   return (

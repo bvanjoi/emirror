@@ -7,6 +7,12 @@
   height: 24px;
 }
 
+.emirror
+  .emirror-node-placeholder
+  .emirror-node-placeholder-image::selection {
+  background-color: transparent;
+}
+
 .emirror .emirror-node-placeholder.ProseMirror-selectednode {
   border-color: bisque;
 }

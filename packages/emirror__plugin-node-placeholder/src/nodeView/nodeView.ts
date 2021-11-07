@@ -8,11 +8,11 @@ type NodePlaceholderProps = Props & NodeViewComponentProps;
 
 class NodePlaceholderNodeView implements NodeView {
   dom: HTMLElement;
-
+  contentDOM: HTMLElement;
   constructor(public props: NodePlaceholderProps) {
     this.dom = this.createContainerDOM();
-    const imageDOM = this.createContentDOM();
-    this.dom.appendChild(imageDOM);
+    this.contentDOM = this.createContentDOM();
+    this.dom.appendChild(this.contentDOM);
   }
 
   createContainerDOM() {

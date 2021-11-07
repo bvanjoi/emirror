@@ -7,7 +7,7 @@ import {
   TextSelection,
   Transaction,
 } from '@emirror/pm/state';
-import katex, { KatexOptions, ParseError } from 'katex';
+import katex, { KatexOptions } from 'katex';
 import { LatexPluginState } from '../types';
 import { StepMap } from '@emirror/pm/transform';
 import { keymap } from '@emirror/pm/keymap';
@@ -204,7 +204,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
     try {
       katex.render(renderText, this.latexRenderElement, this.katexOptions);
     } catch (err) {
-      if (err instanceof ParseError) {
+      if (err instanceof katex.ParseError) {
         this.latexRenderElement.classList.add('latex-parse-error');
         this.dom.setAttribute('title', err.toString());
       } else {
@@ -214,7 +214,7 @@ class LatexNodeView implements NodeView, ICursorPosObserver {
   }
 
   /**
-   * Render Latex when innerEditor *editing*
+   * TODO: Render Latex when innerEditor *editing*
    */
   renderPreview() {
     console.log('render Preview');

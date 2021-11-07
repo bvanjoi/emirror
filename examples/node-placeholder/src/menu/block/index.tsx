@@ -1,8 +1,8 @@
 import React from 'react';
 import { MenuButton, useEMirrorContext } from '@emirror/react';
+import { isNodeActive } from '@emirror/core-helpers';
 import { genID } from '@emirror/utils';
 import icon from './assets/icon.svg';
-import { isNodeActive } from '@emirror/core-helpers';
 
 type Props = {
   addId(id: string, type: 'inline' | 'block'): void;
