@@ -3,6 +3,7 @@ import {
   Mark,
   Extension,
   GlobalAttrs,
+  Config
 } from '@emirror/core-structure';
 import { MarkSpec, NodeSpec, Schema } from '@emirror/pm/model';
 import { Plugin } from '@emirror/pm/state';
@@ -31,7 +32,8 @@ export default class Manager {
    */
   #globalAttrs: GlobalAttrs;
 
-  constructor(private emPlugins: (Node | Mark | Extension)[]) {
+  constructor(private emPlugins: (Node | Mark | Extension)[], config: Config) {
+    this.emPlugins.forEach(plugin => plugin.config = config)
     this.#emNodes = emPlugins.filter(
       plugin => plugin instanceof Node,
     ) as Node[];

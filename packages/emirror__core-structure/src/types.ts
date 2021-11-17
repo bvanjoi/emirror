@@ -1,5 +1,6 @@
 import { Decoration, EditorView } from '@emirror/pm/view';
 import { Node as PMNode, Schema } from '@emirror/pm/model';
+import { Logger } from '@emirror/utils';
 
 export interface NodeViewComponentProps<S extends Schema = any> {
   /**
@@ -63,3 +64,7 @@ export type ApplySchemaAttrs = {
 export type GlobalAttrs = ({
   scope?: GlobalAttrScope;
 } & ApplySchemaAttrs)[];
+
+export type Config = {
+  logger: Logger
+}

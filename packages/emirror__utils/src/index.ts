@@ -16,3 +16,4 @@ export * from './uploadImage';
 export * from './objectIncludes';
 export * from './isDeepEqual';
 export * from './parseDOMStyleAttribute';
+export * from './logger';

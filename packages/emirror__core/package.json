@@ -25,6 +25,7 @@
     "@emirror/utils": "^0.0.1",
     "@emirror/core-helpers": "^0.0.1",
     "@emirror/core-manager": "^0.0.1",
-    "@emirror/core-structure": "^0.0.1"
+    "@emirror/core-structure": "^0.0.1",
+    "@emirror/core-performance": "^0.0.1"
   }
 }

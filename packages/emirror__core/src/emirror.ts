@@ -1,13 +1,14 @@
 import Manager from '@emirror/core-manager';
-import { Node, Mark, Extension } from '@emirror/core-structure';
+import { Node, Mark, Extension, Config } from '@emirror/core-structure';
 import { EditorView } from '@emirror/pm/view';
 import { EditorState, Transaction } from '@emirror/pm/state';
 import { Schema, DOMParser } from '@emirror/pm/model';
 import { inputRules } from '@emirror/pm/inputrules';
 import { keymap } from '@emirror/pm/keymap';
 import { Command } from '@emirror/pm/commands';
-import { isEmptyObject } from '@emirror/utils';
+import { isEmptyObject, createLogger } from '@emirror/utils';
 import { checkViewPlugin } from '@emirror/core-helpers';
+import { startMeasure, stopMeasure, clearMeasure } from '@emirror/core-performance';
 
 /**
  * The option of Editor used
@@ -57,9 +58,17 @@ export default class EMirror {
    * The commands extract from emPlugins.
    */
   commands: Record<string, (...args: any[]) => Command>;
+  /**
+   * Some config.
+   */
+  config: Config;
 
   constructor(public opts: EMirrorOptions) {
-    const manager = new Manager([opts.topNode, ...opts.emPlugins]);
+    this.config = {
+      logger: createLogger()
+    }
+
+    const manager = new Manager([opts.topNode, ...opts.emPlugins], this.config);
 
     const { plugins, keymaps, commands } = manager;
 
@@ -131,9 +140,13 @@ export default class EMirror {
    * @param tr PM state transaction
    */
   private dispatchTransaction = (tr: Transaction) => {
+    startMeasure('dispatchTransaction');
     const newState = this.view.state.apply(tr);
     this.view.updateState(newState);
     this.opts.afterUpdate?.(this);
+    stopMeasure('dispatchTransaction', (duration) => {
+      console.log(duration);
+    })
   };
 
   /**
@@ -161,6 +174,7 @@ export default class EMirror {
    * Destroy EMirror editor.
    */
   destroy() {
+    clearMeasure('dispatchTransaction');
     this.opts.beforeDestroy?.(this);
     this.view.destroy();
   }
