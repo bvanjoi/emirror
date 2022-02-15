@@ -1,0 +1,40 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    tags-ignore:
+      - '**'
+    paths-ignore:
+      - LICENSE
+      - '**/*.gitignore'
+      - .editorconfig
+jobs:
+  setup:
+    name: Test
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set node version to 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          check-latest: true
+          architecture: x64
+      - name: Install rush toolchain
+        run: |
+          npm install -g @microsoft/rush
+          npm install -g pnpm
+      - name: Install dependencies
+        run: rush install
+      - name: Build
+        run: rush build
+      - name: Test
+        run: rush test

@@ -1,0 +1,20 @@
+{
+  "name": "@emirror/website",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "test": ""
+  },
+  "dependencies": {
+    "@emirror/examples": "workspace:*",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  },
+  "devDependencies": {
+    "vite": "2.9.9",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5"
+  }
+}

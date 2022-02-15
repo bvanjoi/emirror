@@ -1,0 +1,22 @@
+{
+  "name": "@emirror/examples",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "test": ""
+  },
+  "dependencies": {
+    "react": "18.1.0",
+    "@emirror/core": "workspace:*",
+    "@emirror/pm": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.14",
+    "typescript": "4.7.4"
+  }
+}

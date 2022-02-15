@@ -5,7 +5,7 @@ dist/
 coverage/
 
 # Log files
-*.log*
+*.log
 
 # huksy
 .husky
@@ -19,9 +19,20 @@ coverage/
 *.sln
 *.sw*
 
-# cache
-*.tsbuildinfo
-
 # output
 dist
 lib
+
+# Rush temporary files
+common/deploy/
+common/temp/
+common/autoinstallers/*/.npmrc
+**/.rush/temp/
+
+
+# ReScript
+.merlin
+.bsb.lock
+
+# TypeScript
+*.tsbuildinfo

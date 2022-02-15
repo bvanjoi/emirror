@@ -1,0 +1,55 @@
+ {
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.71.0",
+  "pnpmVersion": "6.32.19",
+  "pnpmOptions": {
+    "strictPeerDependencies": true,
+    "useWorkspaces": true
+  },
+  "nodeSupportedVersionRange": ">=18.3.0",
+  "approvedPackagesPolicy": {
+    "reviewCategories": [
+      "core",   
+      "website",
+      "tools"
+    ]
+  },
+  "repository": {
+  },
+  "eventHooks": {
+    "preRushInstall": [
+    ],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "variants": [
+  ],
+  "projects": [
+    {
+      "packageName": "@emirror/core",
+      "projectFolder": "packages/core",
+      "reviewCategory": "core"
+    },
+    {
+      "packageName": "@emirror/pm",
+      "projectFolder": "packages/pm",
+      "reviewCategory": "core"
+    },
+    {
+      "packageName": "@emirror/tests",
+      "projectFolder": "packages/tests",
+      "reviewCategory": "core"
+    },
+    {
+      "packageName": "@emirror/examples",
+      "projectFolder": "examples",
+      "reviewCategory": "tools"
+    },
+    {
+      "packageName": "@emirror/website",
+      "projectFolder": "website", 
+      "reviewCategory": "website"
+    }
+  ]
+}

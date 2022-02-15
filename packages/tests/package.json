@@ -1,0 +1,19 @@
+{
+  "name": "@emirror/tests",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "",
+    "dev": "",
+    "test": "node --no-warnings --experimental-specifier-resolution=node --test src/**.js"
+  },
+  "dependencies": {
+    "@emirror/pm": "workspace:*",
+    "@emirror/core": "workspace:*",
+    "prosemirror-test-builder": "1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.0"
+  }
+}

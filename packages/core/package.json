@@ -1,0 +1,21 @@
+{
+  "name": "@emirror/core",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./lib/Editor.js",
+  "module": "./lib/Editor.js",
+  "types": "./lib/Editor.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "test": ""
+  },
+  "dependencies": {
+    "@emirror/pm": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.0",
+    "typescript": "4.7.4"
+  }
+}

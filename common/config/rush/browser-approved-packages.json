@@ -1,0 +1,138 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@emirror/core",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "@emirror/demo",
+      "allowedCategories": [ "website" ]
+    },
+    {
+      "name": "@emirror/examples",
+      "allowedCategories": [ "website" ]
+    },
+    {
+      "name": "@emirror/pm",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "@rescript/prosemirror",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "@rescript/react",
+      "allowedCategories": [ "tools", "website" ]
+    },
+    {
+      "name": "@types/node",
+      "allowedCategories": [ "core" ]
+    },
+    {
+      "name": "@types/react",
+      "allowedCategories": [ "tools", "website" ]
+    },
+    {
+      "name": "@types/react-dom",
+      "allowedCategories": [ "website" ]
+    },
+    {
+      "name": "esbuild",
+      "allowedCategories": [ "core" ]
+    },
+    {
+      "name": "esbuild-register",
+      "allowedCategories": [ "core" ]
+    },
+    {
+      "name": "lint",
+      "allowedCategories": [ "website" ]
+    },
+    {
+      "name": "orderedmap",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-changeset",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-commands",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-dropcursor",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-gapcursor",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-history",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-inputrules",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-keymap",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-model",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-schema-basic",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-schema-list",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-state",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-test-builder",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-transform",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "prosemirror-view",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "react",
+      "allowedCategories": [ "tools", "website" ]
+    },
+    {
+      "name": "react-dom",
+      "allowedCategories": [ "tools", "website" ]
+    },
+    {
+      "name": "rescript",
+      "allowedCategories": [ "core", "tools", "website" ]
+    },
+    {
+      "name": "rescript-webapi",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "core", "tools" ]
+    },
+    {
+      "name": "vite",
+      "allowedCategories": [ "website" ]
+    }
+  ]
+}
